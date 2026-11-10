@@ -91,7 +91,7 @@ const FILES = [
   file('the-big-idea.pdf', 'document', 8.4 * MB, { lw: 2 }, 'Downloads', 'mail.google.com', 'doc', { text: 'The big idea. Pitch deck, seed round' }),
   file('quarterly-report.pdf', 'document', 6.1 * MB, { lw: 4 }, 'Documents', 'mail.google.com', 'doc', { text: 'Quarterly report. Revenue, growth and hiring' }),
   file('travel-itinerary.pdf', 'document', .4 * MB, { lw: 1 }, 'Downloads', 'mail.google.com', 'doc', { text: 'Flight itinerary. Seat 14A. Hotel check in' }),
-  file('design-guide.pdf', 'document', 7.3 * MB, 3, 'Downloads', 'github.com', 'doc'),
+  file('design-guide.pdf', 'document', 7.3 * MB, 3, 'Downloads', 'slack.com', 'doc'),
   file('meeting-notes.docx', 'document', 41e3, 2, 'Documents', '', 'text', { label: 'DOC' }),
   file('budget-2026.xlsx', 'document', 92e3, 6, 'Documents', '', 'sheet', { label: 'XLS' }),
   file('reading-list.md', 'document', 5e3, 8, 'Documents', '', 'text', { label: 'MD' }),
@@ -103,9 +103,9 @@ const FILES = [
   file('empty-notes.txt', 'document', 0, 50, 'Desktop', '', 'text', { label: 'TXT' }),
   file('untitled 2.txt', 'document', 0, 70, 'Desktop', '', 'text', { label: 'TXT' }),
   // Archives and installers
-  file('MacEx-source.zip', 'archive', 12.6 * MB, 2, 'Downloads', 'github.com', 'zip'),
+  file('brand-kit.zip', 'archive', 12.6 * MB, 2, 'Downloads', 'slack.com', 'zip'),
   file('fonts-collection.zip', 'archive', 34 * MB, 15, 'Downloads', 'slack.com', 'zip'),
-  file('old-site.zip', 'archive', 48 * MB, 130, 'Downloads', 'github.com', 'zip'),
+  file('old-site.zip', 'archive', 48 * MB, 130, 'Downloads', 'drive.google.com', 'zip'),
   file('photos-backup-2025.zip', 'archive', 2.1 * GB, 240, 'Documents', '', 'zip'),
   file('Notewise-1.8.dmg', 'archive', 96 * MB, 6, 'Downloads', 'notewise.app', 'dmg', { installer: true }),
   file('Sketchpad-3.2.dmg', 'archive', 182 * MB, 95, 'Downloads', 'sketchpad.design', 'dmg', { installer: true }),
@@ -143,7 +143,7 @@ function thumb(f, extraClass = '') {
    --------------------------------------------------------- */
 const NUM_WORDS = { a: 1, an: 1, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, twelve: 12 };
 const UNIT_DAYS = { day: 1, week: 7, month: 30.44, year: 365.25 };
-const SOURCES = { gmail: 'mail.google.com', mail: 'mail.google.com', email: 'mail.google.com', 'e-mail': 'mail.google.com', github: 'github.com', 'google drive': 'drive.google.com', drive: 'drive.google.com', slack: 'slack.com', chatgpt: 'chatgpt.com', whatsapp: 'web.whatsapp.com' };
+const SOURCES = { gmail: 'mail.google.com', mail: 'mail.google.com', email: 'mail.google.com', 'e-mail': 'mail.google.com', dropbox: 'dropbox.com', 'google drive': 'drive.google.com', drive: 'drive.google.com', slack: 'slack.com', chatgpt: 'chatgpt.com', whatsapp: 'web.whatsapp.com' };
 const TYPE_RULES = [
   [/\b(pdf)s?\b/, 'PDF', f => f.ext === 'pdf'],
   [/\b(screen ?shots?|screen ?caps?)\b/, 'Screenshots', f => !!f.shot],
@@ -218,7 +218,7 @@ function parseQuery(q) {
 
   // Sources
   take(/\b(?:from|on|taken with|shot on|taken on)\s+(?:my\s+)?(iphone|phone|camera)\b/, () => ({ kind: 'source', icon: 'camera', label: 'From iPhone', test: f => f.source === 'iPhone' }));
-  take(/\b(?:from|via|on|in|off)\s+(google drive|gmail|e-?mail|mail|github|drive|slack|chatgpt|whatsapp)\b/, a => {
+  take(/\b(?:from|via|on|in|off)\s+(google drive|gmail|e-?mail|mail|dropbox|drive|slack|chatgpt|whatsapp)\b/, a => {
     const host = SOURCES[a[1]];
     return { kind: 'source', icon: 'globe', label: `From ${host}`, test: f => f.source === host };
   });
@@ -986,8 +986,6 @@ function initFeatures() {
     current = key;
     tabs.forEach(t => { const on = t.dataset.feature === key; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; if (on && focus) t.focus({ preventScroll: true }); if (on) { const nav = t.parentElement; if (nav.scrollWidth > nav.clientWidth) nav.scrollTo({ left: t.offsetLeft - nav.clientWidth / 2 + t.offsetWidth / 2, behavior: 'smooth' }); } });
     panels.forEach(p => { const on = p.id === 'fp-' + key; p.hidden = !on; p.classList.remove('active'); if (on) { void p.offsetWidth; p.classList.add('active'); } });
-    if (key === 'space') countUp();
-    if (key === 'quick') quickType();
   }
   tabs.forEach((t, i) => {
     t.addEventListener('click', () => activate(t.dataset.feature));
@@ -999,75 +997,12 @@ function initFeatures() {
     });
   });
 
-  // Natural search panel: live parser on the sample library
-  const fq = $('#feature-query'), parseEl = $('#feature-parse'), chipsEl = $('#feature-chips'), resEl = $('#feature-results'), exEl = $('#feature-examples');
-  const exList = ['pdfs from last week over 5 mb', 'videos from my iphone in august', 'screenshots with wifi password', 'zips bigger than 1 gb older than 6 months', 'pdfs from gmail', 'installers older than 3 months', 'empty files on desktop'];
-  exEl.innerHTML = exList.map(t => `<button data-ex="${esc(t)}">${esc(t)}</button>`).join('');
-  function show(q) {
-    const { chips, spans } = parseQuery(q);
-    parseEl.innerHTML = q ? highlightQuery(q, spans) : 'Start typing…';
-    chipsEl.innerHTML = chips.map(chipHTML).join('');
-    const res = q.trim() ? applyChips(FILES, chips) : [];
-    resEl.innerHTML = !q.trim() ? '' : res.length
-      ? `<div class="ms-count">${res.length} match${res.length > 1 ? 'es' : ''} in the sample library</div>` + res.slice(0, 5).map((f, i) => `<div class="ms-res" style="animation-delay:${i * 50}ms">${thumb(f)}<span>${esc(f.name)}</span><small>${fmtSize(f.size)} · ${esc(f.source || f.folder)}</small></div>`).join('')
-      : `<div class="ms-none">No sample files match. The filters above still show exactly how MacEx read it.</div>`;
-    $$('button', exEl).forEach(b => b.classList.toggle('on', b.dataset.ex === q));
-  }
-  let userTook = false, exI = 0;
-  fq.addEventListener('input', () => { userTook = true; show(fq.value); });
-  fq.addEventListener('focus', () => { userTook = true; });
-  exEl.addEventListener('click', e => { const b = e.target.closest('[data-ex]'); if (!b) return; userTook = true; fq.value = b.dataset.ex; show(fq.value); });
-  (async function cycle() {
-    fq.value = exList[0]; show(fq.value);
-    for (;;) {
-      await sleep(4200);
-      if (userTook || motionPaused || current !== 'search') continue;
-      const t = exList[++exI % exList.length];
-      for (let n = 0; n <= t.length; n++) { if (userTook) break; fq.value = t.slice(0, n); show(fq.value); await sleep(32); }
-    }
-  })();
-
-  // Free up space: count-up
-  function countUp() {
-    const el = $('.sp-total'); const target = +el.dataset.count; const t0 = performance.now();
-    const step = t => { const p = Math.min(1, (t - t0) / 1100); el.textContent = (target * (1 - Math.pow(1 - p, 3))).toFixed(1); if (p < 1) requestAnimationFrame(step); };
-    requestAnimationFrame(step);
-  }
-
-  // Sorting panel: FLIP between sorts and views
-  const soItems = $('#so-items'), soLabel = $('#so-label');
-  const imgs = [
-    ['golden-hour.heic', 3.2, 1, 'sunset', 10], ['forest-trail.jpg', 2.8, 26, 'forest', 120], ['coastal-walk.jpg', 4.7, 86, 'ocean', 200], ['mountain-lake.jpg', 5.6, 93, 'landscape', 200],
-    ['receipt-scan.jpg', 1.3, 9, 'receipt', 40], ['aurora-night.jpg', 6.2, 40, 'landscape', 260], ['mascot-sketch.png', .8, 4, 'landscape', 190], ['dunes.heic', 3.9, 60, 'sunset', 30],
-  ].map(([name, size, age, art, h]) => ({ name, size, age, art, h }));
-  soItems.innerHTML = imgs.map(f => `<div class="so-it" data-n="${esc(f.name)}">${thumb({ ...f, label: '' })}<span>${esc(f.name)}</span><small>${f.size.toFixed(1)} MB</small></div>`).join('');
-  const states = [['Newest', 'grid'], ['Name', 'grid'], ['Size', 'grid'], ['Size', 'list'], ['Newest', 'list'], ['Name', 'list']];
-  let si = 0;
-  function applySort([sort, view]) {
-    const els = $$('.so-it', soItems);
-    const first = new Map(els.map(el => [el, el.getBoundingClientRect()]));
-    const order = [...imgs].sort((a, b) => sort === 'Name' ? a.name.localeCompare(b.name) : sort === 'Size' ? b.size - a.size : a.age - b.age);
-    order.forEach(f => soItems.append(els.find(el => el.dataset.n === f.name)));
-    soItems.classList.toggle('list', view === 'list');
-    $('#so-grid').classList.toggle('on', view === 'grid'); $('#so-list').classList.toggle('on', view === 'list');
-    soLabel.textContent = sort;
-    if (reduceMotion.matches) return;
-    els.forEach(el => {
-      const a = first.get(el), b = el.getBoundingClientRect();
-      el.animate([{ transform: `translate(${a.left - b.left}px,${a.top - b.top}px) scale(${a.width / b.width},${a.height / b.height})`, transformOrigin: 'top left' }, { transform: 'none', transformOrigin: 'top left' }], { duration: 650, easing: 'cubic-bezier(.2,.75,.2,1)' });
-    });
-  }
-  applySort(states[0]);
-  setInterval(() => { if (current !== 'sort' || motionPaused) return; si = (si + 1) % states.length; applySort(states[si]); }, 2300);
-
-  // Quick search panel typing
-  let quickRun = 0;
-  async function quickType() {
-    const run = ++quickRun; const el = $('.qk-typed'); const t = 'invoice from gmail';
-    el.textContent = '';
-    await sleep(1600);
-    for (let n = 0; n <= t.length; n++) { if (run !== quickRun) return; el.textContent = t.slice(0, n); await sleep(55); }
-  }
+  // Panels with two screenshots: switch the picture in place
+  $$('.shot-tabs').forEach(group => group.addEventListener('click', e => {
+    const b = e.target.closest('[data-shot]'); if (!b) return;
+    $$('button', group).forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    const img = $('.shot img', group.closest('.fp')); img.src = b.dataset.shot; img.alt = b.dataset.alt;
+  }));
 
   activate('search');
 }

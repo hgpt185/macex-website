@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MacEx Docs</title>
+  <meta name="description" content="Learn MacEx in five minutes: install it, search in plain words, preview files, free up space and tidy your Downloads.">
+  <meta name="theme-color" content="#f7f9fc">
+  <link rel="icon" href="../assets/mascot.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="docs.css">
+  <script src="../config.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.500M12 7.800v.2"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4.500 7h15M4.500 12h15M4.500 17h15"/></symbol>
+  </defs>
+</svg>
+
+<header class="docs-bar">
+  <div class="docs-bar-in">
+    <a class="brand" href="../" aria-label="MacEx home"><img src="../assets/mascot.svg" alt="" width="32" height="32">MacEx <span>Docs</span></a>
+    <label class="docs-search"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg><input id="docs-q" type="search" placeholder="Search the docs" autocomplete="off" aria-label="Search the docs"><kbd>/</kbd></label>
+    <a class="site-link" href="../">MacEx home</a>
+    <a class="button small" href="../#pricing" data-buy>Buy</a>
+    <button class="docs-menu" id="docs-menu" aria-expanded="false" aria-controls="docs-side"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg> Menu</button>
+  </div>
+</header>
+
+<div class="docs-wrap">
+  <nav class="docs-side" id="docs-side" aria-label="Docs">
+    <b>Learn</b>
+    <a href="#start">Start here</a>
+    <a href="#install">Install MacEx</a>
+    <a href="#buy">Buy MacEx</a>
+    <a href="#access">Allow folder access</a>
+    <b>Everyday</b>
+    <a href="#library">Your library</a>
+    <a href="#search">Search in plain words</a>
+    <a href="#preview">Preview and Copy Text</a>
+    <a href="#views">Grid, list and sorting</a>
+    <a href="#music">Music</a>
+    <b>Clean up</b>
+    <a href="#free-up-space">Free up space</a>
+    <a href="#duplicates">Duplicates and similar photos</a>
+    <a href="#tidy">Tidy Downloads</a>
+    <a href="#trash">Trash and restore</a>
+    <a href="#automation">Automation rules</a>
+    <b>Go further</b>
+    <a href="#sources">Downloaded From</a>
+    <a href="#quick-search">Quick Search and the menu bar</a>
+    <a href="#shortcuts-app">Shortcuts and links</a>
+    <a href="#connections">Connections (SFTP)</a>
+    <b>Help</b>
+    <a href="#shortcuts">Keyboard shortcuts</a>
+    <a href="#troubleshooting">Troubleshooting</a>
+    <a href="#privacy">Privacy and permissions</a>
+  </nav>
+
+  <main class="docs-main" id="main">
+
+    <section id="start">
+      <span class="group-tag">Learn</span>
+      <h1>Feel at home in MacEx in five minutes.</h1>
+      <p class="lead">Four short lessons. Each one is something to try on your own files.</p>
+      <div class="lessons">
+        <a class="lesson" href="#search"><i>1</i><span><b>Find a file by describing it</b><small>&ldquo;pdfs from last week over 5 mb&rdquo;</small></span><span>1 minute</span></a>
+        <a class="lesson" href="#preview"><i>2</i><span><b>Peek without opening</b><small>Select a file and press Space</small></span><span>30 seconds</span></a>
+        <a class="lesson" href="#free-up-space"><i>3</i><span><b>Free up space</b><small>Review first, then move to Trash</small></span><span>2 minutes</span></a>
+        <a class="lesson" href="#tidy"><i>4</i><span><b>Tidy your Downloads</b><small>One click, and ⌘Z puts it all back</small></span><span>1 minute</span></a>
+      </div>
+
+      <h3>Three things that make everything easier</h3>
+      <ul>
+        <li><b>Everything happens in one window.</b> Files open, preview and play inside MacEx.</li>
+        <li><b>Nothing is deleted for good.</b> Cleanup only ever moves files to Trash, and only the ones you pick.</li>
+        <li><b>Back and Forward always work.</b> Use the toolbar arrows or <kbd>⌘</kbd><kbd>[</kbd> and <kbd>⌘</kbd><kbd>]</kbd>.</li>
+      </ul>
+
+      <h3>I want to&hellip;</h3>
+      <div class="wants">
+        <a class="want" href="#search"><b>Find a file</b><span><kbd>⌘</kbd><kbd>F</kbd></span><small>Type what you remember about it.</small></a>
+        <a class="want" href="#preview"><b>Look inside a file</b><span><kbd>Space</kbd></span><small>Arrow keys move to the next one.</small></a>
+        <a class="want" href="#preview"><b>Copy text from an image</b><span><kbd>⇧</kbd><kbd>⌘</kbd><kbd>C</kbd></span><small>Works on images and PDFs.</small></a>
+        <a class="want" href="#free-up-space"><b>Make room on my Mac</b><span><kbd>⇧</kbd><kbd>⌘</kbd><kbd>K</kbd></span><small>Opens Free Up Space.</small></a>
+        <a class="want" href="#sources"><b>See where a download came from</b><span><kbd>⇧</kbd><kbd>⌘</kbd><kbd>J</kbd></span><small>Groups downloads by website.</small></a>
+        <a class="want" href="#quick-search"><b>Search from any app</b><span><kbd>⇧</kbd><kbd>⌘</kbd><kbd>Space</kbd></span><small>Brings MacEx forward, ready to type.</small></a>
+      </div>
+
+      <div class="ask-box">
+        <h3>Ask AI about MacEx</h3>
+        <p>Opens the assistant in a new tab with a question about MacEx already typed. Your question goes to that company. AI can make mistakes, so check anything important against these docs.</p>
+        <div class="ask-links">
+          <a data-ai="chatgpt" href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a>
+          <a data-ai="claude" href="https://claude.ai/" target="_blank" rel="noopener">Claude</a>
+          <a data-ai="perplexity" href="https://www.perplexity.ai/" target="_blank" rel="noopener">Perplexity</a>
+          <a data-ai="google" href="https://www.google.com/" target="_blank" rel="noopener">AI Mode</a>
+          <a data-ai="grok" href="https://grok.com/" target="_blank" rel="noopener">Grok</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="install">
+      <span class="group-tag">Learn</span>
+      <h2>Install MacEx</h2>
+      <p>MacEx needs macOS 14 Sonoma or later. It runs on Apple silicon and Intel Macs.</p>
+      <ol>
+        <li>Open the MacEx disk image you downloaded.</li>
+        <li>Drag <b>MacEx</b> into your <b>Applications</b> folder.</li>
+        <li>Open MacEx from Applications.</li>
+      </ol>
+      <div class="note warn"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><div><b>If macOS says it can&rsquo;t check the app.</b> MacEx is not yet notarized by Apple. Open <b>System Settings → Privacy &amp; Security</b>, scroll down, and click <b>Open Anyway</b> next to MacEx. You only do this once.</div></div>
+    </section>
+
+    <section id="buy">
+      <span class="group-tag">Learn</span>
+      <h2>Buy MacEx</h2>
+      <p>MacEx is a one-time purchase. There is no subscription and no account to create.</p>
+      <div class="buy-row"><a class="button" href="../#pricing" data-buy>Get MacEx · $9.99</a><span>Launch price, <s>$19.98</s></span></div>
+      <ul>
+        <li>Checkout is handled by Dodo Payments.</li>
+        <li>Your receipt arrives by email.</li>
+        <li>Every feature is included, and updates are free.</li>
+      </ul>
+    </section>
+
+    <section id="access">
+      <span class="group-tag">Learn</span>
+      <h2>Allow folder access</h2>
+      <p>The first time MacEx looks in Desktop, Documents or Downloads, macOS asks if that&rsquo;s OK. Click <b>Allow</b> for the folders you want in your library.</p>
+      <p>MacEx looks in your Desktop, Documents, Downloads, Pictures, Music and Movies folders, and lists your installed apps.</p>
+      <h3>Add or remove folders</h3>
+      <ul>
+        <li>Click <b>Add Folder</b> in the sidebar to include a folder from anywhere. You can add up to eight.</li>
+        <li>Open <b>Settings → Library</b> to remove a location you don&rsquo;t want.</li>
+      </ul>
+      <div class="note"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><div>Changed your mind? Open <b>System Settings → Privacy &amp; Security → Files and Folders</b> and switch a folder on or off for MacEx.</div></div>
+    </section>
+
+    <section id="library">
+      <span class="group-tag">Everyday</span>
+      <h2>Your library</h2>
+      <p>Home shows everything MacEx found, sorted into Images, Videos, Music, Documents, Archives and Apps. Click a folder to open it.</p>
+      <figure class="docs-shot"><img src="../assets/app/home.jpg" width="1800" height="1190" loading="lazy" alt="MacEx Home with category folders for Images, Videos, Music, Documents, Archives and Apps"></figure>
+      <ul>
+        <li><b>Recents</b> lists your newest files first.</li>
+        <li><b>Locations</b> opens a real folder, such as Desktop or Downloads.</li>
+        <li><b>Workspaces</b> group files for a project without moving them.</li>
+        <li>Double-click a file to open it in its usual app. Folders open inside MacEx.</li>
+      </ul>
+    </section>
+
+    <section id="search">
+      <span class="group-tag">Everyday</span>
+      <h2>Search in plain words</h2>
+      <p>Press <kbd>⌘</kbd><kbd>F</kbd> and type what you remember. MacEx turns your words into filters and shows them under <b>Understood as</b>.</p>
+      <figure class="docs-shot"><img src="../assets/app/search.jpg" width="1800" height="1190" loading="lazy" alt="MacEx search results for pdfs from last week over 5 mb, with filter chips for PDF, last week and at least 5 MB"></figure>
+      <h3>Things you can type</h3>
+      <ul class="examples">
+        <li>pdfs from last week over 5 mb</li>
+        <li>videos from my iphone in august</li>
+        <li>screenshots with wifi password</li>
+        <li>zips bigger than 1gb older than 6 months</li>
+        <li>pdfs from gmail</li>
+        <li>large videos in Downloads</li>
+      </ul>
+      <h3>Fix a filter</h3>
+      <ul>
+        <li>Click the <b>×</b> on a chip to remove that filter.</li>
+        <li>Click <b>Edit Filters</b> to change the type, size, source or date yourself.</li>
+        <li>Click the bookmark to save the search to your sidebar.</li>
+      </ul>
+      <h3>Good to know</h3>
+      <ul>
+        <li>&ldquo;Last week&rdquo; means the previous calendar week.</li>
+        <li>Sizes use decimal units: 1 MB is 1,000,000 bytes.</li>
+        <li>A file with no camera, source or date information is left out when you filter by that.</li>
+        <li>To find words inside images and PDFs, turn on <b>Settings → Text Search</b>.</li>
+      </ul>
+    </section>
+
+    <section id="preview">
+      <span class="group-tag">Everyday</span>
+      <h2>Preview and Copy Text</h2>
+      <p>Select a file and press <kbd>Space</kbd>. The preview opens inside the window. Press <kbd>←</kbd> or <kbd>→</kbd> to flip through files, and <kbd>Space</kbd> or <kbd>Esc</kbd> to close.</p>
+      <figure class="docs-shot"><img src="../assets/app/preview.jpg" width="1800" height="1190" loading="lazy" alt="MacEx previewing a screenshot in place"></figure>
+      <h3>Copy text out of an image or PDF</h3>
+      <p>Select the file and press <kbd>⇧</kbd><kbd>⌘</kbd><kbd>C</kbd>, or click <b>Copy Text</b> in the toolbar. The text is on your clipboard.</p>
+      <ul>
+        <li>You can select up to 20 files and copy the text from all of them at once.</li>
+        <li>Recognition can miss words, especially in blurry images.</li>
+      </ul>
+      <h3>See the details</h3>
+      <p>Press <kbd>⌘</kbd><kbd>I</kbd> to open the Inspector. It shows size, dates, dimensions, duration, camera and where the file came from, when that information exists.</p>
+    </section>
+
+    <section id="views">
+      <span class="group-tag">Everyday</span>
+      <h2>Grid, list and sorting</h2>
+      <figure class="docs-shot"><img src="../assets/app/images-grid.jpg" width="1800" height="1190" loading="lazy" alt="MacEx Images library as a thumbnail grid"></figure>
+      <table class="keys">
+        <tr><td>Thumbnail grid</td><td><kbd>⌘</kbd><kbd>1</kbd></td></tr>
+        <tr><td>List</td><td><kbd>⌘</kbd><kbd>2</kbd></td></tr>
+        <tr><td>Bigger or smaller cards</td><td><kbd>⌘</kbd><kbd>+</kbd> <kbd>⌘</kbd><kbd>−</kbd></td></tr>
+        <tr><td>Two folders side by side</td><td><kbd>⌘</kbd><kbd>\</kbd></td></tr>
+        <tr><td>Light or dark</td><td><kbd>⌃</kbd><kbd>⌘</kbd><kbd>T</kbd></td></tr>
+      </table>
+      <p>Click the arrows button in the toolbar to change the sort order. Choose System, Light or Dark in Settings.</p>
+    </section>
+
+    <section id="music">
+      <span class="group-tag">Everyday</span>
+      <h2>Music</h2>
+      <p>Double-click a song. It plays in the toolbar and keeps playing while you browse.</p>
+      <table class="keys">
+        <tr><td>Play or pause</td><td><kbd>⌘</kbd><kbd>Space</kbd></td></tr>
+        <tr><td>Previous or next track</td><td><kbd>⌘</kbd><kbd>←</kbd> <kbd>⌘</kbd><kbd>→</kbd></td></tr>
+      </table>
+    </section>
+
+    <section id="free-up-space">
+      <span class="group-tag">Clean up</span>
+      <h2>Free up space</h2>
+      <p>Open <b>Free Up Space</b> in the sidebar, or press <kbd>⇧</kbd><kbd>⌘</kbd><kbd>K</kbd>. MacEx sorts what it found into two groups.</p>
+      <figure class="docs-shot"><img src="../assets/app/free-up-space.jpg" width="1800" height="1190" loading="lazy" alt="MacEx Free Up Space page with Safe to clear and Your call groups"></figure>
+      <ul>
+        <li><b>Safe to clear:</b> old installers, forgotten downloads, old screenshots and empty files.</li>
+        <li><b>Your call:</b> large files, big old videos, duplicates, similar photos and apps you haven&rsquo;t used.</li>
+      </ul>
+      <ol>
+        <li>Click a row to see the files inside it.</li>
+        <li>Tick what you want gone.</li>
+        <li>Review the list, then move it to Trash.</li>
+      </ol>
+      <div class="note"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><div>Nothing is ticked for you, and nothing is deleted for good. Files stay in Trash until you empty it. &ldquo;Safe to clear&rdquo; is a suggestion based on age and type, so have a look before you clear.</div></div>
+      <p>Use <b>Older than 90 days</b> at the top right to change what counts as old.</p>
+    </section>
+
+    <section id="duplicates">
+      <span class="group-tag">Clean up</span>
+      <h2>Duplicates and similar photos</h2>
+      <p>Press <kbd>⇧</kbd><kbd>⌘</kbd><kbd>D</kbd>, or click <b>Find Duplicates</b> in Free Up Space.</p>
+      <ul>
+        <li><b>Duplicates</b> are exact copies. MacEx compares the files byte for byte before calling them the same.</li>
+        <li>MacEx suggests which copy to keep. You choose what goes to Trash.</li>
+        <li><b>Similar photos</b> are bursts and near-identical shots. They look alike but are not identical, so review each group yourself.</li>
+      </ul>
+    </section>
+
+    <section id="tidy">
+      <span class="group-tag">Clean up</span>
+      <h2>Tidy Downloads</h2>
+      <p>Click <b>Tidy Downloads</b> in the sidebar. MacEx shows where each file will go before anything moves.</p>
+      <figure class="docs-shot"><img src="../assets/app/tidy-downloads.jpg" width="1800" height="1190" loading="lazy" alt="MacEx Tidy Downloads sheet listing each file and the folder it will move to"></figure>
+      <ul>
+        <li>Files are sorted into folders such as Images, Documents and Archives inside Downloads.</li>
+        <li>Existing files are never replaced.</li>
+        <li>Press <kbd>⌘</kbd><kbd>Z</kbd> to put everything back.</li>
+      </ul>
+    </section>
+
+    <section id="trash">
+      <span class="group-tag">Clean up</span>
+      <h2>Trash and restore</h2>
+      <p>Click the Trash icon at the bottom of the sidebar. MacEx remembers the last 500 files it moved there and where each one came from.</p>
+      <ul>
+        <li>Choose a file and restore it to its original folder.</li>
+        <li>Restoring never replaces a file that is already there.</li>
+        <li>Files you already emptied from Trash can&rsquo;t be restored.</li>
+      </ul>
+    </section>
+
+    <section id="automation">
+      <span class="group-tag">Clean up</span>
+      <h2>Automation rules</h2>
+      <p>Rules are off until you turn them on in <b>Settings → Automation</b>. They only work in folders you added yourself with Add Folder.</p>
+      <ul>
+        <li><b>Old installers:</b> move <code>.dmg</code> and <code>.pkg</code> files to Trash after the number of days you set.</li>
+        <li><b>Screenshots:</b> file screenshots into a folder for each month.</li>
+      </ul>
+      <p>Rules run every 30 minutes while MacEx is open. They never delete a file for good.</p>
+    </section>
+
+    <section id="sources">
+      <span class="group-tag">Go further</span>
+      <h2>Downloaded From</h2>
+      <p>Press <kbd>⇧</kbd><kbd>⌘</kbd><kbd>J</kbd> to see your downloads grouped by the website they came from. Click a website to see its files.</p>
+      <figure class="docs-shot"><img src="../assets/app/downloaded-from.jpg" width="1800" height="1190" loading="lazy" alt="MacEx Downloaded From page listing websites with file counts and sizes"></figure>
+      <ul>
+        <li>You can also search for it: <code>pdfs from gmail</code>.</li>
+        <li>MacEx reads the source your browser saved with the file. If there isn&rsquo;t one, the source stays unknown.</li>
+        <li>Only the website name is kept. Full links and your browsing history are not stored, and no website is contacted.</li>
+      </ul>
+    </section>
+
+    <section id="quick-search">
+      <span class="group-tag">Go further</span>
+      <h2>Quick Search and the menu bar</h2>
+      <p>Press <kbd>⇧</kbd><kbd>⌘</kbd><kbd>Space</kbd> in any app. MacEx comes forward with the search field ready.</p>
+      <figure class="docs-shot"><img src="../assets/app/quick-search.jpg" width="1800" height="1190" loading="lazy" alt="MacEx Quick Search settings with the shortcut and menu bar option"></figure>
+      <ul>
+        <li>Change the shortcut in <b>Settings → Quick Search</b>.</li>
+        <li>Turn on <b>Latest downloads in the menu bar</b> to see your ten newest downloads. Drag one out, or click it to open it in MacEx.</li>
+      </ul>
+    </section>
+
+    <section id="shortcuts-app">
+      <span class="group-tag">Go further</span>
+      <h2>Shortcuts and links</h2>
+      <p>MacEx adds three actions to the Shortcuts app:</p>
+      <ul>
+        <li><b>Find Files</b></li>
+        <li><b>Get Latest Download</b></li>
+        <li><b>Search in MacEx</b></li>
+      </ul>
+      <p>You can also open a search from a link: <code>macex://search?query=pdfs from last week</code></p>
+    </section>
+
+    <section id="connections">
+      <span class="group-tag">Go further</span>
+      <h2>Connections (SFTP)</h2>
+      <p>Click <b>Connections</b> in the sidebar, or press <kbd>⌘</kbd><kbd>K</kbd>, to browse a server in the same window.</p>
+      <figure class="docs-shot"><img src="../assets/app/connections.jpg" width="1800" height="1190" loading="lazy" alt="MacEx new SFTP connection form"></figure>
+      <ol>
+        <li>Enter the host and your username.</li>
+        <li>Choose how to sign in: password, private key or SSH agent.</li>
+        <li>Click <b>Connect</b>. The first time, MacEx shows the server&rsquo;s fingerprint. Check it before you confirm.</li>
+      </ol>
+      <ul>
+        <li>Your password is saved to Keychain only if you ask.</li>
+        <li>If a server&rsquo;s fingerprint changes, MacEx stops and asks you to review it.</li>
+        <li>Uploads and downloads never replace a file that already exists.</li>
+        <li>A transfer you cancel can leave a partial file behind. MacEx tells you which one.</li>
+      </ul>
+    </section>
+
+    <section id="shortcuts">
+      <span class="group-tag">Help</span>
+      <h2>Keyboard shortcuts</h2>
+      <p>Press <kbd>⌘</kbd><kbd>/</kbd> in MacEx to see this list at any time.</p>
+      <table class="keys">
+        <tr><th colspan="2">Find and look</th></tr>
+        <tr><td>Search</td><td><kbd>⌘</kbd><kbd>F</kbd></td></tr>
+        <tr><td>Quick Search from any app</td><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>Space</kbd></td></tr>
+        <tr><td>Preview</td><td><kbd>Space</kbd></td></tr>
+        <tr><td>Open</td><td><kbd>⌘</kbd><kbd>O</kbd></td></tr>
+        <tr><td>Inspector</td><td><kbd>⌘</kbd><kbd>I</kbd></td></tr>
+        <tr><td>Copy Text</td><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>C</kbd></td></tr>
+        <tr><th colspan="2">Get around</th></tr>
+        <tr><td>Back and Forward</td><td><kbd>⌘</kbd><kbd>[</kbd> <kbd>⌘</kbd><kbd>]</kbd></td></tr>
+        <tr><td>Home</td><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>H</kbd></td></tr>
+        <tr><td>Go to Folder</td><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd></td></tr>
+        <tr><td>Downloaded From</td><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>J</kbd></td></tr>
+        <tr><td>Free Up Space</td><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>K</kbd></td></tr>
+        <tr><td>Duplicates</td><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>D</kbd></td></tr>
+        <tr><td>Connect with SFTP</td><td><kbd>⌘</kbd><kbd>K</kbd></td></tr>
+        <tr><td>Settings</td><td><kbd>⌘</kbd><kbd>,</kbd></td></tr>
+        <tr><th colspan="2">View</th></tr>
+        <tr><td>Grid and List</td><td><kbd>⌘</kbd><kbd>1</kbd> <kbd>⌘</kbd><kbd>2</kbd></td></tr>
+        <tr><td>Bigger or smaller cards</td><td><kbd>⌘</kbd><kbd>+</kbd> <kbd>⌘</kbd><kbd>−</kbd></td></tr>
+        <tr><td>Split View</td><td><kbd>⌘</kbd><kbd>\</kbd></td></tr>
+        <tr><td>Light or dark</td><td><kbd>⌃</kbd><kbd>⌘</kbd><kbd>T</kbd></td></tr>
+        <tr><td>Refresh</td><td><kbd>⌘</kbd><kbd>R</kbd></td></tr>
+        <tr><th colspan="2">Files</th></tr>
+        <tr><td>New Folder</td><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>N</kbd></td></tr>
+        <tr><td>Duplicate</td><td><kbd>⌘</kbd><kbd>D</kbd></td></tr>
+        <tr><td>Move to Trash</td><td><kbd>⌘</kbd><kbd>⌫</kbd></td></tr>
+        <tr><td>Undo</td><td><kbd>⌘</kbd><kbd>Z</kbd></td></tr>
+        <tr><td>Copy or move to the other pane</td><td><kbd>F5</kbd> <kbd>F6</kbd></td></tr>
+        <tr><th colspan="2">Music</th></tr>
+        <tr><td>Play or pause</td><td><kbd>⌘</kbd><kbd>Space</kbd></td></tr>
+        <tr><td>Previous or next track</td><td><kbd>⌘</kbd><kbd>←</kbd> <kbd>⌘</kbd><kbd>→</kbd></td></tr>
+      </table>
+    </section>
+
+    <section id="troubleshooting">
+      <span class="group-tag">Help</span>
+      <h2>Troubleshooting</h2>
+      <h3>macOS won&rsquo;t open MacEx</h3>
+      <p>Open <b>System Settings → Privacy &amp; Security</b>, scroll down, and click <b>Open Anyway</b>. See <a href="#install">Install MacEx</a>.</p>
+      <h3>Some of my files are missing</h3>
+      <ul>
+        <li>Check that MacEx is allowed to read the folder. See <a href="#access">Allow folder access</a>.</li>
+        <li>Open <b>Settings → Library</b>. It lists any location MacEx couldn&rsquo;t read.</li>
+        <li>Press <kbd>⌘</kbd><kbd>R</kbd> to refresh.</li>
+        <li>Hidden files and the insides of app bundles are left out on purpose.</li>
+      </ul>
+      <h3>Search can&rsquo;t find words inside my images</h3>
+      <ul>
+        <li>Turn on <b>Settings → Text Search</b>.</li>
+        <li>Give it time. Reading a large library takes a while, and MacEx slows down on battery or in Low Power Mode.</li>
+      </ul>
+      <h3>&ldquo;From my iPhone&rdquo; or &ldquo;from Gmail&rdquo; misses files</h3>
+      <p>Those filters rely on information saved inside the file. A file without camera or source information is left out.</p>
+      <h3>Quick Search does nothing</h3>
+      <p>Another app is probably using the same shortcut. Pick a different one in <b>Settings → Quick Search</b>.</p>
+      <h3>An iCloud file shows no thumbnail</h3>
+      <p>Files stored only in iCloud are listed, but MacEx never downloads them for you.</p>
+    </section>
+
+    <section id="privacy">
+      <span class="group-tag">Help</span>
+      <h2>Privacy and permissions</h2>
+      <p>MacEx works on your Mac. There is no account and no cloud AI.</p>
+      <figure class="docs-shot"><img src="../assets/app/text-search.jpg" width="1800" height="1190" loading="lazy" alt="MacEx Text Search settings explaining that recognition runs on this Mac"></figure>
+      <ul>
+        <li><b>Search</b> runs on your Mac.</li>
+        <li><b>Text recognition</b> is off until you turn it on, and uses Apple&rsquo;s on-device Vision.</li>
+        <li><b>iCloud files</b> that are online-only are never downloaded by MacEx.</li>
+        <li><b>Download sources</b> are kept as website names only.</li>
+        <li><b>Server passwords</b> go to your Keychain, and only if you choose to save them.</li>
+        <li><b>Update checks</b> are off until you turn them on.</li>
+      </ul>
+      <h3>Where MacEx keeps its data</h3>
+      <p>Library details, settings, recognized text and Trash history are stored in <code>~/Library/Application Support/MacEx/</code>.</p>
+      <h3>What MacEx can&rsquo;t do</h3>
+      <p>MacEx runs as you. It can&rsquo;t read a folder macOS hasn&rsquo;t allowed, and it never changes your system permissions for you.</p>
+    </section>
+
+    <p class="no-match" id="no-match">Nothing in the docs matches that. Try a shorter word.</p>
+  </main>
+</div>
+
+<footer class="docs-foot"><div><span>MacEx. Your Mac, explored.</span><span><a href="../">MacEx home</a> · <a href="../#pricing">Pricing</a> · <a href="#" data-support hidden>Email support</a></span></div></footer>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const sections = $$('.docs-main > section'), links = $$('.docs-side a'), side = $('#docs-side'), menu = $('#docs-menu'), q = $('#docs-q');
+
+  // highlight the section being read
+  const byId = Object.fromEntries(links.map(a => [a.getAttribute('href').slice(1), a]));
+  const spy = () => {
+    let cur = sections.find(s => !s.hidden) || sections[0];
+    for (const s of sections) if (!s.hidden && s.getBoundingClientRect().top < 140) cur = s;
+    links.forEach(a => a.classList.toggle('on', a === byId[cur.id]));
+  };
+  addEventListener('scroll', spy, { passive: true }); spy();
+
+  // filter sections as you type
+  q.addEventListener('input', () => {
+    const t = q.value.trim().toLowerCase(); let shown = 0;
+    sections.forEach(s => { const on = !t || s.textContent.toLowerCase().includes(t); s.hidden = !on; if (byId[s.id]) byId[s.id].hidden = !on; shown += on; });
+    $$('.docs-side b').forEach(b => { let n = b.nextElementSibling, any = false; while (n && n.tagName === 'A') { any = any || !n.hidden; n = n.nextElementSibling; } b.hidden = !any; });
+    $('#no-match').classList.toggle('show', !shown); spy();
+  });
+  addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement !== q) { e.preventDefault(); q.focus(); }
+    if (e.key === 'Escape' && document.activeElement === q) { q.value = ''; q.dispatchEvent(new Event('input')); q.blur(); }
+  });
+
+  // small screens: the sidebar is a menu
+  const setMenu = open => { side.classList.toggle('open', open); menu.setAttribute('aria-expanded', String(open)); };
+  menu.addEventListener('click', () => setMenu(!side.classList.contains('open')));
+  side.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+})();
+</script>
+</body>
+</html>
