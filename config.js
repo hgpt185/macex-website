@@ -12,7 +12,7 @@ window.MACEX = {
   supportEmail: '',
 
   // Public address of this site, used in the "Ask AI" prompts.
-  siteUrl: 'https://hgpt185.github.io/macex-website/',
+  siteUrl: 'https://macex.app/',
 
   // Licenses shown on the pricing card. Add more rows (with their own checkoutUrl)
   // to show the 1 Mac / 3 Macs / 5 Macs switcher.

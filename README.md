@@ -1,6 +1,6 @@
 # MacEx Website
 
-Official static marketing website for MacEx, a paid file library app for macOS.
+Official static marketing website for MacEx, a paid file library app for macOS. Live at **https://macex.app**.
 
 ## Files
 - `index.html`: hero, live demo inside a MacBook Pro, feature explorer, pricing, FAQs, footer
@@ -19,7 +19,7 @@ Set these in `config.js`:
 - `checkoutUrl`: the Dodo Payments checkout link. Until it is set, the "Get MacEx" buttons scroll to the pricing card.
 - `downloadUrl`: link to the `.dmg`. Until it is set, "Download for Mac" is hidden.
 - `supportEmail`: until it is set, "Email support" is hidden.
-- `siteUrl`: the public address, used in the "Ask AI" prompts.
+- `siteUrl`: the public address (`https://macex.app/`), used in the "Ask AI" prompts.
 
 ## Run locally
 
@@ -31,19 +31,13 @@ python3 -m http.server 8000
 
 Then visit http://localhost:8000.
 
-## Deploy to GitHub Pages
+## Live site
 
-This repository automatically deploys the static site with [GitHub Actions](.github/workflows/deploy.yml) whenever you push to `main`.
+The site is published at **https://macex.app**.
 
-**One-time setup (repository admin):**
+If you change the domain, update it in `config.js` (`siteUrl`), the `canonical`, `og:` and `twitter:` tags in `index.html` and `docs/index.html`, `robots.txt` and `sitemap.xml`.
 
-1. Open [Settings → Pages](https://github.com/hgpt185/macex-website/settings/pages).
-2. Under **Build and deployment → Source**, select **GitHub Actions**.
-3. Open [Actions → Deploy MacEx website to GitHub Pages](https://github.com/hgpt185/macex-website/actions/workflows/deploy.yml), open the last failed run, and select **Re-run all jobs** (or use **Run workflow**).
-
-Once the deployment succeeds, the site will be published at:
-
-https://hgpt185.github.io/macex-website/
+`assets/og-image.png` is the 1200×630 picture shown when the link is shared.
 
 ## Credits
 
