@@ -20,11 +20,15 @@ Then visit http://localhost:8000.
 
 ## Deploy to GitHub Pages
 
-1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select branch **main**, folder **/(root)**, then **Save**.
+This repository automatically deploys the static site with [GitHub Actions](.github/workflows/deploy.yml) whenever you push to `main`.
 
-After GitHub Pages finishes publishing, the site URL should be:
+**One-time setup (repository admin):**
+
+1. Open [Settings → Pages](https://github.com/hgpt185/macex-website/settings/pages).
+2. Under **Build and deployment → Source**, select **GitHub Actions**.
+3. Open [Actions → Deploy MacEx website to GitHub Pages](https://github.com/hgpt185/macex-website/actions/workflows/deploy.yml), open the last failed run, and select **Re-run all jobs** (or use **Run workflow**).
+
+Once the deployment succeeds, the site will be published at:
 
 https://hgpt185.github.io/macex-website/
 
