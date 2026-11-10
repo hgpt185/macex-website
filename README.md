@@ -39,6 +39,14 @@ If you change the domain, update it in `config.js` (`siteUrl`), the `canonical`,
 
 `assets/og-image.png` is the 1200×630 picture shown when the link is shared.
 
+## SEO files
+
+- `robots.txt`, `sitemap.xml`: crawling and the list of pages (update `lastmod` when a page changes)
+- `llms.txt`: a plain-text summary of MacEx for AI search tools
+- `404.html`: the "page not found" page, so missing addresses return a real 404
+- `site.webmanifest`, `assets/icon-*.png`, `assets/apple-touch-icon.png`: app icons
+- Structured data (JSON-LD) sits in the `<head>` of `index.html` (Organization, WebSite, SoftwareApplication with the price) and `docs/index.html` (TechArticle, BreadcrumbList). Keep the price in it in step with `config.js`.
+
 ## Credits
 
 MacEx. Your Mac. Explored.

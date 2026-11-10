@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>MacEx: a happier home for your files</title>
-  <meta name="description" content="Meet MacEx, the file library for Mac. Search in plain words, preview in place, and free up space with confidence. Built for macOS 14 and later.">
+  <title>MacEx – Find, Preview &amp; Clean Up Files on Your Mac</title>
+  <meta name="description" content="MacEx is a file library app for Mac. Find any file by describing it, preview without opening, remove duplicates and free up space safely. One-time $9.99.">
   <meta name="theme-color" content="#f7f9fc">
   <link rel="canonical" href="https://macex.app/">
   <meta property="og:site_name" content="MacEx">
@@ -20,7 +20,64 @@
   <meta name="twitter:title" content="MacEx: a happier home for your files">
   <meta name="twitter:description" content="Search the way you think. A native file library for your Mac.">
   <meta name="twitter:image" content="https://macex.app/assets/og-image.png">
-  <link rel="icon" href="assets/mascot.svg">
+  <link rel="icon" href="assets/mascot.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://macex.app/#organization",
+        "name": "MacEx",
+        "url": "https://macex.app/",
+        "logo": "https://macex.app/assets/icon-512.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://macex.app/#website",
+        "name": "MacEx",
+        "url": "https://macex.app/",
+        "publisher": { "@id": "https://macex.app/#organization" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://macex.app/#app",
+        "name": "MacEx",
+        "url": "https://macex.app/",
+        "description": "A file library app for Mac. Search your files in plain words, preview them without opening, see where downloads came from, and free up space by reviewing old installers, forgotten downloads and duplicates before they go to Trash.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS 14 or later",
+        "image": "https://macex.app/assets/icon-512.png",
+        "screenshot": [
+          "https://macex.app/assets/app/home.jpg",
+          "https://macex.app/assets/app/search.jpg",
+          "https://macex.app/assets/app/free-up-space.jpg"
+        ],
+        "featureList": [
+          "Natural-language file search",
+          "Free Up Space cleanup with review before Trash",
+          "Duplicate and similar photo finder",
+          "Download source grouping and Tidy Downloads",
+          "In-place preview and Copy Text from images",
+          "Quick Search from any app",
+          "SFTP connections",
+          "On-device text recognition"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "9.99",
+          "priceCurrency": "USD",
+          "url": "https://macex.app/#pricing",
+          "availability": "https://schema.org/InStock"
+        },
+        "publisher": { "@id": "https://macex.app/#organization" }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@600;700;800&display=swap">
@@ -383,6 +440,8 @@
     <details><summary>Is it a subscription?<span>+</span></summary><p>No. MacEx is a one-time purchase. Pay once and keep it.</p></details>
     <details><summary>Do I need an account?<span>+</span></summary><p>No. There is no account to create and no API key to set up. Checkout is handled by Dodo Payments.</p></details>
     <details><summary>Which Macs can run it?<span>+</span></summary><p>MacEx needs macOS 14 Sonoma or later and runs on Apple silicon and Intel Macs.</p></details>
+    <details><summary>How is MacEx different from Finder?<span>+</span></summary><p>Finder shows your files folder by folder. MacEx gathers everything into one library sorted by kind, so you can find a file by describing it (&ldquo;pdfs from last week over 5&nbsp;mb&rdquo;) instead of remembering where you saved it. It also shows where each download came from and what&rsquo;s safe to clear. Your files stay exactly where they are.</p></details>
+    <details><summary>Can MacEx find duplicate files and free up space?<span>+</span></summary><p>Yes. Free Up Space lists old installers, forgotten downloads, old screenshots, big old videos and duplicate files. Duplicates are compared byte for byte before they&rsquo;re shown, and nothing is removed until you review it and move it to Trash.</p></details>
     <details><summary>Does it move my files around?<span>+</span></summary><p>Browsing your library never reorganizes the originals. Cleanup moves only what you select to Trash. Tidy Downloads runs only when you ask, never replaces existing files, and ⌘Z puts everything back. Automation rules are off until you turn them on.</p></details>
     <details><summary>Does search send my files to AI?<span>+</span></summary><p>No. Search runs on your Mac and turns your words into filters you can edit. Finding words inside images and PDFs is a separate switch, and it uses Apple&rsquo;s on-device text recognition.</p></details>
     <details><summary>macOS warned me when I opened it. Is that normal?<span>+</span></summary><p>MacEx is not yet notarized by Apple, so macOS can show a warning the first time you open it. <a href="docs/#install">The install guide</a> shows how to open it.</p></details>

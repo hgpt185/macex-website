@@ -1,0 +1,30 @@
+# MacEx
+
+> MacEx is a file library app for Mac (macOS 14 or later, Apple silicon and Intel). It gathers your images, videos, music, documents, archives and apps into one library, lets you find files by describing them in plain words, previews files without opening another app, and helps you free up space by reviewing old installers, forgotten downloads and duplicates before they go to Trash. It is a one-time purchase ($9.99 launch price, usually $19.98) with no subscription and no account.
+
+Key facts:
+
+- Search in plain words: "pdfs from last week over 5 mb" becomes PDF, last week and at least 5 MB filters you can see and edit.
+- Free Up Space: lists old installers, forgotten downloads, old screenshots, big old videos and duplicates. Duplicates are compared byte for byte. Nothing is deleted for good; selected files move to Trash and can be restored.
+- Smart Downloads: groups downloads by the website they came from (for example Gmail, Slack, Drive) and tidies the Downloads folder in one click; ⌘Z undoes it.
+- Preview: press Space to look inside photos, PDFs and videos in place; copy text out of images and PDFs.
+- Quick Search: ⇧⌘Space brings MacEx forward from any app.
+- Connections: browse, upload and download files on servers over SFTP, with host-key verification.
+- Privacy: search and text recognition run on the Mac. No account and no cloud AI.
+
+## Pages
+
+- [MacEx home](https://macex.app/): features, live in-browser demo, keyboard shortcuts, pricing and FAQ
+- [MacEx Docs](https://macex.app/docs/): install, search, preview, Free Up Space, duplicates, Tidy Downloads, Trash, automation, Quick Search, SFTP, keyboard shortcuts, troubleshooting, privacy
+
+## Docs sections
+
+- [Install MacEx](https://macex.app/docs/#install)
+- [Search in plain words](https://macex.app/docs/#search)
+- [Preview and Copy Text](https://macex.app/docs/#preview)
+- [Free up space](https://macex.app/docs/#free-up-space)
+- [Duplicates and similar photos](https://macex.app/docs/#duplicates)
+- [Tidy Downloads](https://macex.app/docs/#tidy)
+- [Keyboard shortcuts](https://macex.app/docs/#shortcuts)
+- [Troubleshooting](https://macex.app/docs/#troubleshooting)
+- [Privacy and permissions](https://macex.app/docs/#privacy)
