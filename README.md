@@ -1,6 +1,6 @@
 # MacEx Website
 
-Official static marketing website for [MacEx](https://github.com/hgpt185/MacEx), a free, open-source macOS file explorer.
+Official static marketing website for [MacEx](https://github.com/hgpt185/MacEx), a macOS file explorer.
 
 ## Files
 - `index.html`: hero, live demo inside a MacBook Pro, feature explorer, FAQs, download links

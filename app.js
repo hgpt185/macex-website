@@ -353,7 +353,7 @@ function initHero() {
   document.addEventListener('click', e => {
     const b = e.target.closest('[data-try]');
     if (!b) return;
-    $('#demo').scrollIntoView({ behavior: motionPaused ? 'auto' : 'smooth', block: 'start' });
+    $('#mac-stage').scrollIntoView({ behavior: motionPaused ? 'auto' : 'smooth', block: 'start' });
     setTimeout(() => Demo.typeSearch(b.dataset.try), motionPaused ? 50 : 700);
   });
 }
@@ -772,7 +772,7 @@ const Demo = (() => {
     const mod = e.metaKey || e.ctrlKey;
     if (mod && e.key.toLowerCase() === 'k') {
       e.preventDefault();
-      if (!stage.classList.contains('fs')) $('#demo').scrollIntoView({ behavior: motionPaused ? 'auto' : 'smooth', block: 'start' });
+      if (!stage.classList.contains('fs')) $('#mac-stage').scrollIntoView({ behavior: motionPaused ? 'auto' : 'smooth', block: 'start' });
       openLid(); setTimeout(() => input.focus({ preventScroll: true }), 300);
       return;
     }

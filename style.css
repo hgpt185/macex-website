@@ -538,14 +538,14 @@ body.fs-lock{overflow:hidden}
 .badge{font-style:normal;font-size:10px;font-weight:700;letter-spacing:.06em;padding:2px 7px;border-radius:99px;background:linear-gradient(90deg,#1772ed,#7a6cff);color:#fff}
 .c-blue{--c:#1772ed}.c-pink{--c:#d24bea}.c-violet{--c:#7a6cff}.c-green{--c:#1fae6a}.c-orange{--c:#f2853a}.c-teal{--c:#14a8b8}.c-slate{--c:#56657f}.c-ink{--c:#1b2537}
 .feature-panels{position:relative;min-height:640px}
-.fp{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:32px;align-items:center;padding:32px 32px 32px 38px;border-radius:28px;background:#fff;box-shadow:0 0 0 1px #e3e9f2 inset,0 40px 80px -50px #1b2b4a55;min-height:640px}
+.fp{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:32px;align-items:center;padding:32px 32px 32px 38px;border-radius:28px;background:#fff;box-shadow:0 0 0 1px #e3e9f2 inset,0 40px 80px -50px #1b2b4a55;min-height:640px}
 .fp[hidden]{display:none}
 .fp.active{animation:panel-in .55s var(--ease) both}
 .fp-kicker{font-size:11.5px;font-weight:700;letter-spacing:.16em;color:var(--c)}
 .fp h3{font:800 clamp(28px,2.6vw,36px)/1.08 var(--display);letter-spacing:-.04em;margin:14px 0 16px}
-.fp-copy>p{font-size:15.5px;line-height:1.7;color:var(--muted);margin:0}
-.fp-points{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
-.fp-points li{position:relative;padding-left:26px;font-size:14.5px;line-height:1.6;color:var(--muted)}
+.fp-copy>p{font-size:16px;line-height:1.5;color:var(--muted);margin:0}
+.fp-points{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px}
+.fp-points li{position:relative;padding-left:26px;font-size:14.5px;line-height:1.45;color:var(--muted)}
 .fp-points li:before{content:"";position:absolute;left:2px;top:7px;width:12px;height:12px;border-radius:4px;background:var(--blue);opacity:.18}
 .fp-points li:after{content:"";position:absolute;left:5px;top:10px;width:6px;height:6px;border-radius:2px;background:var(--blue)}
 .fp-points b{color:var(--ink);font-weight:600}
@@ -887,4 +887,22 @@ body.fs-lock{overflow:hidden}
   .mac-stage.fs .mbp-hinge,.mac-stage.fs .mbp-base,.mac-stage.fs .mbp-feet,.mac-stage.fs .mbp-shadow{display:none}
   .mac-stage.fs .tour{position:fixed;left:0;right:0;bottom:14px;margin:0;justify-content:center}
   .mac-stage.fs .tour-steps{display:none}
+}
+
+/* live demo: laptop + tour commands share one viewport at 100% zoom */
+@media (min-width:701px){
+  .demo-section{padding:28px 0 20px}
+  .demo-section .section-head{margin-bottom:18px}
+  .demo-section h2{font-size:clamp(32px,4vw,44px);margin-top:8px}
+  .demo-section .section-head p{font-size:15px;line-height:1.5;margin-top:8px}
+  /* anchors land with the laptop just under the nav; laptop + command row fill the rest of the viewport */
+  .mac-stage{--W:min(1180px,calc(100vw - 48px),max(480px,calc((100vh - 156px)/.62)))}
+  /* the tour spans the page container, not the (height-limited) laptop width */
+  .mac-stage:not(.fs) .tour{position:relative;left:50%;translate:-50% 0;width:min(1180px,calc(100vw - 48px));margin-top:14px;gap:8px}
+  .mac-stage:not(.fs) .tour-step small{display:none}
+  .demo-note{margin-top:8px;font-size:12px}
+}
+@media (min-width:1081px){
+  .tour{flex-direction:row;flex-wrap:wrap;justify-content:center}
+  .mac-stage:not(.fs) .tour-steps{flex-wrap:nowrap}
 }
