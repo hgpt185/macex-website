@@ -9,7 +9,8 @@ Official static marketing website for MacEx, a paid file library app for macOS.
 - `style.css`: responsive design, the CSS MacBook, motion effects and footer wordmark
 - `app.js`: sample library, natural-search parser, the in-browser MacEx demo and feature panels
 - `assets/mascot.svg`: MacEx mascot and favicon
-- `assets/app/`: screenshots of the real app, taken with a sample library
+- `assets/app/`: screenshots of the real app, taken with a sample library (used by the docs)
+- `assets/video/`: screen recordings of each feature (`.mp4`) with poster frames (`.jpg`), played in the Features section
 
 ## Before going live
 

@@ -986,7 +986,25 @@ function initFeatures() {
     current = key;
     tabs.forEach(t => { const on = t.dataset.feature === key; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; if (on && focus) t.focus({ preventScroll: true }); if (on) { const nav = t.parentElement; if (nav.scrollWidth > nav.clientWidth) nav.scrollTo({ left: t.offsetLeft - nav.clientWidth / 2 + t.offsetWidth / 2, behavior: 'smooth' }); } });
     panels.forEach(p => { const on = p.id === 'fp-' + key; p.hidden = !on; p.classList.remove('active'); if (on) { void p.offsetWidth; p.classList.add('active'); } });
+    syncVideos(true);
   }
+
+  // Feature videos: only the open tab plays, and only while the section is on screen
+  const featureVideos = $$('.fp video');
+  let featuresVisible = !('IntersectionObserver' in window);
+  function syncVideos(restart = false) {
+    featureVideos.forEach(v => {
+      const live = !v.closest('.fp').hidden;
+      v.controls = motionPaused;
+      if (live && featuresVisible && !motionPaused) {
+        if (v.preload !== 'auto') { v.preload = 'auto'; v.load(); }
+        if (restart) v.currentTime = 0;
+        v.play().catch(() => { v.controls = true; });
+      } else if (!v.paused) v.pause();
+    });
+  }
+  window.syncFeatureVideos = syncVideos;
+  if ('IntersectionObserver' in window) new IntersectionObserver(([e]) => { featuresVisible = e.isIntersecting; syncVideos(); }, { threshold: .2 }).observe($('.feature-panels'));
   tabs.forEach((t, i) => {
     t.addEventListener('click', () => activate(t.dataset.feature));
     t.addEventListener('keydown', e => {
@@ -996,13 +1014,6 @@ function initFeatures() {
       if (e.key === 'End') { e.preventDefault(); activate(tabs[tabs.length - 1].dataset.feature, true); }
     });
   });
-
-  // Panels with two screenshots: switch the picture in place
-  $$('.shot-tabs').forEach(group => group.addEventListener('click', e => {
-    const b = e.target.closest('[data-shot]'); if (!b) return;
-    $$('button', group).forEach(x => x.setAttribute('aria-pressed', String(x === b)));
-    const img = $('.shot img', group.closest('.fp')); img.src = b.dataset.shot; img.alt = b.dataset.alt;
-  }));
 
   activate('search');
 }
@@ -1019,7 +1030,7 @@ function initPage() {
   const nav = $('.nav-wrap');
   addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 10), { passive: true });
   const mb = $('#motion-toggle');
-  const setMotion = () => { document.documentElement.classList.toggle('motion-paused', motionPaused); mb.textContent = motionPaused ? 'Resume motion' : 'Pause motion'; mb.setAttribute('aria-pressed', String(motionPaused)); };
+  const setMotion = () => { document.documentElement.classList.toggle('motion-paused', motionPaused); mb.textContent = motionPaused ? 'Resume motion' : 'Pause motion'; mb.setAttribute('aria-pressed', String(motionPaused)); window.syncFeatureVideos?.(); };
   mb.addEventListener('click', () => { motionPaused = !motionPaused; setMotion(); });
   reduceMotion.addEventListener('change', e => { motionPaused = e.matches; setMotion(); });
   setMotion();
