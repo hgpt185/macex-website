@@ -328,6 +328,10 @@ function initHero() {
     }
   })();
 
+  // Shrink the mascot, rings and cards with the stage so the first screen fits the window
+  const fitStage = () => stage.style.setProperty('--k', clamp(stage.clientHeight / 480, .55, 1).toFixed(3));
+  if ('ResizeObserver' in window) new ResizeObserver(fitStage).observe(stage); fitStage();
+
   // Gentle parallax
   const layers = $$('[data-depth]', stage);
   let raf = 0, tx = 0, ty = 0;
@@ -1029,9 +1033,8 @@ function initPage() {
   }
   const nav = $('.nav-wrap');
   addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 10), { passive: true });
-  const mb = $('#motion-toggle');
-  const setMotion = () => { document.documentElement.classList.toggle('motion-paused', motionPaused); mb.textContent = motionPaused ? 'Resume motion' : 'Pause motion'; mb.setAttribute('aria-pressed', String(motionPaused)); window.syncFeatureVideos?.(); };
-  mb.addEventListener('click', () => { motionPaused = !motionPaused; setMotion(); });
+  // Animations follow the system "Reduce motion" setting
+  const setMotion = () => { document.documentElement.classList.toggle('motion-paused', motionPaused); window.syncFeatureVideos?.(); };
   reduceMotion.addEventListener('change', e => { motionPaused = e.matches; setMotion(); });
   setMotion();
 }

@@ -43,11 +43,10 @@ window.MACEX = {
       const tabs = card.querySelector('[data-plan-tabs]');
       const paint = () => {
         const macs = plan.macs === 1 ? '1 Mac' : plan.macs + ' Macs';
-        card.querySelector('[data-plan-sub]').textContent = 'Personal license for ' + macs;
-        card.querySelector('[data-price]').textContent = money(plan.price);
-        const was = card.querySelector('[data-was]');
-        was.textContent = plan.was > plan.price ? money(plan.was) : '';
-        card.querySelector('[data-buy-label]').textContent = 'Buy MacEx · ' + money(plan.price);
+        card.querySelectorAll('[data-plan-sub]').forEach(el => { el.textContent = macs; });
+        card.querySelectorAll('[data-price]').forEach(el => { el.textContent = money(plan.price); });
+        card.querySelectorAll('[data-was]').forEach(el => { el.textContent = plan.was > plan.price ? money(plan.was) : ''; });
+        card.querySelectorAll('[data-buy-label]').forEach(el => { el.textContent = 'Get MacEx, ' + money(plan.price); });
         all('[data-plan]').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.plan === plan.macs)));
         paintBuy();
       };
@@ -59,6 +58,21 @@ window.MACEX = {
       paint();
     }
     paintBuy();
+
+    // Ticket notches sit where the dashed tear line meets the edge: top and bottom on wide
+    // screens, left and right once the card stacks into one column
+    const ticket = document.querySelector('.ticket'), side = ticket && ticket.querySelector('.tk-side');
+    if (side) {
+      const notch = () => {
+        const across = side.offsetLeft > 0;
+        // centre on the 1.5px dashed line
+        const x = side.offsetLeft + .75, y = side.offsetTop + .75;
+        ticket.style.setProperty('--n1', across ? x + 'px 0' : '0 ' + y + 'px');
+        ticket.style.setProperty('--n2', across ? x + 'px 100%' : '100% ' + y + 'px');
+      };
+      if ('ResizeObserver' in window) new ResizeObserver(notch).observe(ticket);
+      notch();
+    }
 
     all('[data-download]').forEach(a => { if (C.downloadUrl) { a.href = C.downloadUrl; a.hidden = false; } else a.hidden = true; });
     all('[data-support]').forEach(a => { if (C.supportEmail) { a.href = 'mailto:' + C.supportEmail; a.hidden = false; } else a.hidden = true; });
