@@ -104,6 +104,9 @@ h2 .serif{font-size:1.12em;color:var(--blue);letter-spacing:-.02em}
 .float-card .th{height:84px;border-radius:10px;margin-bottom:9px}
 .float-card span{display:block;font-size:12px;font-weight:600;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .float-card small{display:block;font-size:11px;color:var(--soft);margin-top:1px}
+/* decorative labels come from data-t, so crawlers don't read sample file names as page text */
+.float-card span::before,.float-card small::before{content:attr(data-t)}
+.hero-copy strong{color:var(--ink);font-weight:600}
 .fc-photo{left:2%;top:8%;rotate:-8deg;animation:bob 7s -2s ease-in-out infinite}
 .fc-pdf{right:3%;top:2%;rotate:9deg;animation:bob 8s -4s ease-in-out infinite}
 .fc-music{left:12%;top:56%;rotate:6deg;width:138px;animation:bob 7.5s -1s ease-in-out infinite}
@@ -544,6 +547,18 @@ body.fs-lock{overflow:hidden}
 .fp-head p{margin:0;max-width:720px;font-size:16px;line-height:1.6;color:var(--muted)}
 .shot{margin:0;padding:clamp(12px,2.4vw,28px);border-radius:20px;background:radial-gradient(ellipse at 20% 0%,#dfeaff,transparent 60%),radial-gradient(ellipse at 90% 100%,#ece2ff,transparent 60%),#eef2f9}
 .shot img,.shot video{display:block;width:100%;height:auto;aspect-ratio:1440/952;background:#1c1d22;border-radius:1.1%/1.65%;box-shadow:0 0 0 1px #0b0e1740,0 30px 60px -30px #0b1328bb,0 8px 20px -12px #0b132866}
+
+/* features: plain summary under the tabs */
+.glance{margin-top:56px;padding:34px clamp(20px,3vw,40px);border-radius:28px;background:#ffffffb3;box-shadow:0 0 0 1px #e3e9f2 inset}
+.glance h3{margin:0 0 20px;font:800 24px/1.2 var(--display);letter-spacing:-.03em}
+.glance dl{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.glance dl>div{padding-top:16px;border-top:1px solid var(--line)}
+.glance dt{font-weight:700;font-size:15.5px;color:var(--ink)}
+.glance dd{margin:4px 0 0;font-size:15px;line-height:1.6;color:var(--muted)}
+.glance kbd{font-size:.82em}
+.glance-more{margin:24px 0 0;font-size:15px}
+.glance-more a{display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-weight:600}
+@media (max-width:700px){.glance dl{grid-template-columns:1fr}.glance{margin-top:36px}}
 
 /* =========================================================
    KEYBOARD SHORTCUTS
