@@ -1,76 +1,495 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>MacEx — A happier home for your files.</title>
-  <meta name="description" content="Meet MacEx, the free, open-source file library for Mac. Find files naturally, preview in place, and clean up with confidence. Built for macOS 14 and later.">
-  <meta name="theme-color" content="#f8fafc">
-  <meta property="og:title" content="MacEx — A happier home for your files."><meta property="og:description" content="Less digging. More doing. A native, open-source file library for your Mac."><meta property="og:type" content="website"><meta property="og:image" content="assets/mascot.svg">
-  <link rel="icon" href="assets/mascot.svg"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MacEx: a happier home for your files</title>
+  <meta name="description" content="Meet MacEx, the free, open-source file library for Mac. Search in plain words, preview in place, and free up space with confidence. Built for macOS 14 and later.">
+  <meta name="theme-color" content="#f7f9fc">
+  <meta property="og:title" content="MacEx: a happier home for your files">
+  <meta property="og:description" content="Search the way you think. A native, open-source file library for your Mac.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/mascot.svg">
+  <link rel="icon" href="assets/mascot.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="nav-wrap"><nav class="nav container" aria-label="Main navigation">
-  <a class="brand" href="#" aria-label="MacEx home"><img src="assets/mascot.svg" alt="" width="38" height="38">MacEx<span class="beta">PREVIEW</span></a>
-  <div class="nav-links"><a href="#features">Features</a><a href="#playground">Take a look</a><a href="#faq">FAQs</a><a href="https://github.com/hgpt185/MacEx" target="_blank" rel="noreferrer">GitHub <svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
-  <a class="button small" href="#download">Get MacEx <span><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
-</nav></header>
-<main id="main">
-<section class="hero container">
-  <div class="eyebrow"><span class="status-dot"></span> A LITTLE MORE JOY. A LOT LESS SEARCHING.</div>
-  <h1>A happier home<br>for your <span class="word-files">files.<svg viewBox="0 0 220 18" aria-hidden="true"><path d="M4 12 Q100 -1 214 8"/></svg></span></h1>
-  <p class="hero-copy">Everything on your Mac, a little more together.<br>Find it. Preview it. Get on with the good stuff.</p>
-  <div class="hero-actions"><a class="button" href="#download"> Get MacEx for Mac <span><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></span></a><a class="text-link" href="#playground">Meet your new file library <span><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5l14 14M5 19h14V5"/></svg></span></a></div>
-  <p class="fine">Free & open source <span>·</span> macOS 14+ <span>·</span> No account needed</p>
-  <div class="hero-scene" aria-label="MacEx mascot surrounded by file illustrations">
-    <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-    <div class="floating-file photo-float"><div class="landscape"><span></span></div><span>weekend.heic</span></div>
-    <div class="floating-file doc-float"><b class="doc-mark">PDF</b><i></i><i></i><i></i><span>the-big-idea.pdf</span></div>
-    <div class="floating-file music-float"><b>♫</b><span>good-vibes.mp3</span></div>
-    <div class="floating-file zip-float"><b>ZIP</b><span>everything.zip</span></div>
-    <div class="mascot-halo"></div><img class="hero-mascot" src="assets/mascot.svg" alt="MacEx's smiling blue folder mascot" width="340" height="340" fetchpriority="high">
-    <div class="speech">Found it. <span>✦</span></div><span class="scene-spark s1">✦</span><span class="scene-spark s2">✧</span>
-    <span class="scene-caption">Your files. Finally, in good company.</span>
-  </div>
-</section>
-<section class="playground-section" id="playground">
- <div class="container">
-  <div class="section-top reveal"><div><span class="eyebrow blue">MEET YOUR NEW EVERYDAY</span><h2>Many files.<br>One lovely place.</h2></div><p>Photos, PDFs, playlists, that thing you downloaded.<br>MacEx brings them into one calm, native window.</p></div>
-  <div class="window-wrap reveal">
-   <div class="demo-window">
-    <div class="window-chrome"><span class="traffic"><i></i><i></i><i></i></span><span>MacEx</span><span class="chrome-caption">Interactive preview</span></div>
-    <div class="window-body">
-     <aside class="sidebar" aria-label="Demo categories"><div class="side-brand"><img src="assets/mascot.svg" width="28" height="28" alt="">Your library</div><span class="side-label">LIBRARY</span><button data-category="all" class="active" aria-pressed="true"><span>⌂</span> All files <small>8</small></button><button data-category="image" aria-pressed="false"><span>▧</span> Images <small>3</small></button><button data-category="document" aria-pressed="false"><span>▤</span> Documents <small>3</small></button><button data-category="music" aria-pressed="false"><span>♫</span> Music <small>1</small></button><button data-category="archive" aria-pressed="false"><span>▣</span> Archives <small>1</small></button><span class="side-label">A LITTLE TIDIER</span><a href="#cleanup"><span>♧</span> Clean Up</a><a href="#features"><span>⌘</span> Quick Search</a><div class="local-badge"><span class="status-dot"></span> Right here on your Mac</div></aside>
-     <div class="library-main"><div class="library-toolbar"><div><h3 id="library-title">All your files</h3><p id="result-count" aria-live="polite">8 items, a little more organized.</p></div><button class="icon-button" id="view-toggle" aria-label="Switch to list view" aria-pressed="false">☷</button></div><label class="search-box"><span aria-hidden="true">⌕</span><input id="demo-search" placeholder="Try ‘PDFs over 5 MB’" aria-label="Search sample files"><kbd>⌘ K</kbd></label><div class="quick-searches"><span>Try it:</span><button data-query="PDFs over 5 MB">PDFs over 5 MB</button><button data-query="images">Images</button><button data-query="github">From GitHub</button><button id="reset-demo">Reset <svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 9M4 4v6h6"/></svg></button></div><div id="demo-files" class="files-grid"></div><div class="demo-status"><span><i></i> Local files. No cloud required.</span><span>Illustrative demo · sample files</span></div></div>
+
+<!-- Icon sprite: line icons drawn for this site -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2.5"/><circle cx="9" cy="10" r="1.6"/><path d="m4 17 5-4.5 3.5 3 3-2.5L20 17"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2.5"/><path d="m10.5 9.2 4.3 2.8-4.3 2.8z"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V6.5l10-2V16"/><circle cx="6.8" cy="18" r="2.2"/><circle cx="16.8" cy="16" r="2.2"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3.5H7.5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V8z"/><path d="M14 3.5V8h4.5M9 12.5h6M9 16h4"/></symbol>
+    <symbol id="i-archive" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="4.5" rx="1.2"/><path d="M5 9v9a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 18V9M10 13h4"/></symbol>
+    <symbol id="i-apps" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.6"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.6"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.6"/></symbol>
+    <symbol id="i-desktop" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="12" rx="1.8"/><path d="M9 20h6M12 16.5V20"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v8M8.5 12.5 12 16l3.5-3.5"/></symbol>
+    <symbol id="i-film" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="1.8"/><path d="M7.5 4.5v15M16.5 4.5v15M3.5 9h4M3.5 14.5h4M16.5 9h4M16.5 14.5h4"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3.5 7.5a2 2 0 0 1 2-2h4l2 2.2h7a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M10 3.5c.6 3.8 2.2 5.4 6 6-3.8.6-5.4 2.2-6 6-.6-3.8-2.2-5.4-6-6 3.8-.6 5.4-2.2 6-6zM17.5 14c.3 2 1.1 2.8 3 3-1.9.3-2.7 1.1-3 3-.3-1.9-1.1-2.7-3-3 1.9-.2 2.7-1 3-3z"/></symbol>
+    <symbol id="i-wand" viewBox="0 0 24 24"><path d="m4 20 10.5-10.5M13 6l1.2-2.5L15.4 6l2.5 1.2-2.5 1.2-1.2 2.5L13 8.4l-2.5-1.2zM18.5 13.5l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4-1.4-.6 1.4-.6z"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.5 5.4 3.5 8.5s-1 5.9-3.5 8.5c-2.5-2.6-3.5-5.4-3.5-8.5s1-5.9 3.5-8.5z"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4.5 6.5h15M9.5 6.5V4.5h5v2M6.5 6.5l.9 12.2a1.5 1.5 0 0 0 1.5 1.3h6.2a1.5 1.5 0 0 0 1.5-1.3l.9-12.2M10 10.5v6M14 10.5v6"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3.5v2.2M12 18.3v2.2M20.5 12h-2.2M5.7 12H3.5M18 6l-1.6 1.6M7.6 16.4 6 18M18 18l-1.6-1.6M7.6 7.6 6 6"/></symbol>
+    <symbol id="i-sidebar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2.5"/><path d="M9.5 5v14M5.8 8.5h1.6M5.8 11h1.6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m14.5 6-6 6 6 6"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9.5 6 6 6-6 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.6"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19.5 14.5A7.5 7.5 0 0 1 9.5 4.5a7.5 7.5 0 1 0 10 10z"/></symbol>
+    <symbol id="i-split" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2.5"/><path d="M12 5v14"/></symbol>
+    <symbol id="i-inspector" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2.5"/><path d="M14.5 5v14M16.6 8.5h1.6M16.6 11h1.6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+    <symbol id="i-sort" viewBox="0 0 24 24"><path d="M8 19V5M4.5 8.5 8 5l3.5 3.5M16 5v14M12.5 15.5 16 19l3.5-3.5"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4.5" y="4.5" width="6" height="6" rx="1.2"/><rect x="13.5" y="4.5" width="6" height="6" rx="1.2"/><rect x="4.5" y="13.5" width="6" height="6" rx="1.2"/><rect x="13.5" y="13.5" width="6" height="6" rx="1.2"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6.5h11M9 12h11M9 17.5h11"/><circle cx="5" cy="6.5" r=".6"/><circle cx="5" cy="12" r=".6"/><circle cx="5" cy="17.5" r=".6"/></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M7 4.5h10v15l-5-3.5-5 3.5z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14" rx="2"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5.5 12.5 4 4 9-9"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m6.5 6.5 11 11M17.5 6.5l-11 11"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5.5v13M16 5.5v13"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M14.5 4.5h5v5M9.5 19.5h-5v-5M19.5 4.5l-6 6M4.5 19.5l6-6"/></symbol>
+    <symbol id="i-shrink" viewBox="0 0 24 24"><path d="M19.5 9.5h-5v-5M4.5 14.5h5v5M14.5 9.5l6-6M9.5 14.5l-6 6"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4.5 10.5a8 8 0 1 1 1.6 6.8M4.5 4.5v6h6"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3.5 5.5 13.5H12l-1 7 7.5-10H12z"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="4" y="4.5" width="16" height="6.5" rx="1.6"/><rect x="4" y="13" width="16" height="6.5" rx="1.6"/><path d="M7.5 7.75h.01M7.5 16.25h.01"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path d="M5 6.5V5h14v1.5M12 5v14M9.5 19h5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 19 6v5.5c0 4.3-3 7.6-7 9-4-1.4-7-4.7-7-9V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4.5v15M6 13.5l6 6 6-6"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav-wrap">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="MacEx home"><img src="assets/mascot.svg" alt="" width="34" height="34">MacEx<span class="beta">PREVIEW</span></a>
+    <div class="nav-links">
+      <a href="#demo">Try it live</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQs</a>
+      <a href="https://github.com/hgpt185/MacEx" target="_blank" rel="noreferrer">GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
-   </div>
-   <span class="demo-note">Go on, search around. Click a file to preview it. <span><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 19 5 5M5 19V5h14"/></svg></span></span>
+    <a class="button small" href="#download">Get MacEx <svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ============ PAGE 1: HERO ============ -->
+<section class="hero" id="top">
+  <div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i><i class="a4"></i></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <a class="pill-eyebrow" href="https://github.com/hgpt185/MacEx/releases" target="_blank" rel="noreferrer"><span class="status-dot"></span> Free &amp; open source <span class="sep"></span> macOS 14+ <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <h1 class="hero-title">
+      <span class="line"><span class="word">A</span> <span class="word">happier</span> <span class="word">home</span></span>
+      <span class="line"><span class="word">for</span> <span class="word">your</span> <em class="word serif">files.</em></span>
+    </h1>
+    <p class="hero-copy">Everything on your Mac, in one calm window.<br class="br-wide"> Search the way you think. Peek without opening. Make room with confidence.</p>
+    <div class="hero-actions">
+      <a class="button" href="#download">Get MacEx for Mac <svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></a>
+      <a class="button ghost" href="#demo">Try it live <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+
+    <div class="hero-stage" id="hero-stage">
+      <div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="float-card fc-photo" data-depth="18" aria-hidden="true"><div class="th th-sunset"></div><span>golden-hour.heic</span><small>3.2 MB · iPhone</small></div>
+      <div class="float-card fc-pdf" data-depth="28" aria-hidden="true"><div class="th th-doc"><b>PDF</b></div><span>the-big-idea.pdf</span><small>8.4 MB · Gmail</small></div>
+      <div class="float-card fc-music" data-depth="14" aria-hidden="true"><div class="th th-music"></div><span>good-vibes.mp3</span><small>6.8 MB · Music</small></div>
+      <div class="float-card fc-zip" data-depth="24" aria-hidden="true"><div class="th th-zip"></div><span>MacEx-source.zip</span><small>12.6 MB · GitHub</small></div>
+      <div class="float-card fc-shot" data-depth="10" aria-hidden="true"><div class="th th-shot"></div><span>Screenshot 10.24.png</span><small>1.1 MB · Desktop</small></div>
+      <div class="mascot-wrap" data-depth="6" aria-hidden="true">
+        <div class="mascot-glow"></div>
+        <img class="hero-mascot" src="assets/mascot.svg" alt="" width="300" height="300" fetchpriority="high">
+      </div>
+      <div class="hero-search" aria-label="Example: MacEx turns a plain sentence into search filters">
+        <div class="hs-field"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg><span id="hero-query"></span><i class="caret" aria-hidden="true"></i><kbd>⌘F</kbd></div>
+        <div class="hs-chips" id="hero-chips"><span class="hs-label">Understood as</span></div>
+      </div>
+    </div>
   </div>
- </div>
+  <a class="scroll-cue" href="#demo" aria-label="Scroll to the live demo"><span></span></a>
 </section>
-<div class="principles container reveal"><span>Made for <b>macOS</b></span><span>Built with <b>Swift</b></span><span>Yours to explore. <b>Open source.</b></span><span>Your files stay <b>yours.</b></span></div>
-<section class="features container" id="features">
- <div class="section-heading reveal"><span class="eyebrow blue">LESS FRICTION. MORE FLOW.</span><h2>All the little things.<br><span class="muted">Thoughtfully together.</span></h2><p>A file library that works the way your brain does.</p></div>
- <div class="feature-grid">
-  <article class="feature-card search-card reveal"><div class="card-copy"><span class="feature-num">01 / FIND YOUR FLOW</span><h3>Remember the file.<br>Forget the folder.</h3><p>Search in everyday words. MacEx turns your request into visible filters you can adjust and save.</p></div><div class="query-visual"><span class="query-cursor">⌕</span><span id="animated-query">pdfs from last week over 5 mb</span><span class="caret"></span></div><div class="filter-chips"><span>PDF <i>×</i></span><span>Last week <i>×</i></span><span>&gt; 5 MB <i>×</i></span></div><span class="card-foot">No cloud AI. Just a more natural way to find things.</span></article>
-  <article class="feature-card preview-card reveal"><div class="card-copy"><span class="feature-num">02 / STAY IN THE MOMENT</span><h3>A peek, not a detour.</h3><p>Press Space to preview. Browse images, read PDFs, play music, and copy text from images and PDFs in the same window.</p></div><div class="preview-art"><div class="mini-photo landscape"><span></span></div><div class="space-key">space <span><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></div><span class="text-extracted">✓ Text copied</span></div></article>
-  <article class="feature-card cleanup-card reveal" id="cleanup"><div class="card-copy"><span class="feature-num">03 / A LITTLE ROOM TO BREATHE</span><h3>Less clutter.<br>More clarity.</h3><p>Review duplicates, old downloads, and large files. You choose what goes to Trash. MacEx keeps a history of its moves for restoring later.</p></div><div class="cleanup-visual"><div><span class="file-tile">PDF</span><span>proposal.pdf<small>Keep this copy</small></span><b class="keep">Keep</b></div><div id="duplicate-row"><span class="file-tile faded">PDF</span><span>proposal copy.pdf<small>Identical content</small></span><button id="cleanup-demo">Review</button></div><div class="cleanup-feedback" id="cleanup-feedback" aria-live="polite">You’re in control. Nothing disappears on its own.</div></div></article>
-  <article class="feature-card shortcuts-card reveal"><div class="card-copy"><span class="feature-num">04 / KEEP YOUR MOMENTUM</span><h3>Right at your fingertips.</h3><p>Bring MacEx forward with Quick Search. Pick up your latest downloads from the menu bar. Connect your flow with macOS Shortcuts.</p></div><div class="keyboard-art"><kbd>⇧</kbd><kbd>⌘</kbd><kbd>space</kbd></div><span class="card-foot">Your window. Your shortcut. Your flow.</span></article>
- </div>
- <div class="extra-features reveal"><article><span><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span><h3>Know where it came from</h3><p>Filter downloads by source, when that information is available. GitHub, Gmail, and beyond.</p></article><article><span>⌁</span><h3>Your remote files, too</h3><p>Browse and transfer over SFTP with host-key verification and optional Keychain storage.</p></article><article><span>◐</span><h3>Feels right at home</h3><p>System, Light, or Dark. A native Swift app that remembers how you like things.</p></article></div>
+
+<div class="marquee" aria-label="Things you can type into MacEx search">
+  <div class="marquee-row"><div class="marquee-track" data-row="0"></div></div>
+  <div class="marquee-row reverse"><div class="marquee-track" data-row="1"></div></div>
+</div>
+
+<!-- ============ PAGE 2: LIVE DEMO IN A MACBOOK ============ -->
+<section class="demo-section" id="demo">
+  <div class="container section-head center reveal">
+    <span class="eyebrow">TRY IT LIVE</span>
+    <h2>Go on. <em class="serif">Poke around.</em></h2>
+    <p>This is MacEx running in your browser with sample files. Type a search in plain words, open a category, free up some space. Nothing here can see your real files.</p>
+  </div>
+
+  <div class="mac-stage" id="mac-stage">
+    <div class="mac-ambient" aria-hidden="true"></div>
+    <div class="mbp" id="mbp">
+      <div class="mbp-lid">
+        <div class="mbp-bezel">
+          <div class="mbp-screen" id="mbp-screen">
+            <div class="desktop" id="desktop">
+              <div class="wallpaper" aria-hidden="true"></div>
+              <div class="menubar" aria-hidden="true">
+                <span class="mb-logo"><img src="assets/mascot.svg" alt="" width="14" height="14"></span><b>MacEx</b><span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Window</span><span>Help</span>
+                <span class="mb-right"><svg class="ico"><use href="#i-search"/></svg><i class="mb-battery"></i><span id="mb-clock">Tue 10:24</span></span>
+              </div>
+
+              <!-- The MacEx window -->
+              <div class="app dark" id="app" role="application" aria-label="MacEx interactive demo">
+                <div class="app-toolbar">
+                  <div class="traffic" aria-hidden="true"><i></i><i></i><i></i></div>
+                  <button class="tb-btn" data-act="toggle-sidebar" aria-label="Toggle sidebar"><svg class="ico"><use href="#i-sidebar"/></svg></button>
+                  <button class="tb-btn" data-act="back" aria-label="Back"><svg class="ico"><use href="#i-left"/></svg></button>
+                  <button class="tb-btn" data-act="forward" aria-label="Forward"><svg class="ico"><use href="#i-right"/></svg></button>
+                  <label class="app-search">
+                    <svg class="ico" aria-hidden="true"><use href="#i-search"/></svg>
+                    <input id="app-search" type="text" autocomplete="off" spellcheck="false" placeholder="Search, or try &ldquo;pdfs from last week&rdquo;" aria-label="Search sample files">
+                    <button class="as-clear" data-act="clear-search" aria-label="Clear search"><svg class="ico"><use href="#i-x"/></svg></button>
+                    <kbd>⌘F</kbd>
+                  </label>
+                  <div class="tb-right">
+                    <button class="tb-btn" data-act="theme" aria-label="Switch between light and dark"><svg class="ico"><use href="#i-sun"/></svg></button>
+                    <button class="tb-btn" data-act="toggle-preview" aria-label="Toggle preview pane"><svg class="ico"><use href="#i-inspector"/></svg></button>
+                  </div>
+                </div>
+                <div class="app-body">
+                  <nav class="app-sidebar" id="app-sidebar" aria-label="MacEx sidebar"></nav>
+                  <div class="app-main">
+                    <div class="app-content" id="app-content"></div>
+                    <div class="app-status" id="app-status"></div>
+                  </div>
+                  <aside class="app-preview" id="app-preview" aria-label="Preview"></aside>
+                </div>
+                <div class="app-sheet-wrap" id="app-sheet" hidden></div>
+                <div class="app-toast" id="app-toast" role="status" aria-live="polite"></div>
+              </div>
+            </div>
+            <div class="screen-wake" aria-hidden="true"></div>
+            <span class="mbp-notch" aria-hidden="true"><i></i></span>
+            <span class="mbp-glare" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+      <div class="mbp-hinge" aria-hidden="true"></div>
+      <div class="mbp-base" aria-hidden="true"></div>
+      <div class="mbp-feet" aria-hidden="true"><i></i><i></i></div>
+      <div class="mbp-shadow" aria-hidden="true"></div>
+      <button class="mobile-open" id="mobile-open">Tap to open the demo <svg class="ico" aria-hidden="true"><use href="#i-expand"/></svg></button>
+    </div>
+
+    <div class="tour" id="tour">
+      <div class="tour-steps">
+        <button class="tour-step" data-tour="search"><span class="ts-num">1</span><span><b>Search in plain words</b><small>&ldquo;pdfs from last week over 5 mb&rdquo;</small></span></button>
+        <button class="tour-step" data-tour="preview"><span class="ts-num">2</span><span><b>Peek at a file</b><small>Select it, then press Space</small></span></button>
+        <button class="tour-step" data-tour="space"><span class="ts-num">3</span><span><b>Free up space</b><small>Review first, then choose</small></span></button>
+        <button class="tour-step" data-tour="tidy"><span class="ts-num">4</span><span><b>Tidy Downloads</b><small>One click, fully undoable</small></span></button>
+        <button class="tour-step" data-tour="sort"><span class="ts-num">5</span><span><b>Sort &amp; switch views</b><small>Grid or list, your order</small></span></button>
+      </div>
+      <div class="tour-tools">
+        <button class="chip-btn" data-act="reset-demo"><svg class="ico" aria-hidden="true"><use href="#i-reset"/></svg> Reset</button>
+        <button class="chip-btn" data-act="fullscreen" id="fs-btn"><svg class="ico" aria-hidden="true"><use href="#i-expand"/></svg> <span>Full screen</span></button>
+      </div>
+    </div>
+    <p class="demo-note">Illustrative demo with sample files. <kbd>⌘K</kbd> jumps to search, <kbd>Space</kbd> previews, <kbd>Esc</kbd> closes.</p>
+  </div>
 </section>
-<section class="privacy-section"><div class="container privacy-content reveal"><div class="privacy-orb"><span>⌂</span><div class="orbit"></div></div><div><span class="eyebrow blue">AT HOME ON YOUR MAC</span><h2>Your library.<br>Your business.</h2><p>File discovery, search, and optional text recognition happen locally. No account, subscription, API key, or cloud AI service needed.</p><p class="privacy-note">SFTP connects only to servers you choose. Optional update checks connect to GitHub, without sending your library’s names or contents.</p><a class="text-link" href="https://github.com/hgpt185/MacEx#ocr-local-files-and-resource-bounds" target="_blank" rel="noreferrer">See how MacEx handles your files <span><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a></div></div></section>
-<section class="faq container" id="faq"><div class="reveal"><span class="eyebrow blue">GOOD QUESTIONS</span><h2>A few things<br>you might wonder.</h2><p>Curious about something else?<br><a href="https://github.com/hgpt185/MacEx/issues" target="_blank" rel="noreferrer">Ask on GitHub <svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></p></div><div class="faq-list reveal">
- <details><summary>Is MacEx free?<span>+</span></summary><p>Yes. MacEx is an open-source app with MIT-licensed code. There is no account, subscription, or API key required.</p></details>
- <details><summary>Which Macs can run it?<span>+</span></summary><p>MacEx requires macOS 14 Sonoma or later. The project supports Intel and Apple silicon build targets. Check the latest release notes for the current preview and testing status.</p></details>
- <details><summary>Does it move my files around?<span>+</span></summary><p>Browsing your library does not reorganize the originals. Cleanup moves only your explicit selections to Trash. Optional organization rules are off by default and require a separate opt-in.</p></details>
- <details><summary>Does search send my files to AI?<span>+</span></summary><p>No. Search is local and turns supported phrases into editable filters. Text recognition is a separate opt-in using on-device frameworks; it is not enabled just by opening the app.</p></details>
- <details><summary>Is the download a finished, notarized app?<span>+</span></summary><p>MacEx is currently a GitHub preview. Builds are ad-hoc signed and not Apple-notarized, so macOS may show a security warning. Read the release and installation notes before downloading. Broader runtime checks remain preview gates.</p></details>
- <details><summary>Can I contribute?<span>+</span></summary><p>Absolutely. Explore the source, report an issue, or contribute on <a href="https://github.com/hgpt185/MacEx" target="_blank" rel="noreferrer">GitHub</a>. MacEx is built with Swift and native macOS frameworks.</p></details>
- </div></section>
-<section class="download-section container reveal" id="download"><div class="download-panel"><img src="assets/mascot.svg" alt="The smiling MacEx mascot" width="150" height="150" loading="lazy"><span class="eyebrow blue">LESS DIGGING. MORE DOING.</span><h2>Make yourself<br>right at home.</h2><p>Your next favorite Mac app might just be a folder.</p><a class="button" href="https://github.com/hgpt185/MacEx/releases" target="_blank" rel="noreferrer">Get the free MacEx preview <span><svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></span></a><span class="fine">macOS 14+ · Intel & Apple silicon · Open source</span><p class="release-note">Preview builds are not Apple-notarized.<br><a href="https://github.com/hgpt185/MacEx/blob/main/docs/RELEASE.md" target="_blank" rel="noreferrer">Read installation & release notes <svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></p></div></section>
+
+<!-- ============ PAGE 3: FEATURES ============ -->
+<section class="features" id="features">
+  <div class="container section-head reveal">
+    <span class="eyebrow">EVERYTHING IT DOES</span>
+    <h2>Small app.<br><em class="serif">Big relief.</em></h2>
+    <p>Pick a feature to see how it works. Every one runs on your Mac, with no account and no cloud.</p>
+  </div>
+
+  <div class="container feature-layout">
+    <nav class="feature-nav" aria-label="Features" role="tablist">
+      <button class="fn-item" role="tab" data-feature="search" aria-selected="true" aria-controls="fp-search" id="ft-search"><span class="fn-icon c-blue"><svg class="ico"><use href="#i-search"/></svg></span><span class="fn-text"><b>Natural search <i class="badge">New</i></b><small>Type it how you say it</small></span></button>
+      <button class="fn-item" role="tab" data-feature="space" aria-selected="false" aria-controls="fp-space" id="ft-space" tabindex="-1"><span class="fn-icon c-pink"><svg class="ico"><use href="#i-sparkles"/></svg></span><span class="fn-text"><b>Free Up Space</b><small>Clear clutter, safely</small></span></button>
+      <button class="fn-item" role="tab" data-feature="sort" aria-selected="false" aria-controls="fp-sort" id="ft-sort" tabindex="-1"><span class="fn-icon c-violet"><svg class="ico"><use href="#i-sort"/></svg></span><span class="fn-text"><b>Sorting &amp; views</b><small>Grid, list, your order</small></span></button>
+      <button class="fn-item" role="tab" data-feature="downloads" aria-selected="false" aria-controls="fp-downloads" id="ft-downloads" tabindex="-1"><span class="fn-icon c-green"><svg class="ico"><use href="#i-download"/></svg></span><span class="fn-text"><b>Smart Downloads</b><small>Know where it came from</small></span></button>
+      <button class="fn-item" role="tab" data-feature="preview" aria-selected="false" aria-controls="fp-preview" id="ft-preview" tabindex="-1"><span class="fn-icon c-orange"><svg class="ico"><use href="#i-text"/></svg></span><span class="fn-text"><b>Preview &amp; Copy Text</b><small>A peek, not a detour</small></span></button>
+      <button class="fn-item" role="tab" data-feature="quick" aria-selected="false" aria-controls="fp-quick" id="ft-quick" tabindex="-1"><span class="fn-icon c-teal"><svg class="ico"><use href="#i-bolt"/></svg></span><span class="fn-text"><b>Quick Search &amp; Shortcuts</b><small>One keystroke away</small></span></button>
+      <button class="fn-item" role="tab" data-feature="sftp" aria-selected="false" aria-controls="fp-sftp" id="ft-sftp" tabindex="-1"><span class="fn-icon c-slate"><svg class="ico"><use href="#i-server"/></svg></span><span class="fn-text"><b>Connections</b><small>Your servers, verified</small></span></button>
+      <button class="fn-item" role="tab" data-feature="privacy" aria-selected="false" aria-controls="fp-privacy" id="ft-privacy" tabindex="-1"><span class="fn-icon c-ink"><svg class="ico"><use href="#i-shield"/></svg></span><span class="fn-text"><b>Private by design</b><small>Your files stay yours</small></span></button>
+    </nav>
+
+    <div class="feature-panels">
+
+      <!-- Natural search -->
+      <article class="fp active" id="fp-search" role="tabpanel" aria-labelledby="ft-search">
+        <div class="fp-copy">
+          <span class="fp-kicker c-blue">01 · THE HEADLINER</span>
+          <h3>Remember the file.<br>Forget the folder.</h3>
+          <p>Type what you remember, the way you would say it out loud. MacEx reads the phrase, turns each part into a visible filter, and shows you exactly how it understood you. Don't like a filter? Tap the × and it is gone.</p>
+          <ul class="fp-points">
+            <li><b>Type, size, date and source</b> in one sentence: &ldquo;zips bigger than 1 gb older than 6 months&rdquo;.</li>
+            <li><b>Words inside images and PDFs</b> with on-device text recognition: &ldquo;screenshots with wifi password&rdquo;.</li>
+            <li><b>Save any search</b> to the sidebar. Relative dates stay fresh every time you open it.</li>
+          </ul>
+        </div>
+        <div class="fp-visual">
+          <div class="mock mock-search">
+            <div class="mock-bar"><i></i><i></i><i></i><span>Natural search</span></div>
+            <label class="ms-field"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg><input id="feature-query" type="text" autocomplete="off" spellcheck="false" aria-label="Try a natural search on sample files"><span class="ms-hint">Type your own</span></label>
+            <div class="ms-parse" id="feature-parse" aria-hidden="true"></div>
+            <div class="ms-chips" id="feature-chips" aria-live="polite"></div>
+            <div class="ms-results" id="feature-results"></div>
+            <div class="ms-examples" id="feature-examples"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Free up space -->
+      <article class="fp" id="fp-space" role="tabpanel" aria-labelledby="ft-space" hidden>
+        <div class="fp-copy">
+          <span class="fp-kicker c-pink">02 · ROOM TO BREATHE</span>
+          <h3>Less clutter.<br>More clarity.</h3>
+          <p>Free Up Space scans your library for the usual suspects and sorts them into two honest groups: things that are usually safe to clear, and things only you can decide on. Nothing is removed until you choose it.</p>
+          <ul class="fp-points">
+            <li><b>Safe to clear:</b> old screenshots, old installers, forgotten downloads and empty files.</li>
+            <li><b>Your call:</b> exact duplicates (checked byte for byte), similar photos, big old videos and unused apps.</li>
+            <li><b>Always reversible:</b> files go to Trash, and MacEx keeps a history so you can put them back.</li>
+          </ul>
+        </div>
+        <div class="fp-visual">
+          <div class="mock mock-space dark-mock">
+            <div class="mock-bar"><i></i><i></i><i></i><span>Free Up Space</span></div>
+            <div class="sp-hero"><div><b class="sp-total" data-count="2.9">2.9</b><span> GB safe to clear in 41 files</span></div><span class="sp-btn"><svg class="ico"><use href="#i-check"/></svg> Select all safe</span></div>
+            <div class="sp-bar"><i style="--w:44%;--c:#d24bea"></i><i style="--w:31%;--c:#5b8cff"></i><i style="--w:17%;--c:#2fc4b2"></i><i style="--w:8%;--c:#f2a33a"></i></div>
+            <div class="sp-legend"><span style="--c:#d24bea">Old screenshots</span><span style="--c:#5b8cff">Old installers</span><span style="--c:#2fc4b2">Forgotten downloads</span><span style="--c:#f2a33a">Empty files</span></div>
+            <div class="sp-group">Safe to clear</div>
+            <div class="sp-row"><span class="sp-radio on"></span><span class="sp-ic" style="--c:#d24bea"><svg class="ico"><use href="#i-camera"/></svg></span><span><b>Old screenshots</b><small>Screenshots older than 30 days</small></span><em>1.3 GB</em></div>
+            <div class="sp-row"><span class="sp-radio on"></span><span class="sp-ic" style="--c:#5b8cff"><svg class="ico"><use href="#i-archive"/></svg></span><span><b>Old installers</b><small>.dmg and .pkg files you already used</small></span><em>904 MB</em></div>
+            <div class="sp-row"><span class="sp-radio"></span><span class="sp-ic" style="--c:#2fc4b2"><svg class="ico"><use href="#i-download"/></svg></span><span><b>Forgotten downloads</b><small>Not opened in months</small></span><em>496 MB</em></div>
+            <div class="sp-group">Your call</div>
+            <div class="sp-row"><span class="sp-gap"></span><span class="sp-ic" style="--c:#7b6cff"><svg class="ico"><use href="#i-copy"/></svg></span><span><b>Duplicates</b><small>Exact copies, compared byte for byte</small></span><span class="sp-pill">Find Duplicates</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sorting & views -->
+      <article class="fp" id="fp-sort" role="tabpanel" aria-labelledby="ft-sort" hidden>
+        <div class="fp-copy">
+          <span class="fp-kicker c-violet">03 · YOUR ORDER</span>
+          <h3>Every file has<br>a place. Yours.</h3>
+          <p>MacEx gathers Images, Videos, Music, Documents, Archives and Apps from across your Mac into one library. Browse them as roomy thumbnails or a tidy list, and sort the way your brain works today.</p>
+          <ul class="fp-points">
+            <li><b>Sort by</b> newest, name, size or kind, in grid or list.</li>
+            <li><b>Recents, Large Files and Screenshots</b> shelves, ready on Home.</li>
+            <li><b>Workspaces</b> group files from different folders without moving a thing.</li>
+          </ul>
+        </div>
+        <div class="fp-visual">
+          <div class="mock mock-sort dark-mock" id="mock-sort">
+            <div class="mock-bar"><i></i><i></i><i></i><span>Images</span></div>
+            <div class="so-head"><b><svg class="ico"><use href="#i-image"/></svg> Images <small>8</small></b><span class="so-tools"><span class="so-sort"><svg class="ico"><use href="#i-sort"/></svg><span id="so-label">Newest</span></span><span class="so-seg"><i class="on" id="so-grid"><svg class="ico"><use href="#i-grid"/></svg></i><i id="so-list"><svg class="ico"><use href="#i-list"/></svg></i></span></span></div>
+            <div class="so-items" id="so-items"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Downloads -->
+      <article class="fp" id="fp-downloads" role="tabpanel" aria-labelledby="ft-downloads" hidden>
+        <div class="fp-copy">
+          <span class="fp-kicker c-green">04 · DOWNLOADS, HANDLED</span>
+          <h3>Know where it<br>came from.</h3>
+          <p>Your Mac quietly remembers where each download came from. MacEx puts that to work: filter by Gmail, GitHub, Drive, Slack and more, then tidy the whole folder into neat kinds with a single click.</p>
+          <ul class="fp-points">
+            <li><b>Downloaded From</b> groups files by website. Full links and browsing history are never stored.</li>
+            <li><b>Tidy Downloads</b> sorts files into Images, Documents, Installers and more. Existing files are never replaced, and ⌘Z puts everything back.</li>
+            <li><b>Menu bar shelf</b> shows your ten latest downloads, ready to drag.</li>
+          </ul>
+        </div>
+        <div class="fp-visual">
+          <div class="mock mock-dl dark-mock">
+            <div class="mock-bar"><i></i><i></i><i></i><span>Downloads</span></div>
+            <div class="dl-sources"><span class="on">All</span><span>mail.google.com</span><span>github.com</span><span>drive.google.com</span><span>slack.com</span></div>
+            <div class="dl-stage">
+              <div class="dl-loose" aria-hidden="true">
+                <span class="dl-file f1"><i class="th th-sunset"></i></span><span class="dl-file f2"><i class="th th-doc"></i></span><span class="dl-file f3"><i class="th th-zip"></i></span>
+                <span class="dl-file f4"><i class="th th-dmg"></i></span><span class="dl-file f5"><i class="th th-doc"></i></span><span class="dl-file f6"><i class="th th-ocean"></i></span>
+              </div>
+              <div class="dl-folders">
+                <span><i class="mini-folder"></i>Images</span><span><i class="mini-folder"></i>Documents</span><span><i class="mini-folder"></i>Archives</span><span><i class="mini-folder"></i>Installers</span>
+              </div>
+            </div>
+            <div class="dl-sheet"><svg class="ico"><use href="#i-wand"/></svg><span><b>Tidied 6 files into 4 folders</b><small>⌘Z puts everything back.</small></span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Preview -->
+      <article class="fp" id="fp-preview" role="tabpanel" aria-labelledby="ft-preview" hidden>
+        <div class="fp-copy">
+          <span class="fp-kicker c-orange">05 · STAY IN THE MOMENT</span>
+          <h3>A peek,<br>not a detour.</h3>
+          <p>Press Space and the file opens right beside your library. Flip through photos with the arrow keys, read PDFs, play music, and lift the text straight out of a screenshot or a scanned page.</p>
+          <ul class="fp-points">
+            <li><b>Copy Text</b> from images and PDFs, recognised on your Mac.</li>
+            <li><b>Details that matter:</b> source, dimensions, duration, camera and dates.</li>
+            <li><b>Music keeps playing</b> in the toolbar while you browse.</li>
+          </ul>
+        </div>
+        <div class="fp-visual">
+          <div class="mock mock-preview dark-mock">
+            <div class="mock-bar"><i></i><i></i><i></i><span>Preview</span></div>
+            <div class="pv-body">
+              <div class="pv-shot">
+                <div class="pv-ui"><i></i><i></i><i></i></div>
+                <div class="pv-card"><small>Network</small><b>Studio Wi-Fi</b><small>Password</small><b class="pv-sel">maple-garden-42</b></div>
+              </div>
+              <div class="pv-meta">
+                <b>Screenshot 2026-11-03.png</b>
+                <dl><dt>Kind</dt><dd>PNG image</dd><dt>Size</dt><dd>1.1 MB</dd><dt>Dimensions</dt><dd>2880 × 1800</dd><dt>Where</dt><dd>Desktop</dd></dl>
+                <span class="pv-copy"><svg class="ico"><use href="#i-copy"/></svg> <span>Copy Text</span></span>
+              </div>
+            </div>
+            <div class="pv-keys"><kbd>space</kbd> preview <kbd>←</kbd><kbd>→</kbd> flip through</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Quick search -->
+      <article class="fp" id="fp-quick" role="tabpanel" aria-labelledby="ft-quick" hidden>
+        <div class="fp-copy">
+          <span class="fp-kicker c-teal">06 · KEEP YOUR MOMENTUM</span>
+          <h3>Right at your<br>fingertips.</h3>
+          <p>Press ⇧⌘Space from anywhere and MacEx comes forward with the search field ready. Wire it into your flow with Shortcuts and Siri, or open a search from any app with a simple link.</p>
+          <ul class="fp-points">
+            <li><b>Quick Search</b> on a shortcut you choose.</li>
+            <li><b>Shortcuts actions:</b> Find Files, Get Latest Download, Search in MacEx.</li>
+            <li><b>Links like</b> <code>macex://search?query=…</code> route straight into your window.</li>
+          </ul>
+        </div>
+        <div class="fp-visual">
+          <div class="mock mock-quick">
+            <div class="qk-keys"><kbd>⇧</kbd><kbd>⌘</kbd><kbd class="wide">space</kbd></div>
+            <div class="qk-palette dark-mock">
+              <div class="qk-field"><svg class="ico"><use href="#i-search"/></svg><span class="qk-typed">invoice from gmail</span><i class="caret"></i></div>
+              <div class="qk-row on"><i class="th th-doc"></i><span><b>invoice-0923.pdf</b><small>Downloads · mail.google.com</small></span><kbd>↩</kbd></div>
+              <div class="qk-row"><i class="th th-doc"></i><span><b>invoice-0824.pdf</b><small>Documents · mail.google.com</small></span></div>
+            </div>
+            <div class="qk-shortcuts">
+              <span><svg class="ico"><use href="#i-search"/></svg>Find Files</span>
+              <span><svg class="ico"><use href="#i-download"/></svg>Get Latest Download</span>
+              <span><svg class="ico"><use href="#i-bolt"/></svg>Search in MacEx</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- SFTP -->
+      <article class="fp" id="fp-sftp" role="tabpanel" aria-labelledby="ft-sftp" hidden>
+        <div class="fp-copy">
+          <span class="fp-kicker c-slate">07 · BEYOND THIS MAC</span>
+          <h3>Your servers,<br>in the same window.</h3>
+          <p>Browse and transfer files over SFTP without leaving MacEx. Every new server shows its fingerprint before any password is sent, and a changed key stops everything until you look.</p>
+          <ul class="fp-points">
+            <li><b>Host key review</b> before you sign in.</li>
+            <li><b>Password, key or agent</b> sign-in, with optional Keychain storage.</li>
+            <li><b>Never overwrites:</b> uploads and downloads refuse to replace existing files.</li>
+          </ul>
+        </div>
+        <div class="fp-visual">
+          <div class="mock mock-sftp dark-mock">
+            <div class="mock-bar"><i></i><i></i><i></i><span>Connections</span></div>
+            <div class="sf-card">
+              <span class="sf-ic"><svg class="ico"><use href="#i-server"/></svg></span>
+              <span><b>studio-nas.local</b><small>sftp · port 22 · ed25519</small></span>
+              <span class="sf-ok"><svg class="ico"><use href="#i-shield"/></svg> Verified</span>
+            </div>
+            <div class="sf-fp"><small>SHA256 fingerprint</small><code>3Fq9 kL2x 8vNw Zp1R yT6m Hc4e Ab0s Ud7K</code></div>
+            <div class="sf-transfer"><span>footage-final.mov</span><div class="sf-bar"><i></i></div><small>Uploading</small></div>
+            <div class="sf-transfer"><span>brand-kit.zip</span><div class="sf-bar done"><i></i></div><small>Downloaded</small></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Privacy -->
+      <article class="fp" id="fp-privacy" role="tabpanel" aria-labelledby="ft-privacy" hidden>
+        <div class="fp-copy">
+          <span class="fp-kicker c-ink">08 · YOUR BUSINESS</span>
+          <h3>Your library.<br>Your business.</h3>
+          <p>Finding, searching and reading text all happen on your Mac. There is no account, no subscription, no API key and no cloud AI. MacEx is open source, so you can check every line.</p>
+          <ul class="fp-points">
+            <li><b>Text recognition is opt-in</b> and runs with Apple's on-device frameworks.</li>
+            <li><b>Online-only files</b> are never downloaded just to show a thumbnail.</li>
+            <li><b>Update checks are optional</b> and never send your file names or contents.</li>
+          </ul>
+          <a class="text-link" href="https://github.com/hgpt185/MacEx#ocr-local-files-and-resource-bounds" target="_blank" rel="noreferrer">See how MacEx handles your files <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="fp-visual">
+          <div class="mock mock-privacy">
+            <div class="pr-orb"><img src="assets/mascot.svg" alt="" width="140" height="140"><i></i><i></i><i></i></div>
+            <div class="pr-tags">
+              <span><svg class="ico"><use href="#i-lock"/></svg>On-device</span>
+              <span><svg class="ico"><use href="#i-x"/></svg>No account</span>
+              <span><svg class="ico"><use href="#i-x"/></svg>No cloud AI</span>
+              <span><svg class="ico"><use href="#i-check"/></svg>MIT licensed</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="faq container" id="faq">
+  <div class="reveal">
+    <span class="eyebrow">GOOD QUESTIONS</span>
+    <h2>A few things<br><em class="serif">you might wonder.</em></h2>
+    <p>Curious about something else?<br><a href="https://github.com/hgpt185/MacEx/issues" target="_blank" rel="noreferrer">Ask on GitHub <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+  </div>
+  <div class="faq-list reveal">
+    <details><summary>Is MacEx free?<span>+</span></summary><p>Yes. MacEx is an open-source app with MIT-licensed code. There is no account, subscription, or API key required.</p></details>
+    <details><summary>Which Macs can run it?<span>+</span></summary><p>MacEx requires macOS 14 Sonoma or later. The project supports Intel and Apple silicon build targets. Check the latest release notes for the current preview and testing status.</p></details>
+    <details><summary>Does it move my files around?<span>+</span></summary><p>Browsing your library does not reorganize the originals. Cleanup moves only your explicit selections to Trash. Tidy Downloads runs only when you ask, never replaces existing files, and ⌘Z puts everything back. Optional organization rules are off by default and require a separate opt-in.</p></details>
+    <details><summary>Does search send my files to AI?<span>+</span></summary><p>No. Search is local and turns supported phrases into editable filters. Text recognition is a separate opt-in using on-device frameworks; it is not enabled just by opening the app.</p></details>
+    <details><summary>Is the download a finished, notarized app?<span>+</span></summary><p>MacEx is currently a GitHub preview. Builds are ad-hoc signed and not Apple-notarized, so macOS may show a security warning. Read the release and installation notes before downloading.</p></details>
+    <details><summary>Can I contribute?<span>+</span></summary><p>Absolutely. Explore the source, report an issue, or contribute on <a href="https://github.com/hgpt185/MacEx" target="_blank" rel="noreferrer">GitHub</a>. MacEx is built with Swift and native macOS frameworks.</p></details>
+  </div>
+</section>
+
+<section class="download-section container reveal" id="download">
+  <div class="download-panel">
+    <div class="aurora small" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+    <img src="assets/mascot.svg" alt="The smiling MacEx mascot" width="120" height="120" loading="lazy">
+    <span class="eyebrow">LESS DIGGING. MORE DOING.</span>
+    <h2>Make yourself<br><em class="serif">right at home.</em></h2>
+    <p>Your next favorite Mac app might just be a folder.</p>
+    <a class="button" href="https://github.com/hgpt185/MacEx/releases" target="_blank" rel="noreferrer">Get the free MacEx preview <svg class="ico" aria-hidden="true"><use href="#i-down"/></svg></a>
+    <span class="fine">macOS 14+ · Intel &amp; Apple silicon · Open source</span>
+    <p class="release-note">Preview builds are not Apple-notarized.<br><a href="https://github.com/hgpt185/MacEx/blob/main/docs/RELEASE.md" target="_blank" rel="noreferrer">Read installation &amp; release notes <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
 </main>
-<footer class="container"><a class="brand" href="#"><img src="assets/mascot.svg" alt="" width="32" height="32">MacEx</a><span>A little more organized. A little more you.</span><div><a href="https://github.com/hgpt185/MacEx" target="_blank" rel="noreferrer">Source <svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="https://github.com/hgpt185/MacEx/issues" target="_blank" rel="noreferrer">Feedback <svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><button id="motion-toggle" aria-pressed="false">Pause motion</button></div></footer>
+
+<footer class="container site-footer">
+  <a class="brand" href="#top"><img src="assets/mascot.svg" alt="" width="30" height="30">MacEx</a>
+  <span>A little more organized. A little more you.</span>
+  <div>
+    <a href="https://github.com/hgpt185/MacEx" target="_blank" rel="noreferrer">Source <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a href="https://github.com/hgpt185/MacEx/issues" target="_blank" rel="noreferrer">Feedback <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <button id="motion-toggle" aria-pressed="false">Pause motion</button>
+  </div>
+</footer>
 <div class="brand-finale" aria-label="MacExplorer"><div class="brand-finale-word"><span class="brand-finale-mac">MacEx</span><span class="brand-finale-rest">plorer</span></div><div class="brand-finale-tagline">YOUR MAC. EXPLORED.</div></div>
-<dialog id="preview-dialog" aria-labelledby="preview-title"><div class="dialog-top"><span>MacEx · Sample preview</span><button id="close-preview" aria-label="Close preview">×</button></div><div id="preview-content"></div><h2 id="preview-title"></h2><p id="preview-meta"></p><p class="fine">Illustrative website demo. Your real files are never accessed.</p></dialog>
-</body></html>
+</body>
+</html>

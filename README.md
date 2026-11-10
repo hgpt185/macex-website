@@ -1,12 +1,12 @@
 # MacEx Website
 
-Official static marketing website for [MacEx](https://github.com/hgpt185/MacEx) — a free, open-source macOS file explorer.
+Official static marketing website for [MacEx](https://github.com/hgpt185/MacEx), a free, open-source macOS file explorer.
 
 ## Files
-- `index.html` — landing page, interactive sample file browser, FAQs, download links
-- `style.css` — responsive design, motion effects and footer wordmark
-- `app.js` — website interactions and previews
-- `assets/mascot.svg` — MacEx mascot and favicon
+- `index.html`: hero, live demo inside a MacBook Pro, feature explorer, FAQs, download links
+- `style.css`: responsive design, the CSS MacBook, motion effects and footer wordmark
+- `app.js`: sample library, natural-search parser, the in-browser MacEx demo and feature panels
+- `assets/mascot.svg`: MacEx mascot and favicon
 
 ## Run locally
 
@@ -36,4 +36,4 @@ This website links to [MacEx Releases](https://github.com/hgpt185/MacEx/releases
 
 ## Credits
 
-MacEx — Your Mac. Explored.
+MacEx. Your Mac. Explored.
