@@ -6,8 +6,9 @@ window.MACEX = {
   // While empty, every "Get MacEx" button scrolls to the pricing card instead.
   checkoutUrl: 'https://checkout.dodopayments.com/buy/pdt_0NreSA2ieB6DWf67OiCsZ?quantity=1&redirect_url=https%3A%2F%2Fmacex.app%2Fthanks%2F',
 
+  // Always the newest release: the release workflow refreshes this file on every v* tag.
   // Direct link to the MacEx .dmg. While empty, the "Download for Mac" button is hidden.
-  downloadUrl: 'https://downloads.macex.app/releases/v0.8.1/MacEx-0.8.1.dmg',
+  downloadUrl: 'https://downloads.macex.app/releases/latest/MacEx.dmg',
 
   // Support address. While empty, the "Email support" links are hidden.
   supportEmail: 'support@macex.app',

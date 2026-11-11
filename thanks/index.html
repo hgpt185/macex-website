@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Thank you – Download MacEx</title>
-  <meta name="description" content="Thanks for buying MacEx. Download the app here.">
+  <title>Thank you – Download and activate MacEx</title>
+  <meta name="description" content="Thanks for buying MacEx. Download the app and activate it with your license key.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#f7f9fc">
   <link rel="icon" href="../assets/mascot.svg" type="image/svg+xml">
@@ -14,13 +14,20 @@
   <link rel="stylesheet" href="../docs/docs.css">
   <script src="../config.js" defer></script>
   <style>
-    .thanks{max-width:640px;margin:0 auto;padding:80px 0 100px;text-align:center}
-    .thanks img{margin:0 auto 18px}
+    .thanks{max-width:680px;margin:0 auto;padding:70px 0 100px;text-align:center}
+    .thanks>img{margin:0 auto 18px}
     .thanks h1{font:800 clamp(34px,4.6vw,52px)/1.06 var(--display);letter-spacing:-.045em;margin:0 0 14px}
     .thanks h1 em{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--blue);letter-spacing:-.01em}
     .thanks p{font-size:17px;line-height:1.7;color:var(--ink-2);margin:0 0 14px}
-    .thanks .button{margin:18px 0 22px}
-    .thanks code{padding:3px 8px;border-radius:8px;background:#fff;box-shadow:0 0 0 1px #e1e7f0 inset;font-size:15px;user-select:all}
+    .steps{list-style:none;counter-reset:s;margin:34px 0 28px;padding:0;text-align:left;display:grid;gap:14px}
+    .steps li{counter-increment:s;position:relative;padding:22px 24px 14px 74px;border-radius:20px;background:#fff;box-shadow:0 0 0 1px #e1e7f0 inset}
+    .steps li::before{content:counter(s);position:absolute;left:22px;top:22px;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;display:grid;place-items:center}
+    .steps h2{font:800 20px/1.2 var(--display);letter-spacing:-.03em;margin:4px 0 8px}
+    .steps p{font-size:16px;margin:0 0 12px}
+    .steps .button{margin:4px 0 12px}
+    .key-box{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:4px 0 12px}
+    .key-box code{flex:1 1 260px;padding:12px 14px;border-radius:12px;background:#f6f8fb;box-shadow:0 0 0 1px #e1e7f0 inset;font:600 15px ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all;user-select:all}
+    .key-box button{padding:12px 16px;border:0;border-radius:12px;background:var(--blue);color:#fff;font:600 14px var(--sans,inherit);cursor:pointer}
     .thanks small{display:block;color:var(--soft);font-size:14px;line-height:1.6}
   </style>
   <script defer src="https://analytics.hemeshgupta.com/script.js" data-website-id="39604b49-3ffd-480a-bede-91caf13c1414"></script>
@@ -35,18 +42,45 @@
 <main id="main" class="container thanks">
   <img src="../assets/mascot.svg" alt="" width="72" height="72">
   <h1>Thank you. <em>MacEx is yours.</em></h1>
-  <p>Your payment went through. Download MacEx below and drag it into Applications.</p>
-  <a class="button" href="#" data-download hidden>Download MacEx for Mac</a>
-  <p id="key-wrap" hidden>Your licence key: <code id="key"></code></p>
-  <small>Needs macOS 14 or later, Apple silicon or Intel. Your receipt is in your email. Questions? <a href="#" data-support hidden>Email support</a></small>
+  <p>Your payment went through. Here is how to get set up.</p>
+
+  <ol class="steps">
+    <li>
+      <h2>Download MacEx</h2>
+      <p>Open the disk image and drag MacEx into your Applications folder. It needs macOS 14 or later, on Apple silicon or Intel.</p>
+      <a class="button" href="#" data-download hidden>Download MacEx for Mac</a>
+    </li>
+    <li>
+      <h2>Open it</h2>
+      <p>MacEx isn&rsquo;t notarized by Apple yet, so macOS may block the first launch. If it does, open <b>System Settings &rarr; Privacy &amp; Security</b>, scroll down and choose <b>Open Anyway</b> for MacEx.</p>
+    </li>
+    <li>
+      <h2>Activate with your license key</h2>
+      <p>MacEx asks for a license key the first time you open it. Paste the key below into the activation window and press Activate. You need an internet connection for this one step.</p>
+      <div class="key-box" id="key-wrap" hidden>
+        <code id="key"></code>
+        <button type="button" id="copy-key">Copy key</button>
+      </div>
+      <p class="no-key" id="no-key">Your license key is in the receipt email from Dodo Payments, sent to the address you paid with. If you can&rsquo;t find it, check spam or <a href="#" data-support hidden>email support</a>.</p>
+    </li>
+  </ol>
+
+  <small>The key is saved in your Mac&rsquo;s Keychain, so updates don&rsquo;t ask for it again. Keep the key somewhere safe: you need it if you move MacEx to another Mac. Questions? <a href="#" data-support hidden>Email support</a>.</small>
 </main>
 <script>
-  // Dodo appends ?license_key=... to the return URL when the product issues one.
+  // Dodo appends ?license_key=... (and status, email) to the return URL when the product issues a key.
   (function () {
-    var k = new URLSearchParams(location.search).get('license_key');
+    var q = new URLSearchParams(location.search);
+    var k = (q.get('license_key') || '').split(',')[0].trim();
     if (!k) return;
     document.getElementById('key').textContent = k;
     document.getElementById('key-wrap').hidden = false;
+    document.getElementById('no-key').hidden = true;
+    var btn = document.getElementById('copy-key');
+    btn.addEventListener('click', function () {
+      var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy key'; }, 2000); };
+      if (navigator.clipboard) navigator.clipboard.writeText(k).then(done, function () {});
+    });
   })();
 </script>
 </body>
