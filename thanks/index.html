@@ -14,21 +14,23 @@
   <link rel="stylesheet" href="../docs/docs.css">
   <script src="../config.js" defer></script>
   <style>
-    .thanks{max-width:680px;margin:0 auto;padding:70px 0 100px;text-align:center}
-    .thanks>img{margin:0 auto 18px}
-    .thanks h1{font:800 clamp(34px,4.6vw,52px)/1.06 var(--display);letter-spacing:-.045em;margin:0 0 14px}
+    .thanks{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:56px;align-items:center;max-width:1080px;margin:0 auto;padding:48px 0 56px;min-height:calc(100vh - 120px)}
+    .intro{text-align:left}
+    .intro>img{margin:0 0 18px}
+    .thanks h1{font:800 clamp(34px,4.2vw,56px)/1.04 var(--display);letter-spacing:-.045em;margin:0 0 16px}
     .thanks h1 em{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--blue);letter-spacing:-.01em}
-    .thanks p{font-size:17px;line-height:1.7;color:var(--ink-2);margin:0 0 14px}
-    .steps{list-style:none;counter-reset:s;margin:34px 0 28px;padding:0;text-align:left;display:grid;gap:14px}
-    .steps li{counter-increment:s;position:relative;padding:22px 24px 14px 74px;border-radius:20px;background:#fff;box-shadow:0 0 0 1px #e1e7f0 inset}
-    .steps li::before{content:counter(s);position:absolute;left:22px;top:22px;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;display:grid;place-items:center}
-    .steps h2{font:800 20px/1.2 var(--display);letter-spacing:-.03em;margin:4px 0 8px}
-    .steps p{font-size:16px;margin:0 0 12px}
-    .steps .button{margin:4px 0 12px}
-    .key-box{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:4px 0 12px}
-    .key-box code{flex:1 1 260px;padding:12px 14px;border-radius:12px;background:#f6f8fb;box-shadow:0 0 0 1px #e1e7f0 inset;font:600 15px ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all;user-select:all}
-    .key-box button{padding:12px 16px;border:0;border-radius:12px;background:var(--blue);color:#fff;font:600 14px var(--sans,inherit);cursor:pointer}
-    .thanks small{display:block;color:var(--soft);font-size:14px;line-height:1.6}
+    .thanks p{font-size:17px;line-height:1.65;color:var(--ink-2);margin:0 0 14px}
+    .steps{list-style:none;counter-reset:s;margin:0;padding:0;text-align:left;display:grid;gap:12px}
+    .steps li{counter-increment:s;position:relative;padding:18px 22px 8px 66px;border-radius:18px;background:#fff;box-shadow:0 0 0 1px #e1e7f0 inset}
+    .steps li::before{content:counter(s);position:absolute;left:20px;top:18px;width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;font-weight:700;display:grid;place-items:center}
+    .steps h2{font:800 18px/1.2 var(--display);letter-spacing:-.03em;margin:3px 0 6px}
+    .steps p{font-size:15px;line-height:1.55;margin:0 0 10px}
+    .steps .button{margin:2px 0 10px}
+    .key-box{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:2px 0 10px}
+    .key-box code{flex:1 1 220px;padding:10px 12px;border-radius:12px;background:#f6f8fb;box-shadow:0 0 0 1px #e1e7f0 inset;font:600 14px ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all;user-select:all}
+    .key-box button{padding:10px 14px;border:0;border-radius:12px;background:var(--blue);color:#fff;font:600 14px var(--sans,inherit);cursor:pointer}
+    .thanks small{display:block;color:var(--soft);font-size:14px;line-height:1.6;margin-top:18px}
+    @media (max-width:860px){.thanks{grid-template-columns:1fr;gap:28px;min-height:0;padding:36px 0 64px}.intro{text-align:center}.intro>img{margin:0 auto 14px}}
   </style>
   <script defer src="https://analytics.hemeshgupta.com/script.js" data-website-id="39604b49-3ffd-480a-bede-91caf13c1414"></script>
 </head>
@@ -40,9 +42,12 @@
 </header>
 
 <main id="main" class="container thanks">
-  <img src="../assets/mascot.svg" alt="" width="72" height="72">
-  <h1>Thank you. <em>MacEx is yours.</em></h1>
-  <p>Your payment went through. Here is how to get set up.</p>
+  <div class="intro">
+    <img src="../assets/mascot.svg" alt="" width="72" height="72">
+    <h1>Thank you. <em>MacEx is yours.</em></h1>
+    <p>Your payment went through. Here is how to get set up.</p>
+    <small>The key is saved in your Mac&rsquo;s Keychain, so updates don&rsquo;t ask for it again. Keep the key somewhere safe: you need it if you move MacEx to another Mac. Questions? <a href="#" data-support hidden>Email support</a>.</small>
+  </div>
 
   <ol class="steps">
     <li>
@@ -65,7 +70,6 @@
     </li>
   </ol>
 
-  <small>The key is saved in your Mac&rsquo;s Keychain, so updates don&rsquo;t ask for it again. Keep the key somewhere safe: you need it if you move MacEx to another Mac. Questions? <a href="#" data-support hidden>Email support</a>.</small>
 </main>
 <script>
   // Dodo appends ?license_key=... (and status, email) to the return URL when the product issues a key.
