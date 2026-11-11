@@ -1,0 +1,3 @@
+# config.js holds the checkout and download links; browsers must recheck it on every visit.
+/config.js
+  Cache-Control: no-cache
