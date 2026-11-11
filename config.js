@@ -2,8 +2,9 @@
 window.MACEX = {
   // Dodo Payments checkout link for the 1-Mac license, e.g.
   // 'https://checkout.dodopayments.com/buy/pdt_XXXXXXXX?quantity=1'
+  // redirect_url sends buyers to the thank-you page (which offers the download) after paying.
   // While empty, every "Get MacEx" button scrolls to the pricing card instead.
-  checkoutUrl: 'https://checkout.dodopayments.com/buy/pdt_0NreSA2ieB6DWf67OiCsZ?quantity=1',
+  checkoutUrl: 'https://checkout.dodopayments.com/buy/pdt_0NreSA2ieB6DWf67OiCsZ?quantity=1&redirect_url=https%3A%2F%2Fmacex.app%2Fthanks%2F',
 
   // Direct link to the MacEx .dmg. While empty, the "Download for Mac" button is hidden.
   downloadUrl: 'https://downloads.macex.app/releases/v0.8.1/MacEx-0.8.1.dmg',
@@ -17,7 +18,7 @@ window.MACEX = {
   // Licenses shown on the pricing card. Add more rows (with their own checkoutUrl)
   // to show the 1 Mac / 3 Macs / 5 Macs switcher.
   plans: [
-    { macs: 1, price: 9.99, was: 19.98, checkoutUrl: 'https://checkout.dodopayments.com/buy/pdt_0NreSA2ieB6DWf67OiCsZ?quantity=1' }
+    { macs: 1, price: 9.99, was: 19.98, checkoutUrl: 'https://checkout.dodopayments.com/buy/pdt_0NreSA2ieB6DWf67OiCsZ?quantity=1&redirect_url=https%3A%2F%2Fmacex.app%2Fthanks%2F' }
   ]
 };
 

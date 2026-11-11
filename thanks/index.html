@@ -20,6 +20,7 @@
     .thanks h1 em{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--blue);letter-spacing:-.01em}
     .thanks p{font-size:17px;line-height:1.7;color:var(--ink-2);margin:0 0 14px}
     .thanks .button{margin:18px 0 22px}
+    .thanks code{padding:3px 8px;border-radius:8px;background:#fff;box-shadow:0 0 0 1px #e1e7f0 inset;font-size:15px;user-select:all}
     .thanks small{display:block;color:var(--soft);font-size:14px;line-height:1.6}
   </style>
   <script defer src="https://analytics.hemeshgupta.com/script.js" data-website-id="39604b49-3ffd-480a-bede-91caf13c1414"></script>
@@ -36,7 +37,17 @@
   <h1>Thank you. <em>MacEx is yours.</em></h1>
   <p>Your payment went through. Download MacEx below and drag it into Applications.</p>
   <a class="button" href="#" data-download hidden>Download MacEx for Mac</a>
+  <p id="key-wrap" hidden>Your licence key: <code id="key"></code></p>
   <small>Needs macOS 14 or later, Apple silicon or Intel. Your receipt is in your email. Questions? <a href="#" data-support hidden>Email support</a></small>
 </main>
+<script>
+  // Dodo appends ?license_key=... to the return URL when the product issues one.
+  (function () {
+    var k = new URLSearchParams(location.search).get('license_key');
+    if (!k) return;
+    document.getElementById('key').textContent = k;
+    document.getElementById('key-wrap').hidden = false;
+  })();
+</script>
 </body>
 </html>
