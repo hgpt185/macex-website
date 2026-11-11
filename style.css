@@ -50,6 +50,8 @@ kbd{font-family:var(--sys);font-size:.82em;padding:.1em .45em;border-radius:6px;
 .button{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;background:linear-gradient(180deg,#2a86ff,#1268e6);color:#fff;border-radius:14px;font-size:15px;font-weight:600;box-shadow:0 1px 0 #ffffff40 inset,0 10px 24px -10px #1772edaa,0 2px 4px #1772ed30;transition:transform .25s var(--ease),box-shadow .25s}
 .button:hover{transform:translateY(-2px);box-shadow:0 1px 0 #ffffff40 inset,0 16px 30px -12px #1772edbb,0 2px 4px #1772ed30}
 .button.small{padding:10px 15px;font-size:13px;border-radius:11px}
+.button[hidden]{display:none}
+.nav-cta{display:flex;align-items:center;gap:10px}
 .button.ghost{background:#ffffffcc;color:var(--ink);box-shadow:0 0 0 1px #dfe5ee inset,0 6px 18px -10px #1b2b4a33}
 .button.ghost:hover{box-shadow:0 0 0 1px #c9d4e3 inset,0 10px 24px -12px #1b2b4a44}
 .text-link{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--blue)}
