@@ -6,10 +6,10 @@ window.MACEX = {
   checkoutUrl: 'https://checkout.dodopayments.com/buy/pdt_0NreSA2ieB6DWf67OiCsZ?quantity=1',
 
   // Direct link to the MacEx .dmg. While empty, the "Download for Mac" button is hidden.
-  downloadUrl: '',
+  downloadUrl: 'https://downloads.macex.app/releases/v0.8.1/MacEx-0.8.1.dmg',
 
   // Support address. While empty, the "Email support" links are hidden.
-  supportEmail: '',
+  supportEmail: 'support@macex.app',
 
   // Public address of this site, used in the "Ask AI" prompts.
   siteUrl: 'https://macex.app/',
