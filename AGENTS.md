@@ -35,7 +35,7 @@ All links and prices live in `config.js`. Pages opt in with data attributes, and
 
 ## SEO and GEO files
 
-`robots.txt` (allows all crawlers), `sitemap.xml` (3 URLs; add new indexable pages), `llms.txt`, `site.webmanifest`, and JSON-LD in every page head. The Organization `sameAs` lists the owner's LinkedIn and X profiles. Google Search Console (domain property) and Bing Webmaster Tools are set up with the sitemap submitted.
+`robots.txt` (allows all crawlers), `sitemap.xml` (5 URLs; add new indexable pages, including `guides/*`), `llms.txt`, `site.webmanifest`, and JSON-LD in every page head. The Organization `sameAs` lists the owner's LinkedIn and X profiles. Google Search Console (domain property) and Bing Webmaster Tools are set up with the sitemap submitted.
 
 Every page has the Umami analytics script in `<head>`. Add it to any new page.
 

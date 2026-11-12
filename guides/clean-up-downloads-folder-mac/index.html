@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How to Clean Up Your Downloads Folder on Mac – MacEx</title>
+  <meta name="description" content="Tidy a messy Mac Downloads folder in one click, see which website each file came from, and undo it with Command-Z. Existing files are never replaced.">
+  <meta name="theme-color" content="#f7f9fc">
+  <link rel="canonical" href="https://macex.app/guides/clean-up-downloads-folder-mac/">
+  <meta property="og:site_name" content="MacEx">
+  <meta property="og:url" content="https://macex.app/guides/clean-up-downloads-folder-mac/">
+  <meta property="og:title" content="How to Clean Up Your Downloads Folder on Mac – MacEx">
+  <meta property="og:description" content="Tidy a messy Mac Downloads folder in one click, see which website each file came from, and undo it with Command-Z. Existing files are never replaced.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://macex.app/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://macex.app/assets/og-image.png">
+  <link rel="icon" href="../../assets/mascot.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://macex.app/guides/clean-up-downloads-folder-mac/#article",
+      "headline": "How to Clean Up Your Downloads Folder on Mac – MacEx",
+      "description": "Tidy a messy Mac Downloads folder in one click, see which website each file came from, and undo it with Command-Z. Existing files are never replaced.",
+      "url": "https://macex.app/guides/clean-up-downloads-folder-mac/",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "author": {
+        "@type": "Organization",
+        "name": "MacEx",
+        "url": "https://macex.app/"
+      },
+      "publisher": {
+        "@id": "https://macex.app/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://macex.app/#organization",
+      "name": "MacEx",
+      "url": "https://macex.app/",
+      "logo": "https://macex.app/assets/icon-512.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "MacEx",
+          "item": "https://macex.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Clean up Downloads folder",
+          "item": "https://macex.app/guides/clean-up-downloads-folder-mac/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../docs/docs.css">
+  <script src="../../config.js" defer></script>
+  <style>
+    .cmp{max-width:900px;margin:0 auto;padding:46px 0 80px}
+    .cmp .crumbs-nav{font-size:14px;color:var(--soft)}
+    .cmp .crumbs-nav a{color:var(--muted)}
+    .cmp .crumbs-nav a:hover{color:var(--blue)}
+    .cmp h1{font:800 clamp(34px,4.6vw,52px)/1.06 var(--display);letter-spacing:-.045em;margin:14px 0 14px}
+    .cmp h1 em{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--blue);letter-spacing:-.01em}
+    .cmp .updated{font-size:14px;color:var(--soft);margin:0 0 24px}
+    .cmp .answer{padding:22px 24px;border-radius:18px;background:#fff;box-shadow:0 0 0 1px #e1e7f0 inset;font-size:17px;line-height:1.7;color:var(--ink-2)}
+    .cmp .answer b{color:var(--ink)}
+    .cmp h2{font:800 clamp(24px,3vw,30px)/1.15 var(--display);letter-spacing:-.04em;margin:48px 0 14px}
+    .cmp p,.cmp li{font-size:16.5px;line-height:1.7;color:var(--ink-2)}
+    .cmp ul{padding-left:22px}
+    .tbl-wrap{overflow-x:auto;border-radius:18px;background:#fff;box-shadow:0 0 0 1px #e1e7f0 inset}
+    table.vs{width:100%;min-width:640px;border-collapse:collapse;font-size:15px}
+    table.vs th,table.vs td{padding:14px 16px;text-align:left;vertical-align:top;border-top:1px solid var(--line)}
+    table.vs thead th{border-top:0;font:700 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);background:#f6f8fb}
+    table.vs tbody th{font-weight:600;color:var(--ink);width:24%}
+    table.vs td{color:var(--ink-2);width:38%}
+    .tag{display:inline-block;margin-right:6px;padding:2px 8px;border-radius:99px;font-size:12px;font-weight:700}
+    .yes{background:#e4f8ee;color:#1d7a4c}.part{background:#fff4e0;color:#9a5b00}.no{background:#eef1f5;color:#5f6b7d}
+    .cta{margin-top:44px;padding:30px;border-radius:24px;background:#fff;box-shadow:0 0 0 1px #e1e7f0 inset;text-align:center}
+    .cta p{margin:0 0 18px;color:var(--muted)}
+    .cta .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  </style>
+  <script defer src="https://analytics.hemeshgupta.com/script.js" data-website-id="39604b49-3ffd-480a-bede-91caf13c1414"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+  </defs>
+</svg>
+
+<header class="docs-bar">
+  <div class="docs-bar-in">
+    <a class="brand" href="../../" aria-label="MacEx home"><img src="../../assets/mascot.svg" alt="" width="32" height="32">MacEx</a>
+    <a class="site-link" style="margin-left:auto" href="../../docs/">Docs</a>
+    <a class="site-link" href="../../#pricing">Pricing</a>
+    <a class="button small ghost" href="#" data-download hidden>Download</a>
+    <a class="button small" href="../../#pricing">Get MacEx</a>
+  </div>
+</header>
+
+<main id="main" class="container cmp">
+  <nav class="crumbs-nav" aria-label="Breadcrumb"><a href="../../">MacEx</a> › Clean up your Downloads folder</nav>
+  <h1>How to clean up your Downloads folder <em>on Mac</em></h1>
+  <p class="updated">Updated <time datetime="2026-11-12">November 12, 2026</time></p>
+
+  <div class="answer"><b>Short answer:</b> Click <b>Tidy Downloads</b> in the MacEx sidebar. MacEx shows where each file will go before anything moves, sorts files into folders such as Images, Documents and Archives inside Downloads, never replaces existing files, and <kbd>⌘</kbd><kbd>Z</kbd> puts everything back.</div>
+
+  <h2>How do I tidy my Downloads folder?</h2>
+  <ol>
+    <li>Click <b>Tidy Downloads</b> in the MacEx sidebar.</li>
+    <li>Review the list. Each file shows the folder it will move to.</li>
+    <li>Confirm. Files are sorted into folders such as Images, Documents and Archives inside Downloads.</li>
+    <li>Changed your mind? Press <kbd>⌘</kbd><kbd>Z</kbd> to put everything back.</li>
+  </ol>
+
+  <h2>Will it overwrite or lose files?</h2>
+  <p>No. Existing files are never replaced. Tidy Downloads runs only when you ask, and automation rules are off until you turn them on.</p>
+
+  <h2>How do I see where a download came from?</h2>
+  <p>MacEx groups downloads by the website they came from, for example Gmail, Slack or Drive, and you can search by source. Finder shows &ldquo;Where from&rdquo; for one file at a time in Get Info.</p>
+
+  <h2>How do I free up space from old downloads?</h2>
+  <p>Use <b>Free Up Space</b>. It lists old installers, forgotten downloads, old screenshots, big old videos and duplicate files. You review everything, and only the files you select move to Trash. Read how to <a href="../find-duplicate-files-mac/">find duplicate files on Mac</a>.</p>
+
+  <div class="cta">
+    <p>MacEx runs on macOS 14 or later, Apple silicon and Intel. One-time purchase, no account.</p>
+    <div class="row">
+      <a class="button" href="../../#pricing" data-buy>Get MacEx · $9.99</a>
+      <a class="button ghost" href="../../docs/">Read the docs</a>
+    </div>
+  </div>
+</main>
+
+<footer class="docs-foot"><div><span>MacEx. Your Mac, explored.</span><span><a href="../../">MacEx home</a> · <a href="../../docs/">Docs</a> · <a href="../../compare/finder/">MacEx vs Finder</a> · <a href="../../#pricing">Pricing</a></span></div></footer>
+</body>
+</html>

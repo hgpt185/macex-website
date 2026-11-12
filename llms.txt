@@ -17,6 +17,8 @@ Key facts:
 - [MacEx home](https://macex.app/): features, live in-browser demo, keyboard shortcuts, pricing and FAQ
 - [MacEx Docs](https://macex.app/docs/): install, search, preview, Free Up Space, duplicates, Tidy Downloads, Trash, automation, Quick Search, SFTP, keyboard shortcuts, troubleshooting, privacy
 - [MacEx vs Finder](https://macex.app/compare/finder/): feature-by-feature comparison, when Finder is enough and when MacEx helps
+- [Find duplicate files on Mac](https://macex.app/guides/find-duplicate-files-mac/): how to find and remove duplicates safely
+- [Clean up your Downloads folder](https://macex.app/guides/clean-up-downloads-folder-mac/): Tidy Downloads, download sources, undo
 
 ## Docs sections
 
