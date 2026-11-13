@@ -795,6 +795,69 @@ body.fs-lock{overflow:hidden}
   .footer-grid{grid-template-columns:1fr 1fr}
 }
 
+/* =========================================================
+   Small delights
+   ========================================================= */
+/* reading progress: a thin gradient line along the bottom of the nav */
+.scroll-progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,#1b82ff,#36c6f0 50%,#7a6cff);pointer-events:none}
+
+/* nav links: underline grows from the centre */
+.nav-links a{position:relative}
+.nav-links a:after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;background:var(--blue);transform:scaleX(0);transition:transform .3s var(--ease)}
+.nav-links a:hover:after{transform:scaleX(1)}
+
+/* eyebrows get a small gradient dash either side */
+.section-head .eyebrow:before,.faq .eyebrow:before,.section-head.center .eyebrow:after{content:"";width:18px;height:2px;border-radius:2px;background:linear-gradient(90deg,#1b82ff,#7a6cff)}
+.section-head.center .eyebrow:after{transform:scaleX(-1)}
+
+/* a light sweep across the main buy buttons every few seconds */
+.hero-actions .button:not(.ghost),.download-panel .button,.tk-buy{position:relative;overflow:hidden}
+.hero-actions .button:not(.ghost):after,.download-panel .button:after,.tk-buy:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,#ffffff59 50%,transparent 65%);transform:translateX(-120%);animation:shine 6s 2.4s ease-in-out infinite;pointer-events:none}
+.hero-actions .button .ico{transition:transform .25s var(--ease)}
+.hero-actions .button:hover .ico{transform:translate(2px,-2px)}
+
+/* launch badge: a soft pulsing dot */
+.tk-badge{display:inline-flex;align-items:center;gap:7px}
+.tk-badge:before{content:"";width:7px;height:7px;border-radius:50%;background:#1fae6a;animation:badge-pulse 2.2s ease-out infinite}
+
+/* feature tabs: the icon tilts a little on hover */
+.fn-icon{transition:transform .35s var(--spring)}
+.fn-item:hover .fn-icon,.fn-item[aria-selected="true"] .fn-icon{transform:rotate(-6deg) scale(1.06)}
+
+/* shortcut cards: a soft spotlight follows the pointer, keys press down on hover */
+.kb-card{position:relative;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s}
+.kb-card:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),#1772ed14,transparent 70%)}
+.kb-card:hover{transform:translateY(-3px);box-shadow:0 0 0 1px #d3dff0 inset,0 36px 60px -40px #1b2b4a66}
+.kb-card:hover:before{opacity:1}
+.kb-card dl>div{transition:color .2s}
+.kb-card kbd{transition:transform .12s,border-bottom-width .12s,box-shadow .2s}
+.kb-card dl>div:hover kbd{transform:translateY(1px);border-bottom-width:1px;box-shadow:0 0 0 3px #1772ed14}
+.kb-card dl>div:hover dt{color:var(--ink)}
+
+/* "at a glance" rows: the top rule fills with colour on hover */
+.glance dl>div{position:relative}
+.glance dl>div:before{content:"";position:absolute;left:0;top:-1px;height:1px;width:100%;background:linear-gradient(90deg,#1b82ff,#7a6cff);transform:scaleX(0);transform-origin:0 50%;transition:transform .5s var(--ease)}
+.glance dl>div:hover:before{transform:scaleX(1)}
+
+/* FAQ: the + sits in a small circle that fills when open */
+.faq-list summary{transition:color .2s}
+.faq-list summary:hover{color:var(--blue)}
+.faq-list summary span{display:grid;place-items:center;flex-shrink:0;width:30px;height:30px;border-radius:50%;font-size:20px;line-height:1;box-shadow:0 0 0 1px var(--line) inset;transition:transform .3s var(--ease),background .25s,color .25s,box-shadow .25s}
+.faq-list summary:hover span{box-shadow:0 0 0 1px #bcd2f2 inset;color:var(--blue)}
+.faq-list details[open] summary span{background:var(--blue);color:#fff;box-shadow:none}
+
+/* closing wordmark: the faded half lights up on hover */
+.brand-finale-rest{background:linear-gradient(120deg,#c3ccd9,#c3ccd9);-webkit-background-clip:text;background-clip:text;color:transparent;transition:background .6s}
+.brand-finale:hover .brand-finale-rest{background:linear-gradient(120deg,#7a6cff,#36c6f0)}
+
+/* staggered entrance for lists and grids */
+.js-motion .stagger>*{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:calc(var(--i,0)*70ms)}
+.js-motion .stagger.visible>*{opacity:1;transform:none}
+.motion-paused .stagger>*{opacity:1!important;transform:none!important}
+
+@keyframes shine{0%{transform:translateX(-120%)}22%,100%{transform:translateX(120%)}}
+@keyframes badge-pulse{0%{box-shadow:0 0 0 0 #1fae6a66}70%,100%{box-shadow:0 0 0 7px #1fae6a00}}
+
 /* ---------- Motion preferences ---------- */
 .motion-paused *,.motion-paused *::before,.motion-paused *::after{animation-play-state:paused!important}
 .motion-paused .reveal{opacity:1!important;transform:none!important}

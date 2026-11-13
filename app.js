@@ -1029,10 +1029,30 @@ function initPage() {
   if ('IntersectionObserver' in window && !reduceMotion.matches) {
     document.documentElement.classList.add('js-motion');
     const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: .08 });
-    $$('.reveal').forEach(el => io.observe(el));
+    $$('.reveal, .stagger').forEach(el => io.observe(el));
+    $$('.stagger').forEach(list => [...list.children].forEach((c, i) => c.style.setProperty('--i', i)));
   }
   const nav = $('.nav-wrap');
-  addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 10), { passive: true });
+  // Thin reading-progress line along the bottom of the nav
+  const bar = document.createElement('div');
+  bar.className = 'scroll-progress';
+  bar.setAttribute('aria-hidden', 'true');
+  nav.append(bar);
+  let ticking = false;
+  const onScroll = () => {
+    nav.classList.toggle('scrolled', scrollY > 10);
+    const max = document.documentElement.scrollHeight - innerHeight;
+    bar.style.setProperty('--p', max > 0 ? Math.min(1, scrollY / max) : 0);
+    ticking = false;
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+  // Shortcut cards: spotlight follows the pointer
+  $$('.kb-card').forEach(card => card.addEventListener('pointermove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+    card.style.setProperty('--my', `${e.clientY - r.top}px`);
+  }));
   // Animations follow the system "Reduce motion" setting
   const setMotion = () => { document.documentElement.classList.toggle('motion-paused', motionPaused); window.syncFeatureVideos?.(); };
   reduceMotion.addEventListener('change', e => { motionPaused = e.matches; setMotion(); });
