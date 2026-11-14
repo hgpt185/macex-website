@@ -161,6 +161,12 @@
         <li>Open MacEx from Applications.</li>
       </ol>
       <div class="note"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><div><b>MacEx is notarized by Apple.</b> It is signed with an Apple Developer ID and checked by Apple for malicious software. The first time you open it, macOS asks you to confirm an app downloaded from the internet. Click <b>Open</b>.</div></div>
+      <h3>Install with Homebrew</h3>
+      <p>If you use <a href="https://brew.sh">Homebrew</a>, run these in Terminal instead:</p>
+      <pre class="cmd"><code>brew tap hgpt185/macex
+brew trust hgpt185/macex
+brew install --cask macex</code></pre>
+      <p>Homebrew asks you to trust a third-party tap once. Update later with <code>brew upgrade --cask macex</code>, or turn on automatic updates in MacEx.</p>
     </section>
 
     <section id="buy">
