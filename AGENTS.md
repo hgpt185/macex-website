@@ -30,7 +30,7 @@ All links and prices live in `config.js`. Pages opt in with data attributes, and
 - `index.html`: hero, live demo, features, pricing ticket, FAQ. The hero "Get MacEx" button scrolls to `#pricing`. The nav "Get MacEx" button and the pricing card "Buy License" button open Dodo checkout.
 - `docs/index.html`: documentation.
 - `compare/finder/index.html`: MacEx vs Finder page.
-- `thanks/index.html`: post-purchase page. Two-column: intro on the left, steps on the right (download, open past Gatekeeper, activate). Dodo appends `?license_key=...` to the return URL and the page shows it with a copy button. It is `noindex`, and it must stay out of `sitemap.xml`.
+- `thanks/index.html`: post-purchase page. Two-column: intro on the left, steps on the right (download, open, activate). Dodo appends `?license_key=...` to the return URL and the page shows it with a copy button. It is `noindex`, and it must stay out of `sitemap.xml`.
 - `404.html`: real 404.
 
 ## SEO and GEO files

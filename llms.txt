@@ -1,6 +1,6 @@
 # MacEx
 
-> MacEx is a file library app for Mac (macOS 14 or later, Apple silicon and Intel). It gathers your images, videos, music, documents, archives and apps into one library, lets you find files by describing them in plain words, previews files without opening another app, and helps you free up space by reviewing old installers, forgotten downloads and duplicates before they go to Trash. It is a one-time purchase ($9.99 launch price, usually $19.98) with no subscription and no account.
+> MacEx is a file library app for Mac (macOS 14 or later, Apple silicon and Intel). It gathers your images, videos, music, documents, archives and apps into one library, lets you find files by describing them in plain words, previews files without opening another app, and helps you free up space by reviewing old installers, forgotten downloads and duplicates before they go to Trash. It is a one-time purchase ($9.99 launch price, usually $19.98) with no subscription and no account. MacEx is signed with an Apple Developer ID and notarized by Apple.
 
 Key facts:
 
