@@ -71,8 +71,8 @@ the layout, update `blog-theme/`, then regenerate. Do not hand-edit `blog/`.
 - The marketing navigation and footer link to the journal.
 - The marketing `robots.txt` advertises both sitemaps. Its sitemap retains
   only marketing URLs. `/thanks/` stays excluded and `noindex`.
-- `macex.app/blog/*` and the production Pages hostname redirect to the
-  canonical blog host.
+- `macex.app/blog/*` redirects to the blog host. Every blog page declares
+  its `blogs.macex.app` canonical URL, including when viewed on a Pages alias.
 
 The daily automation itself is separate; this repository supplies its
 publishing contract. Publishing frequency alone does not guarantee rankings.

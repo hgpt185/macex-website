@@ -60,6 +60,9 @@ class BlogTests(unittest.TestCase):
             self.assertEqual(feed.findtext("channel/item/link"), url)
             self.assertIn('data-website-id=', page)
             self.assertTrue((output / "404.html").exists())
+            redirects = (output / "_redirects").read_text().splitlines()
+            self.assertTrue(all(not line.strip() or line.startswith(("#", "/")) for line in redirects),
+                            "Cloudflare Pages redirect sources must be relative paths")
 
     def test_drafts_are_excluded_and_duplicate_slugs_fail(self):
         with tempfile.TemporaryDirectory() as temp:

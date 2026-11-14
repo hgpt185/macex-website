@@ -190,7 +190,7 @@ def build(posts, output):
     (output / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
     (output / "llms.txt").write_text("# The MacEx Journal\n\n> Practical Mac file organization and productivity articles by MacEx.\n\n" + "\n".join(f"- [{p['title']}]({BASE}/{p['slug']}/): {p['description']}" for p in posts) + "\n")
     (output / "_headers").write_text("/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/assets/*\n  Cache-Control: public, max-age=3600\n/feed.xml\n  Content-Type: application/rss+xml; charset=utf-8\n")
-    (output / "_redirects").write_text(f"https://macex-blog.pages.dev/* {BASE}/:splat 301\n")
+    (output / "_redirects").write_text("# Add permanent path redirects here when changing a published slug.\n")
 
 
 def main():
