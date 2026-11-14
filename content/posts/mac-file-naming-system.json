@@ -1,0 +1,56 @@
+{
+  "slug": "mac-file-naming-system",
+  "title": "A file naming system for Mac that you can actually keep using",
+  "description": "Make project files easier to recognize with a simple subject, date, and version pattern. Includes examples for invoices, drafts, screenshots, and shared work.",
+  "date": "2026-11-14",
+  "category": "File organization",
+  "art": "names",
+  "intro": "‘Final-final-v3’ usually means the naming system arrived after the confusion. A better filename tells your future self what a file is before you open it. You do not need a complicated standard: a short, repeatable pattern for the files you create most often is enough to make a difference.",
+  "takeaways": [
+    "Pick an order for subject, document type, date, and version, then use only the parts that help.",
+    "Use YYYY-MM-DD when the date is useful for sorting by name.",
+    "Test a naming pattern on one active project before renaming a large archive."
+  ],
+  "sections": [
+    {
+      "heading": "Start with the detail you look for first",
+      "paragraphs": [
+        "Think about the last time you scanned a folder. Were you looking for a client, a project, a date, or a document type? Put that detail near the beginning. A naming pattern should match the way you retrieve files, rather than look impressive in a written policy.",
+        "For client work, a useful example is ‘northstar-proposal-2026-11-14-v01.pdf.’ For a chronological collection of meeting notes, ‘2026-11-14-northstar-kickoff.txt’ may be easier to scan. These are suggestions, not requirements imposed by macOS. Choose the order that answers your own most common question."
+      ]
+    },
+    {
+      "heading": "Give each piece of the name one job",
+      "paragraphs": [
+        "The subject identifies the work. The document type explains what you are opening. The date marks a meaningful event, such as the meeting, invoice, or delivery date. The version separates revisions you deliberately keep. Avoid making one field do several jobs: a date that sometimes means ‘created’ and sometimes means ‘sent’ becomes difficult to trust.",
+        "Use only the pieces a particular collection needs. An invoice might be ‘northstar-invoice-2026-11-014.pdf,’ where the last field is your invoice number. A working design could be ‘workshop-poster-v03.afdesign.’ Adding every possible detail can make a name harder to read than the original."
+      ]
+    },
+    {
+      "heading": "Use dates and versions consistently",
+      "paragraphs": [
+        "When dates belong in a filename, YYYY-MM-DD is a useful convention because fixed-width dates sort chronologically when sorted as text. ‘2026-02-09’ and ‘2026-11-14’ have a predictable order. Spell out the year and keep the leading zeros; changing formats halfway through a folder loses the benefit.",
+        "For versions, a simple v01, v02, v03 pattern is easier to compare than ‘new,’ ‘newer,’ and ‘final.’ Decide what earns a new version. You might increment it only when sharing a draft externally, while relying on the document app’s normal save behavior during daily editing. Do not add version copies simply because the pattern has room for them.",
+        "When work is approved, use a status word only if it carries useful information. ‘workshop-outline-approved-2026-11-14.pdf’ communicates a milestone. ‘final’ alone does not explain whether the file was approved, exported, or simply the latest draft you found."
+      ]
+    },
+    {
+      "heading": "Rename a small batch carefully in Finder",
+      "paragraphs": [
+        "In Finder, select a file and press Return to edit its name. For a group, select the items, Control-click, and choose Rename. Finder’s batch options can replace text, add text, or apply a name format. Try the operation on a small, understood selection before applying it to a large folder.",
+        "Preserve file extensions such as .pdf or .jpg. An extension is not a status label, and changing it does not convert the file to another format. Avoid renaming app or system folders as part of a general tidying project. For work managed by another application, use that application’s own organization tools when file paths or linked assets matter."
+      ]
+    },
+    {
+      "heading": "Let folders and search carry the remaining detail",
+      "paragraphs": [
+        "A filename does not need to contain your entire filing system. If a file already sits in a clearly named client folder, repeating the client in every internal scratch note may add little. Use enough context for files that travel outside that folder, such as attachments and deliverables, and keep private working names short.",
+        "Start with the next ten files you create. If the pattern helps you find them again, keep it. If you repeatedly skip a field, remove it. You can combine a modest naming habit with Finder tags, saved searches, or MacEx’s file library instead of attempting a weekend-long rename of everything you own. A system succeeds when you can keep using it on a busy day."
+      ]
+    }
+  ],
+  "sources": [
+    {"title": "Apple: Rename files, folders, and disks on Mac", "url": "https://support.apple.com/en-ca/guide/mac-help/mchlp1144/mac"},
+    {"title": "MacEx: Browse and search your library", "url": "https://macex.app/docs/#search"}
+  ]
+}

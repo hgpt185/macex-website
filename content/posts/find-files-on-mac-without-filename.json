@@ -1,0 +1,65 @@
+{
+  "slug": "find-files-on-mac-without-filename",
+  "title": "How to find a file on your Mac when you forgot its name",
+  "description": "Turn the clues you remember into a useful search: file type, approximate date, likely location, and content. A practical workflow for Finder and MacEx.",
+  "date": "2026-11-14",
+  "category": "Search tips",
+  "art": "search",
+  "intro": "You remember the PDF, the week you downloaded it, and perhaps the project it was for. You do not remember the filename. Instead of opening folders at random, turn those partial memories into a short search plan. Each clue narrows the set of files you need to inspect.",
+  "takeaways": [
+    "Start with the strongest clue you trust, then add one filter at a time.",
+    "Check the search scope before assuming a file has disappeared.",
+    "Preview likely results before moving, renaming, or deleting anything."
+  ],
+  "sections": [
+    {
+      "heading": "Write down the clues you actually remember",
+      "paragraphs": [
+        "A useful clue describes something the computer can test: a PDF rather than an image, a rough date range, a word in the document, or a likely folder. ‘The important one’ matters to you, but it is not a useful filter unless you marked it that way earlier.",
+        "For example, ‘a PDF proposal from the first week of November, probably saved from email’ gives you several independent starting points. Do not treat guesses as facts. If you are certain it was a PDF but only vaguely remember the month, filter by type first and keep the date window generous."
+      ]
+    },
+    {
+      "heading": "Check where Finder is searching",
+      "paragraphs": [
+        "Open Finder and start a search with Command-F. Look at the available scope choices: searching the current folder can give very different results from searching This Mac. If you last worked in Downloads but are now browsing a project folder, a narrow scope can hide the result you expected.",
+        "Connected external drives and cloud locations introduce another question: is the file available here at all? Reconnect the drive or check the service where you originally received the document. A local search cannot prove that a file was deleted simply because an unavailable location does not appear in the results."
+      ]
+    },
+    {
+      "heading": "Narrow the results one condition at a time",
+      "paragraphs": [
+        "Use Finder’s search criteria to narrow by kind and date. Begin with the file type you trust, inspect the results, then add another condition. If the file vanishes after a new filter, loosen that condition before adding more. This makes it easier to see which assumption is excluding the file.",
+        "Be careful about what the date means. The day you received a document may differ from its creation date, and editing it later may change its modification date. Try a wider window and a different date attribute when a strict filter produces nothing. The goal is a small set of plausible files, not a perfectly phrased query on the first attempt.",
+        "A word from the document can be another useful clue, but availability of content search depends on the file and indexing. Text inside a scanned page may behave differently from selectable text in a PDF. If content search does not find it, return to type, location, and dates instead of assuming the word was wrong."
+      ]
+    },
+    {
+      "heading": "Preview the shortlist before acting on it",
+      "paragraphs": [
+        "Once the results are manageable, inspect likely candidates. Select a file in Finder and press Space for Quick Look on supported formats. The first page, a recognizable image, or a document heading can be enough to confirm a match without opening every application involved.",
+        "Use Get Info when the size, location, or dates would help distinguish two similar results. Avoid renaming or moving several candidates while you are still deciding. It is easier to keep your bearings when the search process leaves the files where you found them."
+      ]
+    },
+    {
+      "heading": "Try the same clues in MacEx",
+      "paragraphs": [
+        "MacEx takes a plain description such as ‘pdfs from last week over 5 mb’ and turns it into visible filters. You can inspect those filters and adjust the ones that do not match your memory. Its file library also lets you browse by kind when the right search terms are hard to recall.",
+        "If you remember the source of a download, MacEx can also show download sources when that information is available. This is useful context for a file received through a site such as Gmail or Drive. It does not make missing source metadata appear, and a partial clue still needs checking against the actual document."
+      ]
+    },
+    {
+      "heading": "Leave one useful breadcrumb for next time",
+      "paragraphs": [
+        "After finding the file, make one small improvement: give it a descriptive name, add a project tag, or move it to the project folder where you expected it to be. Choose a change that fits the way you work instead of pausing everything for a complete folder overhaul.",
+        "If you repeat the same search often, save it as a Finder Smart Folder. If you mainly need to browse across many folders, try the MacEx live demo. The most useful outcome is not only recovering today’s document; it is reducing how much you need to remember when you look for it again."
+      ]
+    }
+  ],
+  "sources": [
+    {"title": "Apple: Narrow your search results in Finder", "url": "https://support.apple.com/en-ph/guide/mac-help/mh15155/mac"},
+    {"title": "Apple: Ways to quickly see items in the Finder", "url": "https://support.apple.com/guide/mac-help/mh11493/mac"},
+    {"title": "MacEx: Search in plain words", "url": "https://macex.app/docs/#search"},
+    {"title": "MacEx: Smart Downloads", "url": "https://macex.app/docs/#tidy"}
+  ]
+}

@@ -14,6 +14,7 @@ Key facts:
 
 ## Pages
 
+- [The MacEx Journal](https://blogs.macex.app/): Mac file organization, search tips, and everyday workflows
 - [MacEx home](https://macex.app/): features, live in-browser demo, keyboard shortcuts, pricing and FAQ
 - [MacEx Docs](https://macex.app/docs/): install, search, preview, Free Up Space, duplicates, Tidy Downloads, Trash, automation, Quick Search, SFTP, keyboard shortcuts, troubleshooting, privacy
 - [MacEx vs Finder](https://macex.app/compare/finder/): feature-by-feature comparison, when Finder is enough and when MacEx helps

@@ -27,6 +27,7 @@ All links and prices live in `config.js`. Pages opt in with data attributes, and
 
 ## Pages
 
+- `blog/`: generated output for https://blogs.macex.app, deployed by the separate `macex-blog` Pages project from this same repository and `main` branch. Edit `content/posts/` and `blog-theme/`, then run `python3 -B scripts/build_blog.py`. Commit the generated output with the source. See `BLOG-PUBLISHING.md` for the daily publishing contract. Never put credentials in posts or the generated directory.
 - `index.html`: hero, live demo, features, pricing ticket, FAQ. The hero "Get MacEx" button scrolls to `#pricing`. The nav "Get MacEx" button and the pricing card "Buy License" button open Dodo checkout.
 - `docs/index.html`: documentation.
 - `compare/finder/index.html`: MacEx vs Finder page.

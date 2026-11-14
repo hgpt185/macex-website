@@ -1,0 +1,57 @@
+{
+  "slug": "finder-smart-folders",
+  "title": "Finder Smart Folders: keep a project view without moving your files",
+  "description": "Build a saved Finder search for active work, understand what Smart Folders actually store, and choose rules that stay useful as your projects grow.",
+  "date": "2026-11-14",
+  "category": "Mac workflows",
+  "art": "folders",
+  "intro": "A project rarely arrives in one tidy folder. A brief lands in Downloads, reference images live in Documents, and the latest export is somewhere else again. A Finder Smart Folder gives you another way to look at that work: a saved search that gathers matching files into one view while the originals stay where they are.",
+  "takeaways": [
+    "A Smart Folder saves search rules; it does not create another copy of each matching file.",
+    "Start with a small, specific view such as recent PDFs for one project.",
+    "Treat files in search results as originals: moving or deleting a result affects the actual file."
+  ],
+  "sections": [
+    {
+      "heading": "Choose a question you ask more than once",
+      "paragraphs": [
+        "Before creating another saved view, write down what you repeatedly need to find. ‘All my work’ is hard to define and usually produces too much noise. ‘PDFs I have worked on recently’ is a clearer starting point. A useful Smart Folder answers a recurring question rather than reproducing your entire file system.",
+        "For example, imagine you are preparing a workshop. Your slides, venue documents, and invoices have different homes. You could use a consistent workshop tag to identify them, then create a view around that tag. The view becomes a way back into the project, rather than another destination you have to remember to file things into."
+      ]
+    },
+    {
+      "heading": "Create and save your first Smart Folder",
+      "paragraphs": [
+        "Open Finder and choose File → New Smart Folder. Set the search scope, then add criteria with the plus button. Finder offers attributes such as file kind and dates; Other exposes additional attributes. Start with one or two rules and inspect the results before adding more.",
+        "A simple first experiment is a view of PDFs you have opened recently. Set the kind to PDF and add a recent-opened-date condition using the options available on your macOS version. Click Save, give the view a descriptive name such as ‘Recent reference PDFs,’ and keep Add To Sidebar selected if you want quick access.",
+        "Check the result against a file you already know. If the document is missing, verify the scope and each condition individually. Saving a search that happens to be empty is easy; checking it against a known example makes the view much more dependable."
+      ]
+    },
+    {
+      "heading": "Understand what stays in place",
+      "paragraphs": [
+        "The Smart Folder stores the search, not a second set of documents. Its results update as matching files are added or changed. That makes it useful when the same document belongs in several contexts: a project view, a recent-documents view, and a view of files carrying a particular tag.",
+        "The practical consequence is that a search result is still your real file. Do not use Trash to ‘remove it from the Smart Folder’ unless you intend to trash the original. Change its tag or the saved criteria when you want to change membership. A Smart Folder is also not a backup: it provides another view, not another protected copy."
+      ]
+    },
+    {
+      "heading": "Use tags for context and folders for a home",
+      "paragraphs": [
+        "Folders work well for ownership: this is where the workshop materials live. Tags work well for context: this is awaiting review, or this belongs to a particular client. Smart Folders can bring those contexts back together without requiring a second folder hierarchy.",
+        "Keep the vocabulary small. If ‘Review,’ ‘To review,’ and ‘Needs review’ all mean the same thing, choose one. A saved view is only as useful as the information it searches. Apply a tag to a handful of files first, try the view for a week, and expand only if it helps you return to work faster."
+      ]
+    },
+    {
+      "heading": "Keep the views you actually use",
+      "paragraphs": [
+        "A sidebar full of saved searches can become another place to lose things. Keep a few views that match your current routine: recent project documents, items awaiting review, or a particular kind of reference material. Retire a view when the project ends instead of treating every saved search as permanent infrastructure.",
+        "Finder Smart Folders are a good fit when you already know the rules you want to save. For broader browsing across file types, MacEx offers a file library and plain-language search. Try the live demo to see how that approach feels alongside the folders you already use. Neither approach requires reorganizing every file before you can begin."
+      ]
+    }
+  ],
+  "sources": [
+    {"title": "Apple: Create or change a Smart Folder on Mac", "url": "https://support.apple.com/en-eg/guide/mac-help/mchlp2804/mac"},
+    {"title": "Apple: Use tags to organize files on Mac", "url": "https://support.apple.com/en-ie/guide/mac-help/mchlp15236/mac"},
+    {"title": "MacEx: Search in plain words", "url": "https://macex.app/docs/#search"}
+  ]
+}

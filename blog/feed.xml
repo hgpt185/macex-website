@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>The MacEx Journal</title>
+    <link>https://blogs.macex.app/</link>
+    <description>Practical ideas for a calmer Mac.</description>
+    <language>en</language>
+    <atom:link href="https://blogs.macex.app/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A file naming system for Mac that you can actually keep using</title>
+      <link>https://blogs.macex.app/mac-file-naming-system/</link>
+      <guid>https://blogs.macex.app/mac-file-naming-system/</guid>
+      <description>Make project files easier to recognize with a simple subject, date, and version pattern. Includes examples for invoices, drafts, screenshots, and shared work.</description>
+      <category>File organization</category>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Finder Smart Folders: keep a project view without moving your files</title>
+      <link>https://blogs.macex.app/finder-smart-folders/</link>
+      <guid>https://blogs.macex.app/finder-smart-folders/</guid>
+      <description>Build a saved Finder search for active work, understand what Smart Folders actually store, and choose rules that stay useful as your projects grow.</description>
+      <category>Mac workflows</category>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>How to find a file on your Mac when you forgot its name</title>
+      <link>https://blogs.macex.app/find-files-on-mac-without-filename/</link>
+      <guid>https://blogs.macex.app/find-files-on-mac-without-filename/</guid>
+      <description>Turn the clues you remember into a useful search: file type, approximate date, likely location, and content. A practical workflow for Finder and MacEx.</description>
+      <category>Search tips</category>
+      <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

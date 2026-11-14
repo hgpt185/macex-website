@@ -1,0 +1,7 @@
+# The MacEx Journal
+
+> Practical Mac file organization and productivity articles by MacEx.
+
+- [A file naming system for Mac that you can actually keep using](https://blogs.macex.app/mac-file-naming-system/): Make project files easier to recognize with a simple subject, date, and version pattern. Includes examples for invoices, drafts, screenshots, and shared work.
+- [Finder Smart Folders: keep a project view without moving your files](https://blogs.macex.app/finder-smart-folders/): Build a saved Finder search for active work, understand what Smart Folders actually store, and choose rules that stay useful as your projects grow.
+- [How to find a file on your Mac when you forgot its name](https://blogs.macex.app/find-files-on-mac-without-filename/): Turn the clues you remember into a useful search: file type, approximate date, likely location, and content. A practical workflow for Finder and MacEx.

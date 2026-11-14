@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://macex.app/sitemap.xml
+Sitemap: https://blogs.macex.app/sitemap.xml
