@@ -14,7 +14,7 @@ from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = "https://blogs.macex.app"
+BASE = "https://macex.app/blog"
 RESERVED = {"assets", "index", "404", "robots", "sitemap", "feed", "llms", "page"}
 
 
@@ -111,9 +111,11 @@ def page(title, description, path, content, schema, article=None):
     graph = [{"@type": "Organization", "@id": "https://macex.app/#organization", "name": "MacEx", "url": "https://macex.app/", "logo": "https://macex.app/assets/icon-512.png"}, *schema]
     # Escaping '<' prevents a text field from closing the JSON-LD script element.
     jsonld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False).replace("<", "\\u003c")
-    return template.substitute(title=escape(title), description=escape(description), canonical=BASE + path,
+    html = template.substitute(title=escape(title), description=escape(description), canonical=BASE + path,
                                og_type="article" if article else "website", article_meta=article_meta,
                                schema=jsonld, analytics=analytics.group(), content=content)
+    # Blog pages are served under /blog on the main site, not at the domain root.
+    return re.sub(r\'(?<=href=")/(?=[^/])|(?<=src=")/(?=[^/])\', "/blog/", html)
 
 
 def build(posts, output):
@@ -189,7 +191,7 @@ def build(posts, output):
     ET.ElementTree(rss).write(output / "feed.xml", encoding="utf-8", xml_declaration=True)
     (output / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
     (output / "llms.txt").write_text("# The MacEx Journal\n\n> Practical Mac file organization and productivity articles by MacEx.\n\n" + "\n".join(f"- [{p['title']}]({BASE}/{p['slug']}/): {p['description']}" for p in posts) + "\n")
-    (output / "_headers").write_text("/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/assets/*\n  Cache-Control: public, max-age=3600\n/feed.xml\n  Content-Type: application/rss+xml; charset=utf-8\n")
+    (output / "_headers").write_text("/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/blog/assets/*\n  Cache-Control: public, max-age=3600\n/blog/feed.xml\n  Content-Type: application/rss+xml; charset=utf-8\n")
     (output / "_redirects").write_text("# Add permanent path redirects here when changing a published slug.\n")
 
 
