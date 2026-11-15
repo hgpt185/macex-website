@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="520" viewBox="0 0 1080 520" role="img" aria-labelledby="title desc">
+<title id="title">A simple Spotlight troubleshooting checklist</title>
+<desc id="desc">Four checks in order: search scope, result categories, Search Privacy exclusions, and index progress or rebuilding.</desc>
+<rect width="1080" height="520" rx="28" fill="#f2f5fa"/>
+<text x="72" y="86" fill="#26354b" font-family="Arial,sans-serif" font-size="30" font-weight="700">When Spotlight misses a file</text>
+<text x="72" y="122" fill="#65748a" font-family="Arial,sans-serif" font-size="17">Work from the simplest check to the deeper fix.</text>
+<g font-family="Arial,sans-serif">
+<rect x="72" y="170" width="220" height="242" rx="18" fill="#fff" stroke="#dbe3ed" stroke-width="2"/>
+<circle cx="112" cy="212" r="22" fill="#e4e9fb"/><text x="112" y="219" text-anchor="middle" font-size="18" font-weight="700" fill="#4759a8">1</text>
+<text x="98" y="272" font-size="22" font-weight="700" fill="#26354b">Scope</text>
+<text x="98" y="308" font-size="16" fill="#5b6b80">Are you searching</text><text x="98" y="333" font-size="16" fill="#5b6b80">the right place?</text>
+<rect x="318" y="170" width="220" height="242" rx="18" fill="#fff" stroke="#dbe3ed" stroke-width="2"/>
+<circle cx="358" cy="212" r="22" fill="#e4e9fb"/><text x="358" y="219" text-anchor="middle" font-size="18" font-weight="700" fill="#4759a8">2</text>
+<text x="344" y="272" font-size="22" font-weight="700" fill="#26354b">Categories</text>
+<text x="344" y="308" font-size="16" fill="#5b6b80">Are documents and</text><text x="344" y="333" font-size="16" fill="#5b6b80">folders enabled?</text>
+<rect x="564" y="170" width="220" height="242" rx="18" fill="#fff" stroke="#dbe3ed" stroke-width="2"/>
+<circle cx="604" cy="212" r="22" fill="#e4e9fb"/><text x="604" y="219" text-anchor="middle" font-size="18" font-weight="700" fill="#4759a8">3</text>
+<text x="590" y="272" font-size="22" font-weight="700" fill="#26354b">Privacy</text>
+<text x="590" y="308" font-size="16" fill="#5b6b80">Is the folder or disk</text><text x="590" y="333" font-size="16" fill="#5b6b80">excluded from search?</text>
+<rect x="810" y="170" width="198" height="242" rx="18" fill="#fff" stroke="#dbe3ed" stroke-width="2"/>
+<circle cx="850" cy="212" r="22" fill="#e4e9fb"/><text x="850" y="219" text-anchor="middle" font-size="18" font-weight="700" fill="#4759a8">4</text>
+<text x="836" y="272" font-size="22" font-weight="700" fill="#26354b">Index</text>
+<text x="836" y="308" font-size="16" fill="#5b6b80">Is indexing still</text><text x="836" y="333" font-size="16" fill="#5b6b80">in progress?</text>
+<g stroke="#97a6bb" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M296 290h16m-6 -6 6 6 -6 6"/><path d="M542 290h16m-6 -6 6 6 -6 6"/><path d="M788 290h16m-6 -6 6 6 -6 6"/></g>
+</g>
+<text x="72" y="462" fill="#65748a" font-family="Arial,sans-serif" font-size="15">Rebuild only the affected folder or disk after checking the settings.</text>
+</svg>
