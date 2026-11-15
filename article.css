@@ -43,3 +43,8 @@ table.vs td{color:var(--ink-2);width:38%}
 .cmp .related-links li a{display:block;height:100%;padding:16px 18px;border-radius:16px;background:#fff;box-shadow:0 0 0 1px #e1e7f0 inset;color:var(--ink);font-weight:600;line-height:1.4;transition:box-shadow .2s}
 .cmp .related-links li a:hover{text-decoration:none;box-shadow:0 0 0 1.5px var(--blue) inset}
 .related-links small{display:block;margin-top:4px;font-weight:400;font-size:14px;color:var(--muted)}
+
+/* Avoid a delayed remote display-font swap shifting the duplicates guide's
+   above-the-fold heading and answer box on slow mobile connections. */
+.dup-guide h1 {font-family:-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif}
+.dup-guide h1 em {font-family:Georgia,'Times New Roman',serif}

@@ -88,3 +88,30 @@ the layout, update `blog-theme/`, then regenerate. Do not hand-edit `blog/`.
 
 The daily automation itself is separate; this repository supplies its
 publishing contract. Publishing frequency alone does not guarantee rankings.
+
+## SEO topic clusters and editorial sequence (from 15 November 2026)
+
+The journal is part of a useful macOS help library, not a daily keyword quota.
+Every published post must solve a unique Mac question and link readers to the
+most relevant **existing hub**. Use the real reader's problem and available
+Search Console metrics for `macex.app` when accessible; never invent search
+volumes, ranks, traffic or impressions. Preserve permanent slugs.
+
+| Hub and intent | Next useful distinct questions (verify against existing slugs first) |
+| --- | --- |
+| `/features/file-search/` — finding misplaced files | Spotlight not finding files; search text inside screenshots or scanned PDFs; search by date/type/size; where a download came from |
+| `/features/storage-management/` — careful Mac cleanup | Old DMG files: when safe to delete; System Data and purgeable storage explained; screenshot/recording cleanup |
+| `/guides/find-duplicate-files-mac/` — duplicate safety | Photos Duplicates vs files on disk; what happens to duplicates in cloud-sync folders |
+| `/guides/clean-up-downloads-folder-mac/` — Downloads organization | Simple folder rules; handling files with the same name; undoing a cleanup |
+| `/compare/finder/` — when to use which app | Finder Smart Folders vs Spotlight vs MacEx; limits of native Finder tools |
+
+**Article selection and quality gate:** Check all current blog articles and hub
+pages for overlapping user intent; research fresh real-world Mac questions with
+Apple's official documentation and appropriate community discussions. Choose
+only one topic that adds new substance. Start with a direct, helpful answer,
+then precise steps and credible limitations. Link naturally to at least one hub
+and, if valuable, a related article. Keep product mentions brief and truthful.
+The optional `related_pages` field is suited to the hub link. Do not claim
+coverage or ranking gains until Search Console reports them. Track completed
+subjects by scanning source post JSON rather than treating this table as a
+publication schedule. If a topic is already answered well, skip it.
