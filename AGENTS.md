@@ -34,10 +34,11 @@ All links and prices live in `config.js`. Pages opt in with data attributes, and
 - `features/file-search/`, `features/storage-management/`: feature explainers. `guides/*`: how-to guides for duplicates and Downloads. These pages share `article.css`. There is deliberately no `features/` index; `_redirects` sends it to `/#features`.
 - `thanks/index.html`: post-purchase page. Two-column: intro on the left, steps on the right (download, open, activate). Dodo appends `?license_key=...` to the return URL and the page shows it with a copy button. It is `noindex`, and it must stay out of `sitemap.xml`.
 - `404.html`: real 404.
+- `press/index.html`: verified media and directory listing facts, official screenshots and contact; keep licensing, price, compatibility and description synchronized with `config.js`, docs and the live app.
 
 ## SEO and GEO files
 
-`robots.txt` (allows all crawlers), `sitemap.xml` (generated: run `python3 -B scripts/seo.py sitemap`, never edit by hand), `llms.txt`, `site.webmanifest`, and JSON-LD in every page head. The Organization `sameAs` lists the owner's LinkedIn and X profiles. Google Search Console (domain property) and Bing Webmaster Tools are set up with the sitemap submitted.
+`robots.txt` (allows all crawlers), `sitemap.xml` (generated: run `python3 -B scripts/seo.py sitemap`, never edit by hand), `llms.txt`, `site.webmanifest`, and JSON-LD in every page head. The Organization `sameAs` lists the owner's LinkedIn and X profiles. Google Search Console (domain property) and Bing Webmaster Tools are reported as configured with a submitted sitemap. Verify live property/indexing/traffic from those products before making any current ranking claim.
 
 Every page has the Umami analytics script in `<head>`. Add it to any new page.
 
