@@ -1,0 +1,80 @@
+name: Build and publish MacEx blog
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/posts/**'
+      - 'scripts/build_blog.py'
+      - 'scripts/test_blog.py'
+      - 'blog-theme/**'
+      - '.github/workflows/build-blog.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: macex-blog-publishing
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Generate blog and update root sitemap
+        run: |
+          python3 -B scripts/build_blog.py
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timezone
+          root = Path('.')
+          sitemap = root / 'sitemap.xml'
+          ET.register_namespace('', 'http://www.sitemaps.org/schemas/sitemap/0.9')
+          tree = ET.parse(sitemap)
+          xmlroot = tree.getroot()
+          ns = '{http://www.sitemaps.org/schemas/sitemap/0.9}'
+          old = {element.findtext(ns + 'loc'): element for element in xmlroot.findall(ns + 'url')}
+          posts = [json.loads(p.read_text()) for p in (root / 'content/posts').glob('*.json')]
+          if not posts:
+              raise ValueError('No posts found')
+          latest = max((p.get('updated', p['date']) for p in posts if not p.get('draft')), default=None)
+          for post in posts:
+              if post.get('draft'):
+                  continue
+              url = f"https://macex.app/blog/{post['slug']}/"
+              element = old.get(url)
+              if element is None:
+                  element = ET.SubElement(xmlroot, ns + 'url')
+                  ET.SubElement(element, ns + 'loc').text = url
+              lastmod = element.find(ns + 'lastmod')
+              if lastmod is None:
+                  lastmod = ET.SubElement(element, ns + 'lastmod')
+              lastmod.text = post.get('updated', post['date'])
+          homepage = old.get('https://macex.app/blog/')
+          if homepage is not None and latest:
+              lastmod = homepage.find(ns + 'lastmod')
+              if lastmod is None:
+                  lastmod = ET.SubElement(homepage, ns + 'lastmod')
+              lastmod.text = latest
+          ET.indent(tree, space='  ')
+          tree.write(sitemap, encoding='unicode', xml_declaration=True)
+          PY
+      - name: Validate generated website
+        run: |
+          python3 -B -m unittest discover -s scripts
+          python3 -B scripts/build_blog.py --check
+          git diff --check
+      - name: Commit generated output to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add blog/ sitemap.xml
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate MacEx blog pages and sitemap"
+            git push origin HEAD:main
+          fi
