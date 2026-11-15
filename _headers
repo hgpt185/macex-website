@@ -1,3 +1,8 @@
 # config.js holds the checkout and download links; browsers must recheck it on every visit.
 /config.js
   Cache-Control: no-cache
+
+/blog/feed.xml
+  Content-Type: application/rss+xml; charset=utf-8
+/blog/assets/*
+  Cache-Control: public, max-age=3600
