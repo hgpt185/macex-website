@@ -46,7 +46,7 @@ class BlogTests(unittest.TestCase):
             page = (output / post["slug"] / "index.html").read_text()
             self.assertIn("&lt;script&gt;", page)
             self.assertNotIn('<script>alert("x")</script>', page)
-            url = "https://blogs.macex.app/finder-smart-folders/"
+            url = "https://macex.app/blog/finder-smart-folders/"
             self.assertIn(f'rel="canonical" href="{url}"', page)
             schema = page.split('<script type="application/ld+json">')[1].split('</script>')[0]
             graph = json.loads(schema)["@graph"]
@@ -55,7 +55,7 @@ class BlogTests(unittest.TestCase):
             self.assertEqual(article["author"]["name"], "MacEx")
             sitemap = ET.parse(output / "sitemap.xml")
             locations = [x.text for x in sitemap.findall(".//{*}loc")]
-            self.assertEqual(locations, ["https://blogs.macex.app/", url])
+            self.assertEqual(locations, ["https://macex.app/blog/", url])
             feed = ET.parse(output / "feed.xml")
             self.assertEqual(feed.findtext("channel/item/link"), url)
             self.assertIn('data-website-id=', page)
@@ -81,7 +81,7 @@ class BlogTests(unittest.TestCase):
             self.blog.build(posts, output)
             self.assertTrue((output / "page/2/index.html").exists())
             home = (output / "index.html").read_text()
-            self.assertIn('href="/page/2/"', home)
+            self.assertIn('href="/blog/page/2/"', home)
             self.assertEqual(home.count('<article class="post-card'), 12)
             article = (output / "post-0/index.html").read_text()
             self.assertEqual(article.count('<article class="post-card'), 2)
