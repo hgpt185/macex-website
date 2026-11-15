@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blogs.macex.app/sitemap.xml
+Sitemap: https://macex.app/blog/sitemap.xml
