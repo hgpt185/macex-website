@@ -1,0 +1,86 @@
+name: Production Lighthouse
+
+# Re-check real deployed pages after site changes and weekly.
+# Lab results are useful diagnostics, not Search Console field Core Web Vitals.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 4 * * 0'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/production-lighthouse.yml'
+      - 'index.html'
+      - 'style.css'
+      - 'article.css'
+      - 'guides/**'
+      - 'features/**'
+      - 'assets/**'
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Wait for Cloudflare Pages production deployment
+        if: github.event_name == 'push'
+        run: sleep 90
+      - name: Audit production pages (mobile)
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p reports
+          for entry in "home|https://macex.app/" "duplicates|https://macex.app/guides/find-duplicate-files-mac/" "search|https://macex.app/features/file-search/"; do
+            name="${entry%%|*}"
+            url="${entry#*|}"
+            echo "Auditing $url"
+            npx --yes lighthouse@12.6.1 "$url" \
+              --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" \
+              --only-categories=performance \
+              --output=json --output-path="reports/${name}.json" --quiet
+          done
+      - name: Report scores and Core Web Vitals diagnostics
+        if: always()
+        shell: bash
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const rows = [];
+          for (const name of ['home', 'duplicates', 'search']) {
+            const file = `reports/${name}.json`;
+            if (!fs.existsSync(file)) { rows.push(`| ${name} | unavailable | - | - | - |`); continue; }
+            const r = JSON.parse(fs.readFileSync(file, 'utf8'));
+            const a = r.audits || {};
+            const score = r.categories?.performance?.score;
+            const lcp = a['largest-contentful-paint']?.numericValue;
+            const cls = a['cumulative-layout-shift']?.numericValue;
+            const tbt = a['total-blocking-time']?.numericValue;
+            rows.push(`| ${name} | ${score == null ? '-' : Math.round(score * 100)} | ${lcp == null ? '-' : (lcp / 1000).toFixed(2) + ' s'} | ${cls == null ? '-' : cls.toFixed(3)} | ${tbt == null ? '-' : Math.round(tbt) + ' ms'} |`);
+          }
+          const summary = [
+            '## Production mobile Lighthouse (lab emulation)',
+            '',
+            '| Page | Performance /100 | LCP | CLS | TBT |',
+            '| --- | ---: | ---: | ---: | ---: |',
+            ...rows, '',
+            'Lab results vary; they are not real-user CrUX field measurements.',
+            'Review changes against previous runs before interpreting trends.'
+          ].join('\n');
+          console.log(summary);
+          if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary + '\n');
+          NODE
+      - name: Save raw Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-mobile-reports
+          path: reports/*.json
+          retention-days: 30
+          if-no-files-found: warn
