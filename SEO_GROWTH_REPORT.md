@@ -228,7 +228,7 @@ No fake reviews, paid links, comment spam, forum posts or generated links were c
 
 1. **Off-site presence needs the owner's accounts.** AlternativeTo (as a Finder alternative), Product Hunt, MacUpdate, and a disclosed post on r/macapps are the highest-value steps and cannot be done honestly without them. Use the facts at https://macex.app/press/.
 2. **Organization `sameAs`** still points to personal LinkedIn and X profiles, which contradicts "no maker name". Replace them with MacEx brand accounts once those exist. This was not changed because `AGENTS.md` records it as deliberate.
-3. **Cloudflare bot settings.** The default Python user agent gets 403. Check Security, Bots and AI Crawl Control to confirm no search or AI crawler is blocked. Nothing in Cloudflare was changed.
+3. **Cloudflare bot settings.** Resolved in section 10.2: the 403 is Cloudflare error 1010 (Browser Integrity Check) for the Python `urllib` signature only. Real Googlebot and Bingbot are not affected. Nothing in Cloudflare was changed.
 4. **Domain Rating** needs a signed-in Ahrefs or Semrush session, or the owner's say-so to create a free account.
 5. **Not done from `GEO-ANALYSIS.md`:** a changelog page, an About page, a question-style pricing heading, `softwareVersion` in JSON-LD (it would go stale unless generated), and a YouTube channel for the demo clips.
 6. **Check in 4 to 6 weeks:** Search Console Performance (queries, positions), Pages (indexing), and Bing Webmaster Tools Backlinks. Then decide which planned articles to write.
@@ -247,3 +247,122 @@ No fake reviews, paid links, comment spam, forum posts or generated links were c
 | Clicks, impressions, rankings | 0 clicks, 18 impressions (brand queries only), average position 11.1 | unchanged | Too early; recheck in 4 to 6 weeks |
 
 Traffic, rankings and authority have **not** improved yet, and this report does not claim they have.
+
+## 10. Authority and backlink work (second session, 15 November 2026)
+
+This session had one goal: build a legitimate backlink profile. Rules in force: no external email sent, no account created, no payment, no human-verification bypass, and no external submission without an authorised existing account.
+
+### 10.1 Result at a glance
+
+| Item | Count | Notes |
+|---|---|---|
+| Prospects identified | 103 | 15 High, 27 Medium, 61 Low relevance. 73 distinct domains. In `BACKLINK_TRACKER.csv`; ranked in `PROSPECT_LIST.md`. |
+| Editorial prospects with a public contact route recorded | 53 of 54 | Researched by hand and by three read-only research agents. Several pages returned 403, so some routes come from search snippets. The tracker says which. Some articles are outdated or off-topic and are marked as not worth pursuing. |
+| Outreach emails prepared | 8 | **None sent.** Drafts are in a private folder outside the repository, because they hold third-party contact addresses. |
+| Outreach emails sent | 0 | Sending on the owner's behalf needs the owner's approval. |
+| Directory submissions completed | 0 | Two prepared (see 10.5). |
+| Backlinks discovered or verified | 0 | Search Console shows 0 external links and Bing shows no backlink data (both re-read this session). |
+
+Nothing in this report is an acquired backlink.
+
+### 10.2 Cloudflare 403 and real crawler access (task 6)
+
+- **Cause of the 403:** the response body is `error code: 1010`, Cloudflare's "access denied based on browser signature" (Browser Integrity Check). It happened only for the user agent `Python-urllib/3.9`. Nine other user agents got 200, including `curl`, `python-requests`, `Go-http-client`, `Wget`, an empty user agent, a Chrome browser string, and Googlebot, Bingbot and GPTBot strings (measured with `curl` from one IP).
+- **Real Googlebot (verified by Google, not a spoofed string):** Search Console URL Inspection for `https://macex.app/` says "URL is on Google". Last crawl 12 Nov 2026 04:50:55, crawled as Googlebot smartphone, crawl allowed: yes, page fetch: successful, indexing allowed: yes. The live test run at 15 Nov 23:32 says "URL is available to Google, page can be indexed". The sitemap was read successfully on 15 Nov.
+- **Real Bingbot:** Bing URL Inspection says "Indexed successfully, URL can appear on Bing". The sitemap was crawled successfully on 11/15.
+- **Cloudflare dashboard:** the Mac browser is not signed in, so Security, Bots and AI Crawl Control were not inspected, and nothing was changed.
+- **Conclusion:** no evidence that a legitimate search crawler is affected. Leave Browser Integrity Check on. It only stops a few default script signatures. Scripts that need the site should send a normal `User-Agent` or use `curl`.
+- **Not proven:** AI crawlers other than search bots. Only user-agent strings were tested, which cannot show how Cloudflare treats verified-bot IP ranges.
+- **Bing notice:** Bing URL Inspection flags "Alt attribute for images is missing, 1 instance" on the homepage. The homepage has five decorative mascot images with an empty `alt`. The hero mascot now has `alt="MacEx mascot"`. Which image Bing flagged is not known; re-inspect after Bing recrawls.
+
+### 10.3 Competitor backlinks (task 4)
+
+**Method.** Bing Webmaster Tools, Backlinks, "Backlinks To Any Site", read on 15 Nov 2026 from the owner's session. **Limits:** it shows only what Bing has indexed, "referring domains" is a count of domains, and the per-domain "count" in the top list is a count of links (a high count can mean a sitewide link, not many articles). No data on link type (dofollow or nofollow) or why a site linked. Path Finder's top-domain list returned a server error, so only its total is known. Ahrefs and Semrush were not available.
+
+| Competitor | Domain checked | Referring domains (Bing) | Strongest linking domains (links) | Realistic for MacEx? |
+|---|---|---|---|---|
+| ForkLift | binarynights.com | 996 | easypodcast.it (546), hubspot.com (254), filehorse.com (152), downloadcrew.com (124), charleston.edu (123), macsplex.com (122), jablickar.cz (108) | Partly: download portals (filehorse, downloadcrew) if they accept new apps. Not the large sitewide counts. |
+| DaisyDisk | daisydiskapp.com | 1.3K | applelinkage.com (648), easypodcast.it (598), david-informaticien.com (425), jablickar.cz (261), soydemac.com (259) | Mostly non-English news sites; reason for links not verified. Low. |
+| Path Finder | cocoatech.io | 783 | list unavailable | Unknown |
+| HoudahSpot | houdah.com | 737 | blogspot.com (614), fastspring.com (194), downloadcrew.com (142), tidbits.com (92), devontechnologies.com (86), macg.co (82), macgadget.de (79), macstories.net (78), brettterpstra.com (78) | **Best match to learn from.** HoudahSpot is a file-search app. TidBITS and MacStories are the editorial targets, but both say apps are covered on their own terms. |
+| Nektony | nektony.com | 682 | easypodcast.it (514), titikey.com (265), creativosonline.org (222), torrentmac.net (198), uptodown.com (161), macfreak.nl (119) | Little. Several domains look low-value or piracy-related; avoid torrentmac.net. |
+| Marta | marta.sh | 153 | biapy.com (116), seeseekey.net (70), applefritter.com (53), iconfactory.com (17), ghisler.ch (12), macfreak.nl (12) | Small blogs and community sites; replicable only through real coverage. |
+| Find Any File | findanyfile.app | 108 | jablickar.cz (104), macfreak.nl (76), macdailynews.com (52), eclecticlight.co (30), tempel.org (29) | An independent file-search app with press coverage; a useful pattern. |
+| Fileside | fileside.app | 86 | parkscomputing.com (29), ez3c.tw (21), getlatka.com (19), portablefreeware.com (19), altap.cz (12), trackawesomelist.com (8) | Includes an awesome-list aggregator; supports the GitHub list route. |
+| Homy | tryhomy.app | 7 | x.com (47), scrolllaunch.com, catchbuys.com, ycombinator.com | A new Finder alternative with a profile close to MacEx's today. |
+| Cosmil | cosmil.app | 6 | majabojarska.dev (3), producthunt.com (2), stahuj.cz (2), mac-utils.com (1), macapp.supply (1) | The most useful benchmark: a new Finder alternative whose links are Product Hunt and small Mac directories. These are replicable. |
+
+**What this means.**
+
+- Established apps have hundreds of referring domains built over many years. The two newest competitors have 6 and 7. A realistic first-month goal for MacEx is **a handful of relevant referring domains**, not dozens.
+- The replicable links are the ones Cosmil has: Product Hunt, small directories (Macapp Supply, Mac Utils), and community mentions. Editorial coverage (TidBITS, MacStories, How-To Geek) comes later and cannot be forced.
+- The largest link counts in competitor profiles come from sitewide or low-quality domains. They were not treated as targets.
+- Competitor-published roundups (MacPaw, Nektony, Cosmil, Eltima) and piracy sites are excluded.
+
+### 10.4 Prospecting (task 1) and editorial prospects (task 3)
+
+- `BACKLINK_TRACKER.csv` now holds 103 prospects with the 19 fields the brief asked for: domain, URL, public contact route, existing article or listing, opportunity type, free or not, registration required, human submitter required, relevance, stage and next step.
+- `PROSPECT_LIST.md` ranks the top 100.
+- Stage values are exactly: Prospect identified (93), Outreach prepared (8), Submission prepared (2). No row is "Outreach sent", "Submission completed", "Backlink discovered" or "Backlink verified".
+- Contact-route research for 22 unchecked articles was split across three parallel read-only research agents. They sent nothing and signed in nowhere. Their findings were merged and unverified claims marked. Third-party personal email addresses are not in the public repository. The tracker records each site's public contact page. Addresses a site prints are in the private outreach folder.
+- Only 42 of the 103 are worth acting on (15 High, 27 Medium). The Low rows are old articles, off-topic roundups, non-English sites and vendors, listed so they are not rediscovered.
+- The most important finding is a submission route that exists today: **9to5Mac's Indie App Spotlight** accepts submissions by email for new or updated indie apps, and its latest entries include Mac apps.
+
+### 10.5 Directory submissions (task 2)
+
+Completed: **none.** No existing authorised account is signed in on Product Hunt, AlternativeTo, Cloudflare or any directory, and the rules forbid creating accounts that expose the owner's identity.
+
+| Directory | State |
+|---|---|
+| awesome-mac (GitHub, 118,593 stars, active today) | **Prepared.** A fork `hgpt185/awesome-mac` with a branch `add-macex` holds one entry in each of the five READMEs. Opening the pull request was blocked by the permission system, so it is not submitted. It was not retried by another route. |
+| Apptisan newsletter form | **Prepared.** The public Tally form needs: app name, description, category, developer or team name, platforms, languages, email and links. Answers are in the private kit. Not submitted. |
+| AlternativeTo, Product Hunt, MacUpdate | Need the owner's account. Listing copy is ready. |
+| SaaSHub | Its submit page says AI agents should not submit and asks the human operator to submit. Left for the owner. |
+| Macify | Requires 30 days of public availability. Earliest about 10 Dec 2026. |
+| Macapp Supply, Mac Utils, JustMacApps, Macintosh Apps | Submission pages found; terms still to be read. |
+
+The fork on the owner's GitHub account is public. Delete it if the pull request is not wanted.
+
+### 10.6 Outreach emails prepared (task 3), none sent
+
+| # | Publication and article | Recipient route | Angle |
+|---|---|---|---|
+| 1 | 9to5Mac, Indie App Spotlight | Submission address printed on the series page | Submit MacEx as a new indie Mac app |
+| 2 | How-To Geek, best Finder alternatives (2025-06-19) | Contact form | A different kind of Finder alternative, with honest limits |
+| 3 | Cult of Mac, Bloom review (2025-11-19) | Author's bio contact address | A search-first approach to the same problem |
+| 4 | MakeUseOf, Spotlight alternatives (updated 2022-01-25) | Contact form | Stale article; MacEx is not a launcher |
+| 5 | Macworld, duplicate files (2026-06-07) | Contact page | Byte-verified, review-first duplicates |
+| 6 | TheSweetBits, best duplicate finder | Contact page | Asks about inclusion with no paid placement |
+| 7 | SimplyMac, Finder alternatives (2024-04-06) | Contact page | A search-first companion to dual-pane tools |
+| 8 | iDownloadBlog, 30 storage tips (updated 2026-04-09) | Contact page | Two sourced guides (old installers, screenshots) as references |
+
+Each email names its article, states only verified product facts, does not ask for a link, and is signed "MacEx". The owner decides whether to offer review licenses and whether to sign with a personal name.
+
+### 10.7 PR and brand mentions (task 5)
+
+Four angles are written up in the private folder: why Finder search is frustrating, natural-language search as a productivity habit, privacy-first local file management, and building a review-first file manager. The first three use facts that can be checked on the site and in Apple's documents. The fourth needs the owner's own story; none was invented. Assets: the press page, screenshots, eight demo clips, icon and comparison page.
+
+### 10.8 Browser access
+
+Two Chrome browsers were connected to this account, and the active one was a Linux browser signed into an unrelated Google account without access to the property. The owner chose the Mac browser, and it was selected. No data from the unrelated account was used.
+
+### 10.9 Thirty-day authority plan
+
+Realistic target: **3 to 8 verified referring domains in 30 days**, based on the two newest competitors having 6 and 7. Do not buy links, trade links or use badge exchanges.
+
+| Days | Owner actions (accounts and approvals) | Agent actions | Check at the end |
+|---|---|---|---|
+| 1 to 3 | Approve or reject the awesome-mac pull request. Send the 9to5Mac submission. Create the AlternativeTo listing (Finder, then Spotlight) with the kit copy. Sign in to MacUpdate and read the free listing terms. | Prepare the Macapp Supply and Mac Utils entries after reading their guidelines. Re-read Search Console and Bing links. | Submissions made, with dates |
+| 4 to 10 | Choose a Product Hunt launch date and write the first comment in their own words. Post once on r/macapps as the developer after reading the rules. | Publish the next two articles from the keyword plan (Finder search not working, where downloads go) and link them from the hubs. Ping IndexNow. | New pages indexed |
+| 11 to 17 | Send up to three of the prepared outreach emails, chosen by fit. Do not send all. | Track replies. Read three more target pages fully before any new message. | Replies logged; no follow-up yet |
+| 18 to 25 | Follow up once on unanswered emails, no earlier than two weeks after sending. | Verify every new link by opening the referring page and checking the anchor and rel attribute. Update the tracker. | Verified links only |
+| 26 to 30 | Prepare the Macify pull request (eligible from about 10 Dec). Decide on Show HN and Setapp (a contract, so the owner's call only). | Re-run Bing "Backlinks To Any Site" for Cosmil and Homy to see how a similar new app is growing. Write the 30-day review. | Search Console Links, Bing Backlinks, Umami referrers |
+
+Content that earns links honestly: the existing guides that answer a specific question (Spotlight, DMG files, screenshots), plus original data. The only original data possible is the owner's own measurements, such as how much a Free Up Space review finds on real Macs, with a stated method. Do not estimate or invent numbers.
+
+### 10.10 What is still blocked
+
+- Owner approval to open the awesome-mac pull request and to send any of the 8 emails.
+- The owner's accounts for AlternativeTo, Product Hunt and MacUpdate.
+- A signed-in Cloudflare session, to read Bot and AI Crawl Control settings.
+- Ahrefs or Semrush for Domain Rating and complete competitor profiles.
