@@ -3,7 +3,7 @@
 Official static marketing website for MacEx, a paid file library app for macOS. Live at **https://macex.app**.
 
 ## Files
-- `blog/`: generated static journal, deployed at https://blogs.macex.app
+- `blog/`: generated static journal, deployed at https://macex.app/blog
 - `content/posts/`, `blog-theme/`, `scripts/build_blog.py`: blog content and generator; see [BLOG-PUBLISHING.md](BLOG-PUBLISHING.md) for the daily publishing workflow
 - `index.html`: hero, live demo inside a MacBook Pro, feature explorer, pricing, FAQs, footer
 - `docs/`: the documentation page (`index.html`, `docs.css`)
