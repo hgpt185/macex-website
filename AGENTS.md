@@ -40,6 +40,8 @@ All links and prices live in `config.js`. Pages opt in with data attributes, and
 
 `robots.txt` (allows all crawlers), `sitemap.xml` (generated: run `python3 -B scripts/seo.py sitemap`, never edit by hand), `llms.txt`, `site.webmanifest`, and JSON-LD in every page head. The Organization `sameAs` lists the owner's LinkedIn and X profiles. Google Search Console (domain property) and Bing Webmaster Tools are reported as configured with a submitted sitemap. Verify live property/indexing/traffic from those products before making any current ranking claim.
 
+`1d997c5738512f4869fc920eb1270dc6.txt` at the root is the IndexNow key file (public by design, not a secret); keep it. After a deploy, ping `https://api.indexnow.org/indexnow` with the changed URLs. `SEO_GROWTH_REPORT.md` and `BACKLINK_TRACKER.csv` record the growth work and off-site status; update the tracker only with links you have verified.
+
 Every page has the Umami analytics script in `<head>`. Add it to any new page.
 
 Run `python3 -B scripts/seo.py check` before pushing; CI runs it too. `SEO_AUDIT.md` records the SEO audit, decisions and open opportunities.

@@ -46,6 +46,11 @@ so `blog/` must contain generated output only.
 
 Required strings: `slug`, `title`, `description`, `date`, `category`, `intro`.
 
+- `title`: keep it at or under 60 characters. The generator appends
+  " — MacEx Journal" to the page `<title>` only when the whole title still fits
+  in 60 characters; the visible heading is always just `title`. Aim for
+  `description` of 150-155 characters.
+
 - `date`: actual publication day in `YYYY-MM-DD` format. Future dates fail
   validation. Publish on the intended day; the site does not schedule posts.
 - `updated`: optional revision day; keep the original `date` when updating.
