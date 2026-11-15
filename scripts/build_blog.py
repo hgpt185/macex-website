@@ -154,12 +154,20 @@ def build(posts, output):
         body = ''.join(f'<section id="section-{i}"><h2>{escape(s["heading"])}</h2>' + ''.join(f'<p>{escape(p)}</p>' for p in s["paragraphs"]) + '</section>' for i, s in enumerate(post["sections"], 1))
         takeaways = ''.join(f'<li>{escape(t)}</li>' for t in post["takeaways"])
         sources = ''.join(f'<li><a href="{escape(s["url"])}">{escape(s["title"])}</a></li>' for s in post["sources"])
+        image_html = ""
+        if post.get("slug") == "find-large-files-on-mac":
+            image_html = ('<figure style="margin:1.8rem 0 2rem">'
+                          '<img src="/assets/large-files-illustration.svg" width="1080" height="520" '
+                          'alt="Illustrated Mac storage review showing example large recordings, project exports and installers, ordered by size" '
+                          'loading="lazy" style="display:block;width:100%;height:auto;border-radius:16px">'
+                          '<figcaption style="font-size:.83rem;color:#64748b;margin-top:.6rem">'
+                          'Illustration: file sizes shown are examples, not a scan of your Mac.</figcaption></figure>')
         related = ''.join(card(p) for p in [p for p in posts if p["slug"] != post["slug"]][:2])
         content = f'''<article class="article wrap"><header class="article-head"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Journal</a><span aria-hidden="true">/</span><span>{escape(post['category'])}</span></nav>
           <p class="eyebrow">{escape(post['category'])}</p><h1>{escape(post['title'])}</h1><p class="article-deck">{escape(post['description'])}</p>
           <p class="byline">By MacEx <span>·</span> <time datetime="{post['date']}">{human_date(post['date'])}</time><span>·</span>{reading_time(post)} min read</p></header>
           <div class="article-layout"><aside class="toc"><p>IN THIS ARTICLE</p><ol>{toc}<li><a href="#sources">Further reading</a></li></ol></aside>
-          <div class="prose"><p class="lead">{escape(post['intro'])}</p><div class="takeaways"><h2>The quick take</h2><ul>{takeaways}</ul></div>{body}<section id="sources"><h2>Further reading</h2><ul>{sources}</ul></section>
+          <div class="prose"><p class="lead">{escape(post['intro'])}</p>{image_html}<div class="takeaways"><h2>The quick take</h2><ul>{takeaways}</ul></div>{body}<section id="sources"><h2>Further reading</h2><ul>{sources}</ul></section>
           <div class="article-cta"><h2>Find your files in plain words.</h2><p>Explore MacEx, a native file library for your Mac.</p><a class="button" href="https://macex.app/#mac-stage">Try the live demo <span aria-hidden="true">↗</span></a></div></div></div></article>
           <section class="stories wrap" aria-labelledby="related-title"><div class="section-label"><h2 id="related-title">Keep exploring</h2><a href="/">All stories ↗</a></div><div class="post-grid related">{related}</div></section>'''
         schema = [{"@type": "BlogPosting", "@id": url + "#article", "headline": post["title"], "description": post["description"], "url": url, "mainEntityOfPage": url, "datePublished": post["date"], "dateModified": post.get("updated", post["date"]), "author": {"@type": "Organization", "name": "MacEx", "url": "https://macex.app/"}, "publisher": {"@id": "https://macex.app/#organization"}, "isPartOf": {"@id": BASE + "/#blog"}, "image": "https://macex.app/assets/og-image.png", "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Journal", "item": BASE + "/"}, {"@type": "ListItem", "position": 2, "name": post["title"], "item": url}]}]
