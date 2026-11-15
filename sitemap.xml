@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://macex.app/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://macex.app/docs/</loc></url>
+  <url><loc>https://macex.app/blog/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://macex.app/blog/mac-file-naming-system/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://macex.app/blog/finder-smart-folders/</loc><lastmod>2026-11-14</lastmod></url>
+  <url><loc>https://macex.app/blog/find-files-on-mac-without-filename/</loc><lastmod>2026-11-14</lastmod></url>
   <url><loc>https://macex.app/compare/finder/</loc></url>
   <url><loc>https://macex.app/guides/find-duplicate-files-mac/</loc></url>
   <url><loc>https://macex.app/guides/clean-up-downloads-folder-mac/</loc></url>
