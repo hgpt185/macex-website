@@ -1,8 +1,8 @@
 # The MacEx Journal
 
 > Practical Mac file organization and productivity articles by MacEx.
-- [System Data vs Purgeable Space on Mac](https://macex.app/blog/system-data-vs-purgeable-space-mac/): System Data and purgeable space are not the same. Learn why Storage and Disk Utility show different Mac space totals, and what to do safely on your Mac.
 
+- [System Data vs Purgeable Space on Mac](https://macex.app/blog/system-data-vs-purgeable-space-mac/): System Data and purgeable space are not the same. Learn why Storage and Disk Utility show different Mac space totals, and what to do safely on your Mac.
 - [Where Mac screenshots are saved, and how to stop the pile-up](https://macex.app/blog/where-mac-screenshots-are-saved/): Mac screenshots land on the Desktop by default. Change the save location in two clicks, then clean up the ones you already have without losing anything.
 - [Spotlight not finding files on Mac: what to check first](https://macex.app/blog/spotlight-not-finding-files-mac/): A file you know exists is missing from Spotlight. Check the folder, Search Privacy and result settings, then rebuild the index, in that order.
 - [How to Find Large Files on Your Mac](https://macex.app/blog/find-large-files-on-mac/): Running out of Mac storage? Find your biggest files with Storage settings and Finder, then remove what you no longer need without deleting the wrong thing.
