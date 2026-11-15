@@ -1,10 +1,9 @@
 # Publishing to the MacEx Journal
 
-Live URL: https://blogs.macex.app/.
+Live URL: https://macex.app/blog/.
 
-The `macex-blog` Cloudflare Pages project publishes the `blog/` directory
-from this repository's `main` branch. The existing `macex-website` project
-continues to publish the marketing site. A push to `main` deploys both.
+The `macex-website` Pages project publishes the repository root, including
+`blog/`, directly from `main`. A push to `main` publishes the entire site.
 There is no package manager, CMS, credential in the repository, or server API.
 
 ## Daily publishing agent
@@ -26,15 +25,15 @@ There is no package manager, CMS, credential in the repository, or server API.
    git diff --check
    ```
 
-5. Preview with `python3 -m http.server 8001 --directory blog`. Check the
-   homepage and the new article in a browser. Links start at `/`, so serve
-   `blog/` as the root, rather than browsing `/blog/` on the main preview.
+5. Preview from the repository root with `python3 -m http.server 8001`, then
+   check `/blog/` and `/blog/<slug>/` in your browser.
 6. Commit the source JSON and **all** regenerated files under `blog/`, using
    the session's required co-author trailer. Push to `main` to publish.
    Verify the new article at its public URL after deployment.
 
-Every publish automatically updates the homepage, archive pages, article
-metadata, related stories, sitemap, RSS feed, and `llms.txt`. The generator
+Every publish automatically updates the blog homepage, archives, article
+metadata, related stories, blog sitemap, RSS feed and `llms.txt`.
+Also add new indexable article URLs to the root `sitemap.xml` before publishing. The generator
 copies the existing Umami script from the marketing homepage. It needs only
 Python 3.9 or later and the standard library; Cloudflare serves the committed
 HTML without a build command. The generator removes obsolete output files,
@@ -66,13 +65,12 @@ the layout, update `blog-theme/`, then regenerate. Do not hand-edit `blog/`.
 
 ## Discovery
 
-- Sitemap: https://blogs.macex.app/sitemap.xml
-- RSS: https://blogs.macex.app/feed.xml
+- Sitemap: https://macex.app/blog/sitemap.xml
+- RSS: https://macex.app/blog/feed.xml
 - The marketing navigation and footer link to the journal.
-- The marketing `robots.txt` advertises both sitemaps. Its sitemap retains
-  only marketing URLs. `/thanks/` stays excluded and `noindex`.
-- `macex.app/blog/*` redirects to the blog host. Every blog page declares
-  its `blogs.macex.app` canonical URL, including when viewed on a Pages alias.
+- The root `robots.txt` advertises the unified root sitemap, including blog URLs.
+  `/thanks/` remains `noindex`.
+- The old `blogs.macex.app` URLs must 301 redirect to their `/blog/` equivalents.
 
 The daily automation itself is separate; this repository supplies its
 publishing contract. Publishing frequency alone does not guarantee rankings.
