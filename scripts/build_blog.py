@@ -115,7 +115,7 @@ def page(title, description, path, content, schema, article=None):
                                og_type="article" if article else "website", article_meta=article_meta,
                                schema=jsonld, analytics=analytics.group(), content=content)
     # Blog pages are served under /blog on the main site, not at the domain root.
-    return re.sub(r\'(?<=href=")/(?=[^/])|(?<=src=")/(?=[^/])\', "/blog/", html)
+    return re.sub(r'(?<=href=")/(?=[^/])|(?<=src=")/(?=[^/])', "/blog/", html)
 
 
 def build(posts, output):
