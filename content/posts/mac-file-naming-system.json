@@ -1,7 +1,7 @@
 {
   "slug": "mac-file-naming-system",
-  "title": "A file naming system for Mac that you can actually keep using",
-  "description": "Make project files easier to recognize with a simple subject, date, and version pattern. Includes examples for invoices, drafts, screenshots, and shared work.",
+  "title": "A Mac file naming system you can actually keep using",
+  "description": "Make project files easier to recognize with a simple subject, date and version pattern, with examples for invoices, drafts, screenshots and shared work.",
   "date": "2026-11-14",
   "category": "File organization",
   "art": "names",
@@ -50,8 +50,14 @@
     }
   ],
   "sources": [
-    {"title": "Apple: Rename files, folders, and disks on Mac", "url": "https://support.apple.com/en-ca/guide/mac-help/mchlp1144/mac"},
-    {"title": "MacEx: Browse and search your library", "url": "https://macex.app/docs/#search"}
+    {
+      "title": "Apple: Rename files, folders, and disks on Mac",
+      "url": "https://support.apple.com/en-ca/guide/mac-help/mchlp1144/mac"
+    },
+    {
+      "title": "MacEx: Browse and search your library",
+      "url": "https://macex.app/docs/#search"
+    }
   ],
   "related_pages": [
     {

@@ -22,6 +22,7 @@ Key facts:
 - [Find duplicate files on Mac](https://macex.app/guides/find-duplicate-files-mac/): how to find and remove duplicates safely
 - [Clean up your Downloads folder](https://macex.app/guides/clean-up-downloads-folder-mac/): Tidy Downloads, download sources, undo
 - [The MacEx Journal](https://macex.app/blog/): Mac file organization, search tips, and everyday workflows
+- [MacEx Journal article index](https://macex.app/blog/llms.txt): every Journal article with its description
 - [MacEx press and directory kit](https://macex.app/press/): concise verified product description, license and compatibility facts, real app screenshots and contact information
 
 ## Docs sections

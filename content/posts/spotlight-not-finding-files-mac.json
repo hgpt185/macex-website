@@ -1,0 +1,68 @@
+{
+  "slug": "spotlight-not-finding-files-mac",
+  "title": "Spotlight not finding files on Mac: what to check first",
+  "description": "A file you know exists is missing from Spotlight. Check the folder, Search Privacy and result settings, then rebuild the index, in that order.",
+  "date": "2026-11-15",
+  "category": "Search tips",
+  "art": "search",
+  "intro": "You type the name of a file you know is on your Mac, and Spotlight shows nothing. Before you reach for Terminal, work through the checks below in order. Most missing results come down to a setting, or to an index that has not caught up, and each cause has a different fix.",
+  "takeaways": [
+    "First confirm the file is where you think it is. If Finder does not show it either, Spotlight is not the problem.",
+    "Search Privacy lists folders and disks that Spotlight skips on purpose. Check it before anything else.",
+    "Rebuilding the index is a last resort, and results stay incomplete until it finishes."
+  ],
+  "sections": [
+    {
+      "heading": "Check that the file is where you think it is",
+      "paragraphs": [
+        "Open the folder in Finder and look. If the file is not there, Spotlight is not at fault. It may be in the Trash, in another folder, on a drive that is not connected, or saved online-only in iCloud so that only a placeholder is on the Mac.",
+        "If you can see the file in Finder but Spotlight cannot find it, the cause is either a setting or the index, and the next checks apply."
+      ]
+    },
+    {
+      "heading": "Check Search Privacy",
+      "paragraphs": [
+        "Spotlight skips any folder or disk that is on its exclusion list. Open System Settings, click Spotlight in the sidebar (you may need to scroll), then click Search Privacy in the lower right. Apple describes this list as the place to exclude files in a folder or disk from Spotlight searches.",
+        "If the folder that holds your file, or the disk it is on, appears in the list, select it and click the Remove button. Apple also warns that excluding files can stop update notifications for some apps, so remove anything you did not add on purpose."
+      ]
+    },
+    {
+      "heading": "Check which results Spotlight is allowed to show",
+      "paragraphs": [
+        "On the same Spotlight settings page, Results from Apps and Results from System turn individual apps and system items on or off in search results. Scroll through both lists. If the kind of content you are looking for is switched off, Spotlight will not list it, however good the index is."
+      ]
+    },
+    {
+      "heading": "Give the index time, then restart",
+      "paragraphs": [
+        "After a macOS update, a large file move or the first time you attach a drive, Spotlight may still be building its index. A search run before that finishes can be incomplete. Restarting the Mac is a reasonable next step, and plenty of reports start there.",
+        "Do not expect a guaranteed fix. Threads on Apple’s support forum, including reports after the macOS Tahoe upgrade, describe both quick recoveries and cases where results stayed empty for much longer."
+      ]
+    },
+    {
+      "heading": "Rebuild the index as a last resort",
+      "paragraphs": [
+        "The method most often reported on Apple’s forum is to add the drive or folder to Search Privacy and then remove it again, which makes Spotlight look at it afresh. Apple’s own page only describes excluding and un-excluding, so treat this as a community fix rather than an official repair.",
+        "In Terminal, mdutil manages the stores Spotlight uses. The command sudo mdutil -s / shows whether indexing is enabled for the startup volume. The command sudo mdutil -E / erases that volume’s local store, and according to the manual page the store is rebuilt if appropriate. Type the flag exactly: -d, which looks similar, disables Spotlight searches on the volume. Expect incomplete results while the rebuild runs.",
+        "If a rebuild does not help, do not start deleting system folders on the strength of a forum reply. Contact Apple Support."
+      ]
+    },
+    {
+      "heading": "Where MacEx fits",
+      "paragraphs": [
+        "MacEx keeps its own library of your Desktop, Documents, Downloads, Pictures, Music and Movies folders and up to eight folders you add. You can describe a file by type, date and size, such as pdfs from last week over 5 mb, and the search shows how it read your words. It is a different tool from Spotlight, not a replacement for it.",
+        "MacEx does not search the whole disk. For system folders and files outside your library, Spotlight and the mdfind command still reach further. If Spotlight is only partly working, searching your personal folders in MacEx is a quick way to find a file while you fix it."
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Apple Support: Prevent Spotlight searches in specific folders or disks on Mac", "url": "https://support.apple.com/guide/mac-help/prevent-spotlight-searches-specific-folders-mchl1bb43b84/mac" },
+    { "title": "Apple Support: Spotlight settings on Mac", "url": "https://support.apple.com/guide/mac-help/spotlight-settings-on-mac-mchl54d95e8a/mac" },
+    { "title": "Apple Community: Tahoe: Spotlight Doesn’t Index and Search Files", "url": "https://discussions.apple.com/thread/256178172" },
+    { "title": "MacEx documentation: Search", "url": "https://macex.app/docs/#search" }
+  ],
+  "related_pages": [
+    { "title": "Find files on your Mac by describing them", "url": "https://macex.app/features/file-search/", "note": "what MacEx search covers, and what it cannot do" },
+    { "title": "MacEx vs Finder", "url": "https://macex.app/compare/finder/", "note": "when Finder and Spotlight are enough" }
+  ]
+}

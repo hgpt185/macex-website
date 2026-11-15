@@ -7,23 +7,47 @@
     <language>en</language>
     <atom:link href="https://macex.app/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Where Mac screenshots are saved, and how to stop the pile-up</title>
+      <link>https://macex.app/blog/where-mac-screenshots-are-saved/</link>
+      <guid>https://macex.app/blog/where-mac-screenshots-are-saved/</guid>
+      <description>Mac screenshots land on the Desktop by default. Change the save location in two clicks, then clean up the ones you already have without losing anything.</description>
+      <category>File organization</category>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Spotlight not finding files on Mac: what to check first</title>
+      <link>https://macex.app/blog/spotlight-not-finding-files-mac/</link>
+      <guid>https://macex.app/blog/spotlight-not-finding-files-mac/</guid>
+      <description>A file you know exists is missing from Spotlight. Check the folder, Search Privacy and result settings, then rebuild the index, in that order.</description>
+      <category>Search tips</category>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>How to Find Large Files on Your Mac</title>
       <link>https://macex.app/blog/find-large-files-on-mac/</link>
       <guid>https://macex.app/blog/find-large-files-on-mac/</guid>
-      <description>Running out of Mac storage? Find your biggest files using Storage settings and Finder, then remove what you no longer need without deleting the wrong thing.</description>
+      <description>Running out of Mac storage? Find your biggest files with Storage settings and Finder, then remove what you no longer need without deleting the wrong thing.</description>
       <category>Mac storage</category>
       <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>A file naming system for Mac that you can actually keep using</title>
+      <title>Can you delete DMG files on a Mac? When it is safe</title>
+      <link>https://macex.app/blog/can-you-delete-dmg-files-on-mac/</link>
+      <guid>https://macex.app/blog/can-you-delete-dmg-files-on-mac/</guid>
+      <description>A DMG is only the container an app came in. Once the app is in Applications you can usually delete it. Here is how to check, and when to keep one.</description>
+      <category>Mac storage</category>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>A Mac file naming system you can actually keep using</title>
       <link>https://macex.app/blog/mac-file-naming-system/</link>
       <guid>https://macex.app/blog/mac-file-naming-system/</guid>
-      <description>Make project files easier to recognize with a simple subject, date, and version pattern. Includes examples for invoices, drafts, screenshots, and shared work.</description>
+      <description>Make project files easier to recognize with a simple subject, date and version pattern, with examples for invoices, drafts, screenshots and shared work.</description>
       <category>File organization</category>
       <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>Finder Smart Folders: keep a project view without moving your files</title>
+      <title>Finder Smart Folders: a project view without moving files</title>
       <link>https://macex.app/blog/finder-smart-folders/</link>
       <guid>https://macex.app/blog/finder-smart-folders/</guid>
       <description>Build a saved Finder search for active work, understand what Smart Folders actually store, and choose rules that stay useful as your projects grow.</description>

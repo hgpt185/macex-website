@@ -1,6 +1,6 @@
 {
   "slug": "finder-smart-folders",
-  "title": "Finder Smart Folders: keep a project view without moving your files",
+  "title": "Finder Smart Folders: a project view without moving files",
   "description": "Build a saved Finder search for active work, understand what Smart Folders actually store, and choose rules that stay useful as your projects grow.",
   "date": "2026-11-14",
   "category": "Mac workflows",
@@ -50,9 +50,18 @@
     }
   ],
   "sources": [
-    {"title": "Apple: Create or change a Smart Folder on Mac", "url": "https://support.apple.com/en-eg/guide/mac-help/mchlp2804/mac"},
-    {"title": "Apple: Use tags to organize files on Mac", "url": "https://support.apple.com/en-ie/guide/mac-help/mchlp15236/mac"},
-    {"title": "MacEx: Search in plain words", "url": "https://macex.app/docs/#search"}
+    {
+      "title": "Apple: Create or change a Smart Folder on Mac",
+      "url": "https://support.apple.com/en-eg/guide/mac-help/mchlp2804/mac"
+    },
+    {
+      "title": "Apple: Use tags to organize files on Mac",
+      "url": "https://support.apple.com/en-ie/guide/mac-help/mchlp15236/mac"
+    },
+    {
+      "title": "MacEx: Search in plain words",
+      "url": "https://macex.app/docs/#search"
+    }
   ],
   "related_pages": [
     {

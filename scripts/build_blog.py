@@ -18,6 +18,14 @@ BASE = "https://macex.app/blog"
 RESERVED = {"assets", "index", "404", "robots", "sitemap", "feed", "llms", "page"}
 
 
+TITLE_SUFFIX = " — MacEx Journal"
+
+
+def document_title(title):
+    """Append the site name only when the whole <title> still fits in about 60 characters."""
+    return title + TITLE_SUFFIX if len(title) + len(TITLE_SUFFIX) <= 60 else title
+
+
 def validate_post(post):
     for key in ("slug", "title", "description", "date", "category", "intro"):
         if not isinstance(post.get(key), str) or not post[key].strip():
@@ -136,7 +144,7 @@ def build(posts, output):
     shutil.copytree(ROOT / "blog-theme/assets", output / "assets", dirs_exist_ok=True)
     shutil.copyfile(ROOT / "assets/mascot.svg", output / "assets/mascot.svg")
     content = '''<section class="journal-intro wrap"><p class="eyebrow"><span></span> THE MACEX JOURNAL</p>
-      <h1>A little less<br>file <em>chaos.</em></h1>
+      <h1>A little less <br>file <em>chaos.</em></h1>
       <div class="intro-bottom"><p>Practical ideas for a calmer Mac.<br>Find your files, build better habits, and get back to what matters.</p><a class="feed-link" href="/feed.xml">Follow via RSS <span aria-hidden="true">↗</span></a></div>
       </section><section class="stories wrap" aria-labelledby="stories-title"><div class="section-label"><h2 id="stories-title">The latest stories</h2><span>MAC TIPS &amp; EVERYDAY WORKFLOWS</span></div><div class="post-grid">'''
     index_intro = content
@@ -192,7 +200,7 @@ def build(posts, output):
         schema = [{"@type": "BlogPosting", "@id": url + "#article", "headline": post["title"], "description": post["description"], "url": url, "mainEntityOfPage": url, "datePublished": post["date"], "dateModified": post.get("updated", post["date"]), "author": {"@type": "Organization", "name": "MacEx", "url": "https://macex.app/"}, "publisher": {"@id": "https://macex.app/#organization"}, "isPartOf": {"@id": BASE + "/#blog"}, "image": "https://macex.app/assets/og-image.png", "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Journal", "item": BASE + "/"}, {"@type": "ListItem", "position": 2, "name": post["title"], "item": url}]}]
         target = output / post["slug"]
         target.mkdir(exist_ok=True)
-        (target / "index.html").write_text(page(post["title"] + " — MacEx Journal", post["description"], "/" + post["slug"] + "/", content, schema, post))
+        (target / "index.html").write_text(page(document_title(post["title"]), post["description"], "/" + post["slug"] + "/", content, schema, post))
     not_found = page("Page not found — MacEx Journal", "This story could not be found. Explore the latest MacEx articles.", "/404.html", '<section class="not-found wrap"><p class="eyebrow">404 / A FILE OUT OF PLACE</p><h1>This story isn’t here.</h1><p>Let’s find you something useful to read.</p><a class="button" href="/">Back to the journal</a></section>', [])
     (output / "404.html").write_text(not_found.replace('<meta name="description"', '<meta name="robots" content="noindex">\n<meta name="description"'))
     sitemap = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")

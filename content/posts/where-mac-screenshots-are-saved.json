@@ -1,0 +1,52 @@
+{
+  "slug": "where-mac-screenshots-are-saved",
+  "title": "Where Mac screenshots are saved, and how to stop the pile-up",
+  "description": "Mac screenshots land on the Desktop by default. Change the save location in two clicks, then clean up the ones you already have without losing anything.",
+  "date": "2026-11-15",
+  "category": "File organization",
+  "art": "names",
+  "intro": "A Desktop covered in files called Screenshot followed by a date is the most common sign of a Mac that has not been tidied in a while. The fix has two parts: send new screenshots somewhere else, and clear out the ones that already built up.",
+  "takeaways": [
+    "Screenshots saved with the keyboard shortcuts go to the Desktop. Change that under Options in the Screenshot toolbar.",
+    "Every file name starts with Screenshot and a date and time, which makes them easy to search for and sort.",
+    "Screenshots often hold a code, password or receipt. Look before you delete."
+  ],
+  "sections": [
+    {
+      "heading": "Where screenshots go by default",
+      "paragraphs": [
+        "According to Apple, screenshots taken with the keyboard shortcuts are saved to the Desktop. Each file name begins with Screenshot, followed by the date and time, and the format is PNG. Screen recordings are saved as .mov files and begin with Screen Recording."
+      ]
+    },
+    {
+      "heading": "Choose a different folder",
+      "paragraphs": [
+        "Press Shift-Command-5 to open the Screenshot toolbar. Click Options, and under Save to choose one of the preset locations, or click Other Location to pick any folder. Create a folder first, such as Screenshots inside Pictures, so that the Desktop stays clear.",
+        "The same Options menu has Show Floating Thumbnail. When it is on, a thumbnail appears in the bottom-right corner for a few seconds after each capture. You can swipe it right to save and dismiss it, drag it into a document, or click it to mark it up."
+      ]
+    },
+    {
+      "heading": "Clear what has already piled up",
+      "paragraphs": [
+        "Because every file starts with the word Screenshot, Finder search finds them: open the folder, press Command-F and type Screenshot. Sort by Date Created, then work from the oldest. If you want a standing view, a Smart Folder that matches the name keeps all of them in one place without moving anything. The Finder smart folders guide in this journal explains how to set one up.",
+        "Look at each file before it goes. A screenshot of a code, a booking number or a receipt can be the only copy you have. Moving a screenshot to the Trash does not free space until you empty the Trash, so check it first."
+      ]
+    },
+    {
+      "heading": "Do the same in MacEx",
+      "paragraphs": [
+        "In MacEx, Free Up Space has an Old screenshots group that lists screenshots older than the age you choose (90 days unless you change it). The group is labelled Safe to clear, which is a suggestion based on age and type and not a promise, so the page tells you to look for screenshots that hold a password, code or receipt.",
+        "Two optional extras exist. An automation rule can file screenshots into a folder for each month, and it only runs on folders you added yourself and stays off until you turn it on. Text Search, also off until you turn it on, reads the words inside images on your Mac, so a search such as screenshots with wifi password can match the text in the picture. Recognized text can miss words, especially in blurry images."
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Apple Support: Take screenshots or screen recordings on Mac", "url": "https://support.apple.com/guide/mac-help/take-screenshots-or-screen-recordings-mh26782/mac" },
+    { "title": "Apple Support: Free up storage space on Mac", "url": "https://support.apple.com/en-us/102624" },
+    { "title": "MacEx: Find files on your Mac by describing them", "url": "https://macex.app/features/file-search/" }
+  ],
+  "related_pages": [
+    { "title": "Free up storage on your Mac", "url": "https://macex.app/features/storage-management/", "note": "Old screenshots and the other cleanup groups" },
+    { "title": "Find files on your Mac by describing them", "url": "https://macex.app/features/file-search/", "note": "text search inside screenshots, on your Mac" }
+  ]
+}
