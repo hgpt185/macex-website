@@ -94,6 +94,13 @@ the layout, update `blog-theme/`, then regenerate. Do not hand-edit `blog/`.
 The daily automation itself is separate; this repository supplies its
 publishing contract. Publishing frequency alone does not guarantee rankings.
 
+
+### Published editorial log
+
+| Date | Cluster hub | Search intent | Canonical slug | Status |
+| --- | --- | --- | --- | --- |
+| 2026-11-16 | `/features/file-search/` | Troubleshoot Spotlight when files are missing: scope, categories, privacy exclusions and indexing | `spotlight-not-finding-files-mac` | Published |
+
 ## SEO topic clusters and editorial sequence (from 15 November 2026)
 
 The journal is part of a useful macOS help library, not a daily keyword quota.
