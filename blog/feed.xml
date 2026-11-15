@@ -15,6 +15,14 @@
       <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
     </item>
     <item>
+      <title>Where Mac screenshots are saved, and how to stop the pile-up</title>
+      <link>https://macex.app/blog/where-mac-screenshots-are-saved/</link>
+      <guid>https://macex.app/blog/where-mac-screenshots-are-saved/</guid>
+      <description>Mac screenshots land on the Desktop by default. Change the save location in two clicks, then clean up the ones you already have without losing anything.</description>
+      <category>File organization</category>
+      <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Spotlight not finding files on Mac: what to check first</title>
       <link>https://macex.app/blog/spotlight-not-finding-files-mac/</link>
       <guid>https://macex.app/blog/spotlight-not-finding-files-mac/</guid>
@@ -62,6 +70,5 @@
       <category>Search tips</category>
       <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
     </item>
-tem>
   </channel>
 </rss>
