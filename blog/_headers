@@ -1,7 +1,0 @@
-/*
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-/blog/assets/*
-  Cache-Control: public, max-age=3600
-/blog/feed.xml
-  Content-Type: application/rss+xml; charset=utf-8

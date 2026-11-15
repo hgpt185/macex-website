@@ -1,1 +1,4 @@
 # Blog pages are directly served under /blog/.
+# There is no features index page; send it to the homepage features section.
+/features /#features 301
+/features/ /#features 301

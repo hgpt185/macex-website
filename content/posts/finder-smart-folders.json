@@ -53,5 +53,17 @@
     {"title": "Apple: Create or change a Smart Folder on Mac", "url": "https://support.apple.com/en-eg/guide/mac-help/mchlp2804/mac"},
     {"title": "Apple: Use tags to organize files on Mac", "url": "https://support.apple.com/en-ie/guide/mac-help/mchlp15236/mac"},
     {"title": "MacEx: Search in plain words", "url": "https://macex.app/docs/#search"}
+  ],
+  "related_pages": [
+    {
+      "title": "MacEx vs Finder",
+      "url": "https://macex.app/compare/finder/",
+      "note": "a feature-by-feature comparison"
+    },
+    {
+      "title": "Saved searches in MacEx",
+      "url": "https://macex.app/features/file-search/",
+      "note": "plain-word searches you can keep in the sidebar"
+    }
   ]
 }

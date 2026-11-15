@@ -28,6 +28,14 @@ window.MACEX = {
   const money = n => '$' + n.toFixed(2);
   const all = s => [...document.querySelectorAll(s)];
 
+  // Umami counts clicks on elements with data-umami-event; the place says which button was used.
+  // No personal data is sent: only the event name, the place and the page URL.
+  const track = (a, name) => {
+    const at = a.closest('[id], header, footer');
+    a.dataset.umamiEvent = name;
+    a.dataset.umamiEventPlace = at ? (at.id || at.tagName.toLowerCase()) : 'page';
+  };
+
   function wire() {
     const plans = C.plans.length ? C.plans : [{ macs: 1, price: 0, was: 0 }];
     let plan = plans[0];
@@ -36,7 +44,7 @@ window.MACEX = {
     // "Get MacEx" buttons: straight to Dodo checkout once a link is set
     const paintBuy = () => all('[data-buy]').forEach(a => {
       const url = checkout(plan);
-      if (url) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; }
+      if (url) { a.href = url; a.target = '_blank'; a.rel = 'noopener'; track(a, 'checkout'); }
     });
 
     // Pricing card
@@ -76,7 +84,7 @@ window.MACEX = {
       notch();
     }
 
-    all('[data-download]').forEach(a => { if (C.downloadUrl) { a.href = C.downloadUrl; a.hidden = false; } else a.hidden = true; });
+    all('[data-download]').forEach(a => { if (C.downloadUrl) { a.href = C.downloadUrl; a.hidden = false; track(a, 'download'); } else a.hidden = true; });
     all('[data-support]').forEach(a => { if (C.supportEmail) { a.href = 'mailto:' + C.supportEmail; a.hidden = false; } else a.hidden = true; });
 
     // "Ask AI" links open the assistant with a question about MacEx already typed

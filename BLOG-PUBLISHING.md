@@ -33,7 +33,10 @@ There is no package manager, CMS, credential in the repository, or server API.
 
 Every publish automatically updates the blog homepage, archives, article
 metadata, related stories, blog sitemap, RSS feed and `llms.txt`.
-Also add new indexable article URLs to the root `sitemap.xml` before publishing. The generator
+Then run `python3 -B scripts/seo.py sitemap` to refresh the root `sitemap.xml`
+(it lists every indexable page, blog posts included, with dates taken from each
+page's structured data), and `python3 -B scripts/seo.py check` to catch broken
+links, duplicate titles and other SEO mistakes. The generator
 copies the existing Umami script from the marketing homepage. It needs only
 Python 3.9 or later and the standard library; Cloudflare serves the committed
 HTML without a build command. The generator removes obsolete output files,
@@ -53,14 +56,25 @@ Required strings: `slug`, `title`, `description`, `date`, `category`, `intro`.
   This is where clickable supporting links appear.
 - `art`: optional `folders`, `search`, or `names` card illustration.
 - `draft`: optional boolean. `true` excludes a post from all public output.
+- `image`: optional `{ "src": "/assets/name.svg", "width": 1080, "height": 520,
+  "alt": "…", "caption": "…" }`. The file must exist in `blog-theme/assets/`.
+  Write `alt` to describe what the image shows; `caption` is optional.
+- `related_pages`: optional array of `{ "title": "…", "url": "https://macex.app/…",
+  "note": "…" }`, shown as "Related MacEx guides" below the sources. Link one or
+  two pages that genuinely help with the article's topic, such as
+  `/features/file-search/`, `/features/storage-management/`, `/compare/finder/`
+  or a `/guides/` page.
 
 Content is plain text, with HTML escaped. Markdown is not interpreted.
 Slugs `assets`, `index`, `404`, `robots`, `sitemap`, `feed`, `llms`, and `page`
 are reserved. Newest publication dates appear first, with slugs breaking
-ties. Archive pages contain 12 posts; each article links to two other posts.
+ties. Archive pages contain 12 posts; each article links to two other posts,
+preferring posts in the same category.
 
 Changing a published slug changes its URL. If unavoidable, add a permanent
-redirect in the generator's `_redirects` output before publishing. To edit
+redirect to the root `_redirects` file before publishing, for example
+`/blog/old-slug/ /blog/new-slug/ 301`. Cloudflare Pages reads `_redirects` and
+`_headers` only at the site root. To edit
 the layout, update `blog-theme/`, then regenerate. Do not hand-edit `blog/`.
 
 ## Discovery

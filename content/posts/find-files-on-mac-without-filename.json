@@ -61,5 +61,17 @@
     {"title": "Apple: Ways to quickly see items in the Finder", "url": "https://support.apple.com/guide/mac-help/mh11493/mac"},
     {"title": "MacEx: Search in plain words", "url": "https://macex.app/docs/#search"},
     {"title": "MacEx: Smart Downloads", "url": "https://macex.app/docs/#tidy"}
+  ],
+  "related_pages": [
+    {
+      "title": "Find files on your Mac by describing them",
+      "url": "https://macex.app/features/file-search/",
+      "note": "how MacEx turns “pdfs from last week” into filters"
+    },
+    {
+      "title": "MacEx vs Finder",
+      "url": "https://macex.app/compare/finder/",
+      "note": "what Finder does well, and where MacEx helps"
+    }
   ]
 }

@@ -95,6 +95,11 @@ html{scroll-padding-top:88px}
   .docs-search kbd{display:none}
   .docs-bar .brand span{display:none}
   .docs-bar .button{display:none}
+  /* The logo already links home; this keeps the Menu button on screen at 375px */
+  .docs-search~.site-link{display:none}
+  .docs-bar-in{gap:10px}
+  .docs-search{flex:1 1 0;min-width:0}
+  .docs-search input{min-width:0;width:100%}
 }
 .docs-main .updated{margin:-4px 0 22px;font-size:14px;color:var(--soft)}
 .docs-main h2.what{font-size:22px;margin:0 0 8px}

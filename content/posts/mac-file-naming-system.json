@@ -52,5 +52,17 @@
   "sources": [
     {"title": "Apple: Rename files, folders, and disks on Mac", "url": "https://support.apple.com/en-ca/guide/mac-help/mchlp1144/mac"},
     {"title": "MacEx: Browse and search your library", "url": "https://macex.app/docs/#search"}
+  ],
+  "related_pages": [
+    {
+      "title": "Clean up your Downloads folder",
+      "url": "https://macex.app/guides/clean-up-downloads-folder-mac/",
+      "note": "sort a messy folder in one click"
+    },
+    {
+      "title": "Find files on your Mac by describing them",
+      "url": "https://macex.app/features/file-search/",
+      "note": "when you can’t remember the name"
+    }
   ]
 }

@@ -1,6 +1,6 @@
 # MacEx
 
-> MacEx is a file library app for Mac (macOS 14 or later, Apple silicon and Intel). It gathers your images, videos, music, documents, archives and apps into one library, lets you find files by describing them in plain words, previews files without opening another app, and helps you free up space by reviewing old installers, forgotten downloads and duplicates before they go to Trash. It is a one-time purchase ($9.99 launch price, usually $19.98) with no subscription and no account. MacEx is signed with an Apple Developer ID and notarized by Apple.
+> MacEx is a file library app for Mac (macOS 14 or later, Apple silicon and Intel). It gathers your images, videos, music, documents, archives and apps into one library, lets you find files by describing them in plain words, previews files without opening another app, and helps you free up space by reviewing old installers, forgotten downloads and duplicates before they go to Trash. It is a one-time purchase ($9.99 launch price, usually $19.98) with no subscription and no account. There is no free trial: the app asks for a license key on first launch, and one license activates one Mac. MacEx is signed with an Apple Developer ID and notarized by Apple.
 
 Key facts:
 
@@ -14,12 +14,14 @@ Key facts:
 
 ## Pages
 
-- [The MacEx Journal](https://blogs.macex.app/): Mac file organization, search tips, and everyday workflows
 - [MacEx home](https://macex.app/): features, live in-browser demo, keyboard shortcuts, pricing and FAQ
 - [MacEx Docs](https://macex.app/docs/): install, search, preview, Free Up Space, duplicates, Tidy Downloads, Trash, automation, Quick Search, SFTP, keyboard shortcuts, troubleshooting, privacy
 - [MacEx vs Finder](https://macex.app/compare/finder/): feature-by-feature comparison, when Finder is enough and when MacEx helps
+- [Find files on Mac by describing them](https://macex.app/features/file-search/): how plain-language search, text search in images and PDFs, and download sources work, and what search can't do
+- [Free up storage on Mac](https://macex.app/features/storage-management/): what Free Up Space lists, how each group is defined, and how cleanup stays reversible
 - [Find duplicate files on Mac](https://macex.app/guides/find-duplicate-files-mac/): how to find and remove duplicates safely
 - [Clean up your Downloads folder](https://macex.app/guides/clean-up-downloads-folder-mac/): Tidy Downloads, download sources, undo
+- [The MacEx Journal](https://macex.app/blog/): Mac file organization, search tips, and everyday workflows
 
 ## Docs sections
 

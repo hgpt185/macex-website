@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://macex.app/blog/sitemap.xml

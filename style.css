@@ -558,7 +558,9 @@ body.fs-lock{overflow:hidden}
 .glance dt{font-weight:700;font-size:15.5px;color:var(--ink)}
 .glance dd{margin:4px 0 0;font-size:15px;line-height:1.6;color:var(--muted)}
 .glance kbd{font-size:.82em}
-.glance-more{margin:24px 0 0;font-size:15px}
+.glance-more{margin:24px 0 0;font-size:15px;display:flex;flex-wrap:wrap;gap:10px 28px}
+.glance dt a{color:inherit;text-decoration:underline;text-decoration-color:#c9d6ea;text-underline-offset:4px;text-decoration-thickness:1.5px}
+.glance dt a:hover{color:var(--blue);text-decoration-color:currentColor}
 .glance-more a{display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-weight:600}
 @media (max-width:700px){.glance dl{grid-template-columns:1fr}.glance{margin-top:36px}}
 

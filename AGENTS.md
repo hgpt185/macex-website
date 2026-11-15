@@ -30,15 +30,18 @@ All links and prices live in `config.js`. Pages opt in with data attributes, and
 - `blog/`: generated output at https://macex.app/blog, served by the main `macex-website` Pages project. Edit `content/posts/` and `blog-theme/`, then run `python3 -B scripts/build_blog.py`. Commit the generated output with the source. See `BLOG-PUBLISHING.md` for the daily publishing contract. Never put credentials in posts or the generated directory.
 - `index.html`: hero, live demo, features, pricing ticket, FAQ. The hero "Get MacEx" button scrolls to `#pricing`. The nav "Get MacEx" button and the pricing card "Buy License" button open Dodo checkout.
 - `docs/index.html`: documentation.
-- `compare/finder/index.html`: MacEx vs Finder page.
+- `compare/finder/index.html`: MacEx vs Finder page (also the Finder-alternative page).
+- `features/file-search/`, `features/storage-management/`: feature explainers. `guides/*`: how-to guides for duplicates and Downloads. These pages share `article.css`. There is deliberately no `features/` index; `_redirects` sends it to `/#features`.
 - `thanks/index.html`: post-purchase page. Two-column: intro on the left, steps on the right (download, open, activate). Dodo appends `?license_key=...` to the return URL and the page shows it with a copy button. It is `noindex`, and it must stay out of `sitemap.xml`.
 - `404.html`: real 404.
 
 ## SEO and GEO files
 
-`robots.txt` (allows all crawlers), `sitemap.xml` (5 URLs; add new indexable pages, including `guides/*`), `llms.txt`, `site.webmanifest`, and JSON-LD in every page head. The Organization `sameAs` lists the owner's LinkedIn and X profiles. Google Search Console (domain property) and Bing Webmaster Tools are set up with the sitemap submitted.
+`robots.txt` (allows all crawlers), `sitemap.xml` (generated: run `python3 -B scripts/seo.py sitemap`, never edit by hand), `llms.txt`, `site.webmanifest`, and JSON-LD in every page head. The Organization `sameAs` lists the owner's LinkedIn and X profiles. Google Search Console (domain property) and Bing Webmaster Tools are set up with the sitemap submitted.
 
 Every page has the Umami analytics script in `<head>`. Add it to any new page.
+
+Run `python3 -B scripts/seo.py check` before pushing; CI runs it too. `SEO_AUDIT.md` records the SEO audit, decisions and open opportunities.
 
 ## Rules
 

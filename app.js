@@ -996,9 +996,12 @@ function initFeatures() {
   // Feature videos: only the open tab plays, and only while the section is on screen
   const featureVideos = $$('.fp video');
   let featuresVisible = !('IntersectionObserver' in window);
+  // Posters wait until the section is close, so they don't compete with the hero for bandwidth
+  let featuresNear = !('IntersectionObserver' in window);
   function syncVideos(restart = false) {
     featureVideos.forEach(v => {
       const live = !v.closest('.fp').hidden;
+      if (live && featuresNear && v.dataset.poster && !v.getAttribute('poster')) v.poster = v.dataset.poster;
       v.controls = motionPaused;
       if (live && featuresVisible && !motionPaused) {
         if (v.preload !== 'auto') { v.preload = 'auto'; v.load(); }
@@ -1009,6 +1012,7 @@ function initFeatures() {
   }
   window.syncFeatureVideos = syncVideos;
   if ('IntersectionObserver' in window) new IntersectionObserver(([e]) => { featuresVisible = e.isIntersecting; syncVideos(); }, { threshold: .2 }).observe($('.feature-panels'));
+  if ('IntersectionObserver' in window) new IntersectionObserver(([e], o) => { if (e.isIntersecting) { featuresNear = true; o.disconnect(); syncVideos(); } }, { rootMargin: '900px 0px' }).observe($('.feature-panels'));
   tabs.forEach((t, i) => {
     t.addEventListener('click', () => activate(t.dataset.feature));
     t.addEventListener('keydown', e => {

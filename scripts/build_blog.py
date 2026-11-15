@@ -54,6 +54,19 @@ def validate_post(post):
         raise ValueError("draft must be a boolean")
     if post.get("art", "folders") not in {"folders", "search", "names"}:
         raise ValueError("art must be folders, search, or names")
+    if "image" in post:
+        image = post["image"]
+        if not isinstance(image, dict) or not re.fullmatch(r"/assets/[a-z0-9-]+\.(svg|png|jpg|webp)", str(image.get("src", ""))):
+            raise ValueError("image.src must be a file in blog-theme/assets, like /assets/name.svg")
+        if not (ROOT / "blog-theme" / image["src"].lstrip("/")).is_file():
+            raise ValueError(f"image file not found: blog-theme{image['src']}")
+        if not isinstance(image.get("alt"), str) or not image["alt"].strip():
+            raise ValueError("image.alt must describe the image")
+        if not all(isinstance(image.get(k), int) and image[k] > 0 for k in ("width", "height")):
+            raise ValueError("image.width and image.height must be positive integers")
+    for link in post.get("related_pages", []):
+        if not isinstance(link, dict) or not str(link.get("url", "")).startswith("https://macex.app/") or not link.get("title"):
+            raise ValueError("related_pages entries need a title and a https://macex.app/ URL")
 
 
 def load_posts(source):
@@ -142,7 +155,7 @@ def build(posts, output):
                 content += f'<a href="/page/{number + 1}/">Older stories →</a>'
             content += '</nav>'
         content += '</section><section class="journal-note wrap"><span class="note-icon" aria-hidden="true">↳</span><div><h2>Good habits. A better file library.</h2><p>MacEx helps you find, preview, and organize the files already on your Mac.</p></div><a class="button" href="https://macex.app/#mac-stage">Meet MacEx <span aria-hidden="true">↗</span></a></section>'
-        schema = [{"@type": "Blog", "@id": BASE + "/#blog", "name": "The MacEx Journal", "url": BASE + "/", "publisher": {"@id": "https://macex.app/#organization"}, "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": BASE + "/" + p["slug"] + "/", "datePublished": p["date"]} for p in visible]}]
+        schema = [{"@type": "Blog", "@id": BASE + "/#blog", "name": "The MacEx Journal", "url": BASE + "/", "dateModified": max(p.get("updated", p["date"]) for p in posts), "publisher": {"@id": "https://macex.app/#organization"}, "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": BASE + "/" + p["slug"] + "/", "datePublished": p["date"]} for p in visible]}]
         path = '/' if number == 1 else f'/page/{number}/'
         target = output if number == 1 else output / f'page/{number}'
         target.mkdir(parents=True, exist_ok=True)
@@ -155,19 +168,25 @@ def build(posts, output):
         takeaways = ''.join(f'<li>{escape(t)}</li>' for t in post["takeaways"])
         sources = ''.join(f'<li><a href="{escape(s["url"])}">{escape(s["title"])}</a></li>' for s in post["sources"])
         image_html = ""
-        if post.get("slug") == "find-large-files-on-mac":
-            image_html = ('<figure style="margin:1.8rem 0 2rem">'
-                          '<img src="/assets/large-files-illustration.svg" width="1080" height="520" '
-                          'alt="Illustrated Mac storage review showing example large recordings, project exports and installers, ordered by size" '
-                          'loading="lazy" style="display:block;width:100%;height:auto;border-radius:16px">'
-                          '<figcaption style="font-size:.83rem;color:#64748b;margin-top:.6rem">'
-                          'Illustration: file sizes shown are examples, not a scan of your Mac.</figcaption></figure>')
-        related = ''.join(card(p) for p in [p for p in posts if p["slug"] != post["slug"]][:2])
+        if "image" in post:
+            image = post["image"]
+            caption = (f'<figcaption style="font-size:.83rem;color:#64748b;margin-top:.6rem">{escape(image["caption"])}</figcaption>'
+                       if image.get("caption") else "")
+            image_html = (f'<figure style="margin:1.8rem 0 2rem"><img src="{escape(image["src"])}" width="{image["width"]}" height="{image["height"]}" '
+                          f'alt="{escape(image["alt"])}" loading="lazy" style="display:block;width:100%;height:auto;border-radius:16px">{caption}</figure>')
+        pages_html = ""
+        if post.get("related_pages"):
+            items = ''.join(f'<li><a href="{escape(link["url"])}">{escape(link["title"])}</a>' + (f' — {escape(link["note"])}' if link.get("note") else '') + '</li>'
+                            for link in post["related_pages"])
+            pages_html = f'<section id="macex-guides"><h2>Related MacEx guides</h2><ul>{items}</ul></section>'
+        # Related stories: same category first, then the newest of the rest.
+        others = [p for p in posts if p["slug"] != post["slug"]]
+        related = ''.join(card(p) for p in sorted(others, key=lambda p: p["category"] != post["category"])[:2])
         content = f'''<article class="article wrap"><header class="article-head"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Journal</a><span aria-hidden="true">/</span><span>{escape(post['category'])}</span></nav>
           <p class="eyebrow">{escape(post['category'])}</p><h1>{escape(post['title'])}</h1><p class="article-deck">{escape(post['description'])}</p>
           <p class="byline">By MacEx <span>·</span> <time datetime="{post['date']}">{human_date(post['date'])}</time><span>·</span>{reading_time(post)} min read</p></header>
           <div class="article-layout"><aside class="toc"><p>IN THIS ARTICLE</p><ol>{toc}<li><a href="#sources">Further reading</a></li></ol></aside>
-          <div class="prose"><p class="lead">{escape(post['intro'])}</p>{image_html}<div class="takeaways"><h2>The quick take</h2><ul>{takeaways}</ul></div>{body}<section id="sources"><h2>Further reading</h2><ul>{sources}</ul></section>
+          <div class="prose"><p class="lead">{escape(post['intro'])}</p>{image_html}<div class="takeaways"><h2>The quick take</h2><ul>{takeaways}</ul></div>{body}<section id="sources"><h2>Further reading</h2><ul>{sources}</ul></section>{pages_html}
           <div class="article-cta"><h2>Find your files in plain words.</h2><p>Explore MacEx, a native file library for your Mac.</p><a class="button" href="https://macex.app/#mac-stage">Try the live demo <span aria-hidden="true">↗</span></a></div></div></div></article>
           <section class="stories wrap" aria-labelledby="related-title"><div class="section-label"><h2 id="related-title">Keep exploring</h2><a href="/">All stories ↗</a></div><div class="post-grid related">{related}</div></section>'''
         schema = [{"@type": "BlogPosting", "@id": url + "#article", "headline": post["title"], "description": post["description"], "url": url, "mainEntityOfPage": url, "datePublished": post["date"], "dateModified": post.get("updated", post["date"]), "author": {"@type": "Organization", "name": "MacEx", "url": "https://macex.app/"}, "publisher": {"@id": "https://macex.app/#organization"}, "isPartOf": {"@id": BASE + "/#blog"}, "image": "https://macex.app/assets/og-image.png", "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Journal", "item": BASE + "/"}, {"@type": "ListItem", "position": 2, "name": post["title"], "item": url}]}]
@@ -197,10 +216,9 @@ def build(posts, output):
             ET.SubElement(item, key).text = value
     ET.indent(rss)
     ET.ElementTree(rss).write(output / "feed.xml", encoding="utf-8", xml_declaration=True)
-    (output / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
     (output / "llms.txt").write_text("# The MacEx Journal\n\n> Practical Mac file organization and productivity articles by MacEx.\n\n" + "\n".join(f"- [{p['title']}]({BASE}/{p['slug']}/): {p['description']}" for p in posts) + "\n")
-    (output / "_headers").write_text("/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n/blog/assets/*\n  Cache-Control: public, max-age=3600\n/blog/feed.xml\n  Content-Type: application/rss+xml; charset=utf-8\n")
-    (output / "_redirects").write_text("# Add permanent path redirects here when changing a published slug.\n")
+    # Cloudflare Pages reads _headers and _redirects only at the site root, so blog
+    # headers and slug redirects live in the root files, not in the blog output.
 
 
 def main():

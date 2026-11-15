@@ -91,5 +91,24 @@
       "title": "MacEx guide: Find duplicate files on Mac",
       "url": "https://macex.app/guides/find-duplicate-files-mac/"
     }
+  ],
+  "image": {
+    "src": "/assets/large-files-illustration.svg",
+    "width": 1080,
+    "height": 520,
+    "alt": "Illustrated Mac storage review showing example large recordings, project exports and installers, ordered by size",
+    "caption": "Illustration: file sizes shown are examples, not a scan of your Mac."
+  },
+  "related_pages": [
+    {
+      "title": "Free up storage on your Mac",
+      "url": "https://macex.app/features/storage-management/",
+      "note": "large files, old installers and more, reviewed first"
+    },
+    {
+      "title": "Find duplicate files on Mac",
+      "url": "https://macex.app/guides/find-duplicate-files-mac/",
+      "note": "byte-for-byte checks before anything moves"
+    }
   ]
 }

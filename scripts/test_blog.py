@@ -60,9 +60,26 @@ class BlogTests(unittest.TestCase):
             self.assertEqual(feed.findtext("channel/item/link"), url)
             self.assertIn('data-website-id=', page)
             self.assertTrue((output / "404.html").exists())
-            redirects = (output / "_redirects").read_text().splitlines()
-            self.assertTrue(all(not line.strip() or line.startswith(("#", "/")) for line in redirects),
-                            "Cloudflare Pages redirect sources must be relative paths")
+            # Pages ignores _headers and _redirects outside the site root.
+            self.assertFalse((output / "_redirects").exists())
+            self.assertFalse((output / "_headers").exists())
+
+    def test_optional_image_and_related_pages(self):
+        image = dict(src="/assets/large-files-illustration.svg", width=1080, height=520, alt="Example storage review")
+        links = [dict(title="Free up storage", url="https://macex.app/features/storage-management/")]
+        post = self.post(image=image, related_pages=links)
+        self.blog.validate_post(post)
+        for bad in (dict(image=dict(image, alt="")), dict(image=dict(image, src="https://example.com/x.png")),
+                    dict(image=dict(image, src="/assets/missing.svg")),
+                    dict(related_pages=[dict(title="Elsewhere", url="https://example.com/")])):
+            with self.subTest(bad=bad), self.assertRaises(ValueError):
+                self.blog.validate_post(self.post(**bad))
+        with tempfile.TemporaryDirectory() as temp:
+            output = Path(temp)
+            self.blog.build([post], output)
+            page = (output / post["slug"] / "index.html").read_text()
+            self.assertIn('src="/blog/assets/large-files-illustration.svg"', page)
+            self.assertIn('href="https://macex.app/features/storage-management/"', page)
 
     def test_drafts_are_excluded_and_duplicate_slugs_fail(self):
         with tempfile.TemporaryDirectory() as temp:

@@ -1,22 +1,10 @@
-name: Validate blog
+name: Validate site
 
+# Runs on every push and pull request: the checks take seconds, and any page
+# change can break a link, a title or the sitemap.
 on:
   push:
-    paths:
-      - 'content/posts/**'
-      - 'blog-theme/**'
-      - 'blog/**'
-      - 'scripts/**'
-      - 'index.html'
-      - '.github/workflows/validate-blog.yml'
   pull_request:
-    paths:
-      - 'content/posts/**'
-      - 'blog-theme/**'
-      - 'blog/**'
-      - 'scripts/**'
-      - 'index.html'
-      - '.github/workflows/validate-blog.yml'
 
 permissions:
   contents: read
@@ -31,3 +19,5 @@ jobs:
           python-version: '3.12'
       - run: python3 -B -m unittest discover -s scripts
       - run: python3 -B scripts/build_blog.py --check
+      - run: python3 -B scripts/seo.py sitemap --check
+      - run: python3 -B scripts/seo.py check
