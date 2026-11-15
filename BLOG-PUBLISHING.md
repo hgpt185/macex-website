@@ -31,8 +31,9 @@ There is no package manager, CMS, credential in the repository, or server API.
    the session's required co-author trailer. Push to `main` to publish.
    Verify the new article at its public URL after deployment.
 
-Every publish automatically updates the homepage, archive pages, article
-metadata, related stories, sitemap, RSS feed, and `llms.txt`. The generator
+Every publish automatically updates the blog homepage, archives, article
+metadata, related stories, blog sitemap, RSS feed and `llms.txt`.
+Also add new indexable article URLs to the root `sitemap.xml` before publishing. The generator
 copies the existing Umami script from the marketing homepage. It needs only
 Python 3.9 or later and the standard library; Cloudflare serves the committed
 HTML without a build command. The generator removes obsolete output files,
