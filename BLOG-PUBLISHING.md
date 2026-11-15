@@ -99,7 +99,7 @@ publishing contract. Publishing frequency alone does not guarantee rankings.
 
 | Date | Cluster hub | Search intent | Canonical slug | Status |
 | --- | --- | --- | --- | --- |
-| 2026-11-16 | `/features/storage-management/` | Explain why System Data and purgeable space differ, and why Storage and Disk Utility totals can disagree | `system-data-vs-purgeable-space-mac` | In progress |
+| 2026-11-16 | `/features/storage-management/` | Explain why System Data and purgeable space differ, and why Storage and Disk Utility totals can disagree | `system-data-vs-purgeable-space-mac` | Committed to main; live verification pending |
 
 ## SEO topic clusters and editorial sequence (from 15 November 2026)
 
