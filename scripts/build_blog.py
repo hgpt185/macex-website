@@ -2,6 +2,7 @@
 """Generate the committed, buildless blog with Python's standard library only."""
 import argparse
 from datetime import date, datetime, timezone
+from zoneinfo import ZoneInfo
 from email.utils import format_datetime
 from html import escape
 import json
@@ -35,7 +36,7 @@ def validate_post(post):
     for key in ("date", "updated"):
         if key in post:
             parsed = date.fromisoformat(post[key])
-            if parsed.isoformat() != post[key] or parsed > datetime.now(timezone.utc).date():
+            if parsed.isoformat() != post[key] or parsed > datetime.now(ZoneInfo("Asia/Kolkata")).date():
                 raise ValueError(f"{key} must be an ISO date that is not in the future")
     if post.get("updated", post["date"]) < post["date"]:
         raise ValueError("updated must not precede date")
