@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from datetime import datetime
+from zoneinfo import ZoneInfo
 import xml.etree.ElementTree as ET
 
 SCRIPT = Path(__file__).with_name("build_blog.py")
@@ -30,6 +32,10 @@ class BlogTests(unittest.TestCase):
         for slug in ("../escape", "assets", "index.html", "Uppercase", "feed.xml"):
             with self.subTest(slug=slug), self.assertRaises(ValueError):
                 self.blog.validate_post(self.post(slug=slug))
+
+    def test_accepts_publication_date_in_Asia_Kolkata(self):
+        today_ist = datetime.now(ZoneInfo("Asia/Kolkata")).date().isoformat()
+        self.blog.validate_post(self.post(date=today_ist))
 
     def test_rejects_invalid_dates_and_links(self):
         for changes in (dict(date="2026-02-30"), dict(date="2999-01-01"),
