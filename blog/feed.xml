@@ -7,6 +7,14 @@
     <language>en</language>
     <atom:link href="https://macex.app/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Find Text Inside Images and PDFs on Mac</title>
+      <link>https://macex.app/blog/search-text-inside-images-pdfs-mac/</link>
+      <guid>https://macex.app/blog/search-text-inside-images-pdfs-mac/</guid>
+      <description>Find words in Mac screenshots and scanned PDFs. Learn what Preview and Spotlight can do, when a scan needs OCR, and how to search across your files.</description>
+      <category>Mac file search</category>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>System Data vs Purgeable Space on Mac</title>
       <link>https://macex.app/blog/system-data-vs-purgeable-space-mac/</link>
       <guid>https://macex.app/blog/system-data-vs-purgeable-space-mac/</guid>
