@@ -99,7 +99,8 @@ publishing contract. Publishing frequency alone does not guarantee rankings.
 
 | Date | Cluster hub | Search intent | Canonical slug | Status |
 | --- | --- | --- | --- | --- |
-| 2026-11-16 | `/features/storage-management/` | Explain why System Data and purgeable space differ, and why Storage and Disk Utility totals can disagree | `system-data-vs-purgeable-space-mac` | Committed to main; live verification pending |
+| 2026-11-16 | `/features/storage-management/` | Explain why System Data and purgeable space differ, and why Storage and Disk Utility totals can disagree | `system-data-vs-purgeable-space-mac` | Production deployment verified |
+| 2026-11-17 | `/features/file-search/` | Find words inside screenshots and scanned PDFs; distinguish Preview Live Text, PDF text layers and library-wide OCR | `search-text-inside-images-pdfs-mac` | Generated, tests and SEO checks passed; Cloudflare production deployment verified |
 
 ## SEO topic clusters and editorial sequence (from 15 November 2026)
 
@@ -111,7 +112,7 @@ volumes, ranks, traffic or impressions. Preserve permanent slugs.
 
 | Hub and intent | Next useful distinct questions (verify against existing slugs first) |
 | --- | --- |
-| `/features/file-search/` — finding misplaced files | Spotlight not finding files; search text inside screenshots or scanned PDFs; search by date/type/size; where a download came from |
+| `/features/file-search/` — finding misplaced files | Spotlight not finding files (published); text inside screenshots/scanned PDFs (published); search by date/type/size; where a download came from |
 | `/features/storage-management/` — careful Mac cleanup | Old DMG files: when safe to delete; System Data and purgeable storage explained; screenshot/recording cleanup |
 | `/guides/find-duplicate-files-mac/` — duplicate safety | Photos Duplicates vs files on disk; what happens to duplicates in cloud-sync folders |
 | `/guides/clean-up-downloads-folder-mac/` — Downloads organization | Simple folder rules; handling files with the same name; undoing a cleanup |
