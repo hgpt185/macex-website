@@ -7,6 +7,14 @@
     <language>en</language>
     <atom:link href="https://macex.app/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Why Downloads Don’t Show in Finder Recents on Mac</title>
+      <link>https://macex.app/blog/why-downloads-dont-show-in-finder-recents/</link>
+      <guid>https://macex.app/blog/why-downloads-dont-show-in-finder-recents/</guid>
+      <description>Downloaded a file but can’t see it in Finder Recents? Learn what Recents shows, how to sort Downloads by Date Added, and save a recent-files view on Mac.</description>
+      <category>Mac file search</category>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Find Text Inside Images and PDFs on Mac</title>
       <link>https://macex.app/blog/search-text-inside-images-pdfs-mac/</link>
       <guid>https://macex.app/blog/search-text-inside-images-pdfs-mac/</guid>

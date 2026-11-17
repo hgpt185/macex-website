@@ -2,6 +2,7 @@
 
 > Practical Mac file organization and productivity articles by MacEx.
 
+- [Why Downloads Don’t Show in Finder Recents on Mac](https://macex.app/blog/why-downloads-dont-show-in-finder-recents/): Downloaded a file but can’t see it in Finder Recents? Learn what Recents shows, how to sort Downloads by Date Added, and save a recent-files view on Mac.
 - [Find Text Inside Images and PDFs on Mac](https://macex.app/blog/search-text-inside-images-pdfs-mac/): Find words in Mac screenshots and scanned PDFs. Learn what Preview and Spotlight can do, when a scan needs OCR, and how to search across your file library.
 - [System Data vs Purgeable Space on Mac](https://macex.app/blog/system-data-vs-purgeable-space-mac/): System Data and purgeable space are not the same. Learn why Storage and Disk Utility show different Mac space totals, and what to do safely on your Mac.
 - [Where Mac screenshots are saved, and how to stop the pile-up](https://macex.app/blog/where-mac-screenshots-are-saved/): Mac screenshots land on the Desktop by default. Change the save location in two clicks, then clean up the ones you already have without losing anything.
