@@ -101,6 +101,7 @@ publishing contract. Publishing frequency alone does not guarantee rankings.
 | --- | --- | --- | --- | --- |
 | 2026-11-16 | `/features/storage-management/` | Explain why System Data and purgeable space differ, and why Storage and Disk Utility totals can disagree | `system-data-vs-purgeable-space-mac` | Production deployment verified |
 | 2026-11-17 | `/features/file-search/` | Find words inside screenshots and scanned PDFs; distinguish Preview Live Text, PDF text layers and library-wide OCR | `search-text-inside-images-pdfs-mac` | Generated, tests and SEO checks passed; Cloudflare production deployment verified |
+| 2026-11-18 | `/features/file-search/` | Explain why new downloads do not necessarily appear in Finder Recents; show Downloads, Date Added and a saved recent-arrivals Smart Folder | `why-downloads-dont-show-in-finder-recents` | Generated, automated validation and production deployment pending verification |
 
 ## SEO topic clusters and editorial sequence (from 15 November 2026)
 
