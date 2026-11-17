@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="560" viewBox="0 0 1080 560" role="img" aria-labelledby="title desc">
+<title id="title">Finder Recents is different from Downloads</title>
+<desc id="desc">Three illustrated Finder-style panels distinguish Recents, Downloads and Date Added: recently opened files, files saved in a folder, and when an item arrived in that folder.</desc>
+<rect width="1080" height="560" rx="30" fill="#eef2f8"/>
+<text x="64" y="70" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2" fill="#66748a">THREE DIFFERENT QUESTIONS</text>
+<g font-family="Arial,sans-serif">
+<rect x="54" y="106" width="304" height="376" rx="20" fill="#fff" stroke="#d8e0eb" stroke-width="2"/>
+<rect x="54" y="106" width="304" height="60" rx="20" fill="#e8edf5"/>
+<rect x="54" y="146" width="304" height="20" fill="#e8edf5"/>
+<circle cx="80" cy="136" r="6" fill="#e59b9c"/><circle cx="101" cy="136" r="6" fill="#e8c17d"/><circle cx="122" cy="136" r="6" fill="#8bc49f"/>
+<text x="80" y="209" font-size="16" font-weight="700" fill="#718096">FINDER VIEW</text>
+<text x="80" y="252" font-size="29" font-weight="700" fill="#27354a">Recents</text>
+<rect x="80" y="276" width="252" height="53" rx="10" fill="#f3f5f9"/>
+<rect x="96" y="290" width="23" height="26" rx="4" fill="#cbd5f3"/><text x="131" y="309" font-size="15" fill="#36445a">Opened report.pdf</text>
+<rect x="80" y="339" width="252" height="53" rx="10" fill="#f3f5f9"/>
+<rect x="96" y="353" width="23" height="26" rx="4" fill="#e6d6b8"/><text x="131" y="372" font-size="15" fill="#36445a">Viewed image.png</text>
+<text x="80" y="432" font-size="17" font-weight="700" fill="#52617a">Recently used</text>
+<text x="80" y="456" font-size="14" fill="#718096">Not a download history</text>
+
+<rect x="388" y="106" width="304" height="376" rx="20" fill="#fff" stroke="#d8e0eb" stroke-width="2"/>
+<rect x="388" y="106" width="304" height="60" rx="20" fill="#e8edf5"/>
+<rect x="388" y="146" width="304" height="20" fill="#e8edf5"/>
+<circle cx="414" cy="136" r="6" fill="#e59b9c"/><circle cx="435" cy="136" r="6" fill="#e8c17d"/><circle cx="456" cy="136" r="6" fill="#8bc49f"/>
+<text x="414" y="209" font-size="16" font-weight="700" fill="#718096">FINDER FOLDER</text>
+<text x="414" y="252" font-size="29" font-weight="700" fill="#27354a">Downloads</text>
+<rect x="414" y="276" width="252" height="53" rx="10" fill="#f3f5f9"/>
+<rect x="430" y="290" width="23" height="26" rx="4" fill="#cbd5f3"/><text x="465" y="309" font-size="15" fill="#36445a">manual.pdf</text>
+<rect x="414" y="339" width="252" height="53" rx="10" fill="#f3f5f9"/>
+<rect x="430" y="353" width="23" height="26" rx="4" fill="#e6d6b8"/><text x="465" y="372" font-size="15" fill="#36445a">installer.dmg</text>
+<text x="414" y="432" font-size="17" font-weight="700" fill="#52617a">Files saved here</text>
+<text x="414" y="456" font-size="14" fill="#718096">Your usual download folder</text>
+
+<rect x="722" y="106" width="304" height="376" rx="20" fill="#fff" stroke="#d8e0eb" stroke-width="2"/>
+<rect x="722" y="106" width="304" height="60" rx="20" fill="#e8edf5"/>
+<rect x="722" y="146" width="304" height="20" fill="#e8edf5"/>
+<circle cx="748" cy="136" r="6" fill="#e59b9c"/><circle cx="769" cy="136" r="6" fill="#e8c17d"/><circle cx="790" cy="136" r="6" fill="#8bc49f"/>
+<text x="748" y="209" font-size="16" font-weight="700" fill="#718096">LIST VIEW COLUMN</text>
+<text x="748" y="252" font-size="29" font-weight="700" fill="#27354a">Date Added</text>
+<rect x="748" y="276" width="252" height="53" rx="10" fill="#f3f5f9"/>
+<text x="765" y="308" font-size="15" fill="#36445a">manual.pdf</text><text x="984" y="308" text-anchor="end" font-size="14" fill="#52617a">Today</text>
+<rect x="748" y="339" width="252" height="53" rx="10" fill="#f3f5f9"/>
+<text x="765" y="371" font-size="15" fill="#36445a">installer.dmg</text><text x="984" y="371" text-anchor="end" font-size="14" fill="#52617a">Yesterday</text>
+<text x="748" y="432" font-size="17" font-weight="700" fill="#52617a">When it arrived here</text>
+<text x="748" y="456" font-size="14" fill="#718096">Can change when moved</text>
+</g>
+<text x="540" y="527" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#68778d">Illustrative guide, not a screenshot of macOS.</text>
+</svg>
