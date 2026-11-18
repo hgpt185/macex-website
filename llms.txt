@@ -34,7 +34,7 @@ Not supported (as of version 0.8.12): tabs, multiple windows, column view, built
 - [Privacy and permissions](https://macex.app/docs/#privacy): what runs on the Mac, what goes online, where data is stored
 - [MacEx Docs](https://macex.app/docs/): install, search, preview, Free Up Space, duplicates, Tidy Downloads, Trash, automation, Quick Search, SFTP, keyboard shortcuts, troubleshooting, privacy
 - [MacEx vs Finder](https://macex.app/compare/finder/): feature-by-feature comparison, when Finder is enough and when MacEx helps
-- [Best Finder alternatives for Mac](https://macex.app/compare/best-finder-alternatives-mac/): ForkLift, Path Finder, Commander One, QSpace, Marta, Nimble Commander, Bloom and MacEx compared on price, panes, tabs and remote servers, with Finder tips to try first
+- [Best Finder alternative for Mac](https://macex.app/compare/best-finder-alternatives-mac/): MacEx, ForkLift, Path Finder, Commander One, QSpace, Bloom, Marta and Nimble Commander compared on finding files, text search in images, download sources, cleanup, duplicates and price
 - [Find files on Mac by describing them](https://macex.app/features/file-search/): how plain-language search, text search in images and PDFs, and download sources work, and what search can't do
 - [Free up storage on Mac](https://macex.app/features/storage-management/): what Free Up Space lists, how each group is defined, and how cleanup stays reversible
 - [Find duplicate files on Mac](https://macex.app/guides/find-duplicate-files-mac/): how to find and remove duplicates safely
