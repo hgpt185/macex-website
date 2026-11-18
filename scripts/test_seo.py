@@ -64,6 +64,22 @@ class SeoTests(unittest.TestCase):
             errors, _ = self.seo.check(root)
             self.assertTrue(any("missing https://macex.app/new/" in e for e in errors))
 
+    def test_flags_product_facts_that_disagree_with_config(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.site(root, {"/": PAGE.format(title="Home", path="/", body=
+                "<p>$9.99 for MacEx 0.8.12 on macOS 14. Notarized since 0.8.7.</p>"
+                "<p>Only $7.99 for MacEx 0.9.0 on macOS 13.</p>")})
+            (root / "config.js").write_text(
+                "version: '0.8.12', minimumMacOS: '14', plans: [ { macs: 1, price: 9.99, was: 19.98 } ]")
+            (root / "llms.txt").write_text("MacEx 0.8.12 costs $19.98 regularly.")
+            text = "\n".join(self.seo.check_facts(root))
+            self.assertIn("price $7.99", text)
+            self.assertIn("MacEx 0.9.0", text)
+            self.assertIn("macOS 13", text)
+            self.assertNotIn("0.8.7", text)
+            self.assertNotIn("llms.txt", text)
+
 
 if __name__ == "__main__":
     unittest.main()

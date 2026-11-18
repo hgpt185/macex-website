@@ -223,21 +223,22 @@ def check_facts(root=ROOT):
     """Every non-blog page and llms.txt must state the same price, version and macOS minimum as config.js."""
     facts, errors = config_facts(root), []
     files = [p for p in page_files(root) if not p.relative_to(root).as_posix().startswith("blog/")]
-    files += [root / "llms.txt"]
+    if (root / "llms.txt").is_file():
+        files.append(root / "llms.txt")
     for path in files:
         where = path.relative_to(root).as_posix()
         raw = path.read_text(errors="ignore")
         text = re.sub(r"<script(?! type=\"application/ld\+json\")[\s\S]*?</script>|<style[\s\S]*?</style>", " ", raw)
         text = re.sub(r"<[^>]+>", " ", text)
-        for amount in set(re.findall(r"\$(\d+\.\d{2})", text)):
+        for amount in set(re.findall(r"\$(\d+\.\d{2})", text)) if facts["price"] else ():
             if amount not in {facts["price"], facts["was"]}:
                 errors.append(f"{where}: price ${amount} matches neither config.js price ${facts['price']} nor regular price ${facts['was']}")
         for match in re.finditer(r"MacEx\s+(?:version\s+)?(\d+\.\d+\.\d+)|version\s+(\d+\.\d+\.\d+)", text):
             version = match.group(1) or match.group(2)
             before, after = text[max(0, match.start() - 30):match.start()], text[match.end():match.end() + 15]
-            if version != facts["version"] and not HISTORIC_VERSION.search(before) and not HISTORIC_VERSION.search(after):
+            if facts["version"] and version != facts["version"] and not HISTORIC_VERSION.search(before) and not HISTORIC_VERSION.search(after):
                 errors.append(f"{where}: names MacEx {version} as current; config.js version is {facts['version']}")
-        for found in set(re.findall(r"macOS\s+(\d{2})\b", text)):
+        for found in set(re.findall(r"macOS\s+(\d{2})\b", text)) if facts["macos"] else ():
             if found != facts["macos"]:
                 errors.append(f"{where}: says macOS {found}; config.js minimumMacOS is {facts['macos']}")
     return errors
