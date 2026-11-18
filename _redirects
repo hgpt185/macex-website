@@ -1,7 +1,5 @@
 # Blog pages are directly served under /blog/.
-# There is no features index page; send it to the homepage features section.
-/features /#features 301
-/features/ /#features 301
+# /features/ is the "Everything MacEx can do" page (features/index.html); Pages serves it directly.
 
 # Explicitly resolve the latest journal article to its generated static document.
 /blog/system-data-vs-purgeable-space-mac /blog/system-data-vs-purgeable-space-mac/index.html 200

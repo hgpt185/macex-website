@@ -908,3 +908,6 @@ body.fs-lock{overflow:hidden}
   .mascot-wrap,.float-card,.rings i{scale:var(--k,1)}
   .fc-shot{scale:calc(.86*var(--k,1))}
 }
+/* Inline links in the features intro and feature panels */
+.what-is a,.fp-head p a{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:color-mix(in srgb,var(--blue) 35%,transparent)}
+.what-is a:hover,.fp-head p a:hover{text-decoration-color:currentColor}

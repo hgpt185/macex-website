@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mac File Manager with Split View &amp; Batch Rename – MacEx</title>
+  <meta name="description" content="MacEx is also a full Mac file browser: two-pane Split View, batch rename with live preview, zip and unzip, Finder tags, workspaces, folder sizes, SMB and SFTP.">
+  <meta name="theme-color" content="#f7f9fc">
+  <link rel="canonical" href="https://macex.app/features/file-management/">
+  <meta property="og:site_name" content="MacEx">
+  <meta property="og:url" content="https://macex.app/features/file-management/">
+  <meta property="og:title" content="File management in MacEx: Split View, batch rename, tags and servers">
+  <meta property="og:description" content="Browse folders, work in two panes, rename hundreds of files at once, zip, tag and connect to SMB and SFTP servers in one Mac window.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://macex.app/assets/app/split-view.jpg">
+  <meta property="og:image:width" content="1800">
+  <meta property="og:image:height" content="1190">
+  <meta property="og:image:alt" content="MacEx Split View with a photo folder on the left and a projects folder on the right">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="File management in MacEx: Split View, batch rename, tags and servers">
+  <meta name="twitter:description" content="Browse folders, work in two panes, rename hundreds of files at once, zip, tag and connect to SMB and SFTP servers in one Mac window.">
+  <meta name="twitter:image" content="https://macex.app/assets/app/split-view.jpg">
+  <link rel="icon" href="../../assets/mascot.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://macex.app/features/file-management/#article",
+        "headline": "File management in MacEx: Split View, batch rename, tags and servers",
+        "description": "What the MacEx folder browser can do: two-pane Split View with copy and move, batch rename with live preview, zip and unzip, Finder tags, workspaces, folder sizes, hidden files, undo, and SMB and SFTP connections, with their limits.",
+        "url": "https://macex.app/features/file-management/",
+        "mainEntityOfPage": "https://macex.app/features/file-management/",
+        "image": "https://macex.app/assets/app/split-view.jpg",
+        "inLanguage": "en",
+        "datePublished": "2026-11-18",
+        "dateModified": "2026-11-18",
+        "about": { "@id": "https://macex.app/#app" },
+        "author": { "@type": "Organization", "name": "MacEx", "url": "https://macex.app/" },
+        "publisher": { "@id": "https://macex.app/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://macex.app/#organization",
+        "name": "MacEx",
+        "url": "https://macex.app/",
+        "logo": "https://macex.app/assets/icon-512.png"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "MacEx", "item": "https://macex.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://macex.app/features/" },
+          { "@type": "ListItem", "position": 3, "name": "File management", "item": "https://macex.app/features/file-management/" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../docs/docs.css">
+  <link rel="stylesheet" href="../../article.css">
+  <script src="../../config.js" defer></script>
+  <script defer src="https://analytics.hemeshgupta.com/script.js" data-website-id="39604b49-3ffd-480a-bede-91caf13c1414"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+  </defs>
+</svg>
+
+<header class="docs-bar">
+  <div class="docs-bar-in">
+    <a class="brand" href="../../" aria-label="MacEx home"><img src="../../assets/mascot.svg" alt="" width="32" height="32">MacEx</a>
+    <a class="site-link" style="margin-left:auto" href="../">Features</a>
+    <a class="site-link" href="../../docs/">Docs</a>
+    <a class="site-link" href="../../#pricing">Pricing</a>
+    <a class="button small ghost" href="#" data-download hidden>Download</a>
+    <a class="button small" href="../../#pricing">Get MacEx</a>
+  </div>
+</header>
+
+<main id="main" class="container cmp">
+  <nav class="crumbs-nav" aria-label="Breadcrumb"><a href="../../">MacEx</a> › <a href="../">Features</a> › File management</nav>
+  <h1>File management in MacEx: <em>two panes, batch rename, tags and servers</em></h1>
+  <p class="updated">Updated <time datetime="2026-11-18">November 18, 2026</time></p>
+
+  <div class="answer"><b>Short answer:</b> Besides its library and search, MacEx is a folder browser. It has a path bar, Back and Forward, and a two-pane Split View where <kbd>F5</kbd> copies and <kbd>F6</kbd> moves the selection to the other pane. You can rename hundreds of files at once with a live preview, zip and unzip, add Finder tags, and gather folders into workspaces. It also opens SMB network shares and SFTP servers in the same window. Every file action can be undone with <kbd>⌘</kbd><kbd>Z</kbd>, and MacEx never replaces a file that already exists.</div>
+
+  <figure class="shot-fig">
+    <img src="../../assets/app/split-view-900.jpg" srcset="../../assets/app/split-view-900.jpg 900w, ../../assets/app/split-view.jpg 1800w" sizes="(max-width: 948px) calc(100vw - 48px), 900px" width="1800" height="1190" decoding="async" alt="MacEx Split View: the left pane shows the Trip Photos folder as a grid of twelve photos, the right pane lists the Projects folder with Archive, proposal-draft.txt and Website">
+    <figcaption>Split View (<kbd>⌘</kbd><kbd>\</kbd>) puts two folders side by side. Select files on one side and press <kbd>F5</kbd> to copy or <kbd>F6</kbd> to move them to the other. Shown with sample files.</figcaption>
+  </figure>
+
+  <h2 id="browse">Browse any folder</h2>
+  <p>Click a location in the sidebar, or press <kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd> to go to a folder by path. Press <kbd>⌘</kbd><kbd>L</kbd> to edit the path bar, and <kbd>⌘</kbd><kbd>[</kbd> and <kbd>⌘</kbd><kbd>]</kbd> to go back and forward. Folders open inside MacEx; files open in their usual app.</p>
+  <ul>
+    <li><b>Grid or list.</b> <kbd>⌘</kbd><kbd>1</kbd> shows thumbnails, <kbd>⌘</kbd><kbd>2</kbd> shows a list with name, date, size and kind. Sort by any column, with folders first if you like.</li>
+    <li><b>Folder sizes.</b> The list view works out how big each folder is in the background and shows its item count. If some items can’t be read, or are online-only iCloud files, the size is marked as partial.</li>
+    <li><b>Hidden files.</b> Turn on <b>Show Hidden Files</b> in the folder toolbar to see dotfiles. MacEx remembers the choice.</li>
+    <li><b>Right-click actions.</b> Quick Look, Copy Paths, Duplicate, Compress, Tags, Add to Workspace, and Add Folder to Sidebar.</li>
+  </ul>
+  <figure class="shot-fig">
+    <img src="../../assets/app/folder-browser-900.jpg" srcset="../../assets/app/folder-browser-900.jpg 900w, ../../assets/app/folder-browser.jpg 1800w" sizes="(max-width: 948px) calc(100vw - 48px), 900px" width="1800" height="1190" loading="lazy" decoding="async" alt="MacEx list view of a Work folder with a path bar reading Users, Shared, Documents, Work, and a Size column showing each folder’s size and item count, such as Projects at 861 KB with 9 items">
+    <figcaption>The list view shows folder sizes and item counts next to file sizes.</figcaption>
+  </figure>
+
+  <h2 id="copy-move">Copy, move and rename without overwriting</h2>
+  <p>The usual commands are all here: <kbd>⇧</kbd><kbd>⌘</kbd><kbd>N</kbd> for a new folder, <kbd>Return</kbd> to rename, <kbd>⌘</kbd><kbd>D</kbd> to duplicate, <kbd>⌘</kbd><kbd>C</kbd> and <kbd>⌘</kbd><kbd>V</kbd> to copy and paste, and <kbd>⌘</kbd><kbd>⌫</kbd> to move to Trash. You can drag files into folders, onto a workspace, or out to other apps.</p>
+  <p>If a file with the same name is already there, MacEx asks whether to <b>Keep Both</b> or <b>Skip</b>. It never replaces or merges an existing item. Long copies show progress and can be cancelled. <kbd>⌘</kbd><kbd>Z</kbd> undoes moves, renames, Trash and batch renames.</p>
+
+  <h2 id="batch-rename">Rename many files at once</h2>
+  <p>Select several files, right-click and choose <b>Rename Items</b>. You can find and replace text, or build new names from a template:</p>
+  <ul>
+    <li><code>{name}</code> is the current name, <code>{n}</code> is a sequence number (pick the start and the number of digits), and <code>{date}</code> is the date modified as <code>yyyy-MM-dd</code>.</li>
+    <li>For example, <code>Lisbon {n}</code> with two digits turns twelve camera files into <code>Lisbon 01.jpg</code> to <code>Lisbon 12.jpg</code>.</li>
+    <li>File extensions are always kept.</li>
+  </ul>
+  <p>The preview shows every old and new name before anything changes, and flags any clash with a name that already exists. One click renames up to 10,000 items, and <kbd>⌘</kbd><kbd>Z</kbd> puts the old names back.</p>
+  <figure class="shot-fig">
+    <img src="../../assets/app/batch-rename-900.jpg" srcset="../../assets/app/batch-rename-900.jpg 900w, ../../assets/app/batch-rename.jpg 1800w" sizes="(max-width: 948px) calc(100vw - 48px), 900px" width="1800" height="1190" loading="lazy" decoding="async" alt="MacEx Rename 12 Items sheet: find IMG_ and replace with Lisbon, with a preview list showing IMG_4021.jpg becoming Lisbon 4021.jpg, and a note that 12 names change and Command-Z restores them">
+    <figcaption>Batch rename previews every new name. Here, find and replace turns <code>IMG_4021.jpg</code> into <code>Lisbon 4021.jpg</code>.</figcaption>
+  </figure>
+
+  <h2 id="zip">Zip and unzip</h2>
+  <p>Right-click and choose <b>Compress</b> to make a <code>.zip</code>, or <b>Extract</b> on a zip to unpack it next to itself. MacEx uses <code>ditto</code>, the same tool Finder uses. It writes to a temporary name first, so a cancelled or failed run leaves no half-written archive. Only zip is supported. MacEx does not open RAR, 7z or tar files.</p>
+
+  <h2 id="finder-tags-and-workspaces">Finder tags and workspaces</h2>
+  <p><b>Tags</b> you set in Finder appear in the MacEx sidebar, and clicking one lists every file with it. To tag files, select them, right-click and choose <b>Tags</b>, or type tags in the Inspector (<kbd>⌘</kbd><kbd>I</kbd>). Tags are stored as normal macOS tags, so Finder sees them too.</p>
+  <p><b>Workspaces</b> are named pages in the sidebar that collect files and folders from anywhere: a client project, a tax year, a trip. Choose <b>File › New Workspace</b>, then drop files on it or right-click and choose <b>Add to Workspace</b>. Nothing is copied or moved. If an item is moved or deleted, the workspace shows it as unavailable.</p>
+
+  <h2 id="servers">Network shares and servers</h2>
+  <ul>
+    <li><b>SMB shares (Windows PCs and NAS drives).</b> On the Connections page, type an address such as <code>smb://nas.local/Media</code>. macOS asks for the password and can keep it in your keychain. MacEx never sees the password. The share then opens as an ordinary folder, and Split View, copy and move, batch rename and tags all work on it.</li>
+    <li><b>SFTP servers.</b> Press <kbd>⌘</kbd><kbd>K</kbd> to connect with a password, a private key or your SSH agent. MacEx shows the server’s host key the first time so you can check it, and blocks sign-in if the key later changes. You can browse, upload, download, rename, make folders and preview files. It doesn’t copy whole folders at once, delete on the server, open a terminal or sync folders.</li>
+  </ul>
+
+  <h2 id="limits">What MacEx file management doesn’t do</h2>
+  <ul>
+    <li>No tabs and no extra windows. MacEx uses one window, with Split View for two folders at once.</li>
+    <li>No column view. Folders show as a grid or a list.</li>
+    <li>No built-in Terminal, Git status or permissions (chmod) editor.</li>
+    <li>No folder sync, file comparison or file conversion.</li>
+  </ul>
+  <p>If you need those every day, a dedicated dual-pane file manager is a better fit. MacEx is for people who want everyday file management and the ability to find, preview and clean up files in the same app. See <a href="../../compare/finder/">MacEx vs Finder</a> for a feature-by-feature comparison.</p>
+
+  <h2>Related</h2>
+  <ul class="related-links">
+    <li><a href="../">Everything MacEx can do<small>Every feature, with its limits</small></a></li>
+    <li><a href="../file-search/">Find files by describing them<small>Plain-language search, text in images, download sources</small></a></li>
+    <li><a href="../storage-management/">Free up storage on Mac<small>Old installers, large files, duplicates, reviewed first</small></a></li>
+    <li><a href="../../docs/#files">File management docs<small>Step by step, with every shortcut</small></a></li>
+  </ul>
+
+  <div class="cta">
+    <p>MacEx runs on macOS 14 or later, Apple silicon and Intel. One-time purchase, no account, no subscription.</p>
+    <div class="row">
+      <a class="button" href="../../#pricing" data-buy>Get MacEx · $9.99</a>
+      <a class="button ghost" href="../../#mac-stage">Try the live demo <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</main>
+
+<footer class="docs-foot"><div><span>MacEx. Your Mac, explored.</span><span><a href="../../">MacEx home</a> · <a href="../">Features</a> · <a href="../../docs/">Docs</a> · <a href="../../compare/finder/">MacEx vs Finder</a> · <a href="../../#pricing">Pricing</a></span></div></footer>
+</body>
+</html>

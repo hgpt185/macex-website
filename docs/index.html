@@ -30,7 +30,7 @@
         "url": "https://macex.app/docs/",
         "image": "https://macex.app/assets/og-image.png",
         "inLanguage": "en",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-18",
         "about": { "@id": "https://macex.app/#app" },
         "author": { "@type": "Organization", "name": "MacEx", "url": "https://macex.app/" },
         "publisher": { "@type": "Organization", "name": "MacEx", "url": "https://macex.app/", "logo": { "@type": "ImageObject", "url": "https://macex.app/assets/icon-512.png" } }
@@ -88,6 +88,9 @@
     <a href="#preview">Preview and Copy Text</a>
     <a href="#views">Grid, list and sorting</a>
     <a href="#music">Music</a>
+    <b>Files and folders</b>
+    <a href="#files">Folders and Split View</a>
+    <a href="#rename">Batch rename, zip and tags</a>
     <b>Clean up</b>
     <a href="#free-up-space">Free up space</a>
     <a href="#duplicates">Duplicates and similar photos</a>
@@ -98,7 +101,7 @@
     <a href="#sources">Downloaded From</a>
     <a href="#quick-search">Quick Search and the menu bar</a>
     <a href="#shortcuts-app">Shortcuts and links</a>
-    <a href="#connections">Connections (SFTP)</a>
+    <a href="#connections">Connections (SFTP and SMB)</a>
     <b>Help</b>
     <a href="#shortcuts">Keyboard shortcuts</a>
     <a href="#troubleshooting">Troubleshooting</a>
@@ -110,7 +113,7 @@
     <section id="start">
       <span class="group-tag">Learn</span>
       <h1>Feel at home in MacEx in five minutes.</h1>
-      <p class="updated">Updated <time datetime="2026-11-15">November 15, 2026</time> · MacEx 0.8.12</p>
+      <p class="updated">Updated <time datetime="2026-11-18">November 18, 2026</time> · MacEx 0.8.12</p>
       <h2 class="what">What is MacEx?</h2>
       <p>MacEx is a file library app for Mac. It gathers your images, videos, music, documents, archives and apps into one window, finds any file from a plain description like &ldquo;pdfs from last week over 5&nbsp;mb&rdquo;, previews files without opening another app, and helps you free up space by reviewing old installers, forgotten downloads and duplicates before they go to Trash. It runs on macOS 14 or later, works without an account, and is a one-time purchase.</p>
       <p class="lead">Four short lessons. Each one is something to try on your own files.</p>
@@ -268,6 +271,51 @@ brew install --cask macex</code></pre>
       <p>Click the arrows button in the toolbar to change the sort order. Choose System, Light or Dark in Settings.</p>
     </section>
 
+    <section id="files">
+      <span class="group-tag">Files and folders</span>
+      <h2>Folders and Split View</h2>
+      <p>Click a location in the sidebar to browse it. Folders open inside MacEx; double-click a file to open it in its usual app.</p>
+      <figure class="docs-shot"><img src="../assets/app/split-view.jpg" width="1800" height="1190" loading="lazy" alt="MacEx Split View with a photo folder on the left and a projects folder on the right"></figure>
+      <table class="keys">
+        <tr><td>Go to a folder by path</td><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd></td></tr>
+        <tr><td>Edit the path bar</td><td><kbd>⌘</kbd><kbd>L</kbd></td></tr>
+        <tr><td>Split View</td><td><kbd>⌘</kbd><kbd>\</kbd></td></tr>
+        <tr><td>Copy or move to the other pane</td><td><kbd>F5</kbd> <kbd>F6</kbd></td></tr>
+        <tr><td>New folder</td><td><kbd>⇧</kbd><kbd>⌘</kbd><kbd>N</kbd></td></tr>
+        <tr><td>Rename</td><td><kbd>Return</kbd></td></tr>
+        <tr><td>Duplicate</td><td><kbd>⌘</kbd><kbd>D</kbd></td></tr>
+        <tr><td>Move to Trash</td><td><kbd>⌘</kbd><kbd>⌫</kbd></td></tr>
+        <tr><td>Undo</td><td><kbd>⌘</kbd><kbd>Z</kbd></td></tr>
+      </table>
+      <ul>
+        <li>The list view shows each folder&rsquo;s size and item count. A size is marked partial when some items can&rsquo;t be read or are online-only.</li>
+        <li>Turn on <b>Show Hidden Files</b> in the folder toolbar to see dotfiles.</li>
+        <li>If a file with the same name already exists, choose <b>Keep Both</b> or <b>Skip</b>. MacEx never replaces it.</li>
+        <li>Right-click a folder and choose <b>Add Folder to Sidebar</b> to keep it one click away, or <b>Copy Paths</b> to copy full paths.</li>
+      </ul>
+    </section>
+
+    <section id="rename">
+      <span class="group-tag">Files and folders</span>
+      <h2>Batch rename, zip and tags</h2>
+      <h3>Rename many files</h3>
+      <ol>
+        <li>Select several files, right-click and choose <b>Rename Items</b>.</li>
+        <li>Fill in <b>Find</b> and <b>Replace with</b>, or edit the <b>Name</b> template. <code>{name}</code> is the current name, <code>{n}</code> a number and <code>{date}</code> the date modified.</li>
+        <li>Check the preview. Clashes with existing names are flagged, and extensions are kept.</li>
+        <li>Click <b>Rename</b>. <kbd>⌘</kbd><kbd>Z</kbd> restores the old names.</li>
+      </ol>
+      <figure class="docs-shot"><img src="../assets/app/batch-rename.jpg" width="1800" height="1190" loading="lazy" alt="MacEx Rename 12 Items sheet replacing IMG_ with Lisbon, with a preview of every new name"></figure>
+      <h3>Zip and unzip</h3>
+      <p>Right-click and choose <b>Compress</b> to make a <code>.zip</code> next to the files. Choose <b>Extract</b> on a zip to unpack it. Only zip archives are supported.</p>
+      <h3>Tags and workspaces</h3>
+      <ul>
+        <li>Right-click files and choose <b>Tags</b> to add or remove a Finder tag, or type tags in the Inspector (<kbd>⌘</kbd><kbd>I</kbd>). Tagged files are listed under the tag in the sidebar.</li>
+        <li>Choose <b>File → New Workspace</b> to make a sidebar page for a project. Drop files on it, or right-click and choose <b>Add to Workspace</b>. Files stay where they are.</li>
+      </ul>
+      <p><a href="../features/file-management/">More about file management in MacEx</a></p>
+    </section>
+
     <section id="music">
       <span class="group-tag">Everyday</span>
       <h2>Music</h2>
@@ -378,7 +426,7 @@ brew install --cask macex</code></pre>
 
     <section id="connections">
       <span class="group-tag">Go further</span>
-      <h2>Connections (SFTP)</h2>
+      <h2>Connections (SFTP and SMB)</h2>
       <p>Click <b>Connections</b> in the sidebar, or press <kbd>⌘</kbd><kbd>K</kbd>, to browse a server in the same window.</p>
       <figure class="docs-shot"><img src="../assets/app/connections.jpg" width="1800" height="1190" loading="lazy" alt="MacEx new SFTP connection form"></figure>
       <ol>
@@ -392,6 +440,8 @@ brew install --cask macex</code></pre>
         <li>Uploads and downloads never replace a file that already exists.</li>
         <li>A transfer you cancel can leave a partial file behind. MacEx tells you which one.</li>
       </ul>
+      <h3>Network shares (SMB)</h3>
+      <p>On the Connections page, type an address such as <code>smb://nas.local/Media</code> and click <b>Connect</b>. macOS asks for the password and can keep it in your keychain. The share opens as a normal folder in MacEx.</p>
     </section>
 
     <section id="shortcuts">

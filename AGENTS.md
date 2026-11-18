@@ -31,7 +31,10 @@ All links and prices live in `config.js`. Pages opt in with data attributes, and
 - `index.html`: hero, live demo, features, pricing ticket, FAQ. The hero "Get MacEx" button scrolls to `#pricing`. The nav "Get MacEx" button and the pricing card "Buy License" button open Dodo checkout.
 - `docs/index.html`: documentation.
 - `compare/finder/index.html`: MacEx vs Finder page (also the Finder-alternative page).
-- `features/file-search/`, `features/storage-management/`: feature explainers. `guides/*`: how-to guides for duplicates and Downloads. These pages share `article.css`. There is deliberately no `features/` index; `_redirects` sends it to `/#features`.
+- `features/index.html`: "Everything MacEx can do", the authoritative feature list with limits and a "doesn't do" list. Update it (and `llms.txt`, the homepage `featureList` and FAQ) whenever an app release adds, changes or removes a feature. Verify each claim in the app source, not the app README or in-app guide: both have been out of date.
+- `features/file-management/`, `features/file-search/`, `features/storage-management/`: feature explainers. `guides/*`: how-to guides for duplicates and Downloads. These pages share `article.css`.
+- Positioning: a Mac file manager built around a file library. Never call it a full Finder replacement or AI-powered; it has no tabs, column view, Terminal, Git or sync.
+- Screenshots in `assets/app/` come from a debug build run with `--state-directory` and a sample folder only, so no personal data shows. The SFTP form pre-fills the macOS username; keep it out of any shot.
 - `thanks/index.html`: post-purchase page. Two-column: intro on the left, steps on the right (download, open, activate). Dodo appends `?license_key=...` to the return URL and the page shows it with a copy button. It is `noindex`, and it must stay out of `sitemap.xml`.
 - `404.html`: real 404.
 - `press/index.html`: verified media and directory listing facts, official screenshots and contact; keep licensing, price, compatibility and description synchronized with `config.js`, docs and the live app.

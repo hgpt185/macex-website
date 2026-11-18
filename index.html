@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>MacEx – Finder Alternative &amp; File Manager for Mac</title>
-  <meta name="description" content="Find any file on your Mac by describing it, preview without opening, remove duplicates, tidy Downloads and free up space. Native macOS app, one-time $9.99.">
+  <meta name="description" content="Mac file manager: find files by describing them, two-pane Split View, batch rename, tags, SMB and SFTP, duplicates and safe cleanup. One-time $9.99.">
   <meta name="theme-color" content="#f7f9fc">
   <link rel="canonical" href="https://macex.app/">
   <meta property="og:site_name" content="MacEx">
   <meta property="og:url" content="https://macex.app/">
   <meta property="og:title" content="MacEx: a better Finder for your Mac">
-  <meta property="og:description" content="Find any file by describing it, preview without opening and free up space safely. A native file manager for macOS.">
+  <meta property="og:description" content="Find, manage and clean up every file on your Mac: plain-language search, Split View, batch rename, SMB and SFTP, and cleanup you review first.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://macex.app/assets/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
   <meta property="og:image:alt" content="MacEx: a better Finder for your Mac">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MacEx: a better Finder for your Mac">
-  <meta name="twitter:description" content="Find any file by describing it, preview without opening and free up space safely. A native file manager for macOS.">
+  <meta name="twitter:description" content="Find, manage and clean up every file on your Mac: plain-language search, Split View, batch rename, SMB and SFTP, and cleanup you review first.">
   <meta name="twitter:image:alt" content="MacEx: a better Finder for your Mac">
   <meta name="twitter:image" content="https://macex.app/assets/og-image.png">
   <link rel="icon" href="assets/mascot.svg" type="image/svg+xml">
@@ -68,7 +68,7 @@
         },
         "primaryImageOfPage": "https://macex.app/assets/og-image.png",
         "datePublished": "2026-11-10",
-        "dateModified": "2026-11-15",
+        "dateModified": "2026-11-18",
         "inLanguage": "en"
       },
       {
@@ -76,7 +76,7 @@
         "@id": "https://macex.app/#app",
         "name": "MacEx",
         "url": "https://macex.app/",
-        "description": "A file library app for Mac. Search your files in plain words, preview them without opening, see where downloads came from, and free up space by reviewing old installers, forgotten downloads and duplicates before they go to Trash.",
+        "description": "A native Mac file manager built around a library of all your files. Find files by describing them in plain words, browse folders in one or two panes, batch rename, zip and tag files, open SMB shares and SFTP servers, preview files and copy text out of images, and free up space by reviewing old installers, large files and duplicates before they go to Trash. Search and text recognition run on the Mac.",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "macOS 14 or later",
         "applicationSubCategory": "File manager",
@@ -86,17 +86,31 @@
         "screenshot": [
           "https://macex.app/assets/app/home.jpg",
           "https://macex.app/assets/app/search.jpg",
-          "https://macex.app/assets/app/free-up-space.jpg"
+          "https://macex.app/assets/app/free-up-space.jpg",
+          "https://macex.app/assets/app/split-view.jpg",
+          "https://macex.app/assets/app/batch-rename.jpg"
         ],
         "featureList": [
-          "Natural-language file search",
+          "Natural-language file search with editable filters",
+          "Filters for kind, extension, size, and created, modified and added dates",
+          "Saved searches in the sidebar",
+          "Folder browser with path bar, history, grid and list views, folder sizes and hidden files",
+          "Two-pane Split View with copy (F5) and move (F6)",
+          "Batch rename with find and replace, numbering, dates and live preview",
+          "Zip compress and extract",
+          "Finder tags and workspaces",
+          "Undo for moves, renames and Trash; never overwrites existing files",
+          "SMB network shares",
+          "SFTP connections with host-key verification",
           "Free Up Space cleanup with review before Trash",
-          "Duplicate and similar photo finder",
+          "Duplicate file finder with SHA-256 and byte-for-byte checks",
+          "Similar photo grouping",
+          "Trash history with restore",
           "Download source grouping and Tidy Downloads",
-          "In-place preview and Copy Text from images",
-          "Quick Search from any app",
-          "SFTP connections",
-          "On-device text recognition"
+          "Optional automation rules for old installers and screenshots",
+          "In-place preview, Inspector metadata and music player",
+          "On-device text recognition: copy and search text in images and PDFs",
+          "Quick Search hotkey, menu bar downloads, Shortcuts and Siri actions"
         ],
         "offers": {
           "@type": "Offer",
@@ -108,6 +122,116 @@
         "publisher": {
           "@id": "https://macex.app/#organization"
         }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://macex.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What can MacEx do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MacEx finds files from a plain description and browses folders in one or two panes. It batch renames, zips and tags files, and opens SMB shares and SFTP servers. It previews files and copies text out of images and PDFs. It finds duplicates, old installers and large files for you to review before they go to Trash. See everything MacEx can do."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is MacEx a replacement for Finder?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It covers everyday file management: folders, Split View with copy and move, batch rename, zip, tags, undo and network shares. It doesn’t replace Finder as the system file manager, and it has no tabs, column view, built-in Terminal or Git integration. Many people use MacEx for finding, organizing and cleaning up, and keep Finder for the rest. Compare MacEx with Finder."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does MacEx support batch operations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Select many files to copy, move, compress, tag or move to Trash in one step, or rename up to 10,000 at once with find and replace, numbering and dates. Every new name is previewed first, and ⌘Z undoes the whole batch."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can MacEx manage files on a server or NAS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Over SFTP you can browse, upload, download, rename and make folders, after checking the server’s identity. SMB shares on a NAS or Windows PC open as ordinary folders. MacEx doesn’t sync folders or copy whole folders over SFTP."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it a subscription?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. MacEx is a one-time purchase. Pay once and keep it."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is there a free trial?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. MacEx asks for a license key the first time it opens, and one license activates it on one Mac. Before you buy, try the live demo on this page with sample files. Every feature is included, and updates are free."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need an account?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. There is no account to create and no API key to set up. Checkout is handled by Dodo Payments."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which Macs can run it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MacEx needs macOS 14 Sonoma or later and runs on Apple silicon and Intel Macs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is MacEx different from Finder?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Finder shows your files folder by folder. MacEx gathers everything into one library sorted by kind, so you can find a file by describing it (“pdfs from last week over 5 mb”) instead of remembering where you saved it. It also shows where each download came from and what’s safe to clear. Your files stay exactly where they are. See the full comparison."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can MacEx find duplicate files and free up space?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Free Up Space lists old installers, forgotten downloads, old screenshots, big old videos and duplicate files. Duplicates are compared byte for byte before they’re shown, and nothing is removed until you review it and move it to Trash."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it move my files around?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Browsing your library never reorganizes the originals. Cleanup moves only what you select to Trash. Tidy Downloads runs only when you ask, never replaces existing files, and ⌘Z puts everything back. Automation rules are off until you turn them on."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does search send my files to AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Search runs on your Mac and turns your words into filters you can edit. Finding words inside images and PDFs is a separate switch, and it uses Apple’s on-device text recognition."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if macOS blocks MacEx when I open it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It shouldn’t. MacEx is signed with an Apple Developer ID and notarized by Apple, so macOS has already checked it for malicious software. The first time you open it, macOS asks you to confirm an app downloaded from the internet; choose Open. Versions before 0.8.7 weren’t notarized, so download the latest version if you still see a warning."
+            }
+          }
+        ]
       },
       {
         "@type": "VideoObject",
@@ -293,7 +417,7 @@
       <span class="line"><span class="word">A</span> <span class="word">better</span> <span class="word">Finder</span></span>
       <span class="line"><span class="word">for</span> <span class="word">your</span> <em class="word serif">Mac.</em></span>
     </h1>
-    <p class="hero-copy"><strong>MacEx is a file manager for Mac.</strong> It finds any file from a plain description,<br class="br-wide"> previews it without opening another app, and frees up space safely.</p>
+    <p class="hero-copy"><strong>Find, manage and clean up every file on your Mac.</strong><br class="br-wide"> Search in plain words, work in two panes, rename files in bulk, and free up space with a review step.</p>
     <div class="hero-actions">
       <a class="button" href="#pricing">Get MacEx · $9.99</a>
       <a class="button ghost" href="#mac-stage">Try it live <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
@@ -410,18 +534,19 @@
   <div class="container section-head reveal">
     <span class="eyebrow">EVERYTHING IT DOES</span>
     <h2>What does MacEx do? <br><em class="serif">Small app. Big relief.</em></h2>
-    <p class="what-is" style="max-width:720px;margin:18px auto 0;font-size:18px;line-height:1.6"><b>MacEx is a file library app for Mac.</b> It gathers your images, videos, music, documents, archives and apps in one place, lets you find files by describing them in plain words, and helps you free up space by reviewing old installers, forgotten downloads and duplicates before anything goes to Trash. <span style="opacity:.6">Updated <time datetime="2026-11-15">November 15, 2026</time>.</span></p>
+    <p class="what-is" style="max-width:720px;margin:18px auto 0;font-size:18px;line-height:1.6"><b>MacEx is a native Mac file manager built around a library of all your files.</b> It gathers your images, videos, music, documents, archives and apps in one place and finds files from a plain description. It browses folders in one or two panes, renames, zips and tags files in bulk, and opens SMB shares and SFTP servers. It also frees up space by reviewing old installers, large files and duplicates before anything goes to Trash. <a href="features/">See everything MacEx can do</a>. <span style="opacity:.6">Updated <time datetime="2026-11-18">November 18, 2026</time>.</span></p>
   </div>
 
   <div class="container feature-layout">
     <nav class="feature-nav" aria-label="Features" role="tablist">
       <button class="fn-item" role="tab" data-feature="search" aria-selected="true" aria-controls="fp-search" id="ft-search"><span class="fn-icon c-blue"><svg class="ico"><use href="#i-search"/></svg></span><span class="fn-text"><b>Natural search</b></span></button>
+      <button class="fn-item" role="tab" data-feature="manage" aria-selected="false" aria-controls="fp-manage" id="ft-manage" tabindex="-1"><span class="fn-icon c-violet"><svg class="ico"><use href="#i-split"/></svg></span><span class="fn-text"><b>Manage files</b></span></button>
       <button class="fn-item" role="tab" data-feature="space" aria-selected="false" aria-controls="fp-space" id="ft-space" tabindex="-1"><span class="fn-icon c-pink"><svg class="ico"><use href="#i-sparkles"/></svg></span><span class="fn-text"><b>Free Up Space</b></span></button>
       <button class="fn-item" role="tab" data-feature="sort" aria-selected="false" aria-controls="fp-sort" id="ft-sort" tabindex="-1"><span class="fn-icon c-violet"><svg class="ico"><use href="#i-grid"/></svg></span><span class="fn-text"><b>Library</b></span></button>
       <button class="fn-item" role="tab" data-feature="downloads" aria-selected="false" aria-controls="fp-downloads" id="ft-downloads" tabindex="-1"><span class="fn-icon c-green"><svg class="ico"><use href="#i-download"/></svg></span><span class="fn-text"><b>Smart Downloads</b></span></button>
       <button class="fn-item" role="tab" data-feature="preview" aria-selected="false" aria-controls="fp-preview" id="ft-preview" tabindex="-1"><span class="fn-icon c-orange"><svg class="ico"><use href="#i-image"/></svg></span><span class="fn-text"><b>Preview</b></span></button>
       <button class="fn-item" role="tab" data-feature="quick" aria-selected="false" aria-controls="fp-quick" id="ft-quick" tabindex="-1"><span class="fn-icon c-teal"><svg class="ico"><use href="#i-bolt"/></svg></span><span class="fn-text"><b>Quick Search</b></span></button>
-      <button class="fn-item" role="tab" data-feature="sftp" aria-selected="false" aria-controls="fp-sftp" id="ft-sftp" tabindex="-1"><span class="fn-icon c-slate"><svg class="ico"><use href="#i-server"/></svg></span><span class="fn-text"><b>Connections</b></span></button>
+      <button class="fn-item" role="tab" data-feature="sftp" aria-selected="false" aria-controls="fp-sftp" id="ft-sftp" tabindex="-1"><span class="fn-icon c-slate"><svg class="ico"><use href="#i-server"/></svg></span><span class="fn-text"><b>Servers</b></span></button>
       <button class="fn-item" role="tab" data-feature="privacy" aria-selected="false" aria-controls="fp-privacy" id="ft-privacy" tabindex="-1"><span class="fn-icon c-ink"><svg class="ico"><use href="#i-shield"/></svg></span><span class="fn-text"><b>Private by design</b></span></button>
     </nav>
 
@@ -429,6 +554,11 @@
       <div class="fp active" id="fp-search" role="tabpanel" aria-labelledby="ft-search">
         <header class="fp-head"><h3>Find a file by <span>describing it.</span></h3><p>Type what you remember, like &ldquo;pdfs from last week over 5&nbsp;mb&rdquo;. MacEx turns your words into filters you can see and change, so you find the file without knowing where it lives.</p></header>
         <figure class="shot"><video muted loop playsinline preload="none" width="1440" height="952" data-poster="assets/video/search.jpg" aria-label="Typing &ldquo;pdfs from last week over 5 mb&rdquo; into MacEx search; it becomes PDF, last week and 5 MB filters, then the date filter is removed to show more files"><source src="assets/video/search.mp4" type="video/mp4"></video></figure>
+      </div>
+
+      <div class="fp" id="fp-manage" role="tabpanel" aria-labelledby="ft-manage" hidden>
+        <header class="fp-head"><h3>Two panes, <span>batch rename and tags.</span></h3><p>Open two folders side by side and press <kbd>F5</kbd> to copy or <kbd>F6</kbd> to move. Rename hundreds of files with a live preview, zip and unzip, and tag files in bulk. MacEx never overwrites a file, and <kbd>⌘</kbd><kbd>Z</kbd> undoes it all. <a href="features/file-management/">More on file management</a></p></header>
+        <figure class="shot"><img src="assets/app/split-view-900.jpg" srcset="assets/app/split-view-900.jpg 900w, assets/app/split-view.jpg 1800w" sizes="(max-width: 900px) 100vw, 900px" width="1800" height="1190" loading="lazy" decoding="async" alt="MacEx Split View with a grid of trip photos on the left and the Projects folder as a list on the right"></figure>
       </div>
 
       <div class="fp" id="fp-space" role="tabpanel" aria-labelledby="ft-space" hidden>
@@ -457,7 +587,7 @@
       </div>
 
       <div class="fp" id="fp-sftp" role="tabpanel" aria-labelledby="ft-sftp" hidden>
-        <header class="fp-head"><h3>Browse SFTP servers <span>in the same window.</span></h3><p>Browse, upload and download files on your servers over SFTP, without leaving MacEx. It checks the server&rsquo;s identity before you sign in, and never overwrites a file.</p></header>
+        <header class="fp-head"><h3>SFTP servers and network shares <span>in the same window.</span></h3><p>Browse, upload and download files on your servers over SFTP. MacEx checks the server&rsquo;s identity before you sign in and never overwrites a file. SMB shares on a NAS or Windows PC open as ordinary folders.</p></header>
         <figure class="shot"><video muted loop playsinline preload="none" width="1440" height="952" data-poster="assets/video/connections.jpg" aria-label="Filling in a new SFTP connection in MacEx and choosing a sign-in method"><source src="assets/video/connections.mp4" type="video/mp4"></video></figure>
       </div>
 
@@ -478,9 +608,13 @@
       <div><dt>Preview &amp; Copy Text</dt><dd>Press <kbd>Space</kbd> to look inside photos, PDFs and videos, and copy text out of up to 20 images or PDFs at once.</dd></div>
       <div><dt>Quick Search</dt><dd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>Space</kbd> brings MacEx forward from any app, ready to type.</dd></div>
       <div><dt>Trash history</dt><dd>Remembers the last 500 files MacEx moved to Trash, so you can put any of them back.</dd></div>
-      <div><dt>Connections</dt><dd>Browse, upload and download files on servers over SFTP, with the server&rsquo;s identity checked first.</dd></div>
+      <div><dt><a href="features/file-management/">Split View &amp; batch rename</a></dt><dd>Two folders side by side with <kbd>F5</kbd> copy and <kbd>F6</kbd> move. Rename up to 10,000 files with find and replace, numbers and dates, previewed first.</dd></div>
+      <div><dt><a href="features/file-management/#finder-tags-and-workspaces">Tags, workspaces &amp; zip</a></dt><dd>Add Finder tags to many files at once, gather folders into workspaces, and zip or unzip in place.</dd></div>
+      <div><dt>Servers</dt><dd>Browse, upload and download over SFTP with the server&rsquo;s identity checked first, and open SMB shares as ordinary folders.</dd></div>
+      <div><dt>Automation &amp; Shortcuts</dt><dd>Optional rules trash old installers and file screenshots by month. Shortcuts and Siri can find files and fetch your latest download.</dd></div>
+      <div><dt>Private by design</dt><dd>No account and no cloud AI. Indexing, search and text recognition run on your Mac.</dd></div>
     </dl>
-    <p class="glance-more"><a href="compare/finder/">See how MacEx compares with Finder <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="features/file-search/">How MacEx search finds files <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+    <p class="glance-more"><a href="features/">Everything MacEx can do <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="compare/finder/">See how MacEx compares with Finder <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="features/file-search/">How MacEx search finds files <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
   </div>
 </section>
 
@@ -558,7 +692,8 @@
         <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Smart Downloads &amp; Tidy</li>
         <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Preview &amp; Copy Text</li>
         <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Quick Search &amp; Shortcuts</li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>SFTP connections</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Split View &amp; batch rename</li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>SFTP &amp; SMB connections</li>
         <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>Free updates</li>
       </ul>
     </div>
@@ -580,6 +715,10 @@
     <p>Curious about something else?<br><a href="docs/">Read the docs <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
   </div>
   <div class="faq-list reveal stagger">
+    <details><summary>What can MacEx do?<span>+</span></summary><p>MacEx finds files from a plain description and browses folders in one or two panes. It batch renames, zips and tags files, and opens SMB shares and SFTP servers. It previews files and copies text out of images and PDFs. It finds duplicates, old installers and large files for you to review before they go to Trash. <a href="features/">See everything MacEx can do</a>.</p></details>
+    <details><summary>Is MacEx a replacement for Finder?<span>+</span></summary><p>It covers everyday file management: folders, Split View with copy and move, batch rename, zip, tags, undo and network shares. It doesn&rsquo;t replace Finder as the system file manager, and it has no tabs, column view, built-in Terminal or Git integration. Many people use MacEx for finding, organizing and cleaning up, and keep Finder for the rest. <a href="compare/finder/">Compare MacEx with Finder</a>.</p></details>
+    <details><summary>Does MacEx support batch operations?<span>+</span></summary><p>Yes. Select many files to copy, move, compress, tag or move to Trash in one step, or rename up to 10,000 at once with find and replace, numbering and dates. Every new name is previewed first, and <kbd>⌘</kbd><kbd>Z</kbd> undoes the whole batch.</p></details>
+    <details><summary>Can MacEx manage files on a server or NAS?<span>+</span></summary><p>Yes. Over SFTP you can browse, upload, download, rename and make folders, after checking the server&rsquo;s identity. SMB shares on a NAS or Windows PC open as ordinary folders. MacEx doesn&rsquo;t sync folders or copy whole folders over SFTP.</p></details>
     <details><summary>Is it a subscription?<span>+</span></summary><p>No. MacEx is a one-time purchase. Pay once and keep it.</p></details>
     <details><summary>Is there a free trial?<span>+</span></summary><p>No. MacEx asks for a license key the first time it opens, and one license activates it on one Mac. Before you buy, <a href="#mac-stage">try the live demo</a> on this page with sample files. Every feature is included, and updates are free.</p></details>
     <details><summary>Do I need an account?<span>+</span></summary><p>No. There is no account to create and no API key to set up. Checkout is handled by Dodo Payments.</p></details>
@@ -608,7 +747,7 @@
   <div class="container footer-grid">
     <div class="footer-brand">
       <a class="brand" href="#top"><img src="assets/mascot.svg" alt="" width="30" height="30">MacEx</a>
-      <p>The file library for Mac. Search in plain words, preview in place, and free up space with confidence.</p>
+      <p>The Mac file manager built around your library. Search in plain words, manage files in two panes, and free up space with confidence.</p>
       <div class="ask-ai">
         <span class="ask-label">ASK AI</span>
         <div class="ask-links">
@@ -624,6 +763,7 @@
       <b>MacEx</b>
       <a href="#mac-stage">Try it live</a>
       <a href="#features">Features</a>
+      <a href="features/">Everything MacEx can do</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
       <a href="docs/">Docs</a>
@@ -636,6 +776,7 @@
       <a href="docs/#free-up-space">Free up space</a>
       <a href="docs/#shortcuts">Keyboard shortcuts</a>
       <a href="compare/finder/">MacEx vs Finder</a>
+      <a href="features/file-management/">Split View &amp; batch rename</a>
       <a href="features/file-search/">Find files on Mac</a>
       <a href="features/storage-management/">Free up storage on Mac</a>
       <a href="guides/find-duplicate-files-mac/">Find duplicate files on Mac</a>
