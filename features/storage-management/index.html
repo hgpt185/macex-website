@@ -62,9 +62,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@600;700;800&display=swap">
-  <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="../../docs/docs.css">
-  <link rel="stylesheet" href="../../article.css">
+  <link rel="stylesheet" href="../../style.css?v=20261118">
+  <link rel="stylesheet" href="../../docs/docs.css?v=20261118">
+  <link rel="stylesheet" href="../../article.css?v=20261118">
   <script src="../../config.js" defer></script>
   <script defer src="https://analytics.hemeshgupta.com/script.js" data-website-id="39604b49-3ffd-480a-bede-91caf13c1414"></script>
 </head>
@@ -79,7 +79,8 @@
 <header class="docs-bar">
   <div class="docs-bar-in">
     <a class="brand" href="../../" aria-label="MacEx home"><img src="../../assets/mascot.svg" alt="" width="32" height="32">MacEx</a>
-    <a class="site-link" style="margin-left:auto" href="../../docs/">Docs</a>
+    <a class="site-link" style="margin-left:auto" href="../../features/">Features</a>
+    <a class="site-link" href="../../docs/">Docs</a>
     <a class="site-link" href="../../#pricing">Pricing</a>
     <a class="button small ghost" href="#" data-download hidden>Download</a>
     <a class="button small" href="../../#pricing">Get MacEx</a>
@@ -98,11 +99,11 @@
     <figcaption>Free Up Space with a sample library. Each row opens to show the files inside it before you choose anything.</figcaption>
   </figure>
 
-  <h2>Start with what macOS already shows</h2>
+  <h2 id="start-with-what-macos-already-shows">Start with what macOS already shows</h2>
   <p>macOS has its own overview in <b>System Settings › General › Storage</b> (<a href="https://support.apple.com/en-us/102624" rel="noopener">Apple’s guide to freeing up storage</a>). It breaks usage into categories such as Applications, Documents and Photos, and offers recommendations like storing files in iCloud or emptying Trash automatically. If one category is clearly the problem, such as a Photos library or old iPhone backups, deal with it there first.</p>
   <p>Where that view gets harder is the everyday clutter spread across folders: installers you ran once, downloads you never opened again, screen recordings and exported videos, and copies of the same file in three places. That is what MacEx Free Up Space is for.</p>
 
-  <h2>What Free Up Space looks for</h2>
+  <h2 id="what-free-up-space-looks-for">What Free Up Space looks for</h2>
   <p>Each group has a plain rule, so you can tell why a file is listed. “Old” is 90 days unless you change it with the <b>Older than</b> menu at the top right (30, 60, 90, 180 or 365 days).</p>
   <div class="tbl-wrap">
     <table class="vs">
@@ -122,7 +123,7 @@
   </div>
   <p>“Safe to clear” is a suggestion based on age and type, not a promise. It is still worth a look before you clear.</p>
 
-  <h2>How cleanup stays reversible</h2>
+  <h2 id="how-cleanup-stays-reversible">How cleanup stays reversible</h2>
   <ol>
     <li>Click a row to see every file inside it.</li>
     <li>Tick what you want gone. Nothing is ticked for you, and <b>Select all safe</b> only selects the Safe to clear groups.</li>
@@ -130,28 +131,29 @@
   </ol>
   <p>MacEx never deletes a file for good. Files sit in the normal Trash until you empty it, and MacEx keeps a history of the last 500 files it moved there, with their original folders. Click the Trash icon in the MacEx sidebar to put any of them back. Restoring never replaces a file that is already there. Once you empty the Trash, those files can’t be restored.</p>
 
-  <h2>Why the space you get back can differ</h2>
+  <h2 id="why-the-space-you-get-back-can-differ">Why the space you get back can differ</h2>
   <ul>
     <li><b>Trash still counts.</b> Space comes back when you empty the Trash, not when files move into it.</li>
     <li><b>APFS shares data.</b> Copies made in Finder can be clones that share storage, and Time Machine local snapshots can hold on to deleted files for a while. Removing a clone may free less than its listed size.</li>
     <li><b>Compression and hard links</b> also make a file’s listed size differ from the disk space it uses.</li>
   </ul>
 
-  <h2>What it doesn’t touch</h2>
+  <h2 id="what-it-doesnt-touch">What it doesn’t touch</h2>
   <ul>
     <li><b>System and app data.</b> MacEx works with your own files and apps. It doesn’t clear caches, logs or anything inside <code>~/Library</code>, and hidden files are left out on purpose.</li>
     <li><b>Online-only iCloud files.</b> They are never downloaded, so they’re never hashed or offered for cleanup.</li>
     <li><b>Folders macOS hasn’t allowed.</b> MacEx runs as you and can’t read a folder you haven’t given it access to.</li>
   </ul>
 
-  <h2>Keep it tidy automatically (optional)</h2>
-  <p>Automation rules are off until you turn them on in <b>Settings › Automation</b>, and they only work in folders you added yourself with <b>Add Folder</b>. One rule moves <code>.dmg</code> and <code>.pkg</code> files to Trash after the number of days you set; another files screenshots into a folder for each month. Rules check every 30 minutes while MacEx is open and never delete a file for good.</p>
+  <h2 id="keep-it-tidy-automatically-optional">Keep it tidy automatically (optional)</h2>
+  <p>Automation rules are off until you turn them on in <b>Settings › Automation</b>, and they only work in folders you added yourself with <b>Add Folder</b>. One rule moves <code>.dmg</code> and <code>.pkg</code> files to Trash after the number of days you set; another files screenshots into a folder for each month. Rules check every 30 minutes while MacEx is in the foreground and never delete a file for good.</p>
 
-  <h2>Related</h2>
+  <h2 id="related">Related</h2>
   <ul class="related-links">
     <li><a href="../../blog/find-large-files-on-mac/">How to find large files on your Mac<small>Storage settings and Finder methods, from the MacEx Journal</small></a></li>
     <li><a href="../../blog/can-you-delete-dmg-files-on-mac/">Can you delete DMG files on a Mac?<small>When installers are safe to remove, and when to keep one</small></a></li>
     <li><a href="../../blog/where-mac-screenshots-are-saved/">Where Mac screenshots are saved<small>Change the folder, then clear the pile-up</small></a></li>
+    <li><a href="../automation/">Automation rules<small>Trash old installers and file screenshots automatically</small></a></li>
     <li><a href="../">Everything MacEx can do<small>Every feature, with its limits</small></a></li>
     <li><a href="../../guides/find-duplicate-files-mac/">Find duplicate files on Mac<small>Byte-for-byte checks and a safe way to remove copies</small></a></li>
     <li><a href="../../guides/clean-up-downloads-folder-mac/">Clean up your Downloads folder<small>Sort it in one click, undo with ⌘Z</small></a></li>

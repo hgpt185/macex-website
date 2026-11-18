@@ -5,6 +5,10 @@
     <lastmod>2026-11-18</lastmod>
   </url>
   <url>
+    <loc>https://macex.app/about/</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
     <loc>https://macex.app/blog/</loc>
     <lastmod>2026-11-18</lastmod>
   </url>
@@ -61,12 +65,20 @@
     <lastmod>2026-11-18</lastmod>
   </url>
   <url>
+    <loc>https://macex.app/features/automation/</loc>
+    <lastmod>2026-11-18</lastmod>
+  </url>
+  <url>
     <loc>https://macex.app/features/file-management/</loc>
     <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://macex.app/features/file-search/</loc>
     <lastmod>2026-11-15</lastmod>
+  </url>
+  <url>
+    <loc>https://macex.app/features/remote-access/</loc>
+    <lastmod>2026-11-18</lastmod>
   </url>
   <url>
     <loc>https://macex.app/features/storage-management/</loc>

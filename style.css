@@ -148,7 +148,7 @@ h2 .serif{font-size:1.12em;color:var(--blue);letter-spacing:-.02em}
 /* =========================================================
    DEMO: MacBook Pro
    ========================================================= */
-.demo-section{padding:120px 0 90px;position:relative;background:radial-gradient(ellipse 80% 50% at 50% 60%,#e3edfb 0%,transparent 70%)}
+.demo-section{padding:120px 0 90px;position:relative;overflow-x:clip;background:radial-gradient(ellipse 80% 50% at 50% 60%,#e3edfb 0%,transparent 70%)}
 .mac-stage{--W:min(1180px,calc(100vw - 48px));position:relative;width:var(--W);margin:0 auto;container-type:inline-size}
 .mac-ambient{position:absolute;left:50%;top:40%;width:120%;height:90%;translate:-50% -50%;pointer-events:none;filter:blur(60px);opacity:0;transition:opacity 1.6s 1s;background:radial-gradient(40% 50% at 25% 45%,#6f9dff66,transparent 70%),radial-gradient(40% 50% at 78% 45%,#c18bff55,transparent 70%),radial-gradient(45% 40% at 50% 90%,#63d6e955,transparent 70%)}
 .mbp.open~.mac-ambient,.mac-stage.lit .mac-ambient{opacity:1}
@@ -911,3 +911,53 @@ body.fs-lock{overflow:hidden}
 /* Inline links in the features intro and feature panels */
 .what-is a,.fp-head p a{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:color-mix(in srgb,var(--blue) 35%,transparent)}
 .what-is a:hover,.fp-head p a:hover{text-decoration-color:currentColor}
+
+/* ---------- Header: Features dropdown and phone menu ---------- */
+.nav-links{align-items:center}
+.nav-drop{position:relative}
+.nav-drop-btn{display:inline-flex;align-items:center;gap:4px;font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;transition:color .2s}
+.nav-drop-btn:hover,.nav-drop-btn[aria-expanded="true"]{color:var(--blue)}
+.nav-drop-btn .ico{width:14px;height:14px;transition:transform .2s}
+.nav-drop-btn[aria-expanded="true"] .ico{transform:rotate(180deg)}
+.nav-drop-menu{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%);min-width:260px;padding:8px;border-radius:16px;background:#fff;box-shadow:0 0 0 1px #e1e7f0,0 24px 48px -20px #1b2b4a55;display:grid;z-index:70}
+.nav-drop-menu[hidden]{display:none}
+.nav-drop-menu a{padding:9px 12px;border-radius:10px;color:var(--ink-2);font-size:14px}
+.nav-drop-menu a:after{display:none}
+.nav-drop-menu a:hover,.nav-drop-menu a:focus-visible{background:#eef4ff;color:var(--blue)}
+.nav-drop-menu .nav-drop-all{margin-top:4px;border-top:1px solid var(--line);border-radius:0 0 10px 10px;padding-top:12px;font-weight:600;color:var(--blue)}
+.nav-toggle{display:none;align-items:center;gap:6px;font:600 14px/1 var(--sans);color:var(--ink);background:#fff;border:0;border-radius:10px;padding:9px 11px;box-shadow:0 0 0 1px #dfe6f0 inset;cursor:pointer}
+.nav-toggle .ico{width:18px;height:18px}
+@media (max-width:700px){
+  .nav{position:relative;gap:10px}
+  .nav-toggle{display:inline-flex;margin-left:auto}
+  .nav-links.open{display:grid;gap:0;position:absolute;top:100%;left:0;right:0;padding:10px 16px 16px;background:#fff;box-shadow:0 20px 40px -24px #1b2b4a66;border-radius:0 0 18px 18px;font-size:16px;max-height:calc(100vh - 70px);overflow:auto}
+  .nav-links.open>a,.nav-links.open .nav-drop-btn{padding:12px 4px;width:100%;justify-content:space-between}
+  .nav-links.open a:after{display:none}
+  .nav-drop-menu{position:static;transform:none;box-shadow:none;padding:0 0 6px 10px;min-width:0}
+  .nav-cta .button.ghost{display:none}
+}
+
+/* ---------- Hero facts ---------- */
+.hero-facts{position:relative;z-index:5;margin:16px auto 0;font-size:13.5px;color:var(--muted);text-align:center;animation:fade-up .9s .7s var(--ease) both}
+
+/* ---------- Feature explorer (homepage) ---------- */
+.explorer{margin-top:64px}
+.explorer-head{text-align:center;margin-bottom:26px}
+.explorer-head h3{margin:0;font:800 clamp(24px,3vw,30px)/1.15 var(--display);letter-spacing:-.035em}
+.explorer-head p{margin:8px 0 0;color:var(--muted);font-size:16px}
+.explorer-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.xp-card{display:flex;flex-direction:column;gap:10px;padding:22px 20px;border-radius:22px;background:#fff;box-shadow:0 0 0 1px #e3e9f2 inset,0 18px 40px -32px #1b2b4a66;min-width:0}
+.xp-card h4{margin:0;display:flex;align-items:center;gap:10px;font:800 17px/1.25 var(--display);letter-spacing:-.02em;color:var(--ink)}
+.xp-card h4 .fn-icon{width:32px;height:32px;border-radius:9px;font-size:16px}
+.xp-intro{margin:0;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+.xp-card ul{margin:0;padding:0;list-style:none;display:grid;gap:7px;flex:1}
+.xp-card li{position:relative;padding-left:16px;font-size:14px;line-height:1.5;color:var(--muted)}
+.xp-card li:before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:50%;background:#c5d3ea}
+.xp-card kbd{font-size:.8em}
+.xp-card q{quotes:"\201C" "\201D"}
+.xp-link{display:inline-flex;align-items:center;gap:6px;margin-top:4px;color:var(--blue);font-weight:600;font-size:14.5px}
+.xp-link:hover{text-decoration:underline;text-underline-offset:3px}
+.xp-cta{background:linear-gradient(160deg,#eef4ff,#f4efff);justify-content:center;align-items:flex-start}
+.xp-cta .button{margin-top:4px}
+@media (max-width:1080px){.explorer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.explorer-grid{grid-template-columns:1fr}.explorer{margin-top:44px}}

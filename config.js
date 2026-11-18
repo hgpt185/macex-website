@@ -13,6 +13,11 @@ window.MACEX = {
   // Support address. While empty, the "Email support" links are hidden.
   supportEmail: 'support@macex.app',
 
+  // Product facts. Pages state these in plain HTML too (for search engines and AI crawlers);
+  // `python3 -B scripts/seo.py check` fails if any page disagrees with these values or the plan prices.
+  version: '0.8.12',      // current release; update with every app release
+  minimumMacOS: '14',     // macOS 14 Sonoma or later; Apple silicon and Intel
+
   // Public address of this site, used in the "Ask AI" prompts.
   siteUrl: 'https://macex.app/',
 
@@ -85,10 +90,11 @@ window.MACEX = {
     }
 
     all('[data-download]').forEach(a => { if (C.downloadUrl) { a.href = C.downloadUrl; a.hidden = false; track(a, 'download'); } else a.hidden = true; });
+    all('[data-version]').forEach(el => { el.textContent = C.version; });
     all('[data-support]').forEach(a => { if (C.supportEmail) { a.href = 'mailto:' + C.supportEmail; a.hidden = false; } else a.hidden = true; });
 
     // "Ask AI" links open the assistant with a question about MacEx already typed
-    const q = encodeURIComponent(`Tell me about MacEx, the file library app for Mac (${C.siteUrl}). What does it do, and who is it for?`);
+    const q = encodeURIComponent(`Tell me about MacEx, the Mac file manager (${C.siteUrl}). What does it do, and who is it for?`);
     const ai = { chatgpt: 'https://chatgpt.com/?q=', claude: 'https://claude.ai/new?q=', perplexity: 'https://www.perplexity.ai/search?q=', google: 'https://www.google.com/search?udm=50&q=', grok: 'https://grok.com/?q=' };
     all('[data-ai]').forEach(a => { if (ai[a.dataset.ai]) a.href = ai[a.dataset.ai] + q; });
   }

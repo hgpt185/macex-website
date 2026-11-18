@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>MacEx vs Finder: A Finder Alternative for Finding Files on Mac</title>
-  <meta name="description" content="Looking for a Finder alternative? Compare MacEx with Finder for finding files, preview, duplicates, downloads and cleanup, and see when Finder is enough.">
+  <title>MacEx vs Finder: A Fair Finder Alternative Comparison</title>
+  <meta name="description" content="A fair MacEx vs Finder comparison across 25 tasks: search, Split View, batch rename, tags, SMB, SFTP, duplicates and automation, and who should choose which.">
   <meta name="theme-color" content="#f7f9fc">
   <link rel="canonical" href="https://macex.app/compare/finder/">
   <meta property="og:site_name" content="MacEx">
   <meta property="og:url" content="https://macex.app/compare/finder/">
-  <meta property="og:title" content="MacEx vs Finder: a Finder alternative for finding files on Mac">
-  <meta name="twitter:title" content="MacEx vs Finder: a Finder alternative for finding files on Mac">
+  <meta property="og:title" content="MacEx vs Finder: a fair comparison for Mac users">
+  <meta name="twitter:title" content="MacEx vs Finder: a fair comparison for Mac users">
   <meta name="twitter:description" content="What Finder already does well, and where MacEx helps: plain-language search, cleanup with review, duplicates, download sources and SFTP.">
   <meta property="og:description" content="What Finder already does well, and where MacEx helps: plain-language search, cleanup with review, duplicates, download sources and SFTP.">
   <meta property="og:type" content="article">
@@ -27,8 +27,8 @@
       {
         "@type": "Article",
         "@id": "https://macex.app/compare/finder/#article",
-        "headline": "MacEx vs Finder: which to use for finding files?",
-        "description": "How MacEx compares with Finder for finding files, previewing, cleaning up space, duplicates and downloads on Mac.",
+        "headline": "MacEx vs Finder: which should you use?",
+        "description": "A fair, task-by-task comparison of MacEx and Finder: search, file management, organization, storage, network access and automation, with who should choose which.",
         "url": "https://macex.app/compare/finder/",
         "image": "https://macex.app/assets/og-image.png",
         "inLanguage": "en",
@@ -51,10 +51,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@600;700;800&display=swap">
-  <link rel="stylesheet" href="../../style.css">
-  <link rel="stylesheet" href="../../docs/docs.css">
+  <link rel="stylesheet" href="../../style.css?v=20261118">
+  <link rel="stylesheet" href="../../docs/docs.css?v=20261118">
   <script src="../../config.js" defer></script>
-  <link rel="stylesheet" href="../../article.css">
+  <link rel="stylesheet" href="../../article.css?v=20261118">
   <script defer src="https://analytics.hemeshgupta.com/script.js" data-website-id="39604b49-3ffd-480a-bede-91caf13c1414"></script>
 </head>
 <body>
@@ -68,7 +68,8 @@
 <header class="docs-bar">
   <div class="docs-bar-in">
     <a class="brand" href="../../" aria-label="MacEx home"><img src="../../assets/mascot.svg" alt="" width="32" height="32">MacEx</a>
-    <a class="site-link" style="margin-left:auto" href="../../docs/">Docs</a>
+    <a class="site-link" style="margin-left:auto" href="../../features/">Features</a>
+    <a class="site-link" href="../../docs/">Docs</a>
     <a class="site-link" href="../../#pricing">Pricing</a>
     <a class="button small ghost" href="#" data-download hidden>Download</a>
     <a class="button small" href="../../#pricing">Get MacEx</a>
@@ -77,60 +78,53 @@
 
 <main id="main" class="container cmp">
   <nav class="crumbs-nav" aria-label="Breadcrumb"><a href="../../">MacEx</a> › MacEx vs Finder</nav>
-  <h1>MacEx vs Finder: <em>which to use for finding files?</em></h1>
+  <h1>MacEx vs Finder: <em>which should you use?</em></h1>
   <p class="updated">Updated <time datetime="2026-11-18">November 18, 2026</time></p>
 
   <div class="answer">
     <b>Short answer:</b> Finder is the Mac&rsquo;s built-in file manager and it stays the best tool for working inside a folder. MacEx is a file manager built around a library of all your files, and it works alongside Finder. You find files by describing them, work in two panes, batch rename and tag files, see where downloads came from, and free up space with a review step before anything goes to Trash. MacEx only moves files when you ask, so you can use both.
   </div>
 
-  <h2>Feature by feature</h2>
+  <h2 id="feature-by-feature">Feature by feature</h2>
+  <p>Finder has decades of features, and macOS adds Spotlight, Shortcuts and Photos around it. The table is fair to both: <b>Partly</b> means Finder can do it with more steps or only in part.</p>
   <div class="tbl-wrap">
-    <table class="vs">
-      <thead><tr><th scope="col">Task</th><th scope="col">Finder &amp; macOS</th><th scope="col">MacEx</th></tr></thead>
+    <table class="vs vs4">
+      <thead><tr><th scope="col">Task</th><th scope="col">Finder &amp; macOS</th><th scope="col">MacEx</th><th scope="col">What&rsquo;s different</th></tr></thead>
       <tbody>
-        <tr><th scope="row">Find a file you can&rsquo;t place</th><td><span class="tag part">Partly</span>Spotlight search, with filters added from menus or search operators.</td><td><span class="tag yes">Yes</span>Type &ldquo;pdfs from last week over 5&nbsp;mb&rdquo;; MacEx shows how it read your words as filters you can edit.</td></tr>
-        <tr><th scope="row">See everything by kind</th><td><span class="tag part">Partly</span>Recents, plus smart folders you set up yourself.</td><td><span class="tag yes">Yes</span>One library of images, videos, music, documents, archives and apps across your folders.</td></tr>
-        <tr><th scope="row">Preview without opening</th><td><span class="tag yes">Yes</span>Quick Look with <kbd>Space</kbd>.</td><td><span class="tag yes">Yes</span><kbd>Space</kbd> previews in the same window; arrow keys move to the next file.</td></tr>
-        <tr><th scope="row">Copy text from images</th><td><span class="tag yes">Yes</span>Live Text, one image at a time.</td><td><span class="tag yes">Yes</span>Copy Text from up to 20 images or PDFs at once, using on-device recognition.</td></tr>
-        <tr><th scope="row">Search words inside screenshots</th><td><span class="tag part">Partly</span>Spotlight indexes some image text.</td><td><span class="tag yes">Yes</span>Optional on-device text index, e.g. &ldquo;screenshots with wifi password&rdquo;.</td></tr>
-        <tr><th scope="row">Free up space</th><td><span class="tag part">Partly</span>System Settings › Storage suggests large files and downloads.</td><td><span class="tag yes">Yes</span>Old installers, forgotten downloads, old screenshots, big old videos and empty files, each with a review step before Trash.</td></tr>
-        <tr><th scope="row">Find duplicate files</th><td><span class="tag no">No</span>Not in Finder (the Photos app only checks its own library).</td><td><span class="tag yes">Yes</span>Exact copies confirmed byte for byte; similar photos grouped separately.</td></tr>
-        <tr><th scope="row">Know where a download came from</th><td><span class="tag part">Partly</span>Get Info shows &ldquo;Where from&rdquo; for one file at a time.</td><td><span class="tag yes">Yes</span>All downloads grouped by website, and searchable (&ldquo;pdfs from gmail&rdquo;).</td></tr>
-        <tr><th scope="row">Tidy the Downloads folder</th><td><span class="tag no">No</span>Manual, or Stacks on the Desktop only.</td><td><span class="tag yes">Yes</span>One click sorts files into folders; <kbd>⌘</kbd><kbd>Z</kbd> puts them back.</td></tr>
-        <tr><th scope="row">Restore trashed files</th><td><span class="tag yes">Yes</span>Put Back from the Trash.</td><td><span class="tag yes">Yes</span>History of the last 500 files MacEx moved to Trash, with their original folders.</td></tr>
-        <tr><th scope="row">Two folders side by side</th><td><span class="tag part">Partly</span>Two windows or tabs, arranged by hand.</td><td><span class="tag yes">Yes</span>Split View (<kbd>⌘</kbd><kbd>\</kbd>); <kbd>F5</kbd> copies and <kbd>F6</kbd> moves to the other pane.</td></tr>
-        <tr><th scope="row">Rename many files at once</th><td><span class="tag yes">Yes</span>Rename Items: replace text, add text or format with a number.</td><td><span class="tag yes">Yes</span>Find and replace plus a template with <code>{name}</code>, <code>{n}</code> and <code>{date}</code>; every name previewed, clashes flagged, <kbd>⌘</kbd><kbd>Z</kbd> undoes it.</td></tr>
-        <tr><th scope="row">Tags and collections</th><td><span class="tag yes">Yes</span>Finder tags in the sidebar.</td><td><span class="tag yes">Yes</span>The same Finder tags, plus workspaces that gather files from anywhere without moving them.</td></tr>
-        <tr><th scope="row">Zip and unzip</th><td><span class="tag yes">Yes</span>Compress and Archive Utility.</td><td><span class="tag yes">Yes</span>Compress and Extract for zip files.</td></tr>
-        <tr><th scope="row">Folder sizes in a list</th><td><span class="tag part">Partly</span>Turn on Calculate all sizes in View Options.</td><td><span class="tag yes">Yes</span>Shown in the list view, with item counts.</td></tr>
-        <tr><th scope="row">SMB network shares</th><td><span class="tag yes">Yes</span>Go › Connect to Server.</td><td><span class="tag yes">Yes</span>Connections page; the share opens as a normal folder.</td></tr>
-        <tr><th scope="row">Browse servers over SFTP</th><td><span class="tag no">No</span>Connect to Server supports SMB and others, not SFTP.</td><td><span class="tag yes">Yes</span>Browse, upload and download over SFTP after checking the server&rsquo;s identity.</td></tr>
-        <tr><th scope="row">Tabs, column view, multiple windows</th><td><span class="tag yes">Yes</span>All three.</td><td><span class="tag no">No</span>One window with Split View; grid and list only.</td></tr>
-        <tr><th scope="row">Search from any app</th><td><span class="tag yes">Yes</span>Spotlight with <kbd>⌘</kbd><kbd>Space</kbd>.</td><td><span class="tag yes">Yes</span>Quick Search with <kbd>⇧</kbd><kbd>⌘</kbd><kbd>Space</kbd>.</td></tr>
-        <tr><th scope="row">Price</th><td>Built in, free.</td><td>$9.99 one-time (launch price), no subscription.</td></tr>
+        <tr><th scope="row">Find a file you can&rsquo;t place</th><td><span class="tag part">Partly</span>Spotlight understands some phrases; Finder&rsquo;s search window adds criteria from menus.</td><td><span class="tag yes">Yes</span>Type &ldquo;pdfs from last week over 5&nbsp;mb&rdquo;; the filters it understood appear as chips you can edit.</td><td>MacEx shows exactly how it read your words. Spotlight reaches further: the whole disk, mail and more.</td></tr>
+        <tr><th scope="row">Saved searches</th><td><span class="tag yes">Yes</span>Smart Folders.</td><td><span class="tag yes">Yes</span>Saved searches in the sidebar; relative dates recalculate.</td><td>Equivalent. Smart Folders also work in Open and Save dialogs; MacEx&rsquo;s only work in MacEx.</td></tr>
+        <tr><th scope="row">Search words inside images</th><td><span class="tag part">Partly</span>Spotlight indexes some image text; Live Text works one image at a time.</td><td><span class="tag yes">Yes</span>Optional on-device text index for images and PDFs.</td><td>MacEx is opt-in and limited to your library folders.</td></tr>
+        <tr><th scope="row">Find a download by its source</th><td><span class="tag part">Partly</span>Get Info shows &ldquo;Where from&rdquo; for one file.</td><td><span class="tag yes">Yes</span>All downloads grouped by website, and searchable.</td><td></td></tr>
+        <tr><th scope="row">Two folders side by side</th><td><span class="tag part">Partly</span>Two windows or tabs, arranged by hand.</td><td><span class="tag yes">Yes</span>Split View; <kbd>F5</kbd> copies and <kbd>F6</kbd> moves to the other pane.</td><td>Finder has tabs; MacEx does not.</td></tr>
+        <tr><th scope="row">Rename many files</th><td><span class="tag yes">Yes</span>Rename: replace text, add text, or format with numbers.</td><td><span class="tag yes">Yes</span>Find and replace plus a <code>{name}</code>, <code>{n}</code>, <code>{date}</code> template, with every new name previewed.</td><td>Both are capable. MacEx shows the full before-and-after list and flags clashes first.</td></tr>
+        <tr><th scope="row">Zip and unzip</th><td><span class="tag yes">Yes</span>Compress; Archive Utility opens zip and a few other formats.</td><td><span class="tag yes">Yes</span>Compress and Extract for zip.</td><td>Finder handles more archive types.</td></tr>
+        <tr><th scope="row">Finder tags</th><td><span class="tag yes">Yes</span>Native.</td><td><span class="tag yes">Yes</span>Reads and writes the same tags, on many files at once.</td><td>Same tags, two ways to use them.</td></tr>
+        <tr><th scope="row">Collections across folders</th><td><span class="tag part">Partly</span>Tags, sidebar favorites or aliases.</td><td><span class="tag yes">Yes</span>Workspaces: sidebar pages that gather files without moving them.</td><td></td></tr>
+        <tr><th scope="row">Undo and conflicts</th><td><span class="tag yes">Yes</span>Undo; asks to keep both, stop or replace.</td><td><span class="tag yes">Yes</span>Undo; asks Keep Both or Skip, and never replaces.</td><td>MacEx removes the replace option on purpose.</td></tr>
+        <tr><th scope="row">Folder sizes in a list</th><td><span class="tag yes">Yes</span>Turn on Calculate all sizes in View Options.</td><td><span class="tag yes">Yes</span>Shown in list view with item counts.</td><td></td></tr>
+        <tr><th scope="row">Views</th><td><span class="tag yes">Yes</span>Icon, list, column and gallery; tabs and many windows.</td><td><span class="tag part">Partly</span>Grid and list in one window.</td><td>Finder is more flexible here.</td></tr>
+        <tr><th scope="row">File details</th><td><span class="tag yes">Yes</span>Get Info and the Preview pane.</td><td><span class="tag yes">Yes</span>Inspector: source website, dimensions, duration, camera, dates, tags and recognized text.</td><td></td></tr>
+        <tr><th scope="row">Copy text from many images</th><td><span class="tag part">Partly</span>Live Text one image at a time; Shortcuts can batch it if you build a shortcut.</td><td><span class="tag yes">Yes</span>Copy Text from up to 20 images or PDFs at once.</td><td></td></tr>
+        <tr><th scope="row">Automation</th><td><span class="tag yes">Yes</span>Shortcuts, Folder Actions and Automator, built by you.</td><td><span class="tag part">Partly</span>Two ready-made rules (old installers, screenshots by month), plus three Shortcuts actions.</td><td>macOS is far more flexible; MacEx is quicker to set up.</td></tr>
+        <tr><th scope="row">Free up space</th><td><span class="tag part">Partly</span>System Settings › Storage suggests large files and downloads.</td><td><span class="tag yes">Yes</span>Old installers, forgotten downloads, old screenshots, big old videos, unused apps and empty files, reviewed before Trash.</td><td></td></tr>
+        <tr><th scope="row">Find duplicate files</th><td><span class="tag no">No</span>Not in Finder. The Photos app checks its own library.</td><td><span class="tag yes">Yes</span>Exact copies confirmed byte for byte.</td><td></td></tr>
+        <tr><th scope="row">Group similar photos</th><td><span class="tag part">Partly</span>Photos finds duplicates inside its library only.</td><td><span class="tag yes">Yes</span>Bursts and near-identical shots in your folders, for you to judge.</td><td></td></tr>
+        <tr><th scope="row">Restore trashed files</th><td><span class="tag yes">Yes</span>Put Back from the Trash.</td><td><span class="tag yes">Yes</span>History of the last 500 files MacEx moved, with their original folders.</td><td>Equivalent for files MacEx trashed.</td></tr>
+        <tr><th scope="row">SMB network shares</th><td><span class="tag yes">Yes</span>Go › Connect to Server.</td><td><span class="tag yes">Yes</span>Connections page; the share opens as a normal folder.</td><td>Equivalent; both use macOS to mount the share.</td></tr>
+        <tr><th scope="row">SFTP servers</th><td><span class="tag no">No</span>Not without a third-party app.</td><td><span class="tag yes">Yes</span>Browse, upload and download after checking the host key.</td><td>MacEx doesn&rsquo;t transfer whole folders or delete on the server.</td></tr>
+        <tr><th scope="row">Shortcuts and Siri</th><td><span class="tag yes">Yes</span>Finder actions in Shortcuts.</td><td><span class="tag yes">Yes</span>Find Files, Search in MacEx and Get Latest Download.</td><td></td></tr>
+        <tr><th scope="row">Search from any app</th><td><span class="tag yes">Yes</span>Spotlight, <kbd>⌘</kbd><kbd>Space</kbd>.</td><td><span class="tag yes">Yes</span>Quick Search, <kbd>⇧</kbd><kbd>⌘</kbd><kbd>Space</kbd>.</td><td></td></tr>
+        <tr><th scope="row">Keyboard shortcuts</th><td><span class="tag yes">Yes</span>Extensive.</td><td><span class="tag yes">Yes</span>Every main action; <kbd>⌘</kbd><kbd>/</kbd> lists them.</td><td></td></tr>
+        <tr><th scope="row">Price</th><td>Built in, free.</td><td>$9.99 one-time (launch price), no subscription.</td><td></td></tr>
       </tbody>
     </table>
   </div>
 
-  <h2>When Finder is enough</h2>
-  <ul>
-    <li>You mostly work inside a few folders you already know.</li>
-    <li>You rely on tabs, column view or several windows.</li>
-    <li>You remember file names, so Spotlight finds things quickly.</li>
-    <li>Your Mac has plenty of free space.</li>
-  </ul>
+  <h2 id="workflow">How the workflow differs</h2>
+  <p><b>Finder starts from folders.</b> You open the place where a file lives and work inside it. That is ideal when you know where things are, and Finder is part of every Open and Save dialog on the Mac.</p>
+  <p><b>MacEx starts from your files.</b> It gathers them into one library by kind, so you can describe a file instead of navigating to it. When you do need folders, Split View, batch rename and undo cover everyday work. Cleanup always shows you a list first and moves files to the Trash, never deleting them for good.</p>
 
-  <h2>When MacEx helps</h2>
-  <ul>
-    <li>You remember <em>what</em> a file was (&ldquo;that invoice from Gmail last month&rdquo;) but not its name or folder.</li>
-    <li>Your Downloads folder is a pile, and you want to know what came from where.</li>
-    <li>You&rsquo;re low on space and want to see what&rsquo;s safe to clear, including duplicates, without deleting anything blindly.</li>
-    <li>You sort files between two folders, or rename a batch of photos or scans, and want a preview and undo.</li>
-    <li>You work with servers over SFTP or a NAS over SMB and want them in the same window as your files.</li>
-  </ul>
-
-  <h2>How MacEx differs from other Finder alternatives</h2>
+  <h2 id="other-alternatives">How MacEx differs from other Finder alternatives</h2>
   <p>Most apps sold as Finder replacements, such as ForkLift, Path Finder, Commander One and QSpace, are file managers built around moving files: two panes, tabs, batch rename, many remote protocols and folder sync. They suit people who copy and sync files all day.</p>
   <p>MacEx starts from a different problem: finding and clearing out files when you don’t know where they are. It gathers your files into one library by kind, lets you <a href="../../features/file-search/">search by describing a file</a>, shows where each download came from, and <a href="../../features/storage-management/">frees up space</a> with a review step. It also covers everyday file management: <a href="../../features/file-management/">Split View</a> with copy or move to the other pane (<kbd>F5</kbd>, <kbd>F6</kbd>), batch rename with a live preview, zip, Finder tags, workspaces, undo, SMB shares and SFTP. It has no tabs, column view, folder sync or built-in Terminal. If those are your main need, a dedicated file manager is a better fit. If “where did that file go?” is, MacEx is.</p>
 
@@ -139,8 +133,15 @@
     <figcaption>MacEx Home sorts files from your folders into one library by kind. The files stay where they are.</figcaption>
   </figure>
 
-  <h2>Does MacEx replace Finder?</h2>
+  <h2 id="replace">Does MacEx replace Finder?</h2>
   <p>Not as the system file manager. MacEx reads your existing folders and leaves the files where they are unless you move them. Double-clicking a file opens it in its usual app, and anything you remove goes to the normal Trash, where Finder can still put it back. You can do most everyday folder work in MacEx, and keep Finder for tabs, column view and system tasks. <a href="../../features/">See everything MacEx can do</a>.</p>
+
+  <h2 id="who-should-choose-macex">Who should choose MacEx</h2>
+  <ul>
+    <li><b>Choose MacEx</b> if you often search for files you can&rsquo;t place, keep running out of space, or sort and rename batches of files. It also helps if you want SFTP and SMB in the same window as your files.</li>
+    <li><b>Stay with Finder alone</b> if you know where your files are, rely on tabs or column view, or build your own automations with Shortcuts and Folder Actions.</li>
+    <li><b>Use both</b>, as most people do. MacEx leaves files where they are, and anything it moves to the Trash can be put back from Finder too.</li>
+  </ul>
 
   <h2>Related</h2>
   <ul class="related-links">

@@ -79,6 +79,8 @@
         "description": "A native Mac file manager built around a library of all your files. Find files by describing them in plain words, browse folders in one or two panes, batch rename, zip and tag files, open SMB shares and SFTP servers, preview files and copy text out of images, and free up space by reviewing old installers, large files and duplicates before they go to Trash. Search and text recognition run on the Mac.",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "macOS 14 or later",
+        "processorRequirements": "Apple silicon or Intel (universal app)",
+        "softwareVersion": "0.8.12",
         "applicationSubCategory": "File manager",
         "downloadUrl": "https://downloads.macex.app/releases/latest/MacEx.dmg",
         "installUrl": "https://macex.app/docs/#install",
@@ -157,6 +159,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. Over SFTP you can browse, upload, download, rename and make folders, after checking the server’s identity. SMB shares on a NAS or Windows PC open as ordinary folders. MacEx doesn’t sync folders or copy whole folders over SFTP."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does MacEx work with Shortcuts and the menu bar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. MacEx adds Find Files, Search in MacEx and Get Latest Download actions to the Shortcuts app, so you can use them in your own shortcuts or with Siri. An optional menu bar item lists your ten newest downloads, and ⇧⌘Space brings MacEx forward from any app. More on automation."
             }
           },
           {
@@ -327,9 +337,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@600;700;800&display=swap">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261118">
   <script src="config.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="app.js?v=20261118" defer></script>
   <script defer src="https://analytics.hemeshgupta.com/script.js" data-website-id="39604b49-3ffd-480a-bede-91caf13c1414"></script>
 </head>
 <body>
@@ -385,15 +395,31 @@
     <symbol id="i-text" viewBox="0 0 24 24"><path d="M5 6.5V5h14v1.5M12 5v14M9.5 19h5"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.5 19 6v5.5c0 4.3-3 7.6-7 9-4-1.4-7-4.7-7-9V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4.5v15M6 13.5l6 6 6-6"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6.5 9.5 5.5 5.5 5.5-5.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4.5 7h15M4.5 12h15M4.5 17h15"/></symbol>
   </defs>
 </svg>
 
 <header class="nav-wrap">
   <nav class="nav container" aria-label="Main navigation">
     <a class="brand" href="#top" aria-label="MacEx home"><img src="assets/mascot.svg" alt="" width="34" height="34">MacEx</a>
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg><span>Menu</span></button>
+    <div class="nav-links" id="nav-links">
       <a href="#mac-stage">Try it live</a>
-      <a href="#features">Features</a>
+      <div class="nav-drop">
+        <button class="nav-drop-btn" type="button" aria-expanded="false" aria-controls="nav-features">Features <svg class="ico" aria-hidden="true"><use href="#i-chev"/></svg></button>
+        <div class="nav-drop-menu" id="nav-features" hidden>
+          <a href="features/#search">Intelligent search</a>
+          <a href="features/#manage">Advanced file management</a>
+          <a href="features/#organize">Organization and automation</a>
+          <a href="features/#storage">Storage management</a>
+          <a href="features/#remote">Network and remote access</a>
+          <a href="features/#productivity">Productivity and integrations</a>
+          <a href="features/#privacy">Privacy and security</a>
+          <a class="nav-drop-all" href="features/">Everything MacEx can do</a>
+          <a href="compare/finder/">MacEx vs Finder</a>
+        </div>
+      </div>
       <a href="#pricing">Pricing</a>
       <a href="docs/">Docs</a>
       <a href="blog/">Blog</a>
@@ -422,6 +448,7 @@
       <a class="button" href="#pricing">Get MacEx · $9.99</a>
       <a class="button ghost" href="#mac-stage">Try it live <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
+    <p class="hero-facts">One-time $9.99 · macOS 14 or later · Apple silicon and Intel · No account or subscription</p>
 
     <div class="hero-stage" id="hero-stage">
       <div class="rings" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -598,23 +625,61 @@
     </div>
   </div>
 
-  <div class="container glance reveal">
-    <h3>What MacEx does, at a glance</h3>
-    <dl class="stagger">
-      <div><dt><a href="features/file-search/">Natural search</a></dt><dd>Type &ldquo;pdfs from last week over 5&nbsp;mb&rdquo; and MacEx turns it into type, date and size filters you can edit.</dd></div>
-      <div><dt><a href="features/storage-management/">Free Up Space</a></dt><dd>Lists old installers, forgotten downloads, old screenshots, big old videos and duplicates. You review everything before it moves to Trash.</dd></div>
-      <div><dt><a href="guides/find-duplicate-files-mac/">Duplicates</a></dt><dd>Exact copies are compared byte for byte; similar photos are grouped separately for you to judge.</dd></div>
-      <div><dt><a href="guides/clean-up-downloads-folder-mac/">Smart Downloads</a></dt><dd>Groups downloads by the website they came from and tidies the Downloads folder in one click. <kbd>⌘</kbd><kbd>Z</kbd> undoes it.</dd></div>
-      <div><dt>Preview &amp; Copy Text</dt><dd>Press <kbd>Space</kbd> to look inside photos, PDFs and videos, and copy text out of up to 20 images or PDFs at once.</dd></div>
-      <div><dt>Quick Search</dt><dd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>Space</kbd> brings MacEx forward from any app, ready to type.</dd></div>
-      <div><dt>Trash history</dt><dd>Remembers the last 500 files MacEx moved to Trash, so you can put any of them back.</dd></div>
-      <div><dt><a href="features/file-management/">Split View &amp; batch rename</a></dt><dd>Two folders side by side with <kbd>F5</kbd> copy and <kbd>F6</kbd> move. Rename up to 10,000 files with find and replace, numbers and dates, previewed first.</dd></div>
-      <div><dt><a href="features/file-management/#finder-tags-and-workspaces">Tags, workspaces &amp; zip</a></dt><dd>Add Finder tags to many files at once, gather folders into workspaces, and zip or unzip in place.</dd></div>
-      <div><dt>Servers</dt><dd>Browse, upload and download over SFTP with the server&rsquo;s identity checked first, and open SMB shares as ordinary folders.</dd></div>
-      <div><dt>Automation &amp; Shortcuts</dt><dd>Optional rules trash old installers and file screenshots by month. Shortcuts and Siri can find files and fetch your latest download.</dd></div>
-      <div><dt>Private by design</dt><dd>No account and no cloud AI. Indexing, search and text recognition run on your Mac.</dd></div>
-    </dl>
-    <p class="glance-more"><a href="features/">Everything MacEx can do <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="compare/finder/">See how MacEx compares with Finder <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="features/file-search/">How MacEx search finds files <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+  <div class="container explorer" id="explore">
+    <div class="explorer-head reveal">
+      <h3>Explore everything MacEx does</h3>
+      <p>Seven areas, one app. Each card links to the details and real screenshots.</p>
+    </div>
+    <div class="explorer-grid stagger">
+      <section class="xp-card" aria-labelledby="xp-search">
+        <h4 id="xp-search"><span class="fn-icon c-blue"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg></span>Intelligent search</h4>
+        <p class="xp-intro">Find a file from what you remember about it, not where you saved it.</p>
+        <ul><li>Type <q>pdfs from last week over 5&nbsp;mb</q> and edit the filters it understood</li><li>Filter by kind, size, and date created, modified or added</li><li>Find words inside documents, screenshots and PDFs</li><li>Search by the website a download came from</li><li>Save searches to the sidebar</li></ul>
+        <a class="xp-link" href="features/file-search/">How search works <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </section>
+      <section class="xp-card" aria-labelledby="xp-manage">
+        <h4 id="xp-manage"><span class="fn-icon c-violet"><svg class="ico" aria-hidden="true"><use href="#i-split"/></svg></span>Advanced file management</h4>
+        <p class="xp-intro">Everyday folder work, in one window with two panes.</p>
+        <ul><li>Split View: <kbd>F5</kbd> copies, <kbd>F6</kbd> moves to the other pane</li><li>Batch rename with find and replace, numbers and dates</li><li>Zip and unzip, folder sizes, hidden files</li><li>Never overwrites a file; <kbd>⌘</kbd><kbd>Z</kbd> undoes moves and renames</li></ul>
+        <a class="xp-link" href="features/file-management/">File management in detail <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </section>
+      <section class="xp-card" aria-labelledby="xp-organize">
+        <h4 id="xp-organize"><span class="fn-icon c-green"><svg class="ico" aria-hidden="true"><use href="#i-wand"/></svg></span>Organization and automation</h4>
+        <p class="xp-intro">Keep files tidy without moving them around by hand.</p>
+        <ul><li>One library of images, videos, music, documents and apps</li><li>Finder tags and workspaces for projects</li><li>Tidy Downloads into kind folders, with undo</li><li>Optional rules for old installers and screenshots</li></ul>
+        <a class="xp-link" href="features/automation/">Organization and automation <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </section>
+      <section class="xp-card" aria-labelledby="xp-storage">
+        <h4 id="xp-storage"><span class="fn-icon c-pink"><svg class="ico" aria-hidden="true"><use href="#i-sparkles"/></svg></span>Storage management</h4>
+        <p class="xp-intro">See what is taking up space, and decide what goes.</p>
+        <ul><li>Old installers, large files, unused apps and old screenshots</li><li>Duplicates confirmed byte for byte</li><li>Similar photos grouped for you to judge</li><li>Trash history: put back any of the last 500 files</li></ul>
+        <a class="xp-link" href="features/storage-management/">Free up space safely <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </section>
+      <section class="xp-card" aria-labelledby="xp-remote">
+        <h4 id="xp-remote"><span class="fn-icon c-slate"><svg class="ico" aria-hidden="true"><use href="#i-server"/></svg></span>Network and remote access</h4>
+        <p class="xp-intro">Servers and shared drives in the same window as your files.</p>
+        <ul><li>SFTP with password, key or SSH agent sign-in</li><li>Host keys checked before you sign in</li><li>SMB shares on a NAS or PC open as normal folders</li><li>Saved connections</li></ul>
+        <a class="xp-link" href="features/remote-access/">SFTP and SMB in MacEx <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </section>
+      <section class="xp-card" aria-labelledby="xp-productivity">
+        <h4 id="xp-productivity"><span class="fn-icon c-teal"><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg></span>Productivity and integrations</h4>
+        <p class="xp-intro">Get to a file from anywhere, and read what is inside it.</p>
+        <ul><li>Quick Search from any app with <kbd>⇧</kbd><kbd>⌘</kbd><kbd>Space</kbd></li><li>Shortcuts and Siri: Find Files, Get Latest Download</li><li>Newest downloads in the menu bar</li><li>Inspector, and Copy Text from up to 20 images or PDFs</li></ul>
+        <a class="xp-link" href="features/automation/#shortcuts">Shortcuts, menu bar and more <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </section>
+      <section class="xp-card" aria-labelledby="xp-privacy">
+        <h4 id="xp-privacy"><span class="fn-icon c-ink"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></span>Privacy and security</h4>
+        <p class="xp-intro">Your files and searches stay on your Mac.</p>
+        <ul><li>Indexing, search and text recognition run on the Mac</li><li>No account, no cloud AI</li><li>Cleanup moves files to Trash, never deletes them for good</li><li>Signed and notarized; updates are verified and opt-in</li></ul>
+        <a class="xp-link" href="docs/#privacy">Privacy and permissions <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </section>
+      <div class="xp-card xp-cta">
+        <h4>See every feature, with its limits</h4>
+        <p class="xp-intro">The complete, searchable list, plus what MacEx doesn&rsquo;t do.</p>
+        <a class="button small" href="features/">Everything MacEx can do</a>
+        <a class="xp-link" href="compare/finder/">MacEx vs Finder <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -719,6 +784,7 @@
     <details><summary>Is MacEx a replacement for Finder?<span>+</span></summary><p>It covers everyday file management: folders, Split View with copy and move, batch rename, zip, tags, undo and network shares. It doesn&rsquo;t replace Finder as the system file manager, and it has no tabs, column view, built-in Terminal or Git integration. Many people use MacEx for finding, organizing and cleaning up, and keep Finder for the rest. <a href="compare/finder/">Compare MacEx with Finder</a>.</p></details>
     <details><summary>Does MacEx support batch operations?<span>+</span></summary><p>Yes. Select many files to copy, move, compress, tag or move to Trash in one step, or rename up to 10,000 at once with find and replace, numbering and dates. Every new name is previewed first, and <kbd>⌘</kbd><kbd>Z</kbd> undoes the whole batch.</p></details>
     <details><summary>Can MacEx manage files on a server or NAS?<span>+</span></summary><p>Yes. Over SFTP you can browse, upload, download, rename and make folders, after checking the server&rsquo;s identity. SMB shares on a NAS or Windows PC open as ordinary folders. MacEx doesn&rsquo;t sync folders or copy whole folders over SFTP.</p></details>
+    <details><summary>Does MacEx work with Shortcuts and the menu bar?<span>+</span></summary><p>Yes. MacEx adds Find Files, Search in MacEx and Get Latest Download actions to the Shortcuts app, so you can use them in your own shortcuts or with Siri. An optional menu bar item lists your ten newest downloads, and <kbd>⇧</kbd><kbd>⌘</kbd><kbd>Space</kbd> brings MacEx forward from any app. <a href="features/automation/">More on automation</a>.</p></details>
     <details><summary>Is it a subscription?<span>+</span></summary><p>No. MacEx is a one-time purchase. Pay once and keep it.</p></details>
     <details><summary>Is there a free trial?<span>+</span></summary><p>No. MacEx asks for a license key the first time it opens, and one license activates it on one Mac. Before you buy, <a href="#mac-stage">try the live demo</a> on this page with sample files. Every feature is included, and updates are free.</p></details>
     <details><summary>Do I need an account?<span>+</span></summary><p>No. There is no account to create and no API key to set up. Checkout is handled by Dodo Payments.</p></details>
@@ -764,6 +830,7 @@
       <a href="#mac-stage">Try it live</a>
       <a href="#features">Features</a>
       <a href="features/">Everything MacEx can do</a>
+      <a href="about/">About MacEx</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
       <a href="docs/">Docs</a>
@@ -777,6 +844,8 @@
       <a href="docs/#shortcuts">Keyboard shortcuts</a>
       <a href="compare/finder/">MacEx vs Finder</a>
       <a href="features/file-management/">Split View &amp; batch rename</a>
+      <a href="features/remote-access/">SFTP &amp; SMB on Mac</a>
+      <a href="features/automation/">Mac file automation</a>
       <a href="features/file-search/">Find files on Mac</a>
       <a href="features/storage-management/">Free up storage on Mac</a>
       <a href="guides/find-duplicate-files-mac/">Find duplicate files on Mac</a>

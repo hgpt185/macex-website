@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mac SFTP Client &amp; SMB File Manager – MacEx</title>
+  <meta name="description" content="Browse SFTP servers and SMB shares on a NAS or Windows PC from your Mac file manager. Host-key checks, key or agent sign-in, and safe uploads.">
+  <meta name="theme-color" content="#f7f9fc">
+  <link rel="canonical" href="https://macex.app/features/remote-access/">
+  <meta property="og:site_name" content="MacEx">
+  <meta property="og:url" content="https://macex.app/features/remote-access/">
+  <meta property="og:title" content="SFTP and SMB in MacEx: servers and network shares on your Mac">
+  <meta property="og:description" content="Connect to SFTP servers and SMB shares in the same window as your files, with host-key checks and uploads that never overwrite.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://macex.app/assets/app/servers.jpg">
+  <meta property="og:image:width" content="1800">
+  <meta property="og:image:height" content="1190">
+  <meta property="og:image:alt" content="MacEx Connections page with an SMB share address and a new SFTP connection form">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SFTP and SMB in MacEx: servers and network shares on your Mac">
+  <meta name="twitter:description" content="Connect to SFTP servers and SMB shares in the same window as your files, with host-key checks and uploads that never overwrite.">
+  <meta name="twitter:image" content="https://macex.app/assets/app/servers.jpg">
+  <link rel="icon" href="../../assets/mascot.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+  <link rel="manifest" href="../../site.webmanifest">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://macex.app/features/remote-access/#article",
+        "headline": "SFTP client and SMB file manager for Mac",
+        "description": "How MacEx connects to SFTP servers and SMB network shares: sign-in methods, host-key verification, what you can do on a server, use cases and limits.",
+        "url": "https://macex.app/features/remote-access/",
+        "mainEntityOfPage": "https://macex.app/features/remote-access/",
+        "image": "https://macex.app/assets/app/servers.jpg",
+        "inLanguage": "en",
+        "datePublished": "2026-11-18",
+        "dateModified": "2026-11-18",
+        "about": { "@id": "https://macex.app/#app" },
+        "author": { "@type": "Organization", "name": "MacEx", "url": "https://macex.app/" },
+        "publisher": { "@id": "https://macex.app/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://macex.app/#organization",
+        "name": "MacEx",
+        "url": "https://macex.app/",
+        "logo": "https://macex.app/assets/icon-512.png"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "MacEx", "item": "https://macex.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://macex.app/features/" },
+          { "@type": "ListItem", "position": 3, "name": "SFTP and SMB", "item": "https://macex.app/features/remote-access/" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="../../style.css?v=20261118">
+  <link rel="stylesheet" href="../../docs/docs.css?v=20261118">
+  <link rel="stylesheet" href="../../article.css?v=20261118">
+  <script src="../../config.js" defer></script>
+  <script defer src="https://analytics.hemeshgupta.com/script.js" data-website-id="39604b49-3ffd-480a-bede-91caf13c1414"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+  </defs>
+</svg>
+
+<header class="docs-bar">
+  <div class="docs-bar-in">
+    <a class="brand" href="../../" aria-label="MacEx home"><img src="../../assets/mascot.svg" alt="" width="32" height="32">MacEx</a>
+    <a class="site-link" style="margin-left:auto" href="../">Features</a>
+    <a class="site-link" href="../../docs/">Docs</a>
+    <a class="site-link" href="../../#pricing">Pricing</a>
+    <a class="button small ghost" href="#" data-download hidden>Download</a>
+    <a class="button small" href="../../#pricing">Get MacEx</a>
+  </div>
+</header>
+
+<main id="main" class="container cmp">
+  <nav class="crumbs-nav" aria-label="Breadcrumb"><a href="../../">MacEx</a> › <a href="../">Features</a> › SFTP and SMB</nav>
+  <h1>SFTP client and SMB file manager <em>for Mac</em></h1>
+  <p class="updated">Updated <time datetime="2026-11-18">November 18, 2026</time></p>
+
+  <div class="answer"><b>Short answer:</b> MacEx opens SFTP servers and SMB network shares in the same window as your local files. For SFTP, press <kbd>⌘</kbd><kbd>K</kbd> and sign in with a password, a private key or your SSH agent. MacEx checks the server&rsquo;s host key before you sign in. For SMB, type an address such as <code>smb://nas.local/Media</code>. macOS mounts the share, and MacEx browses it like any other folder. MacEx is not a sync tool: it doesn&rsquo;t copy whole folders over SFTP, delete files on a server, or open a terminal.</div>
+
+  <figure class="shot-fig">
+    <img src="../../assets/app/servers-900.jpg" srcset="../../assets/app/servers-900.jpg 900w, ../../assets/app/servers.jpg 1800w" sizes="(max-width: 948px) calc(100vw - 48px), 900px" width="1800" height="1190" decoding="async" alt="MacEx Connections page: an SMB share field with smb://nas.local/Media, and a New SFTP connection form for files.example.com, port 22, user deploy, signing in with the SSH agent">
+    <figcaption>The Connections page: an SMB share at the top, a new SFTP connection below. Shown with sample values.</figcaption>
+  </figure>
+
+  <h2 id="sftp">Connect to a server over SFTP</h2>
+  <ol>
+    <li>Press <kbd>⌘</kbd><kbd>K</kbd>, or click <b>Connections</b> in the sidebar.</li>
+    <li>Enter the host, port and username. You can also give the connection a name and a folder to start in.</li>
+    <li>Choose how to sign in: <b>Password</b>, <b>Private key</b> (RSA or Ed25519, including encrypted keys) or <b>SSH agent</b>.</li>
+    <li>Click <b>Connect</b>. The first time, MacEx shows the server&rsquo;s host-key fingerprint. Check it against the one your host gives you, then confirm.</li>
+  </ol>
+  <p>Saved connections appear on the Connections page. MacEx stores a password or key passphrase in your Keychain only if you choose to, and never in its own files.</p>
+
+  <h3>What you can do on the server</h3>
+  <ul>
+    <li>Browse folders and see file sizes and dates.</li>
+    <li>Upload files from your Mac and download files to it, with progress and a Cancel button.</li>
+    <li>Rename files and make new folders.</li>
+    <li>Open or preview a file. MacEx downloads it first, with a size limit, and then shows it.</li>
+  </ul>
+
+  <h3 id="host-keys">Why the host-key check matters</h3>
+  <p>A host key proves you are talking to your server and not to someone in between. MacEx asks you to confirm an unknown key before it sends your password or key. If a saved server&rsquo;s key later changes, MacEx blocks sign-in until you review the new key. You can&rsquo;t turn this check off. Agent forwarding is never enabled.</p>
+
+  <h3>Safe transfers</h3>
+  <p>Uploads and downloads always create new files and never replace one that already exists. If a transfer is cancelled or the connection drops, the partly written file can be left behind, and the status line says so.</p>
+
+  <h2 id="smb">Open SMB shares from a NAS or Windows PC</h2>
+  <p>On the Connections page, type an address in the <b>SMB share</b> field: <code>smb://server/share</code>, <code>server/share</code> or a Windows-style <code>\\server\share</code>. Click <b>Connect</b>. macOS shows its own sign-in window and can save the password in your keychain, so MacEx never sees it. The share mounts under <code>/Volumes</code> and opens in MacEx.</p>
+  <p>Once it is open, a share is an ordinary folder. Split View, copy and move with <kbd>F5</kbd> and <kbd>F6</kbd>, batch rename, zip and tags all work on it. Recent addresses are remembered for next time.</p>
+
+  <h2 id="use-cases">When to use it</h2>
+  <ul>
+    <li><b>Web developers:</b> upload a build folder&rsquo;s files to a staging server, or download a log, without a separate FTP app.</li>
+    <li><b>Home and studio NAS:</b> open the media share in one pane and your Downloads in the other, then press <kbd>F6</kbd> to move files across.</li>
+    <li><b>Office file shares:</b> rename a batch of scans on a Windows share with a live preview.</li>
+  </ul>
+
+  <h2 id="limits">Limits</h2>
+  <ul>
+    <li>SFTP transfers are file by file. MacEx doesn&rsquo;t upload or download whole folders at once.</li>
+    <li>No deleting on the server, no remote Trash, no folder sync and no editing a remote file in place.</li>
+    <li>No terminal, no jump hosts and no automatic reconnect.</li>
+    <li>Only SFTP and SMB. FTP, WebDAV, S3 and cloud drives are not supported, although cloud folders already synced to your Mac work as local folders.</li>
+    <li>MacEx has not had an independent security audit. The SSH libraries it bundles, libssh2 and OpenSSL, are pinned versions.</li>
+  </ul>
+
+  <h2>Related</h2>
+  <ul class="related-links">
+    <li><a href="../file-management/">File management<small>Split View, batch rename, zip and tags</small></a></li>
+    <li><a href="../">Everything MacEx can do<small>Every feature, with its limits</small></a></li>
+    <li><a href="../../docs/#connections">Connections docs<small>Step by step, with troubleshooting</small></a></li>
+    <li><a href="../../compare/finder/">MacEx vs Finder<small>What Finder&rsquo;s Connect to Server covers</small></a></li>
+  </ul>
+
+  <div class="cta">
+    <p>MacEx runs on macOS 14 or later, Apple silicon and Intel. One-time purchase, no account, no subscription.</p>
+    <div class="row">
+      <a class="button" href="../../#pricing" data-buy>Get MacEx · $9.99</a>
+      <a class="button ghost" href="../../#mac-stage">Try the live demo <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</main>
+
+<footer class="docs-foot"><div><span>MacEx. Your Mac, explored.</span><span><a href="../../">MacEx home</a> · <a href="../">Features</a> · <a href="../../docs/">Docs</a> · <a href="../../compare/finder/">MacEx vs Finder</a> · <a href="../../#pricing">Pricing</a></span></div></footer>
+</body>
+</html>

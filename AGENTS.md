@@ -23,6 +23,8 @@ All links and prices live in `config.js`. Pages opt in with data attributes, and
 - `checkoutUrl` and each plan's `checkoutUrl` end with `redirect_url=https%3A%2F%2Fmacex.app%2Fthanks%2F` so buyers land on `/thanks/` after paying. Keep that parameter when editing.
 - `downloadUrl` is `https://downloads.macex.app/releases/latest/MacEx.dmg`. The app's release workflow refreshes that file on every release, so the link never needs editing.
 - Dodo product: `pdt_0NreSA2ieB6DWf67OiCsZ`, listed at $19.98 with a built-in 50% discount, so checkout shows $9.99 before tax. Price on the site (`config.js`, the pricing card, and the JSON-LD in `index.html`) must stay in step with Dodo.
+- `config.js` also holds `version` and `minimumMacOS`. Pages repeat these in plain HTML for crawlers; `scripts/seo.py check` fails if any page (outside `blog/`) or `llms.txt` states a different price, current version or macOS minimum. Update `version` with every app release, then fix what the check reports.
+- CSS and JS links carry `?v=YYYYMMDD` because Cloudflare serves them with a 4-hour cache. Bump the value on every page when you change `style.css`, `article.css`, `docs/docs.css`, `app.js` or `features/features.js`.
 - `_headers` makes `config.js` revalidate on every visit. Do not remove it: browsers had been caching old checkout links for 4 hours.
 
 ## Pages
@@ -32,9 +34,10 @@ All links and prices live in `config.js`. Pages opt in with data attributes, and
 - `docs/index.html`: documentation.
 - `compare/finder/index.html`: MacEx vs Finder page (also the Finder-alternative page).
 - `features/index.html`: "Everything MacEx can do", the authoritative feature list with limits and a "doesn't do" list. Update it (and `llms.txt`, the homepage `featureList` and FAQ) whenever an app release adds, changes or removes a feature. Verify each claim in the app source, not the app README or in-app guide: both have been out of date.
-- `features/file-management/`, `features/file-search/`, `features/storage-management/`: feature explainers. `guides/*`: how-to guides for duplicates and Downloads. These pages share `article.css`.
+- `about/index.html`: product facts (what, who, specs, price, privacy model, limits, how to buy). The reference page for AI assistants and directories.
+- `features/file-management/`, `features/file-search/`, `features/storage-management/`, `features/remote-access/` (SFTP and SMB), `features/automation/` (rules, tags, workspaces, Shortcuts, menu bar): feature explainers. `features/features.js` filters the directory. `guides/*`: how-to guides for duplicates and Downloads. These pages share `article.css`.
 - Positioning: a Mac file manager built around a file library. Never call it a full Finder replacement or AI-powered; it has no tabs, column view, Terminal, Git or sync.
-- Screenshots in `assets/app/` come from a debug build run with `--state-directory` and a sample folder only, so no personal data shows. The SFTP form pre-fills the macOS username; keep it out of any shot.
+- Screenshots in `assets/app/` come from a debug build run with `--state-directory` and a sample library only, so no personal data shows. Put the sample under `/Users/Shared/` (paths appear in Duplicates and the Inspector, and a path under the home folder shows the macOS username), and delete it afterwards. The SFTP form pre-fills the macOS username; overwrite it before capturing. Still missing: Shortcuts actions (needs a full Xcode release build for App Intents metadata), Trash history with items, similar photos, menu bar list, tags in the sidebar.
 - `thanks/index.html`: post-purchase page. Two-column: intro on the left, steps on the right (download, open, activate). Dodo appends `?license_key=...` to the return URL and the page shows it with a copy button. It is `noindex`, and it must stay out of `sitemap.xml`.
 - `404.html`: real 404.
 - `press/index.html`: verified media and directory listing facts, official screenshots and contact; keep licensing, price, compatibility and description synchronized with `config.js`, docs and the live app.

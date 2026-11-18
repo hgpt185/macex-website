@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Everything MacEx Can Do – Mac File Manager Features</title>
-  <meta name="description" content="Every MacEx feature in one place: plain-language search, Split View, batch rename, tags, duplicates, cleanup, previews, SMB and SFTP, and what it doesn’t do.">
+  <meta name="description" content="Searchable directory of every MacEx feature: plain-language search, Split View, batch rename, workspaces, rules, duplicates, SFTP, SMB, Shortcuts, and limits.">
   <meta name="theme-color" content="#f7f9fc">
   <link rel="canonical" href="https://macex.app/features/">
   <meta property="og:site_name" content="MacEx">
@@ -31,7 +31,7 @@
         "@type": "TechArticle",
         "@id": "https://macex.app/features/#article",
         "headline": "Everything MacEx can do",
-        "description": "The complete list of MacEx features, grouped by task, with what each does, when to use it and its limits, plus the features MacEx does not have.",
+        "description": "The complete directory of MacEx features in seven categories, with what each does, its main benefit, an example, screenshots, documentation links, limits, and the features MacEx does not have.",
         "url": "https://macex.app/features/",
         "mainEntityOfPage": "https://macex.app/features/",
         "image": "https://macex.app/assets/app/home.jpg",
@@ -62,10 +62,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@600;700;800&display=swap">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../docs/docs.css">
-  <link rel="stylesheet" href="../article.css">
+  <link rel="stylesheet" href="../style.css?v=20261118">
+  <link rel="stylesheet" href="../docs/docs.css?v=20261118">
+  <link rel="stylesheet" href="../article.css?v=20261118">
   <script src="../config.js" defer></script>
+  <script src="features.js?v=20261118" defer></script>
   <script defer src="https://analytics.hemeshgupta.com/script.js" data-website-id="39604b49-3ffd-480a-bede-91caf13c1414"></script>
 </head>
 <body>
@@ -79,7 +80,8 @@
 <header class="docs-bar">
   <div class="docs-bar-in">
     <a class="brand" href="../" aria-label="MacEx home"><img src="../assets/mascot.svg" alt="" width="32" height="32">MacEx</a>
-    <a class="site-link" style="margin-left:auto" href="../docs/">Docs</a>
+    <a class="site-link" style="margin-left:auto" href="../features/">Features</a>
+    <a class="site-link" href="../docs/">Docs</a>
     <a class="site-link" href="../#pricing">Pricing</a>
     <a class="button small ghost" href="#" data-download hidden>Download</a>
     <a class="button small" href="../#pricing">Get MacEx</a>
@@ -89,114 +91,396 @@
 <main id="main" class="container cmp">
   <nav class="crumbs-nav" aria-label="Breadcrumb"><a href="../">MacEx</a> › Features</nav>
   <h1>Everything MacEx <em>can do</em></h1>
-  <p class="updated">Updated <time datetime="2026-11-18">November 18, 2026</time> for MacEx 0.8.12</p>
+  <p class="updated">Updated <time datetime="2026-11-18">November 18, 2026</time> for MacEx <span data-version>0.8.12</span></p>
 
-  <div class="answer"><b>Short answer:</b> MacEx is a native Mac file manager built around a library of all your files. It finds files from a plain description and browses folders in one or two panes. It renames hundreds of files at once, zips and tags them, and opens SMB shares and SFTP servers in the same window. It previews files and copies text out of images. It frees up space by finding duplicates, old installers and large files, and you review everything before it goes to Trash. Search and text recognition run on your Mac. It is a one-time purchase with no account.</div>
+  <div class="answer"><b>Short answer:</b> MacEx is a native Mac file manager built around a library of all your files. It finds files from a plain description and browses folders in one or two panes. It renames hundreds of files at once, zips and tags them, and opens SMB shares and SFTP servers in the same window. It previews files and copies text out of images. It frees up space by finding duplicates, old installers and large files, and you review everything before it goes to Trash. Search and text recognition run on your Mac. It is a one-time purchase with no account. <a href="../about/">Product facts and requirements</a></div>
 
-  <nav class="toc" aria-label="On this page">
+  <div class="fd-tools">
+    <label class="fd-search" for="fd-q"><span class="visually-hidden">Filter features</span>
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/></svg>
+      <input id="fd-q" type="search" placeholder="Filter features, e.g. rename, sftp, duplicates" autocomplete="off">
+    </label>
+    <p class="fd-count" id="fd-count" aria-live="polite"></p>
+  </div>
+
+  <nav class="toc" aria-label="Feature categories">
     <ul>
-      <li><a href="#find">Find files</a></li>
-      <li><a href="#manage">Manage files and folders</a></li>
-      <li><a href="#organize">Organize and automate</a></li>
-      <li><a href="#cleanup">Free up space</a></li>
-      <li><a href="#preview">Preview and read files</a></li>
-      <li><a href="#servers">Servers and network shares</a></li>
-      <li><a href="#privacy">Privacy, updates and requirements</a></li>
-      <li><a href="#not">What MacEx doesn’t do</a></li>
+      <li><a href="#search">Intelligent search</a></li>
+      <li><a href="#manage">Advanced file management</a></li>
+      <li><a href="#organize">Organization and automation</a></li>
+      <li><a href="#storage">Storage management</a></li>
+      <li><a href="#remote">Network and remote access</a></li>
+      <li><a href="#productivity">Productivity and integrations</a></li>
+      <li><a href="#privacy">Privacy and security</a></li>
+      <li><a href="#status">Limits and unsupported</a></li>
     </ul>
   </nav>
 
-  <h2 id="find">Find files</h2>
-  <h3>Search in plain words</h3>
-  <p>Press <kbd>⌘</kbd><kbd>F</kbd> and type what you remember, such as <b>pdfs from last week over 5 mb</b>. MacEx turns it into kind, date, size and source filters. They show as chips you can remove or edit. Words it doesn’t recognize are matched against file names and tags. <b>Use it when</b> you know roughly what a file was but not its name or folder. <b>Limits:</b> the rules are fixed, not an AI model, so it doesn’t understand what is in a photo. A file with no date, camera or source information is left out when you filter on that detail. <a href="file-search/">How search works</a></p>
-  <h3>Filter by type, size and three dates</h3>
-  <p>Filter by kind, extension, minimum and maximum size, and separate ranges for date created, date modified and date added. You can also show screenshots only. “Last week” means the previous calendar week in your time zone, and sizes use decimal units.</p>
-  <h3>Search inside files</h3>
-  <p>Add <b>containing</b> to a search to match text that Spotlight has indexed inside documents. Turn on <b>Settings › Text Search</b> to also find words inside screenshots, scans and PDFs. <b>Limits:</b> text search is off until you turn it on. It reads the first 10 pages of a PDF and files up to 64 MB, and skips app folders.</p>
-  <h3>Search by where a download came from</h3>
-  <p>Search <b>pdfs from gmail</b> or <b>zips from github</b>, or press <kbd>⇧</kbd><kbd>⌘</kbd><kbd>J</kbd> to see every download grouped by website. MacEx reads the source address your browser saved and keeps only the site name.</p>
-  <h3>Saved searches</h3>
-  <p>Click the bookmark button to keep a search in the sidebar. Dates such as “last week” are recalculated each time you open it. Saved searches do the job of Finder smart folders inside MacEx. They are not Finder <code>.savedSearch</code> files.</p>
-  <h3>Quick Search, menu bar, Shortcuts and Siri</h3>
-  <p><kbd>⇧</kbd><kbd>⌘</kbd><kbd>Space</kbd> brings MacEx forward from any app with the search field ready, and you can change the shortcut. An optional menu bar item lists your ten newest downloads. The Shortcuts app gets <b>Find Files</b>, <b>Search in MacEx</b> and <b>Get Latest Download</b> actions, and a <code>macex://search?query=</code> link starts a search.</p>
+  <section class="fd-cat" id="search" aria-labelledby="search-h">
+    <h2 id="search-h">Intelligent search</h2>
+    <p>Find a file from what you remember about it: what it was, roughly when, how big, or where it came from.</p>
+    <figure class="shot-fig">
+      <img src="../assets/app/saved-search-900.jpg" srcset="../assets/app/saved-search-900.jpg 900w, ../assets/app/saved-search.jpg 1800w" sizes="(max-width: 948px) calc(100vw - 48px), 900px" width="1800" height="1190" loading="lazy" decoding="async" alt="MacEx search for pdfs from gmail, understood as PDF and mail.google.com chips, with five matching invoices and the saved search Invoices from Gmail in the sidebar">
+      <figcaption>A plain-language search, saved to the sidebar as <b>Invoices from Gmail</b>. Shown with sample files.</figcaption>
+    </figure>
+    <div class="fd-grid">
+      <article class="fd-item">
+        <h3>Plain-language search <span class="tag yes">Available</span></h3>
+        <p>Type a sentence such as <b>pdfs from last week over 5 mb</b>; MacEx turns it into kind, date, size and source filters shown as chips you can edit.</p>
+        <p class="fd-meta"><b>Why it helps:</b> You don&rsquo;t need the file name or the folder.</p>
+        <p class="fd-meta"><b>Example:</b> Find the contract a client emailed last month: <b>pdfs from gmail last month</b>.</p>
+        <p class="fd-meta fd-lim">Limits: fixed rules, not an AI model; it doesn&rsquo;t understand what is in a photo.</p>
+        <a class="fd-link" href="file-search/">Details<span class="visually-hidden"> about Plain-language search</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Detailed filters <span class="tag yes">Available</span></h3>
+        <p>Filter by kind, extension, minimum and maximum size, and separate date ranges for created, modified and added. Show screenshots only.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Narrow a big library to a handful of files.</p>
+        <p class="fd-meta"><b>Example:</b> <b>zips bigger than 1gb older than 6 months</b> lists the old archives worth deleting.</p>
+        <a class="fd-link" href="file-search/#how-macex-reads-a-plain-language-search">Details<span class="visually-hidden"> about Detailed filters</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Search inside files <span class="tag part">Limited</span></h3>
+        <p>Add <b>containing</b> to search text Spotlight has indexed. Turn on Text Search to also find words inside screenshots, scans and PDFs, read on your Mac.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Find a screenshot by a word in it.</p>
+        <p class="fd-meta"><b>Example:</b> <b>screenshots with wifi password</b> finds the screenshot of a router label.</p>
+        <p class="fd-meta fd-lim">Limits: Text Search is opt-in; first 10 PDF pages; files up to 64 MB.</p>
+        <a class="fd-link" href="file-search/#find-words-inside-screenshots-scans-and-pdfs">Details<span class="visually-hidden"> about Search inside files</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Search by download source <span class="tag yes">Available</span></h3>
+        <p>Search <b>from gmail</b>, <b>from slack</b> or any site, or press <kbd>⇧</kbd><kbd>⌘</kbd><kbd>J</kbd> to see downloads grouped by website.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Find a download by where it came from.</p>
+        <p class="fd-meta"><b>Example:</b> <b>zips from github</b> lists every release you downloaded.</p>
+        <p class="fd-meta fd-lim">Limits: needs the source address your browser saved; MacEx keeps only the site name.</p>
+        <a class="fd-link" href="file-search/#find-a-download-by-where-it-came-from">Details<span class="visually-hidden"> about Search by download source</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Saved searches <span class="tag yes">Available</span></h3>
+        <p>Save any search to the sidebar. Dates such as &ldquo;last week&rdquo; are recalculated each time you open it.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Smart-folder convenience inside MacEx.</p>
+        <p class="fd-meta"><b>Example:</b> A <b>Screenshots this week</b> search that is always current.</p>
+        <p class="fd-meta fd-lim">Limits: not saved as Finder <code>.savedSearch</code> files.</p>
+        <a class="fd-link" href="../docs/#search">Details<span class="visually-hidden"> about Saved searches</span></a>
+      </article>
+    </div>
+  </section>
 
-  <h2 id="manage">Manage files and folders</h2>
-  <figure class="shot-fig">
-    <img src="../assets/app/split-view-900.jpg" srcset="../assets/app/split-view-900.jpg 900w, ../assets/app/split-view.jpg 1800w" sizes="(max-width: 948px) calc(100vw - 48px), 900px" width="1800" height="1190" loading="lazy" decoding="async" alt="MacEx Split View with a grid of trip photos on the left and a list of project folders on the right">
-    <figcaption>Split View: two folders side by side, <kbd>F5</kbd> to copy and <kbd>F6</kbd> to move between them.</figcaption>
-  </figure>
-  <h3>Folder browser</h3>
-  <p>MacEx has a path bar and Go to Folder (<kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd>). It keeps Back and Forward history and offers a grid or a list sorted by any column. The list view shows folder sizes and item counts, and you can show hidden files. Right-click to Copy Paths or add a folder to the sidebar.</p>
-  <h3>Split View</h3>
-  <p><kbd>⌘</kbd><kbd>\</kbd> splits the window into two folders. <kbd>F5</kbd> copies the selection to the other pane and <kbd>F6</kbd> moves it. <b>Use it when</b> sorting a download pile into project folders, or moving photos off a card.</p>
-  <h3>Copy, move, rename and Trash, without overwriting</h3>
-  <p>The usual commands are here: new folder, rename, duplicate, copy, paste, drag and drop, and Move to Trash. When a name clash happens, MacEx asks whether to Keep Both or Skip. It never replaces an existing file. <kbd>⌘</kbd><kbd>Z</kbd> undoes moves, renames, Trash and batch renames.</p>
-  <h3>Batch rename</h3>
-  <p>Select several files and choose <b>Rename Items</b>. You can find and replace text, or build names from <code>{name}</code>, a sequence number <code>{n}</code> and the modified date <code>{date}</code>. Every new name is previewed, and clashes are flagged before anything changes. Extensions are kept, and you can rename up to 10,000 items in one undoable step.</p>
-  <h3>Zip and unzip</h3>
-  <p>Compress a selection to <code>.zip</code>, or extract a zip next to itself. A cancelled run leaves no half-written archive. <b>Limits:</b> zip only.</p>
-  <h3>Finder tags and workspaces</h3>
-  <p>Finder tags appear in the sidebar, and you can add or remove tags on many files at once. Workspaces are named sidebar pages that collect files and folders from anywhere without moving them. <a href="file-management/">More on file management</a></p>
+  <section class="fd-cat" id="manage" aria-labelledby="manage-h">
+    <h2 id="manage-h">Advanced file management</h2>
+    <p>Everyday folder work in one window: two panes, bulk actions, and undo for everything.</p>
+    <figure class="shot-fig">
+      <img src="../assets/app/split-view-900.jpg" srcset="../assets/app/split-view-900.jpg 900w, ../assets/app/split-view.jpg 1800w" sizes="(max-width: 948px) calc(100vw - 48px), 900px" width="1800" height="1190" loading="lazy" decoding="async" alt="MacEx Split View with a grid of photos on the left and the Projects folder as a list on the right">
+      <figcaption>Split View with photos on one side and a project folder on the other. Shown with sample files.</figcaption>
+    </figure>
+    <div class="fd-grid">
+      <article class="fd-item">
+        <h3>Split View (dual pane) <span class="tag yes">Available</span></h3>
+        <p><kbd>⌘</kbd><kbd>\</kbd> shows two folders side by side; <kbd>F5</kbd> copies and <kbd>F6</kbd> moves the selection to the other pane.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Sort files between folders without juggling windows.</p>
+        <p class="fd-meta"><b>Example:</b> Move photos from Downloads into a project folder in two keystrokes.</p>
+        <a class="fd-link" href="file-management/">Details<span class="visually-hidden"> about Split View (dual pane)</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Batch rename <span class="tag yes">Available</span></h3>
+        <p>Find and replace, or a template with <code>{name}</code>, <code>{n}</code> and <code>{date}</code>. Every new name is previewed, clashes are flagged, extensions are kept.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Rename hundreds of files safely, with undo.</p>
+        <p class="fd-meta"><b>Example:</b> Turn <code>IMG_4021.jpg</code> into <code>Lisbon 01.jpg</code> for a whole trip.</p>
+        <p class="fd-meta fd-lim">Limits: up to 10,000 items at once.</p>
+        <a class="fd-link" href="file-management/#batch-rename">Details<span class="visually-hidden"> about Batch rename</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Folder browser <span class="tag yes">Available</span></h3>
+        <p>Path bar, Go to Folder (<kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd>), Back and Forward, grid or list, sort by any column, folder sizes and item counts, and a hidden-files switch.</p>
+        <p class="fd-meta"><b>Why it helps:</b> See what is in a folder and how big it is at a glance.</p>
+        <p class="fd-meta"><b>Example:</b> Find which project folder is taking 20 GB.</p>
+        <p class="fd-meta fd-lim">Limits: no tabs, column view or extra windows.</p>
+        <a class="fd-link" href="file-management/#browse">Details<span class="visually-hidden"> about Folder browser</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Copy, move, rename, Trash <span class="tag yes">Available</span></h3>
+        <p>The usual commands, plus drag and drop. Name clashes ask Keep Both or Skip; existing files are never replaced. <kbd>⌘</kbd><kbd>Z</kbd> undoes moves, renames and Trash.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Fewer accidents.</p>
+        <p class="fd-meta"><b>Example:</b> Undo a move to the wrong folder.</p>
+        <a class="fd-link" href="file-management/#copy-move">Details<span class="visually-hidden"> about Copy, move, rename, Trash</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Zip and unzip <span class="tag part">Limited</span></h3>
+        <p>Compress a selection to <code>.zip</code>, or extract a zip next to itself. A cancelled run leaves no half-written archive.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Package files to send in one step.</p>
+        <p class="fd-meta"><b>Example:</b> Zip a folder of invoices for your accountant.</p>
+        <p class="fd-meta fd-lim">Limits: zip only; no RAR, 7z or tar.</p>
+        <a class="fd-link" href="file-management/#zip">Details<span class="visually-hidden"> about Zip and unzip</span></a>
+      </article>
+    </div>
+  </section>
 
-  <h2 id="organize">Organize and automate</h2>
-  <h3>One library by kind</h3>
-  <p>Home sorts files from your Desktop, Documents, Downloads, Pictures, Music, Movies and app folders, plus up to eight folders you add, into Images, Videos, Music, Documents, Archives and Apps. Files stay where they are. Recents, Large Files and Screenshots are ready-made views. <b>Limits:</b> the library keeps up to 20,000 files. Hidden files and the insides of app bundles are skipped.</p>
-  <h3>Tidy Downloads</h3>
-  <p>Moves loose files at the top of your Downloads folder into Images, Videos, Music, Documents, Archives and Installers folders. You see the plan first, existing files are never replaced, and <kbd>⌘</kbd><kbd>Z</kbd> puts everything back. <a href="../guides/clean-up-downloads-folder-mac/">Clean up your Downloads folder</a></p>
-  <h3>Rules</h3>
-  <p>There are two optional rules. One moves old <code>.dmg</code> and <code>.pkg</code> installers to Trash. The other files screenshots into monthly folders. <b>Limits:</b> both are off until you turn them on. They act only inside folders you add in Settings › Automation, check every 30 minutes while MacEx is open, and never delete anything permanently.</p>
+  <section class="fd-cat" id="organize" aria-labelledby="organize-h">
+    <h2 id="organize-h">Organization and automation</h2>
+    <p>Keep files tidy without dragging them around by hand.</p>
+    <figure class="shot-fig">
+      <img src="../assets/app/workspaces-900.jpg" srcset="../assets/app/workspaces-900.jpg 900w, ../assets/app/workspaces.jpg 1800w" sizes="(max-width: 948px) calc(100vw - 48px), 900px" width="1800" height="1190" loading="lazy" decoding="async" alt="A MacEx workspace called Client Launch holding a folder, PDFs, a zip, photos and notes from different folders">
+      <figcaption>A workspace collects files from several folders without moving them. Shown with sample files.</figcaption>
+    </figure>
+    <div class="fd-grid">
+      <article class="fd-item">
+        <h3>Library by kind <span class="tag part">Limited</span></h3>
+        <p>Files from your standard folders and up to eight you add, sorted into Images, Videos, Music, Documents, Archives and Apps. Files stay where they are.</p>
+        <p class="fd-meta"><b>Why it helps:</b> See everything of one kind across folders.</p>
+        <p class="fd-meta"><b>Example:</b> Open Videos to find every clip on the Mac.</p>
+        <p class="fd-meta fd-lim">Limits: up to 20,000 files; hidden files and app bundle contents are skipped.</p>
+        <a class="fd-link" href="automation/#library">Details<span class="visually-hidden"> about Library by kind</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Finder tags <span class="tag yes">Available</span></h3>
+        <p>Tags from Finder appear in the sidebar; add or remove tags on many files at once.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Group files across folders the standard macOS way.</p>
+        <p class="fd-meta"><b>Example:</b> Tag every file for a tax return <b>Taxes 2026</b>.</p>
+        <a class="fd-link" href="automation/#tags-workspaces">Details<span class="visually-hidden"> about Finder tags</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Workspaces <span class="tag yes">Available</span></h3>
+        <p>Named sidebar pages that collect files and folders from anywhere as bookmarks.</p>
+        <p class="fd-meta"><b>Why it helps:</b> A project view without reorganizing folders.</p>
+        <p class="fd-meta"><b>Example:</b> A <b>Client Launch</b> page with the brief, the logo zip and the invoices.</p>
+        <p class="fd-meta fd-lim">Limits: up to 100 workspaces.</p>
+        <a class="fd-link" href="automation/#tags-workspaces">Details<span class="visually-hidden"> about Workspaces</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Tidy Downloads <span class="tag yes">Available</span></h3>
+        <p>Moves loose files in Downloads into Images, Videos, Music, Documents, Archives and Installers folders, after showing the plan.</p>
+        <p class="fd-meta"><b>Why it helps:</b> A clean Downloads folder in one step, with undo.</p>
+        <p class="fd-meta"><b>Example:</b> Clear 300 loose downloads before a backup.</p>
+        <a class="fd-link" href="automation/#tidy">Details<span class="visually-hidden"> about Tidy Downloads</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Automation rules <span class="tag part">Limited</span></h3>
+        <p>Two optional rules: trash old <code>.dmg</code> and <code>.pkg</code> installers, and file screenshots by month.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Routine cleanup without thinking about it.</p>
+        <p class="fd-meta"><b>Example:</b> Installers older than 90 days in Downloads go to Trash automatically.</p>
+        <p class="fd-meta fd-lim">Limits: off by default; only in folders you add; runs while MacEx is in the foreground; no rule builder.</p>
+        <a class="fd-link" href="automation/#rules">Details<span class="visually-hidden"> about Automation rules</span></a>
+      </article>
+    </div>
+  </section>
 
-  <h2 id="cleanup">Free up space</h2>
-  <h3>Free Up Space</h3>
-  <p>Press <kbd>⇧</kbd><kbd>⌘</kbd><kbd>K</kbd> to list old installers, forgotten downloads, old screenshots, empty files, large files over 100 MB, big old videos and apps you haven’t opened. You choose the age, from 30 days to a year. Nothing is ticked for you, and you can tell MacEx to ignore a file, an extension or a folder. <a href="storage-management/">How Free Up Space works</a></p>
-  <h3>Duplicate files</h3>
-  <p>Exact copies are confirmed by size, SHA-256 hash and a final byte-for-byte check. You pick the copy to keep, and the rest go to Trash. <a href="../guides/find-duplicate-files-mac/">Find duplicate files</a></p>
-  <h3>Similar photos</h3>
-  <p>Groups bursts and near-identical shots using Apple’s on-device Vision, for you to judge. Similar doesn’t mean identical, so MacEx never treats them as duplicates.</p>
-  <h3>Trash history</h3>
-  <p>MacEx remembers the last 500 files it moved to Trash and can put any of them back in its original folder without overwriting anything. <b>Limits:</b> MacEx doesn’t show a storage chart or treemap. Folder sizes in the list view are the closest thing.</p>
+  <section class="fd-cat" id="storage" aria-labelledby="storage-h">
+    <h2 id="storage-h">Storage management</h2>
+    <p>See what is taking up space, decide what goes, and change your mind later.</p>
+    <figure class="shot-fig">
+      <img src="../assets/app/duplicates-900.jpg" srcset="../assets/app/duplicates-900.jpg 900w, ../assets/app/duplicates.jpg 1800w" sizes="(max-width: 948px) calc(100vw - 48px), 900px" width="1800" height="1190" loading="lazy" decoding="async" alt="MacEx Duplicates page listing groups of identical invoices in Documents and Downloads, each with Keep this one and Trash controls">
+      <figcaption>Duplicates are grouped after a byte-for-byte check; you choose the copy to keep. Shown with sample files.</figcaption>
+    </figure>
+    <div class="fd-grid">
+      <article class="fd-item">
+        <h3>Free Up Space <span class="tag yes">Available</span></h3>
+        <p>Lists old installers, forgotten downloads, old screenshots, empty files, large files over 100 MB, big old videos and apps you haven&rsquo;t opened. Choose the age from 30 days to a year.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Find the space you can reclaim without hunting.</p>
+        <p class="fd-meta"><b>Example:</b> Clear 12 GB of old installers and videos.</p>
+        <p class="fd-meta fd-lim">Note: nothing is pre-selected; you review before Trash.</p>
+        <a class="fd-link" href="storage-management/">Details<span class="visually-hidden"> about Free Up Space</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Duplicate finder <span class="tag yes">Available</span></h3>
+        <p>Groups exact copies after size, SHA-256 and byte-for-byte checks. You pick the copy to keep.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Remove copies without guessing.</p>
+        <p class="fd-meta"><b>Example:</b> Delete the second copy of every invoice you downloaded twice.</p>
+        <a class="fd-link" href="../guides/find-duplicate-files-mac/">Details<span class="visually-hidden"> about Duplicate finder</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Similar photos <span class="tag yes">Available</span></h3>
+        <p>Groups bursts and near-identical shots using on-device Vision.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Keep the best shot of a burst.</p>
+        <p class="fd-meta"><b>Example:</b> Pick one of eight burst photos.</p>
+        <p class="fd-meta fd-lim">Limits: similar is not identical; review only.</p>
+        <a class="fd-link" href="storage-management/">Details<span class="visually-hidden"> about Similar photos</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Trash history <span class="tag yes">Available</span></h3>
+        <p>Remembers the last 500 files MacEx moved to Trash and restores them to their original folder.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Cleanup you can undo days later.</p>
+        <p class="fd-meta"><b>Example:</b> Put back a file you trashed last week.</p>
+        <p class="fd-meta fd-lim">Limits: only files MacEx itself moved.</p>
+        <a class="fd-link" href="../docs/#trash">Details<span class="visually-hidden"> about Trash history</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Folder sizes <span class="tag part">Limited</span></h3>
+        <p>The list view shows each folder&rsquo;s size and item count.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Spot the biggest folders quickly.</p>
+        <p class="fd-meta"><b>Example:</b> Find which folder fills the disk.</p>
+        <p class="fd-meta fd-lim">Limits: no treemap or chart.</p>
+        <a class="fd-link" href="file-management/#browse">Details<span class="visually-hidden"> about Folder sizes</span></a>
+      </article>
+    </div>
+  </section>
 
-  <h2 id="preview">Preview and read files</h2>
-  <h3>Preview in place</h3>
-  <p>Press <kbd>Space</kbd> to look inside photos, PDFs, videos, audio and documents without opening another app, and use the arrow keys to move to the next file. Songs play in a built-in player that keeps playing while you browse.</p>
-  <h3>Inspector</h3>
-  <p><kbd>⌘</kbd><kbd>I</kbd> shows the website a file came from, its size, dimensions, duration, camera, dates, tags and recognized text, where that information exists.</p>
-  <h3>Copy text from images and PDFs</h3>
-  <p><kbd>⇧</kbd><kbd>⌘</kbd><kbd>C</kbd> copies the text in a screenshot, scan or PDF using Apple’s on-device text recognition, and works on up to 20 files at once.</p>
+  <section class="fd-cat" id="remote" aria-labelledby="remote-h">
+    <h2 id="remote-h">Network and remote access</h2>
+    <p>Servers and shared drives in the same window as your local files.</p>
+    <figure class="shot-fig">
+      <img src="../assets/app/servers-900.jpg" srcset="../assets/app/servers-900.jpg 900w, ../assets/app/servers.jpg 1800w" sizes="(max-width: 948px) calc(100vw - 48px), 900px" width="1800" height="1190" loading="lazy" decoding="async" alt="MacEx Connections page with an SMB share address and a new SFTP connection form">
+      <figcaption>The Connections page with an SMB share and an SFTP server. Shown with sample files.</figcaption>
+    </figure>
+    <div class="fd-grid">
+      <article class="fd-item">
+        <h3>SFTP <span class="tag part">Limited</span></h3>
+        <p>Password, private key or SSH agent sign-in; browse, upload, download, rename, new folder and preview.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Manage server files without a separate client.</p>
+        <p class="fd-meta"><b>Example:</b> Download yesterday&rsquo;s log from a staging server.</p>
+        <p class="fd-meta fd-lim">Limits: no whole-folder transfers, remote delete, terminal or sync.</p>
+        <a class="fd-link" href="remote-access/#sftp">Details<span class="visually-hidden"> about SFTP</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Host-key verification <span class="tag yes">Available</span></h3>
+        <p>Unknown keys must be confirmed before sign-in; changed keys block sign-in until reviewed.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Protects your password from impostor servers.</p>
+        <p class="fd-meta"><b>Example:</b> Confirm a new server&rsquo;s fingerprint once.</p>
+        <a class="fd-link" href="remote-access/#host-keys">Details<span class="visually-hidden"> about Host-key verification</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>SMB shares <span class="tag yes">Available</span></h3>
+        <p>Connect to <code>smb://server/share</code>; macOS handles the password, and the share opens as a normal folder.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Use your NAS or a Windows PC like a local folder.</p>
+        <p class="fd-meta"><b>Example:</b> Move finished videos to the NAS with <kbd>F6</kbd>.</p>
+        <a class="fd-link" href="remote-access/#smb">Details<span class="visually-hidden"> about SMB shares</span></a>
+      </article>
+    </div>
+  </section>
 
-  <h2 id="servers">Servers and network shares</h2>
-  <h3>SMB shares</h3>
-  <p>Connect to a Windows PC or NAS with an address such as <code>smb://nas.local/Media</code>. macOS handles the password and keychain, and the share opens as a normal folder in MacEx.</p>
-  <h3>SFTP</h3>
-  <p>Press <kbd>⌘</kbd><kbd>K</kbd> to connect with a password, private key or SSH agent, and save the connection for later. You confirm the server’s host key the first time, and a changed key blocks sign-in. You can browse, upload, download, rename, make folders and preview files. <b>Limits:</b> MacEx doesn’t copy whole folders at once, delete on the server, open a terminal or sync.</p>
+  <section class="fd-cat" id="productivity" aria-labelledby="productivity-h">
+    <h2 id="productivity-h">Productivity and integrations</h2>
+    <p>Get to a file from anywhere, see what is inside it, and connect MacEx to the rest of your Mac.</p>
+    <figure class="shot-fig">
+      <img src="../assets/app/inspector-900.jpg" srcset="../assets/app/inspector-900.jpg 900w, ../assets/app/inspector.jpg 1800w" sizes="(max-width: 948px) calc(100vw - 48px), 900px" width="1800" height="1190" loading="lazy" decoding="async" alt="MacEx Inspector for Invoice May.pdf showing a preview, its path, kind, size, dates and source mail.google.com">
+      <figcaption>The Inspector shows where a file came from and its details. Shown with sample files.</figcaption>
+    </figure>
+    <div class="fd-grid">
+      <article class="fd-item">
+        <h3>Preview in place <span class="tag yes">Available</span></h3>
+        <p>Press <kbd>Space</kbd> to look inside photos, PDFs, videos, audio and documents; arrow keys move to the next file.</p>
+        <p class="fd-meta"><b>Why it helps:</b> No app switching.</p>
+        <p class="fd-meta"><b>Example:</b> Flip through 40 scans to find the signed one.</p>
+        <a class="fd-link" href="../docs/#preview">Details<span class="visually-hidden"> about Preview in place</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Inspector <span class="tag yes">Available</span></h3>
+        <p><kbd>⌘</kbd><kbd>I</kbd> shows the source website, size, dimensions, duration, camera, dates, tags and recognized text.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Answer &ldquo;where did this come from?&rdquo;</p>
+        <p class="fd-meta"><b>Example:</b> See that a PDF came from mail.google.com.</p>
+        <p class="fd-meta fd-lim">Limits: shows only metadata the file has.</p>
+        <a class="fd-link" href="../docs/#preview">Details<span class="visually-hidden"> about Inspector</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Copy Text (batch) <span class="tag part">Limited</span></h3>
+        <p><kbd>⇧</kbd><kbd>⌘</kbd><kbd>C</kbd> copies the text from up to 20 images or PDFs at once, read on your Mac.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Get text out of screenshots and scans.</p>
+        <p class="fd-meta"><b>Example:</b> Copy the numbers from ten receipt photos into a spreadsheet.</p>
+        <p class="fd-meta fd-lim">Limits: up to 20 files and one million characters per copy.</p>
+        <a class="fd-link" href="../docs/#preview">Details<span class="visually-hidden"> about Copy Text (batch)</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Quick Search <span class="tag yes">Available</span></h3>
+        <p><kbd>⇧</kbd><kbd>⌘</kbd><kbd>Space</kbd> from any app brings MacEx forward with search ready.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Search files as fast as Spotlight.</p>
+        <p class="fd-meta"><b>Example:</b> Find an attachment while writing an email.</p>
+        <a class="fd-link" href="automation/#shortcuts">Details<span class="visually-hidden"> about Quick Search</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Shortcuts and Siri <span class="tag yes">Available</span></h3>
+        <p>Actions: <b>Find Files</b>, <b>Search in MacEx</b>, <b>Get Latest Download</b>; plus <code>macex://search</code> links.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Use MacEx in your own automations.</p>
+        <p class="fd-meta"><b>Example:</b> A shortcut that attaches your latest download to a new email.</p>
+        <a class="fd-link" href="automation/#shortcuts">Details<span class="visually-hidden"> about Shortcuts and Siri</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Menu bar downloads <span class="tag yes">Available</span></h3>
+        <p>An optional menu bar item lists your ten newest downloads.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Drag a fresh download anywhere.</p>
+        <p class="fd-meta"><b>Example:</b> Drop the PDF you just downloaded into a chat.</p>
+        <a class="fd-link" href="automation/#shortcuts">Details<span class="visually-hidden"> about Menu bar downloads</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Keyboard shortcuts <span class="tag yes">Available</span></h3>
+        <p>Every main action has a shortcut; <kbd>⌘</kbd><kbd>/</kbd> lists them, <kbd>⌘</kbd><kbd>?</kbd> opens the guide.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Work without the mouse.</p>
+        <p class="fd-meta"><b>Example:</b> <kbd>⇧</kbd><kbd>⌘</kbd><kbd>D</kbd> opens Duplicates.</p>
+        <a class="fd-link" href="../docs/#shortcuts">Details<span class="visually-hidden"> about Keyboard shortcuts</span></a>
+      </article>
+    </div>
+  </section>
 
-  <h2 id="privacy">Privacy, updates and requirements</h2>
-  <ul>
-    <li><b>Private by design.</b> No account and no cloud AI. Indexing, search and text recognition run on your Mac, and file names and contents are never uploaded. MacEx goes online only to activate your license and, if you turn it on, to check for updates. <a href="../docs/#privacy">Privacy and permissions</a></li>
-    <li><b>Optional Full Disk Access.</b> MacEx walks you through allowing protected folders, and you can turn it off at any time.</li>
-    <li><b>Safe updates.</b> Automatic updates are off until you turn them on. Updates are checked for MacEx’s Apple Developer ID and Apple notarization, then installed when you quit.</li>
-    <li><b>Keyboard first.</b> Press <kbd>⌘</kbd><kbd>/</kbd> for every shortcut, and <kbd>⌘</kbd><kbd>?</kbd> for the built-in guide.</li>
-    <li><b>Requirements and price.</b> macOS 14 Sonoma or later, Apple silicon and Intel. Signed and notarized by Apple. $9.99 one-time (launch price, usually $19.98), one license per Mac, no subscription, no free trial.</li>
-  </ul>
+  <section class="fd-cat" id="privacy" aria-labelledby="privacy-h">
+    <h2 id="privacy-h">Privacy and security</h2>
+    <p>What stays on your Mac, and what MacEx does to keep files safe.</p>
+    <div class="fd-grid">
+      <article class="fd-item">
+        <h3>On-device processing <span class="tag yes">Available</span></h3>
+        <p>Indexing, search and text recognition run on your Mac. File names and contents are not uploaded.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Private by default.</p>
+        <p class="fd-meta"><b>Example:</b> Search tax documents without sending them anywhere.</p>
+        <p class="fd-meta fd-lim">Note: MacEx connects only for license activation and opt-in update checks.</p>
+        <a class="fd-link" href="../docs/#privacy">Details<span class="visually-hidden"> about On-device processing</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>No account, no cloud AI <span class="tag yes">Available</span></h3>
+        <p>No sign-up, no API key and no cloud AI service.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Nothing to manage.</p>
+        <p class="fd-meta"><b>Example:</b> Install, enter your license key, done.</p>
+        <a class="fd-link" href="../docs/#privacy">Details<span class="visually-hidden"> about No account, no cloud AI</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Safe cleanup <span class="tag yes">Available</span></h3>
+        <p>Removed files go to the Trash and can be restored; MacEx has no permanent-delete option.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Mistakes are reversible.</p>
+        <p class="fd-meta"><b>Example:</b> Restore a file from Trash history.</p>
+        <a class="fd-link" href="../docs/#trash">Details<span class="visually-hidden"> about Safe cleanup</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Signed and notarized <span class="tag yes">Available</span></h3>
+        <p>Signed with an Apple Developer ID and notarized by Apple.</p>
+        <p class="fd-meta"><b>Why it helps:</b> macOS opens it without warnings.</p>
+        <p class="fd-meta"><b>Example:</b> First launch shows the standard downloaded-app prompt only.</p>
+        <a class="fd-link" href="../docs/#install">Details<span class="visually-hidden"> about Signed and notarized</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Verified updates <span class="tag yes">Available</span></h3>
+        <p>Automatic updates are opt-in. Each update is checked for MacEx&rsquo;s Developer ID and Apple notarization, and installs when you quit.</p>
+        <p class="fd-meta"><b>Why it helps:</b> Stay current safely.</p>
+        <p class="fd-meta"><b>Example:</b> Turn on updates once and forget about it.</p>
+        <a class="fd-link" href="../docs/#privacy">Details<span class="visually-hidden"> about Verified updates</span></a>
+      </article>
+      <article class="fd-item">
+        <h3>Optional Full Disk Access <span class="tag yes">Available</span></h3>
+        <p>MacEx works without it; turn it on only to reach folders macOS protects.</p>
+        <p class="fd-meta"><b>Why it helps:</b> You choose what MacEx can read.</p>
+        <p class="fd-meta"><b>Example:</b> Allow access only if your files live in a folder macOS protects.</p>
+        <a class="fd-link" href="../docs/#access">Details<span class="visually-hidden"> about Optional Full Disk Access</span></a>
+      </article>
+    </div>
+  </section>
 
-  <h2 id="not">What MacEx doesn’t do</h2>
-  <p>To help you decide, here is what MacEx does not include today:</p>
-  <ul>
-    <li>Tabs, multiple windows or a column view.</li>
-    <li>A built-in Terminal, Git integration or a file permissions editor.</li>
-    <li>Folder sync, file comparison, file conversion, or RAR, 7z and tar archives.</li>
-    <li>Recursive folder transfers or deleting files over SFTP.</li>
-    <li>A storage treemap or chart.</li>
-    <li>Cloud AI, or understanding what is in a photo.</li>
-    <li>Replacing Finder as the system file manager. MacEx works alongside it. <a href="../compare/finder/">MacEx vs Finder</a></li>
-  </ul>
+  <p class="fd-empty" id="fd-empty" hidden>No feature matches that filter. Try a broader word, or <a href="../docs/">search the docs</a>.</p>
+
+  <section id="status" aria-labelledby="status-h">
+    <h2 id="status-h">Limits, unsupported features and plans</h2>
+    <p><b>Available</b> means the feature ships in MacEx <span data-version>0.8.12</span> and works as described. <b>Limited</b> means it works with the limits listed on its card. Everything below is <b>not supported</b> today. No upcoming features have been announced, so this page lists none as planned.</p>
+    <ul>
+      <li>Tabs, multiple windows or a column view.</li>
+      <li>A built-in Terminal, Git integration or a file permissions editor.</li>
+      <li>Folder sync, file comparison, file conversion, or RAR, 7z and tar archives.</li>
+      <li>Whole-folder transfers or deleting files over SFTP; FTP, WebDAV, S3 or cloud-drive connections.</li>
+      <li>A storage treemap or chart.</li>
+      <li>Cloud AI, or understanding what is in a photo.</li>
+      <li>Replacing Finder as the system file manager and file picker. MacEx works alongside it. <a href="../compare/finder/">MacEx vs Finder</a></li>
+    </ul>
+  </section>
 
   <h2>Related</h2>
   <ul class="related-links">
-    <li><a href="file-management/">File management<small>Split View, batch rename, zip, tags, workspaces, SMB and SFTP</small></a></li>
-    <li><a href="file-search/">Find files by describing them<small>How plain-language search reads a sentence</small></a></li>
-    <li><a href="storage-management/">Free up storage on Mac<small>What’s safe to clear, reviewed by you</small></a></li>
+    <li><a href="../about/">MacEx product facts<small>Requirements, pricing, privacy and limits</small></a></li>
+    <li><a href="../compare/finder/">MacEx vs Finder<small>A fair, task-by-task comparison</small></a></li>
     <li><a href="../docs/">MacEx Docs<small>Step-by-step guides and every shortcut</small></a></li>
+    <li><a href="../#pricing">Pricing<small>One-time purchase, no subscription</small></a></li>
   </ul>
 
   <div class="cta">

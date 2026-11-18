@@ -1067,3 +1067,24 @@ initPage();
 initHero();
 initFeatures();
 })();
+
+/* ---------------------------------------------------------
+   Header: Features dropdown and the phone menu
+   --------------------------------------------------------- */
+(function initNav() {
+  const toggle = document.querySelector('.nav-toggle'), links = document.getElementById('nav-links');
+  const dropBtn = document.querySelector('.nav-drop-btn'), drop = document.getElementById('nav-features');
+  if (!links) return;
+  const setDrop = open => { if (!dropBtn) return; dropBtn.setAttribute('aria-expanded', String(open)); drop.hidden = !open; };
+  const setMenu = open => { if (!toggle) return; toggle.setAttribute('aria-expanded', String(open)); links.classList.toggle('open', open); if (!open) setDrop(false); };
+  dropBtn && dropBtn.addEventListener('click', () => setDrop(dropBtn.getAttribute('aria-expanded') !== 'true'));
+  toggle && toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+  links.addEventListener('click', e => { if (e.target.closest('a')) { setDrop(false); setMenu(false); } });
+  document.addEventListener('click', e => { if (!e.target.closest('.nav')) { setDrop(false); setMenu(false); } });
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    const wasOpen = dropBtn && dropBtn.getAttribute('aria-expanded') === 'true';
+    setDrop(false); setMenu(false);
+    if (wasOpen) dropBtn.focus();
+  });
+})();

@@ -203,6 +203,46 @@ def config_price(root=ROOT):
     return f"{float(match.group(1)):.2f}" if match else None
 
 
+def config_facts(root=ROOT):
+    """Price, regular price, version and minimum macOS from config.js, the single source of product facts."""
+    text = (root / "config.js").read_text()
+    grab = lambda pattern: (re.search(pattern, text) or [None, None])[1]
+    return {
+        "price": config_price(root),
+        "was": (lambda v: f"{float(v):.2f}" if v else None)(grab(r"plans:\s*\[\s*\{[^}]*?was:\s*([\d.]+)")),
+        "version": grab(r"version:\s*'([\d.]+)'"),
+        "macos": grab(r"minimumMacOS:\s*'(\d+)'"),
+    }
+
+
+# Older versions named on purpose (for example "notarized since 0.8.7"), not claims about the current release.
+HISTORIC_VERSION = re.compile(r"(?:before|since|from|and later|or later|older than|up to)\s*$|^\s*(?:and later|or later|and earlier)", re.I)
+
+
+def check_facts(root=ROOT):
+    """Every non-blog page and llms.txt must state the same price, version and macOS minimum as config.js."""
+    facts, errors = config_facts(root), []
+    files = [p for p in page_files(root) if not p.relative_to(root).as_posix().startswith("blog/")]
+    files += [root / "llms.txt"]
+    for path in files:
+        where = path.relative_to(root).as_posix()
+        raw = path.read_text(errors="ignore")
+        text = re.sub(r"<script(?! type=\"application/ld\+json\")[\s\S]*?</script>|<style[\s\S]*?</style>", " ", raw)
+        text = re.sub(r"<[^>]+>", " ", text)
+        for amount in set(re.findall(r"\$(\d+\.\d{2})", text)):
+            if amount not in {facts["price"], facts["was"]}:
+                errors.append(f"{where}: price ${amount} matches neither config.js price ${facts['price']} nor regular price ${facts['was']}")
+        for match in re.finditer(r"MacEx\s+(?:version\s+)?(\d+\.\d+\.\d+)|version\s+(\d+\.\d+\.\d+)", text):
+            version = match.group(1) or match.group(2)
+            before, after = text[max(0, match.start() - 30):match.start()], text[match.end():match.end() + 15]
+            if version != facts["version"] and not HISTORIC_VERSION.search(before) and not HISTORIC_VERSION.search(after):
+                errors.append(f"{where}: names MacEx {version} as current; config.js version is {facts['version']}")
+        for found in set(re.findall(r"macOS\s+(\d{2})\b", text)):
+            if found != facts["macos"]:
+                errors.append(f"{where}: says macOS {found}; config.js minimumMacOS is {facts['macos']}")
+    return errors
+
+
 def check(root=ROOT):
     """Return (errors, warnings) for the pages, sitemap and robots.txt in root."""
     errors, warnings = [], []
@@ -323,6 +363,7 @@ def check(root=ROOT):
                 if target.fragment not in linked.ids:
                     err(f"<{tag} {attr}={value!r}> points to a missing id")
 
+    errors.extend(check_facts(root))
     for title, where in titles.items():
         if len(where) > 1:
             errors.append(f"duplicate title {title!r} on {', '.join(where)}")

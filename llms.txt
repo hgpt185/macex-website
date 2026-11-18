@@ -2,6 +2,8 @@
 
 > MacEx is a native Mac file manager built around a library of all your files (macOS 14 or later, Apple silicon and Intel). It gathers your images, videos, music, documents, archives and apps into one library and finds files from a plain description. It browses folders in one or two panes, batch renames, zips and tags files, and opens SMB shares and SFTP servers. It previews files without opening another app and frees up space by reviewing old installers, large files and duplicates before they go to Trash. It is a one-time purchase ($9.99 launch price, usually $19.98) with no subscription and no account. There is no free trial: the app asks for a license key on first launch, and one license activates one Mac. MacEx is signed with an Apple Developer ID and notarized by Apple.
 
+Current version: 0.8.12 (see https://macex.app/about/ for the maintained specifications).
+
 Key facts:
 
 - Search in plain words: "pdfs from last week over 5 mb" becomes PDF, last week and at least 5 MB filters you can see and edit.
@@ -12,7 +14,7 @@ Key facts:
 - Zip: Compress and Extract for .zip only (no RAR, 7z or tar).
 - Finder tags (shown in the sidebar, added to many files at once) and workspaces (sidebar pages that collect files from anywhere without moving them).
 - Smart Downloads: groups downloads by the website they came from (for example Gmail, Slack, Drive). Tidy Downloads moves loose files into kind folders (Images, Videos, Music, Documents, Archives, Installers) in one click; ⌘Z undoes it.
-- Automation: two optional rules (trash old .dmg/.pkg installers, file screenshots by month), off by default and limited to folders the user adds. Shortcuts and Siri actions: Find Files, Search in MacEx, Get Latest Download. Menu bar list of the ten newest downloads.
+- Automation: two optional rules (trash old .dmg/.pkg installers, file screenshots by month), off by default, limited to folders the user adds, run every 30 minutes while MacEx is in the foreground. Shortcuts and Siri actions: Find Files, Search in MacEx, Get Latest Download. Menu bar list of the ten newest downloads.
 - Preview: press Space to look inside photos, PDFs and videos in place; Inspector (⌘I) shows source, dimensions, duration, camera, dates and tags; copy text out of up to 20 images or PDFs at once; built-in music player.
 - Quick Search: ⇧⌘Space brings MacEx forward from any app.
 - Servers: SFTP with password, key or SSH-agent sign-in and host-key verification (browse, upload, download, rename, new folder, preview). SMB shares (smb://server/share) mount through macOS and open as ordinary folders.
@@ -23,8 +25,13 @@ Not supported (as of version 0.8.12): tabs, multiple windows, column view, built
 ## Pages
 
 - [MacEx home](https://macex.app/): features, live in-browser demo, keyboard shortcuts, pricing and FAQ
-- [Everything MacEx can do](https://macex.app/features/): the authoritative, current feature list grouped by task, with limits and what MacEx does not do
-- [File management in MacEx](https://macex.app/features/file-management/): Split View, batch rename, zip, Finder tags, workspaces, folder sizes, SMB and SFTP
+- [About MacEx: product facts](https://macex.app/about/): what MacEx is, who it is for, specifications (version, macOS, processors), pricing, license, privacy model, limits, and how to buy and install
+- [Everything MacEx can do](https://macex.app/features/): the authoritative feature directory in seven categories, each feature marked Available or Limited, with limits and what MacEx does not do
+- [File management in MacEx](https://macex.app/features/file-management/): Split View, batch rename, zip, Finder tags, workspaces, folder sizes, hidden files
+- [SFTP and SMB in MacEx](https://macex.app/features/remote-access/): SFTP sign-in methods and host-key checks, SMB shares, use cases and limits
+- [Automation and integrations](https://macex.app/features/automation/): library, Tidy Downloads, the two optional rules, tags, workspaces, Shortcuts and Siri actions, macex:// links, Quick Search, menu bar
+- [Pricing](https://macex.app/#pricing): one-time purchase, current price and checkout
+- [Privacy and permissions](https://macex.app/docs/#privacy): what runs on the Mac, what goes online, where data is stored
 - [MacEx Docs](https://macex.app/docs/): install, search, preview, Free Up Space, duplicates, Tidy Downloads, Trash, automation, Quick Search, SFTP, keyboard shortcuts, troubleshooting, privacy
 - [MacEx vs Finder](https://macex.app/compare/finder/): feature-by-feature comparison, when Finder is enough and when MacEx helps
 - [Find files on Mac by describing them](https://macex.app/features/file-search/): how plain-language search, text search in images and PDFs, and download sources work, and what search can't do
