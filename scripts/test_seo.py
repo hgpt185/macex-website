@@ -69,7 +69,8 @@ class SeoTests(unittest.TestCase):
             root = Path(temp)
             self.site(root, {"/": PAGE.format(title="Home", path="/", body=
                 "<p>$9.99 for MacEx 0.8.12 on macOS 14. Notarized since 0.8.7.</p>"
-                "<p>Only $7.99 for MacEx 0.9.0 on macOS 13.</p>")})
+                "<p>Only $7.99 for MacEx 0.9.0 on macOS 13.</p>"
+                "<p>ForkLift costs <span data-third-party>$19.95</span>.</p>")})
             (root / "config.js").write_text(
                 "version: '0.8.12', minimumMacOS: '14', plans: [ { macs: 1, price: 9.99, was: 19.98 } ]")
             (root / "llms.txt").write_text("MacEx 0.8.12 costs $19.98 regularly.")
@@ -78,6 +79,7 @@ class SeoTests(unittest.TestCase):
             self.assertIn("MacEx 0.9.0", text)
             self.assertIn("macOS 13", text)
             self.assertNotIn("0.8.7", text)
+            self.assertNotIn("$19.95", text)
             self.assertNotIn("llms.txt", text)
 
 

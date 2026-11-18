@@ -219,6 +219,10 @@ def config_facts(root=ROOT):
 HISTORIC_VERSION = re.compile(r"(?:before|since|from|and later|or later|older than|up to)\s*$|^\s*(?:and later|or later|and earlier)", re.I)
 
 
+# A span holding another company's fact (no nested tags), which check_facts ignores.
+THIRD_PARTY = re.compile(r"<span data-third-party>[^<]*</span>")
+
+
 def check_facts(root=ROOT):
     """Every non-blog page and llms.txt must state the same price, version and macOS minimum as config.js."""
     facts, errors = config_facts(root), []
@@ -229,6 +233,8 @@ def check_facts(root=ROOT):
         where = path.relative_to(root).as_posix()
         raw = path.read_text(errors="ignore")
         text = re.sub(r"<script(?! type=\"application/ld\+json\")[\s\S]*?</script>|<style[\s\S]*?</style>", " ", raw)
+        # Another product's price, e.g. on a comparison page: <span data-third-party>$19.95</span>.
+        text = THIRD_PARTY.sub(" ", text)
         text = re.sub(r"<[^>]+>", " ", text)
         for amount in set(re.findall(r"\$(\d+\.\d{2})", text)) if facts["price"] else ():
             if amount not in {facts["price"], facts["was"]}:
