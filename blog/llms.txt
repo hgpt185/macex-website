@@ -2,6 +2,7 @@
 
 > Practical Mac file organization and productivity articles by MacEx.
 
+- [Is Your iCloud Drive File Actually on Your Mac?](https://macex.app/blog/icloud-drive-file-downloaded-on-mac/): A file can appear in Finder without being stored locally. Check iCloud Drive status and use Download Now, Keep Downloaded and Remove Download safely first.
 - [Why Downloads Don’t Show in Finder Recents on Mac](https://macex.app/blog/why-downloads-dont-show-in-finder-recents/): Downloaded a file but can’t see it in Finder Recents? Learn what Recents shows, how to sort Downloads by Date Added, and save a recent-files view on Mac.
 - [Find Text Inside Images and PDFs on Mac](https://macex.app/blog/search-text-inside-images-pdfs-mac/): Find words in Mac screenshots and scanned PDFs. Learn what Preview and Spotlight can do, when a scan needs OCR, and how to search across your file library.
 - [System Data vs Purgeable Space on Mac](https://macex.app/blog/system-data-vs-purgeable-space-mac/): System Data and purgeable space are not the same. Learn why Storage and Disk Utility show different Mac space totals, and what to do safely on your Mac.

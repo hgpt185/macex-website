@@ -7,6 +7,14 @@
     <language>en</language>
     <atom:link href="https://macex.app/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Is Your iCloud Drive File Actually on Your Mac?</title>
+      <link>https://macex.app/blog/icloud-drive-file-downloaded-on-mac/</link>
+      <guid>https://macex.app/blog/icloud-drive-file-downloaded-on-mac/</guid>
+      <description>A file can appear in Finder without being stored locally. Check iCloud Drive status and use Download Now, Keep Downloaded and Remove Download safely first.</description>
+      <category>Mac storage</category>
+      <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Why Downloads Don’t Show in Finder Recents on Mac</title>
       <link>https://macex.app/blog/why-downloads-dont-show-in-finder-recents/</link>
       <guid>https://macex.app/blog/why-downloads-dont-show-in-finder-recents/</guid>
