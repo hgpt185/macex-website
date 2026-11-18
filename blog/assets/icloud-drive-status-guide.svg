@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="560" viewBox="0 0 1080 560" role="img" aria-labelledby="title desc">
+<title id="title">Understand iCloud Drive download status on Mac</title>
+<desc id="desc">An illustrated file list showing In iCloud, Downloaded, Keep Downloaded and Waiting to Upload, with the three different Finder actions Download Now, Keep Downloaded and Remove Download.</desc>
+<rect width="1080" height="560" rx="28" fill="#f1f5fa"/>
+<rect x="42" y="38" width="996" height="484" rx="22" fill="#fff" stroke="#d8e1eb" stroke-width="2"/>
+<rect x="42" y="38" width="996" height="62" rx="22" fill="#edf1f6"/>
+<rect x="42" y="78" width="996" height="22" fill="#edf1f6"/>
+<circle cx="77" cy="69" r="8" fill="#eea4a4"/><circle cx="103" cy="69" r="8" fill="#f2cb83"/><circle cx="129" cy="69" r="8" fill="#9dcfae"/>
+<text x="540" y="76" font-family="Arial,sans-serif" font-size="21" text-anchor="middle" font-weight="700" fill="#304057">iCloud Drive · status at a glance</text>
+<text x="92" y="143" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1" fill="#718096">FILE</text>
+<text x="645" y="143" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="1" fill="#718096">ICLOUD STATUS</text>
+<line x1="88" y1="158" x2="992" y2="158" stroke="#e6ebf1" stroke-width="2"/>
+<g font-family="Arial,sans-serif">
+<rect x="84" y="174" width="912" height="65" rx="10" fill="#f7f9fc"/>
+<rect x="104" y="190" width="29" height="34" rx="5" fill="#e6eafa" stroke="#8d9bce"/>
+<path d="M124 190v10h9" fill="none" stroke="#8d9bce" stroke-width="2"/>
+<text x="151" y="214" font-size="19" fill="#2c3c52">Project brief.pdf</text>
+<rect x="628" y="188" width="158" height="36" rx="18" fill="#e9f1fc"/>
+<text x="707" y="212" font-size="16" text-anchor="middle" font-weight="700" fill="#38649a">In iCloud</text>
+<text x="817" y="212" font-size="15" fill="#66758a">Online only</text>
+<rect x="84" y="248" width="912" height="65" rx="10" fill="#fff"/>
+<rect x="104" y="264" width="29" height="34" rx="5" fill="#e6eafa" stroke="#8d9bce"/>
+<path d="M124 264v10h9" fill="none" stroke="#8d9bce" stroke-width="2"/>
+<text x="151" y="288" font-size="19" fill="#2c3c52">Meeting notes.pages</text>
+<rect x="628" y="262" width="158" height="36" rx="18" fill="#e8f5ed"/>
+<text x="707" y="286" font-size="16" text-anchor="middle" font-weight="700" fill="#32724d">Downloaded</text>
+<text x="817" y="286" font-size="15" fill="#66758a">Opens offline</text>
+<rect x="84" y="322" width="912" height="65" rx="10" fill="#f7f9fc"/>
+<rect x="104" y="338" width="29" height="34" rx="5" fill="#e6eafa" stroke="#8d9bce"/>
+<path d="M124 338v10h9" fill="none" stroke="#8d9bce" stroke-width="2"/>
+<text x="151" y="362" font-size="19" fill="#2c3c52">Client archive.zip</text>
+<rect x="628" y="336" width="158" height="36" rx="18" fill="#f0ecfb"/>
+<text x="707" y="360" font-size="16" text-anchor="middle" font-weight="700" fill="#66519c">Keep Downloaded</text>
+<text x="817" y="360" font-size="15" fill="#66758a">Keep on this Mac</text>
+<rect x="84" y="396" width="912" height="65" rx="10" fill="#fff"/>
+<rect x="104" y="412" width="29" height="34" rx="5" fill="#e6eafa" stroke="#8d9bce"/>
+<path d="M124 412v10h9" fill="none" stroke="#8d9bce" stroke-width="2"/>
+<text x="151" y="436" font-size="19" fill="#2c3c52">Design export.psd</text>
+<rect x="628" y="410" width="158" height="36" rx="18" fill="#fff2df"/>
+<text x="707" y="434" font-size="16" text-anchor="middle" font-weight="700" fill="#966322">Waiting to Upload</text>
+<text x="817" y="434" font-size="15" fill="#66758a">Not in iCloud yet</text>
+</g>
+<text x="92" y="493" font-family="Arial,sans-serif" font-size="15" fill="#65758b">Illustrative labels. Check the status shown by Finder on your Mac.</text>
+</svg>
