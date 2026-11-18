@@ -102,6 +102,7 @@ publishing contract. Publishing frequency alone does not guarantee rankings.
 | 2026-11-16 | `/features/storage-management/` | Explain why System Data and purgeable space differ, and why Storage and Disk Utility totals can disagree | `system-data-vs-purgeable-space-mac` | Production deployment verified |
 | 2026-11-17 | `/features/file-search/` | Find words inside screenshots and scanned PDFs; distinguish Preview Live Text, PDF text layers and library-wide OCR | `search-text-inside-images-pdfs-mac` | Generated, tests and SEO checks passed; Cloudflare production deployment verified |
 | 2026-11-18 | `/features/file-search/` | Explain why new downloads do not necessarily appear in Finder Recents; show Downloads, Date Added and a saved recent-arrivals Smart Folder | `why-downloads-dont-show-in-finder-recents` | 10 unit tests, generator check, sitemap check, SEO check and diff check passed; Cloudflare production deployment verified |
+| 2026-11-19 | `/features/storage-management/` | Check whether an iCloud Drive file is stored locally; distinguish Download Now, Keep Downloaded, Remove Download and Delete | `icloud-drive-file-downloaded-on-mac` | 10 unit tests, generator check, SEO check and diff check passed; Cloudflare production deployment verified |
 
 ## SEO topic clusters and editorial sequence (from 15 November 2026)
 
@@ -114,7 +115,7 @@ volumes, ranks, traffic or impressions. Preserve permanent slugs.
 | Hub and intent | Next useful distinct questions (verify against existing slugs first) |
 | --- | --- |
 | `/features/file-search/` — finding misplaced files | Spotlight not finding files (published); text inside screenshots/scanned PDFs (published); search by date/type/size; where a download came from |
-| `/features/storage-management/` — careful Mac cleanup | Old DMG files: when safe to delete; System Data and purgeable storage explained; screenshot/recording cleanup |
+| `/features/storage-management/` — careful Mac cleanup | Old DMG files: when safe to delete (published); System Data and purgeable storage (published); iCloud Drive local status and safe download controls (published); screenshot/recording cleanup |
 | `/guides/find-duplicate-files-mac/` — duplicate safety | Photos Duplicates vs files on disk; what happens to duplicates in cloud-sync folders |
 | `/guides/clean-up-downloads-folder-mac/` — Downloads organization | Simple folder rules; handling files with the same name; undoing a cleanup |
 | `/compare/finder/` — when to use which app | Finder Smart Folders vs Spotlight vs MacEx; limits of native Finder tools |
