@@ -337,7 +337,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@600;700;800&display=swap">
-  <link rel="stylesheet" href="style.css?v=20261118">
+  <link rel="stylesheet" href="style.css?v=20261119">
   <script src="config.js" defer></script>
   <script src="app.js?v=20261118" defer></script>
   <script defer src="https://analytics.hemeshgupta.com/script.js" data-website-id="39604b49-3ffd-480a-bede-91caf13c1414"></script>
@@ -427,7 +427,6 @@
       <a href="#faq">FAQs</a>
     </div>
     <div class="nav-cta">
-      <a class="button small ghost" href="#" data-download hidden>Download</a>
       <a class="button small" href="#pricing" data-buy>Get MacEx</a>
     </div>
   </nav>
@@ -449,6 +448,7 @@
       <a class="button" href="#pricing">Get MacEx</a>
       <a class="button ghost" href="#mac-stage">Try it live <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
+    <button class="send-to-mac hero-send" type="button" data-share hidden><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg><span>On your phone? <b>Send the link to your Mac</b></span></button>
     <p class="hero-facts">One-time purchase · macOS 14 or later · Apple silicon and Intel · No account or subscription</p>
 
     <div class="hero-stage" id="hero-stage">
@@ -766,7 +766,8 @@
     <div class="tk-side">
       <div class="tk-price"><b data-price>$9.99</b><s data-was>$19.98</s></div>
       <a class="tk-buy" href="#pricing" data-buy>Buy License</a>
-      <a class="tk-download" href="#" data-download hidden><svg class="ico" aria-hidden="true"><use href="#i-down"/></svg> Download for Mac</a>
+      <button class="send-to-mac" type="button" data-share hidden><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg><span>On your phone? <b>Send the link to your Mac</b></span></button>
+      <a class="tk-already" href="#" data-download hidden>Already bought? <span>Download MacEx</span></a>
       <p class="tk-own"><i></i>Yours with a one-time purchase</p>
       <p class="tk-secure"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg> Secure checkout by Dodo Payments</p>
     </div>

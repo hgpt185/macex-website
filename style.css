@@ -630,6 +630,17 @@ body.fs-lock{overflow:hidden}
 .tk-download{margin-top:14px;box-shadow:inset 0 0 0 1.5px #d6dde8;color:var(--ink)}
 .tk-download:hover{background:#f6f8fb}
 .tk-download[hidden]{display:none}
+/* Small link for people who already paid; the header no longer offers a download */
+.tk-already{margin-top:14px;font-size:14px;color:var(--muted)}
+.tk-already span{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#9cc0f5}
+.tk-already:hover span{text-decoration-color:var(--blue)}
+.tk-already[hidden]{display:none}
+/* Phones and tablets can't run MacEx: offer to send the link to a Mac instead */
+.send-to-mac{display:inline-flex;align-items:center;justify-content:center;gap:9px;max-width:340px;margin:14px auto 0;padding:11px 16px;border-radius:12px;background:#eef4ff;color:var(--ink-2);font:inherit;font-size:14.5px;line-height:1.35;text-align:left;cursor:pointer}
+.send-to-mac b{color:var(--blue);font-weight:600}
+.send-to-mac .ico{flex:none;width:18px;height:18px;fill:none;stroke:var(--blue);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.send-to-mac[hidden]{display:none}
+.hero-send{position:relative;z-index:5;display:flex;animation:fade-up .9s .65s var(--ease) both}
 .tk-own{display:flex;align-items:center;gap:9px;margin:24px 0 0;font-size:15px;color:var(--muted)}
 .tk-own i{width:8px;height:8px;border-radius:50%;background:#34c38f;box-shadow:0 0 0 4px #34c38f22}
 .tk-secure{display:flex;align-items:center;gap:7px;margin:10px 0 0;font-size:13px;color:var(--soft)}

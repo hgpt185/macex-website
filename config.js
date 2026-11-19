@@ -89,7 +89,22 @@ window.MACEX = {
       notch();
     }
 
-    all('[data-download]').forEach(a => { if (C.downloadUrl) { a.href = C.downloadUrl; a.hidden = false; track(a, 'download'); } else a.hidden = true; });
+    // Phones and tablets can't install a Mac app: hide downloads there and offer to send the link to a Mac.
+    const phone = matchMedia('(hover: none) and (pointer: coarse)').matches;
+    all('[data-download]').forEach(a => { if (C.downloadUrl && !phone) { a.href = C.downloadUrl; a.hidden = false; track(a, 'download'); } else a.hidden = true; });
+    all('[data-share]').forEach(b => {
+      b.hidden = !phone;
+      if (!phone) return;
+      track(b, 'send-to-mac');
+      b.addEventListener('click', async () => {
+        const url = b.dataset.shareUrl || C.siteUrl;
+        const label = b.querySelector('b');
+        try {
+          if (navigator.share) await navigator.share({ title: 'MacEx for Mac', text: 'MacEx, a file manager for Mac', url });
+          else { await navigator.clipboard.writeText(url); if (label) label.textContent = 'Link copied. Paste it on your Mac'; }
+        } catch (e) { /* share sheet closed */ }
+      });
+    });
     all('[data-version]').forEach(el => { el.textContent = C.version; });
     all('[data-support]').forEach(a => { if (C.supportEmail) { a.href = 'mailto:' + C.supportEmail; a.hidden = false; } else a.hidden = true; });
 
