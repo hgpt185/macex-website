@@ -35,6 +35,13 @@ Not supported (as of version 0.8.12): tabs, multiple windows, column view, built
 - [MacEx Docs](https://macex.app/docs/): install, search, preview, Free Up Space, duplicates, Tidy Downloads, Trash, automation, Quick Search, SFTP, keyboard shortcuts, troubleshooting, privacy
 - [MacEx vs Finder](https://macex.app/compare/finder/): feature-by-feature comparison, when Finder is enough and when MacEx helps
 - [Best Finder alternative for Mac](https://macex.app/compare/best-finder-alternatives-mac/): MacEx, ForkLift, Path Finder, Commander One, QSpace, Bloom, Marta and Nimble Commander compared on finding files, text search in images, download sources, cleanup, duplicates and price
+- [Finder alternatives compared](https://macex.app/compare/): hub of every comparison, with what each Finder alternative costs to keep current for three years (list prices, licence terms, trials, macOS minimums, latest releases)
+- [MacEx vs ForkLift](https://macex.app/compare/forklift/): ForkLift is stronger for server transfers, tabs and folder sync; MacEx for finding and cleaning up files
+- [MacEx vs Path Finder](https://macex.app/compare/path-finder/): Path Finder alternative without a subscription
+- [MacEx vs Commander One](https://macex.app/compare/commander-one/): free and PRO features against MacEx
+- [MacEx vs QSpace](https://macex.app/compare/qspace/): QSpace layouts and paid extensions against MacEx's single price
+- [Total Commander for Mac](https://macex.app/compare/total-commander-mac/): there is no Mac version; Double Commander, Commander One, Nimble Commander and MacEx compared
+- [File Explorer for Mac](https://macex.app/compare/windows-file-explorer-mac/): Windows Explorer tasks mapped to Finder shortcuts and MacEx
 - [Find files on Mac by describing them](https://macex.app/features/file-search/): how plain-language search, text search in images and PDFs, and download sources work, and what search can't do
 - [Free up storage on Mac](https://macex.app/features/storage-management/): what Free Up Space lists, how each group is defined, and how cleanup stays reversible
 - [Find duplicate files on Mac](https://macex.app/guides/find-duplicate-files-mac/): how to find and remove duplicates safely

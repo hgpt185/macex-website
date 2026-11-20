@@ -33,16 +33,28 @@
         "image": "https://macex.app/assets/og-image.png",
         "inLanguage": "en",
         "datePublished": "2026-11-11",
-        "dateModified": "2026-11-18",
+        "dateModified": "2026-11-20",
         "about": { "@id": "https://macex.app/#app" },
         "author": { "@type": "Organization", "name": "MacEx", "url": "https://macex.app/" },
         "publisher": { "@type": "Organization", "name": "MacEx", "url": "https://macex.app/", "logo": { "@type": "ImageObject", "url": "https://macex.app/assets/icon-512.png" } }
       },
       {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Is there something better than Finder on a Mac?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on what bothers you. For finding files you can’t place and freeing up space, MacEx adds plain-language search, text search in images and reviewed cleanup. For server transfers and folder sync, ForkLift is stronger. Finder stays the best tool for tabs, column view and the system’s Open and Save dialogs."}},
+          {"@type": "Question", "name": "Can Finder show two folders side by side?", "acceptedAnswer": {"@type": "Answer", "text": "Only as two windows or two tabs that you arrange by hand. MacEx Split View shows two folders in one window, and F5 copies or F6 moves the selection to the other pane."}},
+          {"@type": "Question", "name": "Can Finder find duplicate files?", "acceptedAnswer": {"@type": "Answer", "text": "No. Finder has no duplicate finder; the Photos app checks only its own library. MacEx finds exact copies in your folders and confirms them byte for byte before showing them."}},
+          {"@type": "Question", "name": "Why can’t Finder find my file?", "acceptedAnswer": {"@type": "Answer", "text": "Finder search relies on Spotlight, which skips folders excluded in Spotlight settings and needs the right words or menu criteria. MacEx lets you describe the file instead, such as pdfs from last week over 5 mb, and shows the filters it understood."}},
+          {"@type": "Question", "name": "Does Finder support SFTP?", "acceptedAnswer": {"@type": "Answer", "text": "No. Finder connects to SMB shares with Connect to Server, but not to SFTP servers. MacEx connects to both."}},
+          {"@type": "Question", "name": "Is MacEx free like Finder?", "acceptedAnswer": {"@type": "Answer", "text": "No. Finder is built into macOS. MacEx costs $9.99 once, with no subscription and no account. You can try a live demo with sample files in your browser first."}}
+        ]
+      },
+      {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "MacEx", "item": "https://macex.app/" },
-          { "@type": "ListItem", "position": 2, "name": "MacEx vs Finder", "item": "https://macex.app/compare/finder/" }
+          { "@type": "ListItem", "position": 2, "name": "Compare", "item": "https://macex.app/compare/" },
+          { "@type": "ListItem", "position": 3, "name": "MacEx vs Finder", "item": "https://macex.app/compare/finder/" }
         ]
       }
     ]
@@ -51,10 +63,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@600;700;800&display=swap">
-  <link rel="stylesheet" href="../../style.css?v=20261119">
+  <link rel="stylesheet" href="../../style.css?v=20261120">
   <link rel="stylesheet" href="../../docs/docs.css?v=20261118">
   <script src="../../config.js" defer></script>
-  <link rel="stylesheet" href="../../article.css?v=20261118">
+  <link rel="stylesheet" href="../../article.css?v=20261120">
   <script defer src="https://analytics.hemeshgupta.com/script.js" data-website-id="39604b49-3ffd-480a-bede-91caf13c1414"></script>
 </head>
 <body>
@@ -76,9 +88,9 @@
 </header>
 
 <main id="main" class="container cmp">
-  <nav class="crumbs-nav" aria-label="Breadcrumb"><a href="../../">MacEx</a> › MacEx vs Finder</nav>
+  <nav class="crumbs-nav" aria-label="Breadcrumb"><a href="../../">MacEx</a> › <a href="../">Compare</a> › MacEx vs Finder</nav>
   <h1>MacEx vs Finder: <em>which should you use?</em></h1>
-  <p class="updated">Updated <time datetime="2026-11-18">November 18, 2026</time></p>
+  <p class="updated">Updated <time datetime="2026-11-20">November 20, 2026</time></p>
 
   <div class="answer">
     <b>Short answer:</b> Finder is the Mac&rsquo;s built-in file manager and it stays the best tool for working inside a folder. MacEx is a file manager built around a library of all your files, and it works alongside Finder. You find files by describing them, work in two panes, batch rename and tag files, see where downloads came from, and free up space with a review step before anything goes to Trash. MacEx only moves files when you ask, so you can use both.
@@ -135,15 +147,34 @@
   <h2 id="replace">Does MacEx replace Finder?</h2>
   <p>Not as the system file manager. MacEx reads your existing folders and leaves the files where they are unless you move them. Double-clicking a file opens it in its usual app, and anything you remove goes to the normal Trash, where Finder can still put it back. You can do most everyday folder work in MacEx, and keep Finder for tabs, column view and system tasks. <a href="../../features/">See everything MacEx can do</a>.</p>
 
-  <h2 id="who-should-choose-macex">Who should choose MacEx</h2>
+  <h2 id="verdict">Verdict: who should choose MacEx</h2>
   <ul>
     <li><b>Choose MacEx</b> if you often search for files you can&rsquo;t place, keep running out of space, or sort and rename batches of files. It also helps if you want SFTP and SMB in the same window as your files.</li>
     <li><b>Stay with Finder alone</b> if you know where your files are, rely on tabs or column view, or build your own automations with Shortcuts and Folder Actions.</li>
-    <li><b>Use both</b>, as most people do. MacEx leaves files where they are, and anything it moves to the Trash can be put back from Finder too.</li>
+    <li><b>Use both.</b> MacEx leaves files where they are, and anything it moves to the Trash can be put back from Finder too.</li>
   </ul>
+
+  <h2 id="faq">Frequently asked questions</h2>
+  <div class="faq-list">
+    <h3>Is there something better than Finder on a Mac?</h3>
+    <p>It depends on what bothers you. For finding files you can&rsquo;t place and freeing up space, MacEx adds plain-language search, text search in images and reviewed cleanup. For server transfers and folder sync, <a href="../forklift/">ForkLift is stronger</a>. Finder stays the best tool for tabs, column view and the system&rsquo;s Open and Save dialogs.</p>
+    <h3>Can Finder show two folders side by side?</h3>
+    <p>Only as two windows or two tabs that you arrange by hand. MacEx Split View shows two folders in one window, and <kbd>F5</kbd> copies or <kbd>F6</kbd> moves the selection to the other pane.</p>
+    <h3>Can Finder find duplicate files?</h3>
+    <p>No. Finder has no duplicate finder; the Photos app checks only its own library. MacEx finds exact copies in your folders and confirms them byte for byte before showing them. <a href="../../guides/find-duplicate-files-mac/">How to find duplicate files on Mac</a>.</p>
+    <h3>Why can’t Finder find my file?</h3>
+    <p>Finder search relies on Spotlight, which skips folders excluded in Spotlight settings and needs the right words or menu criteria. MacEx lets you describe the file instead, such as <code>pdfs from last week over 5 mb</code>, and shows the filters it understood. <a href="../../blog/spotlight-not-finding-files-mac/">Spotlight not finding files?</a></p>
+    <h3>Does Finder support SFTP?</h3>
+    <p>No. Finder connects to SMB shares with Connect to Server, but not to SFTP servers. MacEx connects to both. <a href="../../features/remote-access/">SFTP and SMB in MacEx</a>.</p>
+    <h3>Is MacEx free like Finder?</h3>
+    <p>No. Finder is built into macOS. MacEx costs $9.99 once, with no subscription and no account. You can <a href="../../#mac-stage">try a live demo</a> with sample files in your browser first.</p>
+  </div>
 
   <h2>Related</h2>
   <ul class="related-links">
+    <li><a href="../">All comparisons<small>Three-year cost of every Finder alternative</small></a></li>
+    <li><a href="../windows-file-explorer-mac/">File Explorer for Mac<small>Windows Explorer habits on a Mac</small></a></li>
+    <li><a href="../forklift/">MacEx vs ForkLift<small>The transfer specialist against MacEx</small></a></li>
     <li><a href="../best-finder-alternatives-mac/">Best Finder alternatives for Mac<small>ForkLift, Path Finder, Commander One and more, compared</small></a></li>
     <li><a href="../../features/file-management/">File management in MacEx<small>Split View, batch rename, tags, SMB and SFTP</small></a></li>
     <li><a href="../../features/file-search/">Find files by describing them<small>How MacEx search reads a sentence</small></a></li>
@@ -160,6 +191,6 @@
   </div>
 </main>
 
-<footer class="docs-foot"><div><span>MacEx. Your Mac, explored.</span><span><a href="../../">MacEx home</a> · <a href="../../docs/">Docs</a> · <a href="../../#pricing">Pricing</a></span></div></footer>
+<footer class="docs-foot"><div><span>MacEx. Your Mac, explored.</span><span><a href="../../">MacEx home</a> · <a href="../">All comparisons</a> · <a href="../../docs/">Docs</a> · <a href="../../#pricing">Pricing</a></span></div></footer>
 </body>
 </html>

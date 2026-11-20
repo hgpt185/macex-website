@@ -1,0 +1,133 @@
+{
+  "slug": "path-finder",
+  "title": "MacEx vs Path Finder: A Path Finder Alternative for Mac",
+  "og_title": "MacEx vs Path Finder: a Path Finder alternative without a subscription",
+  "description": "MacEx vs Path Finder compared: search, cleanup, dual pane, Terminal, folder sync and three-year cost. A fair look at which Mac file manager suits you.",
+  "h1": "MacEx vs Path Finder: <em>a Path Finder alternative</em>",
+  "crumb": "MacEx vs Path Finder",
+  "published": "2026-11-20",
+  "updated": "2026-11-20",
+  "checked": "Path Finder facts checked on cocoatech.io that day.",
+  "answer": "<b>Path Finder</b> is a power-user toolbox: dual pane, Drop Stack, a built-in Terminal, folder sync, Size Browser and movable modules, sold as a subscription ([[$29.95]] a year) or a licence with a set period of updates. <b>MacEx</b> is simpler and cheaper: describe a file to find it, search the words inside screenshots, see where downloads came from, and free up space with a review step, plus two panes and batch rename. It costs <b>$9.99 once</b> with updates included. Pick Path Finder for depth, MacEx for finding and cleaning up.",
+  "sections": [
+    {
+      "id": "at-a-glance",
+      "heading": "At a glance",
+      "table": {
+        "columns": ["MacEx", "Path Finder"],
+        "rows": [
+          ["Made by", "MacEx", "Cocoatech"],
+          ["Built for", "Finding, organizing and cleaning up files, plus everyday two-pane work", "Power users who want every file tool in one window"],
+          ["Price", "$9.99 once (launch price)", "[[$29.95]] a year, [[$2.95]] a month, or a licence from [[$32.95]] with one year of updates"],
+          ["Updates", "Included", "While subscribed, or for the period your licence covers"],
+          ["Free trial", "No; a live demo runs in the browser", "30 days, every feature"],
+          ["macOS", "14 Sonoma or later", "[[macOS 13]] Ventura or later"],
+          ["Activations", "One licence per Mac", "Subscription: 2 user accounts. Licence: 3 Macs"]
+        ]
+      }
+    },
+    {
+      "id": "features",
+      "heading": "Feature by feature",
+      "intro": "<b>Partly</b> means the app can do it in a more limited way. Path Finder entries come from Cocoatech’s own feature pages.",
+      "table": {
+        "class": "vs4",
+        "corner": "Task",
+        "columns": ["MacEx", "Path Finder", "What’s different"],
+        "rows": [
+          ["Two folders side by side", {"tag": "yes", "text": "Split View; <kbd>F5</kbd> copies, <kbd>F6</kbd> moves."}, {"tag": "yes", "text": "Dual Pane."}, ""],
+          ["Tabs", {"tag": "no", "text": "One location per pane."}, {"tag": "yes", "text": "Tabs and Tab Presets."}, ""],
+          ["Collect files from many folders", {"tag": "yes", "text": "Workspaces: sidebar pages that gather files without moving them."}, {"tag": "yes", "text": "Drop Stack: collect, then copy or move together."}, "Different ideas: MacEx keeps a lasting collection, Path Finder a temporary one."],
+          ["Find a file by describing it", {"tag": "yes", "text": "“pdfs from gmail last month” becomes editable filters."}, {"tag": "part", "text": "Find files by name, extension or other criteria."}, ""],
+          ["Words inside screenshots and scanned PDFs", {"tag": "yes", "text": "Optional on-device Text Search."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Downloads grouped by website", {"tag": "yes", "text": "<kbd>⇧</kbd><kbd>⌘</kbd><kbd>J</kbd>."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["See what takes up space", {"tag": "part", "text": "Folder sizes in list view; Free Up Space lists large and old files."}, {"tag": "yes", "text": "Size Browser compares folder sizes."}, "Path Finder shows more; MacEx tells you what is safe to clear."],
+          ["Free up space, reviewed first", {"tag": "yes", "text": "Old installers, forgotten downloads, big old videos, unused apps, duplicates."}, {"tag": "part", "text": "You decide from the Size Browser."}, ""],
+          ["Duplicate finder", {"tag": "yes", "text": "Byte-for-byte check."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Batch rename", {"tag": "yes", "text": "Find and replace or a template, every name previewed."}, {"tag": "yes", "text": "Rule-based Batch Rename."}, ""],
+          ["Folder compare and sync", {"tag": "no", "text": "Not supported."}, {"tag": "yes", "text": "Compare, merge or sync."}, ""],
+          ["Built-in Terminal", {"tag": "no", "text": "Not supported."}, {"tag": "yes", "text": "Terminal module in the window."}, ""],
+          ["SFTP client", {"tag": "part", "text": "Browse, upload, download, rename, new folder."}, {"tag": "no", "text": "Not listed on its feature pages."}, ""],
+          ["Secure Delete and admin access", {"tag": "no", "text": "Everything goes to the normal Trash on purpose."}, {"tag": "yes", "text": "Secure Delete, administrator privileges, hidden files."}, "MacEx never deletes for good."],
+          ["Restore what cleanup removed", {"tag": "yes", "text": "Last 500 files MacEx moved to Trash, with their folders."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Browse a connected iPhone", {"tag": "no", "text": "Not supported."}, {"tag": "yes", "text": "Over USB."}, ""],
+          ["Learning curve", {"tag": "yes", "text": "One window, a sidebar and plain-language search."}, {"tag": "part", "text": "Many modules; tutorials help."}, ""]
+        ]
+      }
+    },
+    {
+      "id": "where-they-win",
+      "heading": "Where Path Finder is the better choice",
+      "html": [
+        "<p><b>Depth.</b> Path Finder has been around for 25 years and puts a Terminal, a Drop Stack, a Size Browser, folder compare and sync, Secure Delete and administrator access in one window. You can rearrange the window from modules. MacEx has none of the Terminal, sync or admin tools.</p>",
+        "<p><b>Tabs.</b> Path Finder has tabs and saved Tab Presets. MacEx shows one folder per pane.</p>",
+        "<p><b>A trial.</b> Path Finder gives you 30 days with every feature. MacEx has no trial; you can only try the live demo in your browser before buying.</p>"
+      ]
+    },
+    {
+      "id": "where-macex-wins",
+      "heading": "Where MacEx is the better choice",
+      "html": [
+        "<p><b>No subscription.</b> MacEx is $9.99 once with updates included. Path Finder costs [[$29.95]] a year, or about [[$89]] for three years either way you buy it (see below).</p>",
+        "<p><b>Finding files you can’t place.</b> MacEx sorts every file in your folders into one library by kind, and reads a sentence like <code>screenshots from last week</code> as filters. Text Search finds words inside screenshots and scanned PDFs. <a href=\"/features/file-search/\">How MacEx search works</a>.</p>",
+        "<p><b>Clearing space safely.</b> Path Finder shows you where the space went; MacEx also tells you what is likely safe to clear, checks duplicates byte for byte, moves only what you select to the Trash, and can put any of the last 500 files back. <a href=\"/features/storage-management/\">What Free Up Space checks</a>.</p>",
+        "<p><b>Less to learn.</b> One window, a sidebar and a search box. Press <kbd>⌘</kbd><kbd>/</kbd> to see every shortcut.</p>"
+      ]
+    },
+    {
+      "id": "price",
+      "heading": "What each costs over three years",
+      "intro": "Path Finder offers a subscription or a licence with a fixed period of updates; both include every feature. List prices for one user, checked on the date above:",
+      "table": {
+        "columns": ["MacEx", "Path Finder"],
+        "rows": [
+          ["Year one", "$9.99", "[[$29.95]] (yearly subscription) or [[$32.95]] (licence, one year of updates)"],
+          ["Three years of updates", "$9.99", "[[$89.85]] (three yearly renewals) or [[$88.90]] (a two-year licence, then a one-year licence)"],
+          ["If you stop paying", "Keep MacEx and its updates", "Subscription: updates stop. Licence: keep the versions your update period covered"]
+        ]
+      },
+      "html": ["<p class=\"note\">MacEx’s $9.99 is a launch price; the regular price is $19.98. Path Finder also sells a five-year licence for [[$122.95]].</p>"]
+    },
+    {
+      "id": "switching",
+      "heading": "Switching from Path Finder, or using both",
+      "html": [
+        "<p>MacEx reads your existing folders and Finder tags, so there is nothing to export. Add the folders you use to the sidebar, open Split View with <kbd>⌘</kbd><kbd>\\</kbd>, and use <kbd>F5</kbd> and <kbd>F6</kbd> to copy or move to the other pane. A workspace replaces a Drop Stack you want to keep: it gathers files from different folders without moving them.</p>",
+        "<p>If you rely on Path Finder’s Terminal, sync or admin tools, keep it. MacEx works next to it for search and cleanup, and anything MacEx moves to the Trash can be put back from Finder too.</p>"
+      ]
+    }
+  ],
+  "verdict": {
+    "heading": "Verdict: MacEx or Path Finder?",
+    "items": [
+      "<b>Choose Path Finder</b> if you want the most tools in one window, including a Terminal, folder sync, Secure Delete and administrator access, and don’t mind a subscription or periodic licence.",
+      "<b>Choose MacEx</b> if you want a Path Finder alternative without a subscription that finds files from a description and frees up space safely, with two panes and batch rename for everyday work.",
+      "<b>Use both</b> if you need Path Finder’s power tools and MacEx’s search and cleanup."
+    ]
+  },
+  "faq": [
+    {"q": "Is there a Path Finder alternative without a subscription?", "a": "Yes. MacEx is a one-time $9.99 purchase with updates included. ForkLift and QSpace are also paid once. Path Finder itself also sells licences with a set period of updates, from [[$32.95]]."},
+    {"q": "Is Path Finder a subscription?", "a": "You can choose. Cocoatech sells a subscription ([[$29.95]] a year or [[$2.95]] a month) or a licence key with one, two or five years of updates. Both include every feature."},
+    {"q": "Does MacEx have a Drop Stack like Path Finder?", "a": "Not as such. MacEx has workspaces: named sidebar pages that collect files from different folders without moving them. You can also select files in search results and copy or move them together."},
+    {"q": "Does MacEx have a built-in Terminal?", "a": "No. MacEx has no Terminal, Git integration or folder sync. Path Finder has a Terminal module."},
+    {"q": "Which is easier to learn, MacEx or Path Finder?", "a": "MacEx. It has one window with a sidebar, Split View and a search box that reads plain sentences. Path Finder has many more modules and options, which take time to learn."},
+    {"q": "Does Path Finder have a free trial?", "a": "Yes, 30 days with every feature. MacEx has no free trial; you can try a live demo with sample files in your browser at macex.app."},
+    {"q": "Can I use MacEx and Path Finder together?", "a": "Yes. Both work with your normal folders and Finder tags, and MacEx doesn’t move files unless you ask."}
+  ],
+  "sources": [
+    {"title": "Path Finder features (Cocoatech)", "url": "https://cocoatech.io/"},
+    {"title": "Path Finder pricing: subscription or licence key (Cocoatech)", "url": "https://cocoatech.io/pricing/"}
+  ],
+  "related": [
+    {"href": "/compare/", "title": "All comparisons", "small": "Every MacEx comparison, with prices side by side"},
+    {"href": "/compare/best-finder-alternatives-mac/", "title": "Best Finder alternatives", "small": "Eight Mac file managers compared"},
+    {"href": "/compare/forklift/", "title": "MacEx vs ForkLift", "small": "The transfer specialist against MacEx"},
+    {"href": "/compare/qspace/", "title": "MacEx vs QSpace", "small": "Layouts and extensions against one price"},
+    {"href": "/compare/commander-one/", "title": "MacEx vs Commander One", "small": "Free dual-pane app against MacEx"},
+    {"href": "/compare/finder/", "title": "MacEx vs Finder", "small": "Twenty-five tasks, fairly compared"},
+    {"href": "/features/storage-management/", "title": "Free up storage on Mac", "small": "What’s safe to clear, reviewed by you"},
+    {"href": "/features/automation/", "title": "Workspaces, tags and rules", "small": "Organize files without dragging them around"},
+    {"href": "/features/file-search/", "title": "Find files by describing them", "small": "How MacEx search reads a sentence"},
+    {"href": "/guides/find-duplicate-files-mac/", "title": "Find duplicate files on Mac", "small": "Byte for byte, nothing lost"}
+  ]
+}

@@ -82,6 +82,24 @@ class SeoTests(unittest.TestCase):
             self.assertNotIn("$19.95", text)
             self.assertNotIn("llms.txt", text)
 
+    def test_comparison_pages_must_meet_the_spec(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            thin = PAGE.format(title="Thin", path="/compare/thin/", body='<p>Only two links: <a href="../../">home</a></p>')
+            self.site(root, {"/": PAGE.format(title="Home", path="/", body=""), "/compare/thin/": thin})
+            text = "\n".join(self.seo.check(root)[0])
+            self.assertIn("comparison spec: has no short-answer box", text)
+            self.assertIn('has no id="verdict"', text)
+            self.assertIn("0 FAQPage questions", text)
+            self.assertIn("the spec needs at least 8", text)
+            self.assertIn("does not link to the comparison hub", text)
+
+    def test_generated_comparison_pages_are_current(self):
+        spec = importlib.util.spec_from_file_location("build_compare", SCRIPT.with_name("build_compare.py"))
+        build_compare = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(build_compare)
+        self.assertEqual(build_compare.build(check=True), 0)
+
 
 if __name__ == "__main__":
     unittest.main()

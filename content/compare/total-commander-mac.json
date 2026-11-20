@@ -1,0 +1,135 @@
+{
+  "slug": "total-commander-mac",
+  "title": "Total Commander for Mac? The Best Alternatives (2026)",
+  "og_title": "Total Commander for Mac? What to use instead",
+  "description": "Total Commander has no Mac version. Compare Mac alternatives that keep its two panels and F5/F6 keys: Commander One, Double Commander, Nimble Commander and MacEx.",
+  "h1": "Total Commander for Mac: <em>the alternatives</em>",
+  "crumb": "Total Commander for Mac",
+  "published": "2026-11-20",
+  "updated": "2026-11-20",
+  "checked": "Facts checked on each developer’s site that day.",
+  "answer": "<b>There is no Total Commander for Mac.</b> Ghisler Software makes it for Windows only. On a Mac, <b>Double Commander</b> (free, open source) is the closest copy and even runs Total Commander plugins. <b>Commander One</b> is a polished free alternative with a paid PRO pack, and <b>Nimble Commander</b> is free and very fast. <b>MacEx</b> keeps the two panes and <kbd>F5</kbd>/<kbd>F6</kbd> copy and move, and adds what no commander offers: describe a file to find it, and free up space with a review step, for $9.99 once.",
+  "sections": [
+    {
+      "id": "at-a-glance",
+      "heading": "At a glance: Total Commander-style apps for Mac",
+      "table": {
+        "class": "data",
+        "corner": "App",
+        "columns": ["Price", "Closest to Total Commander in", "Missing compared with Total Commander"],
+        "highlight": "MacEx",
+        "rows": [
+          ["Double Commander", "Free, open source", "Look, F-key bar, plugins (WCX, WDX, WFX, WLX), multi-rename, built-in viewer and editor", "A native Mac look"],
+          ["Commander One", "Free; PRO [[$29.99]]", "Two panels, unlimited tabs, custom hotkeys, regex search", "FTP and archives beyond zip need PRO"],
+          ["Nimble Commander", "Free, open source", "Keyboard shortcuts for over a hundred actions, batch rename, terminal, FTP, SFTP and WebDAV", "Total Commander plugin support"],
+          ["ForkLift 4", "[[$19.95]] with 1 year of updates", "Two panes, sync, many remote protocols", "It is a Mac-style app, not a commander clone"],
+          ["MacEx", "$9.99 once", "Two panes, <kbd>F5</kbd> copy, <kbd>F6</kbd> move, batch rename, SFTP", "Tabs, plugins, viewer and editor, FTP, sync"]
+        ],
+        "note": "Prices in US dollars for one user. ForkLift and MacEx are compared in more depth in <a href=\"/compare/forklift/\">MacEx vs ForkLift</a>."
+      }
+    },
+    {
+      "id": "features",
+      "heading": "Total Commander features, and where to find them on a Mac",
+      "intro": "The left column lists features Ghisler Software names on the Total Commander home page.",
+      "table": {
+        "class": "vs4",
+        "corner": "Total Commander feature",
+        "columns": ["MacEx", "Commander-style Mac apps", "Finder"],
+        "rows": [
+          ["Two file windows side by side", {"tag": "yes", "text": "Split View, <kbd>⌘</kbd><kbd>\\</kbd>."}, {"tag": "yes", "text": "All of them."}, "Two windows or tabs, arranged by hand."],
+          ["Copy with F5, move with F6", {"tag": "yes", "text": "To the other pane."}, {"tag": "yes", "text": "Double Commander mirrors Total Commander’s keys."}, "<kbd>⌘</kbd><kbd>C</kbd>, then <kbd>⌥</kbd><kbd>⌘</kbd><kbd>V</kbd> to move."],
+          ["Multi-rename tool", {"tag": "yes", "text": "Find and replace or <code>{name}</code>, <code>{n}</code>, <code>{date}</code> template, previewed."}, {"tag": "yes", "text": "Double Commander, Nimble Commander."}, "Rename: replace, add text or number."],
+          ["Enhanced search", {"tag": "yes", "text": "Plain sentences: “pdfs from last week over 5 mb”."}, {"tag": "yes", "text": "Regex in Commander One; content search in Double Commander."}, "Spotlight and Find."],
+          ["Tabbed interface", {"tag": "no", "text": "One location per pane."}, {"tag": "yes", "text": "All three commanders."}, "Tabs."],
+          ["Archives as folders (zip, 7z, rar…)", {"tag": "part", "text": "Zip and unzip only."}, {"tag": "yes", "text": "Double Commander and Nimble Commander browse archives."}, "Archive Utility opens zip and a few others."],
+          ["Built-in FTP client", {"tag": "part", "text": "SFTP only, no FTP."}, {"tag": "yes", "text": "Nimble Commander; Commander One PRO; Double Commander."}, "No."],
+          ["Compare and synchronize directories", {"tag": "no", "text": "Not supported."}, {"tag": "part", "text": "ForkLift and Path Finder sync folders."}, "No."],
+          ["Quick View panel", {"tag": "yes", "text": "Preview and Quick Look; Inspector shows details."}, {"tag": "yes", "text": "Built-in viewers."}, "Quick Look, Space bar."],
+          ["Thumbnails and custom columns", {"tag": "part", "text": "Grid and list; folder sizes in list."}, {"tag": "yes", "text": "Custom columns in Double Commander."}, "Icon, list, column, gallery."],
+          ["Plugins", {"tag": "no", "text": "Not supported."}, {"tag": "yes", "text": "Double Commander runs Total Commander plugins; Marta uses Lua."}, "Finder extensions."]
+        ]
+      }
+    },
+    {
+      "id": "where-they-win",
+      "heading": "Where a Total Commander clone is the better choice",
+      "html": [
+        "<p><b>Muscle memory.</b> If you used Total Commander for years, Double Commander gives you the same layout, F-key bar, plugins, viewer (<kbd>F3</kbd>) and editor (<kbd>F4</kbd>). It is free and has builds for Apple silicon and Intel Macs.</p>",
+        "<p><b>Tabs, archives, FTP and plugins.</b> All three commanders have tabs. Double Commander and Nimble Commander browse archives like folders and connect to FTP and SFTP. MacEx has none of tabs, plugins or FTP.</p>",
+        "<p><b>Price.</b> Double Commander, Nimble Commander and Commander One’s basic version are free.</p>"
+      ]
+    },
+    {
+      "id": "where-macex-wins",
+      "heading": "Where MacEx is the better choice",
+      "html": [
+        "<p><b>It feels like a Mac app.</b> A sidebar, previews, Finder tags and Shortcuts actions, with the two panes and <kbd>F5</kbd>/<kbd>F6</kbd> you’re used to. <a href=\"/features/file-management/\">File management in MacEx</a>.</p>",
+        "<p><b>Finding files without browsing.</b> No commander does this: MacEx gathers your folders into one library and reads sentences like <code>zips bigger than 1gb older than 6 months</code>. It also finds words inside screenshots and scanned PDFs. <a href=\"/features/file-search/\">How it works</a>.</p>",
+        "<p><b>Freeing up space safely.</b> Free Up Space lists old installers, forgotten downloads and big old videos, the duplicate finder checks byte for byte, and everything goes to the normal Trash with a 500-file history. <a href=\"/features/storage-management/\">What it checks</a>.</p>"
+      ]
+    },
+    {
+      "id": "price",
+      "heading": "What each costs",
+      "intro": "List prices for one user, checked on the date above.",
+      "table": {
+        "class": "data",
+        "corner": "App",
+        "columns": ["Price", "Updates"],
+        "highlight": "MacEx",
+        "rows": [
+          ["Double Commander", "Free", "Free, open source"],
+          ["Nimble Commander", "Free", "Free, open source"],
+          ["Commander One", "Free; PRO [[$29.99]] on the Mac App Store", "Included with the App Store purchase"],
+          ["MacEx", "$9.99 once (launch price; regular $19.98)", "Included"],
+          ["ForkLift 4", "[[$19.95]]", "One year, then a new licence"],
+          ["Total Commander on Windows, in a virtual machine", "A Total Commander licence plus a Windows licence and virtualization app", "Separate"]
+        ]
+      }
+    },
+    {
+      "id": "switching",
+      "heading": "Moving from Total Commander to a Mac",
+      "html": [
+        "<ul><li><b>Copy and move:</b> in MacEx Split View, <kbd>F5</kbd> copies and <kbd>F6</kbd> moves to the other pane. On a MacBook, hold <kbd>fn</kbd> with the F key, or turn on “Use F1, F2, etc. keys as standard function keys” in System Settings › Keyboard › Keyboard Shortcuts › Function Keys.</li><li><b>Rename:</b> in Finder press <kbd>Return</kbd>; in MacEx select files and choose batch rename.</li><li><b>Delete:</b> <kbd>⌘</kbd><kbd>⌫</kbd> moves to the Trash. MacEx never deletes for good.</li><li><b>Go to a path:</b> <kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd> in both Finder and MacEx.</li><li><b>Hidden files:</b> <kbd>⇧</kbd><kbd>⌘</kbd><kbd>.</kbd> in Finder; a switch in MacEx.</li></ul>",
+        "<p>If you only need Total Commander itself, you can run the Windows version in a Windows virtual machine on your Mac. For most people a native Mac app is simpler. Switching from Windows in general? See <a href=\"/compare/windows-file-explorer-mac/\">File Explorer for Mac</a>.</p>"
+      ]
+    }
+  ],
+  "verdict": {
+    "heading": "Verdict: what to use instead of Total Commander on a Mac",
+    "items": [
+      "<b>Choose Double Commander</b> if you want Total Commander as close as possible, plugins included, for free.",
+      "<b>Choose Commander One</b> if you want a free, more Mac-polished two-panel app, with PRO for FTP and cloud drives.",
+      "<b>Choose MacEx</b> if you want two panes and <kbd>F5</kbd>/<kbd>F6</kbd> in a Mac-style app that also finds files from a description and frees up space safely, for $9.99 once."
+    ]
+  },
+  "faq": [
+    {"q": "Is there a Total Commander for Mac?", "a": "No. Ghisler Software makes Total Commander for Windows only. On a Mac, use a commander-style alternative such as Double Commander, Commander One or Nimble Commander, or a two-pane app such as MacEx."},
+    {"q": "What is the closest Total Commander alternative for Mac?", "a": "Double Commander. It is free and open source, was inspired by Total Commander, keeps its layout and F-key bar, and supports Total Commander WCX, WDX, WFX and WLX plugins."},
+    {"q": "Is Commander One the same as Total Commander?", "a": "No. Commander One is made by Electronic Team (Eltima), not Ghisler Software. Eltima says Total Commander’s author approved it as “Total Commander for Mac”. The basic version is free; servers and cloud drives need PRO."},
+    {"q": "Can I run Total Commander on a Mac?", "a": "Only the Windows version, inside a Windows virtual machine. There is no native macOS version."},
+    {"q": "Does MacEx use F5 and F6 like Total Commander?", "a": "Yes. In Split View, F5 copies the selection to the other pane and F6 moves it. MacEx doesn’t copy the rest of Total Commander’s layout: it has no tabs, plugins or built-in editor."},
+    {"q": "Is there a free Total Commander alternative for Mac?", "a": "Yes: Double Commander and Nimble Commander are free and open source, and Commander One has a free version. MacEx costs $9.99 once."}
+  ],
+  "sources": [
+    {"title": "Total Commander home page (Ghisler Software)", "url": "https://www.ghisler.com/"},
+    {"title": "Double Commander features", "url": "https://doublecmd.sourceforge.io/"},
+    {"title": "Double Commander releases, macOS builds (GitHub)", "url": "https://github.com/doublecmd/doublecmd/releases"},
+    {"title": "Nimble Commander (Magnumbytes)", "url": "https://magnumbytes.com/"},
+    {"title": "Commander One features (Electronic Team)", "url": "https://mac.eltima.com/file-manager.html"},
+    {"title": "ForkLift 4 store (Binarynights)", "url": "https://binarynights.com/store"}
+  ],
+  "related": [
+    {"href": "/compare/", "title": "All comparisons", "small": "Every MacEx comparison, with prices side by side"},
+    {"href": "/compare/commander-one/", "title": "MacEx vs Commander One", "small": "Free dual-pane app against MacEx"},
+    {"href": "/compare/windows-file-explorer-mac/", "title": "File Explorer for Mac", "small": "Windows Explorer habits on a Mac"},
+    {"href": "/compare/forklift/", "title": "MacEx vs ForkLift", "small": "The transfer specialist against MacEx"},
+    {"href": "/compare/best-finder-alternatives-mac/", "title": "Best Finder alternatives", "small": "Eight Mac file managers compared"},
+    {"href": "/compare/finder/", "title": "MacEx vs Finder", "small": "Twenty-five tasks, fairly compared"},
+    {"href": "/features/file-management/", "title": "Split View and batch rename", "small": "Everyday file management in MacEx"},
+    {"href": "/features/remote-access/", "title": "SFTP and SMB in MacEx", "small": "What MacEx does on servers, and what it doesn’t"},
+    {"href": "/features/file-search/", "title": "Find files by describing them", "small": "How MacEx search reads a sentence"}
+  ]
+}

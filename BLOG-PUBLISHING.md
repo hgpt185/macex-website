@@ -119,6 +119,7 @@ volumes, ranks, traffic or impressions. Preserve permanent slugs.
 | `/guides/find-duplicate-files-mac/` — duplicate safety | Photos Duplicates vs files on disk; what happens to duplicates in cloud-sync folders |
 | `/guides/clean-up-downloads-folder-mac/` — Downloads organization | Simple folder rules; handling files with the same name; undoing a cleanup |
 | `/compare/finder/` — when to use which app | Finder Smart Folders vs Spotlight vs MacEx; limits of native Finder tools |
+| `/compare/` — Finder alternatives (added 20 November 2026) | How to cut and paste files on a Mac; show folder sizes in Finder; show hidden files on Mac; Finder tabs and split-screen tricks; Finder column view explained; batch rename files on Mac with Finder; Finder keyboard shortcuts for Windows switchers. Link the matching `/compare/` page in `related_pages`, for example `/compare/windows-file-explorer-mac/`. Compare pages themselves follow `COMPARE-SPEC.md`, not this file. |
 
 **Article selection and quality gate:** Check all current blog articles and hub
 pages for overlapping user intent; research fresh real-world Mac questions with

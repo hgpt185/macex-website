@@ -1,0 +1,131 @@
+{
+  "slug": "qspace",
+  "title": "MacEx vs QSpace Pro: A QSpace Alternative for Mac",
+  "og_title": "MacEx vs QSpace Pro: which Finder alternative?",
+  "description": "MacEx vs QSpace Pro compared: layouts, extensions, server connections, search, cleanup and the full price with extensions. Who should pick which.",
+  "h1": "MacEx vs QSpace: <em>which Finder alternative?</em>",
+  "crumb": "MacEx vs QSpace",
+  "published": "2026-11-20",
+  "updated": "2026-11-20",
+  "checked": "QSpace facts checked on qspace.awehunt.com and the Mac App Store that day.",
+  "answer": "<b>QSpace</b> looks like Finder and adds 12 window layouts, an address bar you can type in, hashes, Windows key bindings and deep customization. Server connections, advanced batch rename, the Stash Shelf and the enhanced archiver are paid extensions on top of the app. <b>MacEx</b> includes everything for <b>$9.99 once</b>: describe a file to find it, search the words inside screenshots, see where downloads came from, free up space with a review step, two panes, batch rename, SFTP and SMB.",
+  "sections": [
+    {
+      "id": "at-a-glance",
+      "heading": "At a glance",
+      "table": {
+        "columns": ["MacEx", "QSpace"],
+        "rows": [
+          ["Made by", "MacEx", "awehunt (Tian Wenda)"],
+          ["Built for", "Finding, organizing and cleaning up files, plus everyday two-pane work", "A customizable Finder with many layouts"],
+          ["Price", "$9.99 once, everything included (launch price)", "Pro [[$29.99]] list, App Store edition [[$27.99]] list, before extensions; often on sale"],
+          ["Extensions", "None; nothing is sold separately", "Server Connections [[$9.99]], Advanced Batch Rename [[$4.99]], Stash Shelf [[$4.99]], Enhanced Archiver [[$4.99]] (list)"],
+          ["Free trial", "No; a live demo runs in the browser", "Pro: 30 days. App Store edition: none"],
+          ["macOS", "14 Sonoma or later", "[[macOS 10.15]] or later"],
+          ["Devices", "One licence per Mac", "One account on up to two devices at a time"]
+        ]
+      }
+    },
+    {
+      "id": "features",
+      "heading": "Feature by feature",
+      "intro": "<b>Partly</b> means the app can do it in a more limited way. “Extension” marks a QSpace feature sold separately.",
+      "table": {
+        "class": "vs4",
+        "corner": "Task",
+        "columns": ["MacEx", "QSpace", "What’s different"],
+        "rows": [
+          ["Folders side by side", {"tag": "yes", "text": "Split View with two panes."}, {"tag": "yes", "text": "12 layouts to switch between."}, "QSpace is more flexible here."],
+          ["Type a path", {"tag": "yes", "text": "Go to Folder, <kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd>."}, {"tag": "yes", "text": "Address bar with auto-completion."}, ""],
+          ["Windows key bindings", {"tag": "no", "text": "Mac shortcuts only."}, {"tag": "yes", "text": "Switch on in settings."}, ""],
+          ["Find a file by describing it", {"tag": "yes", "text": "“screenshots from last week” becomes editable filters."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Words inside screenshots and scanned PDFs", {"tag": "yes", "text": "Optional on-device Text Search."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Downloads grouped by website", {"tag": "yes", "text": "<kbd>⇧</kbd><kbd>⌘</kbd><kbd>J</kbd>."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Free up space, reviewed first", {"tag": "yes", "text": "Old installers, forgotten downloads, big old videos, unused apps."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Duplicate finder", {"tag": "yes", "text": "Byte-for-byte check."}, {"tag": "part", "text": "Calculate and compare file hashes by hand."}, ""],
+          ["Batch rename with preview", {"tag": "yes", "text": "Included."}, {"tag": "yes", "text": "Extension: rules with regex and live preview."}, ""],
+          ["SFTP", {"tag": "part", "text": "Included: browse, upload, download, rename."}, {"tag": "yes", "text": "Extension: drag and drop like local files."}, ""],
+          ["FTP, WebDAV, S3, Dropbox, OneDrive, Google Drive", {"tag": "no", "text": "Not supported."}, {"tag": "yes", "text": "Extension: over 20 server and cloud types."}, ""],
+          ["SMB shares", {"tag": "yes", "text": "Included."}, {"tag": "yes", "text": "Extension."}, ""],
+          ["Archives", {"tag": "part", "text": "Zip and unzip."}, {"tag": "yes", "text": "Extension: browse and extract over 20 formats, including rar and 7z."}, ""],
+          ["Collect files from many folders", {"tag": "yes", "text": "Workspaces, included."}, {"tag": "yes", "text": "Extension: Stash Shelf."}, ""],
+          ["Open a Terminal here", {"tag": "no", "text": "Not supported."}, {"tag": "yes", "text": "Opens your terminal or editor for the current folder."}, ""],
+          ["Restore what cleanup removed", {"tag": "yes", "text": "Last 500 files MacEx moved to Trash."}, {"tag": "no", "text": "Not listed."}, ""]
+        ]
+      }
+    },
+    {
+      "id": "where-they-win",
+      "heading": "Where QSpace is the better choice",
+      "html": [
+        "<p><b>Layouts.</b> QSpace switches between 12 window layouts for comparing, copying and moving files between folders. MacEx has one or two panes.</p>",
+        "<p><b>Customization and Windows habits.</b> An address bar you type into, Windows key bindings, custom file templates, hashes, and one-click Terminal or editor for the current folder.</p>",
+        "<p><b>Servers and archives, if you buy the extensions.</b> Over 20 server and cloud types and over 20 archive formats. MacEx has SFTP, SMB and zip only.</p>",
+        "<p><b>A Pro trial.</b> QSpace Pro can be tried for 30 days. MacEx has a browser demo but no trial.</p>"
+      ]
+    },
+    {
+      "id": "where-macex-wins",
+      "heading": "Where MacEx is the better choice",
+      "html": [
+        "<p><b>One price, everything included.</b> MacEx is $9.99 with SFTP, SMB, batch rename and workspaces built in. QSpace’s equivalents are extensions on top of the app.</p>",
+        "<p><b>Finding files.</b> MacEx sorts your folders into one library by kind and reads sentences such as <code>pdfs from gmail last month</code>. Text Search finds the words in screenshots and scans. <a href=\"/features/file-search/\">How MacEx search works</a>.</p>",
+        "<p><b>Cleanup.</b> Free Up Space and the byte-for-byte duplicate finder show you what is safe to clear, move only what you pick to the Trash, and can put back any of the last 500 files. <a href=\"/features/storage-management/\">What Free Up Space checks</a>.</p>"
+      ]
+    },
+    {
+      "id": "price",
+      "heading": "What each costs with everything included",
+      "intro": "QSpace sells the app and four extensions; it says “Purchase Once, Use Forever”. List prices for one user, checked on the date above. A flash sale was running that day, so you may pay less.",
+      "table": {
+        "columns": ["MacEx", "QSpace Pro"],
+        "rows": [
+          ["The app", "$9.99", "[[$29.99]]"],
+          ["With servers, batch rename, a file shelf and archives", "$9.99", "[[$54.95]] (app plus four extensions)"],
+          ["Refunds and trial", "No trial; live demo", "30-day trial; returns within 3 days"]
+        ]
+      },
+      "html": ["<p class=\"note\">MacEx’s $9.99 is a launch price; the regular price is $19.98. The QSpace App Store edition has no trial and no refunds, according to its pricing page.</p>"]
+    },
+    {
+      "id": "switching",
+      "heading": "Switching from QSpace, or using both",
+      "html": [
+        "<p>MacEx reads your folders and Finder tags where they are; there is nothing to import. Add the folders you use to the sidebar, open Split View with <kbd>⌘</kbd><kbd>\\</kbd>, and press <kbd>F5</kbd> to copy or <kbd>F6</kbd> to move to the other pane. A workspace does the job of a shelf you want to keep.</p>",
+        "<p>If QSpace’s layouts are what you love, keep them for browsing and use MacEx to find files and free up space.</p>"
+      ]
+    }
+  ],
+  "verdict": {
+    "heading": "Verdict: MacEx or QSpace?",
+    "items": [
+      "<b>Choose QSpace</b> if you want a Finder look-alike with many layouts, Windows key bindings and deep customization, and will buy the extensions you need.",
+      "<b>Choose MacEx</b> if you want one price with everything included, plus search by description, text in images and safe cleanup that QSpace doesn’t offer.",
+      "<b>Use both</b> if you browse in QSpace and want MacEx to find and clear out files."
+    ]
+  },
+  "faq": [
+    {"q": "How much does QSpace cost?", "a": "QSpace Pro lists at [[$29.99]] and the Mac App Store edition at [[$27.99]], both often discounted. Server Connections ([[$9.99]]), Advanced Batch Rename, Stash Shelf and Enhanced Archiver ([[$4.99]] each, list) are sold separately."},
+    {"q": "Is MacEx a good QSpace alternative?", "a": "Yes, if you want everything in one price and care about finding and cleaning up files. MacEx has fewer layouts (one or two panes) and no Windows key bindings."},
+    {"q": "What is the difference between QSpace and QSpace Pro?", "a": "QSpace is sold on the Mac App Store; QSpace Pro is sold on the developer’s site with a 30-day trial. The developer’s pricing page lists them separately and explains the differences."},
+    {"q": "Can MacEx show more than two folders at once?", "a": "No. MacEx Split View shows two folders side by side. QSpace offers 12 layouts if you want more."},
+    {"q": "Does MacEx need extensions for SFTP or batch rename?", "a": "No. SFTP, SMB, batch rename, zip and workspaces are all included in the $9.99 price."},
+    {"q": "Does MacEx work on macOS Catalina or Big Sur?", "a": "No. MacEx needs macOS 14 Sonoma or later. QSpace supports older systems, from [[macOS 10.15]]."}
+  ],
+  "sources": [
+    {"title": "QSpace features (awehunt)", "url": "https://qspace.awehunt.com/en-us/index.html"},
+    {"title": "QSpace pricing and extensions (awehunt)", "url": "https://qspace.awehunt.com/en-us/pricing.html"},
+    {"title": "QSpace on the Mac App Store", "url": "https://apps.apple.com/us/app/id1469774098"}
+  ],
+  "related": [
+    {"href": "/compare/", "title": "All comparisons", "small": "Every MacEx comparison, with prices side by side"},
+    {"href": "/compare/best-finder-alternatives-mac/", "title": "Best Finder alternatives", "small": "Eight Mac file managers compared"},
+    {"href": "/compare/forklift/", "title": "MacEx vs ForkLift", "small": "The transfer specialist against MacEx"},
+    {"href": "/compare/path-finder/", "title": "MacEx vs Path Finder", "small": "A Path Finder alternative without a subscription"},
+    {"href": "/compare/commander-one/", "title": "MacEx vs Commander One", "small": "Free dual-pane app against MacEx"},
+    {"href": "/compare/windows-file-explorer-mac/", "title": "File Explorer for Mac", "small": "Windows Explorer habits on a Mac"},
+    {"href": "/features/file-management/", "title": "Split View and batch rename", "small": "Everyday file management in MacEx"},
+    {"href": "/features/automation/", "title": "Workspaces, tags and rules", "small": "Organize files without dragging them around"},
+    {"href": "/features/storage-management/", "title": "Free up storage on Mac", "small": "What’s safe to clear, reviewed by you"}
+  ]
+}

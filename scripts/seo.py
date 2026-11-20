@@ -45,6 +45,11 @@ class Page(HTMLParser):
         self.ids = set()
         self.images = []  # attribute dicts of <img>
         self.analytics = False
+        self.classes = set()
+        self.main_links = []  # href values of <a> inside <main>
+        self.text = []  # visible text, for checks that need it
+        self._main = 0
+        self._skip = 0
         self._in = None
         self._buffer = []
 
@@ -52,6 +57,13 @@ class Page(HTMLParser):
         a = {k: (v or "") for k, v in attrs}
         if "id" in a:
             self.ids.add(a["id"])
+        self.classes.update(a.get("class", "").split())
+        if tag == "main":
+            self._main += 1
+        elif tag in {"script", "style"}:
+            self._skip += 1
+        if tag == "a" and self._main and "href" in a:
+            self.main_links.append(a["href"])
         if tag == "html":
             self.lang = a.get("lang")
         elif tag == "title":
@@ -87,6 +99,10 @@ class Page(HTMLParser):
             self.links.append((tag, "href", a["href"]))
 
     def handle_endtag(self, tag):
+        if tag == "main":
+            self._main = max(0, self._main - 1)
+        elif tag in {"script", "style"}:
+            self._skip = max(0, self._skip - 1)
         if self._in == "title" and tag == "title":
             self.title = "".join(self._buffer).strip()
             self._in = None
@@ -97,6 +113,8 @@ class Page(HTMLParser):
     def handle_data(self, data):
         if self._in:
             self._buffer.append(data)
+        elif not self._skip:
+            self.text.append(data)
 
     @property
     def noindex(self):
@@ -234,9 +252,13 @@ def check_facts(root=ROOT):
         raw = path.read_text(errors="ignore")
         text = re.sub(r"<script(?! type=\"application/ld\+json\")[\s\S]*?</script>|<style[\s\S]*?</style>", " ", raw)
         # Another product's price, e.g. on a comparison page: <span data-third-party>$19.95</span>.
+        # The same amount repeated in the page's FAQPage JSON-LD is that same third-party fact.
+        marked = " ".join(THIRD_PARTY.findall(text))
+        third_party = set(re.findall(r"\$(\d+\.\d{2})", marked))
+        third_party_macos = set(re.findall(r"macOS\s+(\d{2})\b", marked))
         text = THIRD_PARTY.sub(" ", text)
         text = re.sub(r"<[^>]+>", " ", text)
-        for amount in set(re.findall(r"\$(\d+\.\d{2})", text)) if facts["price"] else ():
+        for amount in set(re.findall(r"\$(\d+\.\d{2})", text)) - third_party if facts["price"] else ():
             if amount not in {facts["price"], facts["was"]}:
                 errors.append(f"{where}: price ${amount} matches neither config.js price ${facts['price']} nor regular price ${facts['was']}")
         for match in re.finditer(r"MacEx\s+(?:version\s+)?(\d+\.\d+\.\d+)|version\s+(\d+\.\d+\.\d+)", text):
@@ -244,10 +266,43 @@ def check_facts(root=ROOT):
             before, after = text[max(0, match.start() - 30):match.start()], text[match.end():match.end() + 15]
             if facts["version"] and version != facts["version"] and not HISTORIC_VERSION.search(before) and not HISTORIC_VERSION.search(after):
                 errors.append(f"{where}: names MacEx {version} as current; config.js version is {facts['version']}")
-        for found in set(re.findall(r"macOS\s+(\d{2})\b", text)) if facts["macos"] else ():
+        for found in set(re.findall(r"macOS\s+(\d{2})\b", text)) - third_party_macos if facts["macos"] else ():
             if found != facts["macos"]:
                 errors.append(f"{where}: says macOS {found}; config.js minimumMacOS is {facts['macos']}")
     return errors
+
+
+def check_compare_spec(page, path_url):
+    """COMPARE-SPEC.md, enforced on every indexable page under /compare/ (generated or hand-written)."""
+    problems = []
+    if "answer" not in page.classes:
+        problems.append("has no short-answer box (class=\"answer\")")
+    for needed in ("verdict", "faq"):
+        if needed not in page.ids:
+            problems.append(f"has no id=\"{needed}\" section")
+    if not page.meta.get("description") or not page.title:
+        return problems
+    try:
+        faq = [n for n in graph_nodes(page) if n["@type"] == "FAQPage"]
+    except json.JSONDecodeError:
+        faq = []
+    questions = [q.get("name", "") for f in faq for q in f.get("mainEntity", [])]
+    if len(questions) < 6:
+        problems.append(f"has {len(questions)} FAQPage questions; the spec needs at least 6")
+    text = re.sub(r"\s+", " ", " ".join(page.text))
+    for question in questions:
+        if re.sub(r"\s+", " ", question) not in text:
+            problems.append(f"FAQ {question!r} is in JSON-LD but not shown on the page")
+    internal = set()
+    for href in page.main_links:
+        target = urlparse(urljoin(SITE + path_url, href))
+        if target.hostname == HOST and target.path != path_url and not target.path.startswith("/#"):
+            internal.add(target.path)
+    if len(internal) < 8:
+        problems.append(f"links to {len(internal)} other pages from <main>; the spec needs at least 8")
+    if path_url != "/compare/" and "/compare/" not in internal:
+        problems.append("does not link to the comparison hub /compare/")
+    return problems
 
 
 def check(root=ROOT):
@@ -307,6 +362,9 @@ def check(root=ROOT):
             descriptions.setdefault(description, []).append(where)
             if not page.jsonld:
                 err("no JSON-LD structured data")
+            if path_url.startswith("/compare/"):
+                for problem in check_compare_spec(page, path_url):
+                    err(f"comparison spec: {problem}")
         try:
             nodes = top_nodes(page)
             offers = [n for n in graph_nodes(page) if n["@type"] == "Offer"]

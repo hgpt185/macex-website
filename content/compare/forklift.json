@@ -1,0 +1,138 @@
+{
+  "slug": "forklift",
+  "title": "MacEx vs ForkLift 4: A ForkLift Alternative for Mac",
+  "og_title": "MacEx vs ForkLift 4: which Mac file manager fits you?",
+  "description": "MacEx vs ForkLift 4 compared: search, cleanup, two panes, SFTP, sync, tabs and three-year cost. Where ForkLift wins, where MacEx wins, and who should pick which.",
+  "h1": "MacEx vs ForkLift: <em>which Mac file manager fits you?</em>",
+  "crumb": "MacEx vs ForkLift",
+  "published": "2026-11-20",
+  "updated": "2026-11-20",
+  "checked": "ForkLift facts checked on binarynights.com that day.",
+  "answer": "<b>ForkLift 4</b> is the stronger app for moving files between servers: tabs, folder sync and a dozen remote protocols. <b>MacEx</b> is the stronger app for finding and clearing out files on your Mac: describe a file to find it, search the words inside screenshots, see where every download came from, and free up space with a review step. Both have two panes and batch rename. MacEx costs <b>$9.99 once</b> with updates included; ForkLift costs [[$19.95]] with one year of updates.",
+  "sections": [
+    {
+      "id": "at-a-glance",
+      "heading": "At a glance",
+      "table": {
+        "corner": "",
+        "columns": ["MacEx", "ForkLift 4"],
+        "rows": [
+          ["Made by", "MacEx", "Binarynights"],
+          ["Built for", "Finding, organizing and cleaning up files, plus everyday two-pane file work", "Moving files between folders, servers and cloud storage"],
+          ["Price, one Mac", "$9.99 once (launch price)", "[[$19.95]], or [[$34.95]] with two years of updates"],
+          ["Updates", "Included", "One or two years, then buy a new licence to keep updating"],
+          ["Free trial", "No; a live demo runs in the browser", "Yes"],
+          ["macOS", "14 Sonoma or later", "[[macOS 14.6]] or later for ForkLift [[4.4]] and newer"]
+        ]
+      }
+    },
+    {
+      "id": "features",
+      "heading": "Feature by feature",
+      "intro": "<b>Partly</b> means the app can do it in a more limited way. ForkLift entries come from its own feature page and manual.",
+      "table": {
+        "class": "vs4",
+        "corner": "Task",
+        "columns": ["MacEx", "ForkLift 4", "What’s different"],
+        "rows": [
+          ["Two folders side by side", {"tag": "yes", "text": "Split View; <kbd>F5</kbd> copies, <kbd>F6</kbd> moves."}, {"tag": "yes", "text": "Dual pane."}, "Both are built around two panes."],
+          ["Tabs", {"tag": "no", "text": "One location per pane."}, {"tag": "yes", "text": "Tabs in each pane."}, "ForkLift wins if you keep many folders open."],
+          ["Find a file by describing it", {"tag": "yes", "text": "Type “pdfs from last week over 5 mb”; the filters appear as chips you can edit."}, {"tag": "part", "text": "Search and filter by name, extension, kind, tags or content."}, "MacEx reads dates, sizes and sources from a sentence."],
+          ["Words inside screenshots and scanned PDFs", {"tag": "yes", "text": "Optional on-device Text Search."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Downloads grouped by website", {"tag": "yes", "text": "<kbd>⇧</kbd><kbd>⌘</kbd><kbd>J</kbd> groups every download by source."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Free up space, reviewed first", {"tag": "yes", "text": "Old installers, forgotten downloads, big old videos, unused apps."}, {"tag": "no", "text": "Not listed. It has an App Deleter for removing apps."}, ""],
+          ["Duplicate finder", {"tag": "yes", "text": "Byte-for-byte check before anything is shown."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Batch rename", {"tag": "yes", "text": "Find and replace or a template, every name previewed."}, {"tag": "yes", "text": "Multi Rename with saved presets."}, "Both are capable."],
+          ["SFTP", {"tag": "part", "text": "Browse, upload, download, rename, new folder."}, {"tag": "yes", "text": "Full transfers, remote editing, several servers at once."}, "ForkLift is a complete transfer client."],
+          ["FTP, WebDAV, S3, Google Drive, Dropbox, OneDrive", {"tag": "no", "text": "Not supported."}, {"tag": "yes", "text": "All supported, plus Backblaze B2, AFP and NFS."}, ""],
+          ["SMB shares", {"tag": "yes", "text": "Open as normal folders."}, {"tag": "yes", "text": "Supported."}, ""],
+          ["Folder sync", {"tag": "no", "text": "Not supported."}, {"tag": "yes", "text": "Compare and sync, one or two way, local or remote."}, ""],
+          ["Archives", {"tag": "part", "text": "Zip and unzip only."}, {"tag": "yes", "text": "Browse archives, local and remote."}, ""],
+          ["Finder tags", {"tag": "yes", "text": "Add or remove on many files at once."}, {"tag": "yes", "text": "Add, edit, search and filter."}, ""],
+          ["Undo and name clashes", {"tag": "yes", "text": "<kbd>⌘</kbd><kbd>Z</kbd>; clashes ask Keep Both or Skip, never Replace."}, {"tag": "part", "text": "Conflict rules for transfers."}, "MacEx can’t overwrite a file by accident."],
+          ["Restore what cleanup removed", {"tag": "yes", "text": "History of the last 500 files MacEx moved to Trash."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Shortcuts app actions", {"tag": "yes", "text": "Find Files, Search in MacEx, Get Latest Download."}, {"tag": "part", "text": "Command-line tools you bind to keys."}, ""]
+        ]
+      }
+    },
+    {
+      "id": "where-they-win",
+      "heading": "Where ForkLift is the better choice",
+      "html": [
+        "<p><b>Servers and cloud storage.</b> ForkLift connects to SFTP, FTP, WebDAV, Amazon S3, Backblaze B2, Google Drive, OneDrive, Dropbox, SMB, AFP and NFS, can copy between two servers by drag and drop, and queues transfers with bandwidth limits. MacEx covers SFTP and SMB only, and its SFTP doesn’t copy whole folders or delete on the server.</p>",
+        "<p><b>Folder sync.</b> ForkLift compares two folders and syncs them one or two ways, and can save a sync as a favourite. MacEx has no sync.</p>",
+        "<p><b>Tabs and remote editing.</b> ForkLift has tabs in each pane and uploads a remote file again when you save it in your editor. MacEx has neither.</p>",
+        "<p>If most of your day is moving files to and from servers, ForkLift is built for that and MacEx isn’t.</p>"
+      ]
+    },
+    {
+      "id": "where-macex-wins",
+      "heading": "Where MacEx is the better choice",
+      "html": [
+        "<p><b>Finding a file you can’t place.</b> MacEx gathers your folders into one library sorted by kind. Type what you remember, such as <code>zips bigger than 1gb older than 6 months</code> or <code>pdfs from gmail last month</code>, and it turns the sentence into filters you can see and edit. <a href=\"/features/file-search/\">How MacEx search works</a>.</p>",
+        "<p><b>Words inside images.</b> Turn on Text Search and MacEx reads the text in screenshots and scanned PDFs on your Mac, so <code>screenshots with wifi password</code> finds the photo of a router label.</p>",
+        "<p><b>Freeing up space without fear.</b> Free Up Space lists old installers, forgotten downloads, old screenshots, big old videos, unused apps and exact duplicates. You review every file, only what you select goes to the Trash, and MacEx can put back any of the last 500 files it moved. <a href=\"/features/storage-management/\">What Free Up Space checks</a>.</p>",
+        "<p><b>Price.</b> $9.99 once with updates included, against [[$19.95]] for a year of ForkLift updates.</p>"
+      ]
+    },
+    {
+      "id": "price",
+      "heading": "What each costs over three years",
+      "intro": "Both are paid once, but ForkLift’s licence includes a fixed period of updates. After it ends, you keep the last version your licence covers, or buy a new licence to keep updating. Single-user list prices, checked on the date above:",
+      "table": {
+        "class": "vs-glance",
+        "corner": "",
+        "columns": ["MacEx", "ForkLift 4"],
+        "rows": [
+          ["Year one", "$9.99", "[[$19.95]]"],
+          ["Three years of updates", "$9.99", "[[$54.90]] (a two-year licence, then a one-year licence)"],
+          ["Every Mac in a household", "One licence per Mac", "[[$29.95]] Family licence, one year of updates"]
+        ]
+      },
+      "html": ["<p class=\"note\">ForkLift’s three-year figure assumes you buy the cheapest licences that keep you on the newest version. MacEx’s $9.99 is a launch price; the regular price is $19.98.</p>"]
+    },
+    {
+      "id": "switching",
+      "heading": "Switching from ForkLift, or using both",
+      "html": [
+        "<p>There is nothing to import. MacEx reads your existing folders and Finder tags and leaves files where they are. Add the folders you work in to the sidebar, and press <kbd>⌘</kbd><kbd>\\</kbd> for Split View. <kbd>F5</kbd> copies and <kbd>F6</kbd> moves to the other pane, the keys commander-style file managers such as Total Commander made familiar.</p>",
+        "<p>Many people will want both. Keep ForkLift for server work and sync, and use MacEx to find files, sort downloads and clear space. They don’t conflict: neither moves your files unless you ask.</p>"
+      ]
+    }
+  ],
+  "verdict": {
+    "heading": "Verdict: MacEx or ForkLift?",
+    "items": [
+      "<b>Choose ForkLift</b> if you transfer files to servers or cloud storage every day, sync folders, or need tabs.",
+      "<b>Choose MacEx</b> if you lose files, fight with your Downloads folder or keep running out of space, and want two panes and batch rename for everyday work.",
+      "<b>Choose MacEx</b> if price matters: $9.99 once, updates included, no subscription.",
+      "<b>Use both</b> if you do heavy server work and also want to find and clean up files on your Mac."
+    ]
+  },
+  "faq": [
+    {"q": "Is MacEx a good ForkLift alternative?", "a": "Yes, if you mainly work with files on your own Mac. MacEx has two panes, batch rename, tags, SMB and SFTP, and adds search by description, text search in images and reviewed cleanup. It isn’t a full replacement for ForkLift’s server features: it has no FTP, WebDAV, cloud drives or folder sync."},
+    {"q": "Is ForkLift 4 a one-time purchase?", "a": "Yes. Binarynights sells a lifetime licence that includes one or two years of updates ([[$19.95]] or [[$34.95]] for one user). After that you can keep using the last version your licence covers, or buy a new licence for newer versions."},
+    {"q": "Does MacEx have tabs like ForkLift?", "a": "No. MacEx shows one location in each pane of Split View. If you rely on tabs, ForkLift or Finder suits that better."},
+    {"q": "Can MacEx sync folders like ForkLift?", "a": "No. MacEx doesn’t compare or sync folders. ForkLift does, locally and on servers."},
+    {"q": "Which is better for SFTP, MacEx or ForkLift?", "a": "ForkLift. It is a complete transfer client with queues, remote editing and many protocols. MacEx can browse an SFTP server, upload, download, rename and create folders after checking the host key, but it doesn’t transfer whole folders or delete on the server."},
+    {"q": "Can I use MacEx and ForkLift on the same Mac?", "a": "Yes. Both read your normal folders and Finder tags, and neither reorganizes your files unless you ask. Many people use ForkLift for transfers and MacEx for finding and cleaning up."},
+    {"q": "Is there a free alternative to ForkLift?", "a": "Commander One has a free version, and Marta and Nimble Commander are free. All three are two-pane file managers. MacEx isn’t free, but it costs $9.99 once. <a href=\"/compare/best-finder-alternatives-mac/\">Eight Finder alternatives compared</a>."}
+  ],
+  "sources": [
+    {"title": "ForkLift 4 features (Binarynights)", "url": "https://binarynights.com/"},
+    {"title": "ForkLift 4 store and licence terms (Binarynights)", "url": "https://binarynights.com/store"},
+    {"title": "ForkLift 4 manual: requirements (Binarynights)", "url": "https://binarynights.com/manual"}
+  ],
+  "related": [
+    {"href": "/compare/", "title": "All comparisons", "small": "Every MacEx comparison, with prices side by side"},
+    {"href": "/compare/best-finder-alternatives-mac/", "title": "Best Finder alternatives", "small": "Eight Mac file managers compared"},
+    {"href": "/compare/path-finder/", "title": "MacEx vs Path Finder", "small": "A Path Finder alternative without a subscription"},
+    {"href": "/compare/commander-one/", "title": "MacEx vs Commander One", "small": "Free dual-pane app against MacEx"},
+    {"href": "/compare/qspace/", "title": "MacEx vs QSpace", "small": "Layouts and extensions against one price"},
+    {"href": "/compare/finder/", "title": "MacEx vs Finder", "small": "Twenty-five tasks, fairly compared"},
+    {"href": "/features/remote-access/", "title": "SFTP and SMB in MacEx", "small": "What MacEx does on servers, and what it doesn’t"},
+    {"href": "/features/file-management/", "title": "Split View and batch rename", "small": "Everyday file management in MacEx"},
+    {"href": "/features/file-search/", "title": "Find files by describing them", "small": "How MacEx search reads a sentence"},
+    {"href": "/features/storage-management/", "title": "Free up storage on Mac", "small": "What’s safe to clear, reviewed by you"}
+  ]
+}

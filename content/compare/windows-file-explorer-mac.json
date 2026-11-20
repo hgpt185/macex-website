@@ -1,0 +1,136 @@
+{
+  "slug": "windows-file-explorer-mac",
+  "title": "File Explorer for Mac: Windows Explorer Features on macOS",
+  "og_title": "Is there a File Explorer for Mac like Windows?",
+  "description": "Looking for a file explorer for Mac like Windows? How to cut and paste, see folder sizes, type a path and map a drive in Finder, and apps that work like Explorer.",
+  "h1": "File Explorer for Mac: <em>Windows habits on macOS</em>",
+  "crumb": "File Explorer for Mac",
+  "published": "2026-11-20",
+  "updated": "2026-11-20",
+  "checked": "Finder shortcuts checked against Apple Support that day.",
+  "answer": "<b>Finder is the Mac’s File Explorer.</b> It does almost everything Explorer does once you know the keys: cut and paste is <kbd>⌘</kbd><kbd>C</kbd> then <kbd>⌥</kbd><kbd>⌘</kbd><kbd>V</kbd>, the address bar is <kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd>, and mapping a drive is <kbd>⌘</kbd><kbd>K</kbd>. If you want more than Finder, <b>MacEx</b> adds two panes with <kbd>F5</kbd> copy and <kbd>F6</kbd> move, folder sizes in list view, batch rename, and a search that reads plain sentences, for $9.99 once. QSpace offers Windows key bindings if you want those exactly.",
+  "sections": [
+    {
+      "id": "at-a-glance",
+      "heading": "At a glance: Explorer, Finder and MacEx",
+      "table": {
+        "class": "data",
+        "corner": "",
+        "columns": ["Windows File Explorer", "Finder", "MacEx"],
+        "rows": [
+          ["Comes with", "Windows", "macOS", "A $9.99 app for macOS 14 or later"],
+          ["Main view", "Folders and a navigation pane", "Folders and a sidebar", "A library of all your files by kind, plus folders"],
+          ["Two folders side by side", "Two windows", "Two windows or tabs", "Split View in one window"],
+          ["Folder sizes in a list", "No", "Yes, after turning on Calculate all sizes", "Yes, by default"],
+          ["Tabs", "Yes (Windows 11)", "Yes", "No"]
+        ]
+      }
+    },
+    {
+      "id": "features",
+      "heading": "Explorer tasks, and how to do them on a Mac",
+      "intro": "Finder keys come from Apple’s list of Mac keyboard shortcuts.",
+      "table": {
+        "class": "vs4",
+        "corner": "In File Explorer",
+        "columns": ["In Finder", "In MacEx", "Note"],
+        "rows": [
+          ["Cut and paste (<kbd>Ctrl</kbd>+<kbd>X</kbd>, <kbd>Ctrl</kbd>+<kbd>V</kbd>)", {"tag": "part", "text": "<kbd>⌘</kbd><kbd>C</kbd>, then <kbd>⌥</kbd><kbd>⌘</kbd><kbd>V</kbd> to move."}, {"tag": "yes", "text": "Split View: <kbd>F6</kbd> moves to the other pane; or drag."}, "macOS has no Cut for files; you choose “move” when you paste."],
+          ["Type a path in the address bar", {"tag": "yes", "text": "Go to Folder, <kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd>."}, {"tag": "yes", "text": "Go to Folder, <kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd>, plus a path bar."}, ""],
+          ["See where you are (breadcrumb)", {"tag": "yes", "text": "Path bar, <kbd>⌥</kbd><kbd>⌘</kbd><kbd>P</kbd>."}, {"tag": "yes", "text": "Path bar shown."}, ""],
+          ["Go up a folder (<kbd>Alt</kbd>+<kbd>↑</kbd>)", {"tag": "yes", "text": "<kbd>⌘</kbd><kbd>↑</kbd>."}, {"tag": "yes", "text": "Back, Forward and the path bar."}, ""],
+          ["Open a file (<kbd>Enter</kbd>)", {"tag": "yes", "text": "<kbd>⌘</kbd><kbd>↓</kbd> or double-click. <kbd>Return</kbd> renames."}, {"tag": "yes", "text": "Double-click opens in the usual app."}, "The biggest surprise for Windows users."],
+          ["Rename (<kbd>F2</kbd>)", {"tag": "yes", "text": "<kbd>Return</kbd>."}, {"tag": "yes", "text": "Rename, or batch rename many files with a preview."}, ""],
+          ["Delete (<kbd>Del</kbd>)", {"tag": "yes", "text": "<kbd>⌘</kbd><kbd>⌫</kbd> moves to the Trash."}, {"tag": "yes", "text": "Moves to the Trash; <kbd>⌘</kbd><kbd>Z</kbd> undoes."}, ""],
+          ["Properties (<kbd>Alt</kbd>+<kbd>Enter</kbd>)", {"tag": "yes", "text": "Get Info, <kbd>⌘</kbd><kbd>I</kbd>."}, {"tag": "yes", "text": "Inspector: dates, size, source website, dimensions."}, ""],
+          ["New folder (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd>)", {"tag": "yes", "text": "<kbd>⇧</kbd><kbd>⌘</kbd><kbd>N</kbd>."}, {"tag": "yes", "text": "New Folder."}, ""],
+          ["This PC", {"tag": "yes", "text": "Computer window, <kbd>⇧</kbd><kbd>⌘</kbd><kbd>C</kbd>."}, {"tag": "part", "text": "Locations in the sidebar."}, ""],
+          ["Map network drive", {"tag": "yes", "text": "Connect to Server, <kbd>⌘</kbd><kbd>K</kbd>, then <code>smb://server/share</code>."}, {"tag": "yes", "text": "Connections page; the share opens as a folder. SFTP too."}, ""],
+          ["Show hidden items", {"tag": "yes", "text": "<kbd>⇧</kbd><kbd>⌘</kbd><kbd>.</kbd>"}, {"tag": "yes", "text": "A hidden-files switch."}, ""],
+          ["Preview pane (<kbd>Alt</kbd>+<kbd>P</kbd>)", {"tag": "yes", "text": "Preview pane, <kbd>⇧</kbd><kbd>⌘</kbd><kbd>P</kbd>; Quick Look, Space bar."}, {"tag": "yes", "text": "Preview and Quick Look."}, ""],
+          ["Folder sizes in Details view", {"tag": "part", "text": "List view, View Options (<kbd>⌘</kbd><kbd>J</kbd>), Calculate all sizes."}, {"tag": "yes", "text": "Sizes and item counts in list view."}, "Explorer doesn’t show folder sizes in Details."],
+          ["Status bar", {"tag": "yes", "text": "<kbd>⌘</kbd><kbd>/</kbd>."}, {"tag": "yes", "text": "Item counts and folder sizes in list view."}, ""],
+          ["Search (<kbd>Ctrl</kbd>+<kbd>F</kbd>)", {"tag": "yes", "text": "<kbd>⌘</kbd><kbd>F</kbd>, criteria from menus."}, {"tag": "yes", "text": "Plain sentences: “pdfs from last week over 5 mb”."}, ""],
+          ["Downloads folder", {"tag": "yes", "text": "<kbd>⌥</kbd><kbd>⌘</kbd><kbd>L</kbd>."}, {"tag": "yes", "text": "Downloads grouped by website, <kbd>⇧</kbd><kbd>⌘</kbd><kbd>J</kbd>."}, ""],
+          ["Tabs (<kbd>Ctrl</kbd>+<kbd>T</kbd>)", {"tag": "yes", "text": "<kbd>⌘</kbd><kbd>T</kbd>."}, {"tag": "no", "text": "Two panes instead."}, ""]
+        ]
+      }
+    },
+    {
+      "id": "where-they-win",
+      "heading": "Where Finder is enough",
+      "html": [
+        "<p>Finder is free, already on every Mac, and runs the Desktop and every Open and Save dialog. It has tabs, column view and gallery view, which Explorer and MacEx don’t all have. If the table above covers what you miss from Windows, learn those keys and stop there.</p>",
+        "<p>If you want Explorer’s exact keys, QSpace can switch to Windows key bindings, and Commander One and Double Commander follow the Total Commander layout many Windows power users know. See <a href=\"/compare/qspace/\">MacEx vs QSpace</a> and <a href=\"/compare/total-commander-mac/\">Total Commander for Mac</a>.</p>"
+      ]
+    },
+    {
+      "id": "where-macex-wins",
+      "heading": "What MacEx adds for Windows switchers",
+      "html": [
+        "<p><b>Moving files feels direct.</b> Split View shows two folders in one window; <kbd>F5</kbd> copies and <kbd>F6</kbd> moves the selection to the other pane. Name clashes ask Keep Both or Skip, never Replace, and <kbd>⌘</kbd><kbd>Z</kbd> undoes a move. <a href=\"/features/file-management/\">File management in MacEx</a>.</p>",
+        "<p><b>Folder sizes without a setting.</b> List view shows each folder’s size and item count.</p>",
+        "<p><b>Finding files without knowing the folder.</b> Mac folders can feel unfamiliar at first. MacEx gathers your files into one library by kind and finds them from a description. <a href=\"/features/file-search/\">How MacEx search works</a>.</p>",
+        "<p><b>Network drives and servers in one place.</b> SMB shares from a Windows PC or NAS open as normal folders, and SFTP servers sit beside them. <a href=\"/features/remote-access/\">SFTP and SMB in MacEx</a>.</p>"
+      ]
+    },
+    {
+      "id": "price",
+      "heading": "What it costs",
+      "intro": "List prices for one user, checked on the date above.",
+      "table": {
+        "class": "data",
+        "corner": "App",
+        "columns": ["Price", "Explorer-like because"],
+        "highlight": "MacEx",
+        "rows": [
+          ["Finder", "Free, built in", "It is the Mac’s file manager"],
+          ["MacEx", "$9.99 once (launch price; regular $19.98)", "Two panes, F5 and F6, folder sizes, SMB"],
+          ["QSpace", "Pro [[$29.99]] list, plus extensions", "Windows key bindings, an address bar you type in"],
+          ["Commander One", "Free; PRO [[$29.99]]", "Total Commander-style panels"]
+        ]
+      }
+    },
+    {
+      "id": "switching",
+      "heading": "Five settings that make a Mac feel more like Windows",
+      "html": [
+        "<ol><li>In Finder, choose View › Show Path Bar and View › Show Status Bar.</li><li>In Finder Settings › Advanced, turn on “Show all filename extensions”.</li><li>In Finder Settings › Advanced, set “When performing a search” to “Search the Current Folder”.</li><li>Press <kbd>⌘</kbd><kbd>J</kbd> in a list view and turn on “Calculate all sizes”, then “Use as Defaults”.</li><li>Add folders you use often to the sidebar by dragging them under Favorites.</li></ol>",
+        "<p>Then decide whether you still miss two panes and a search that understands what you type. That is what MacEx adds.</p>"
+      ]
+    }
+  ],
+  "verdict": {
+    "heading": "Verdict: do you need a File Explorer app on Mac?",
+    "items": [
+      "<b>Stay with Finder</b> if you mostly needed the keys: cut is <kbd>⌘</kbd><kbd>C</kbd> then <kbd>⌥</kbd><kbd>⌘</kbd><kbd>V</kbd>, the address bar is <kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd>.",
+      "<b>Choose MacEx</b> if you want two panes, F5 and F6, folder sizes, batch rename and a search that reads plain sentences, for $9.99 once.",
+      "<b>Choose QSpace</b> if you want Windows key bindings exactly, and <b>Commander One</b> or <b>Double Commander</b> if you used Total Commander."
+    ]
+  },
+  "faq": [
+    {"q": "Is there a File Explorer for Mac?", "a": "Yes: Finder is the Mac’s file explorer. It is always running and opens from the Dock. Third-party apps such as MacEx, QSpace and Commander One add features Finder lacks."},
+    {"q": "How do I cut and paste files on a Mac?", "a": "Select the files and press ⌘C. In the destination folder, press ⌥⌘V (Option-Command-V) to move them. Pressing ⌘V alone makes a copy. In MacEx Split View, F6 moves the selection to the other pane."},
+    {"q": "How do I type a path in Finder like the Explorer address bar?", "a": "Press ⇧⌘G (Go to Folder) and type or paste the path, such as ~/Downloads or /Volumes. MacEx uses the same shortcut."},
+    {"q": "How do I see folder sizes on a Mac?", "a": "In Finder, switch to list view, press ⌘J and turn on Calculate all sizes. MacEx shows folder sizes and item counts in list view without a setting."},
+    {"q": "How do I map a network drive on a Mac?", "a": "In Finder press ⌘K (Connect to Server) and enter the address, such as smb://192.168.1.10/share. MacEx can open the same SMB shares from its Connections page."},
+    {"q": "Why does Enter rename a file instead of opening it on a Mac?", "a": "That is how Finder works: Return renames the selected item, and ⌘↓ (Command–Down Arrow) or a double-click opens it."},
+    {"q": "Is there a Mac file manager with Windows keyboard shortcuts?", "a": "QSpace can switch to Windows key bindings. MacEx uses Mac shortcuts, plus F5 and F6 to copy and move in Split View."}
+  ],
+  "sources": [
+    {"title": "Mac keyboard shortcuts (Apple Support)", "url": "https://support.apple.com/en-us/102650"},
+    {"title": "QSpace features, Windows key bindings (awehunt)", "url": "https://qspace.awehunt.com/en-us/index.html"},
+    {"title": "Commander One features (Electronic Team)", "url": "https://mac.eltima.com/file-manager.html"}
+  ],
+  "related": [
+    {"href": "/compare/", "title": "All comparisons", "small": "Every MacEx comparison, with prices side by side"},
+    {"href": "/compare/finder/", "title": "MacEx vs Finder", "small": "Twenty-five tasks, fairly compared"},
+    {"href": "/compare/total-commander-mac/", "title": "Total Commander for Mac", "small": "What to use instead on a Mac"},
+    {"href": "/compare/qspace/", "title": "MacEx vs QSpace", "small": "Layouts and extensions against one price"},
+    {"href": "/compare/best-finder-alternatives-mac/", "title": "Best Finder alternatives", "small": "Eight Mac file managers compared"},
+    {"href": "/features/file-management/", "title": "Split View and batch rename", "small": "Everyday file management in MacEx"},
+    {"href": "/features/remote-access/", "title": "SFTP and SMB in MacEx", "small": "Network drives and servers"},
+    {"href": "/features/file-search/", "title": "Find files by describing them", "small": "How MacEx search reads a sentence"},
+    {"href": "/blog/why-downloads-dont-show-in-finder-recents/", "title": "Downloads missing from Recents?", "small": "Why Finder Recents skips some files"}
+  ]
+}

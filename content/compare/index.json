@@ -1,0 +1,117 @@
+{
+  "slug": "index",
+  "title": "Finder Alternatives for Mac: Every Comparison and Price",
+  "og_title": "Finder alternatives for Mac, compared side by side",
+  "description": "Every Finder alternative for Mac compared: what each costs over three years, licence terms, trials and macOS support, plus a guide to choosing one.",
+  "h1": "Finder alternatives for Mac: <em>compared side by side</em>",
+  "crumb": "Compare",
+  "published": "2026-11-20",
+  "updated": "2026-11-20",
+  "checked": "Prices, licence terms and versions checked on each developer’s site and the Mac App Store that day.",
+  "answer": "Finder alternatives fall into two groups. <b>Transfer-focused file managers</b> (ForkLift, Path Finder, Commander One, QSpace, Double Commander) add tabs, folder sync and many server types. <b>MacEx</b> adds what those don’t: describe a file to find it, search the words inside screenshots, see where downloads came from, and free up space with a review step, plus two panes, batch rename, SFTP and SMB. It is also the cheapest paid option to keep current: <b>$9.99 once</b>, updates included. The table below shows what each app costs over three years.",
+  "sections": [
+    {
+      "id": "choose",
+      "heading": "How to choose a Finder alternative",
+      "toc": "How to choose",
+      "html": [
+        "<p>Most people start looking for a Finder alternative after one of five frustrations. Name yours first; it decides the app.</p>",
+        "<h3>“I can’t find the file I know I saved.”</h3>",
+        "<p>Dual-pane apps don’t fix this; they show you the same folders in a different layout. You need search that works from what you remember: the kind of file, roughly when, how big, where it came from. MacEx reads a sentence such as <code>pdfs from gmail last month</code> and shows the filters it understood. It can also read the words inside screenshots and scanned PDFs on your Mac. <a href=\"/features/file-search/\">How MacEx search works</a>.</p>",
+        "<h3>“My disk is full and I don’t know what to delete.”</h3>",
+        "<p>Path Finder’s Size Browser and Marta’s disk usage view show where the space went. MacEx goes a step further and lists what is usually safe to clear: old installers, forgotten downloads, big old videos, unused apps and exact duplicates. You review every file, and it goes to the normal Trash. <a href=\"/features/storage-management/\">What Free Up Space checks</a>.</p>",
+        "<h3>“I move files between two folders all day.”</h3>",
+        "<p>Every app here has two panes. If you also want tabs, pick ForkLift, Path Finder, Commander One, QSpace or Double Commander; MacEx shows one folder per pane. If you want <kbd>F5</kbd> to copy and <kbd>F6</kbd> to move, MacEx and the commander-style apps do that.</p>",
+        "<h3>“I work with servers and cloud storage.”</h3>",
+        "<p>ForkLift is the strongest here, with SFTP, FTP, WebDAV, S3, Google Drive, Dropbox, OneDrive, SMB and folder sync. Commander One PRO and QSpace’s Server Connections extension also cover clouds. MacEx handles SFTP and SMB only. <a href=\"/compare/forklift/\">MacEx vs ForkLift</a>.</p>",
+        "<h3>“I came from Windows.”</h3>",
+        "<p>Start with the Finder keys you miss, which may be all you need, then look at QSpace for Windows key bindings or Double Commander if you used Total Commander. <a href=\"/compare/windows-file-explorer-mac/\">File Explorer for Mac</a>.</p>",
+        "<h3>Then check three things before you pay</h3>",
+        "<ul><li><b>How updates are sold.</b> “Lifetime” licences from ForkLift and Path Finder include one or more years of updates; after that you buy again to stay current. A subscription stops updates when you stop paying.</li><li><b>Whether features cost extra.</b> QSpace sells server connections, advanced batch rename, a file shelf and archive support as separate extensions. Commander One puts servers and clouds in its PRO pack.</li><li><b>Your macOS version.</b> MacEx and ForkLift [[4.4]] and newer need macOS 14 or later; older apps support older systems.</li></ul>"
+      ]
+    },
+    {
+      "id": "data",
+      "heading": "What Finder alternatives really cost: our three-year data",
+      "toc": "Three-year cost",
+      "intro": "Most roundups list a single price. We worked out what it costs to keep each app current for three years, from each developer’s own store page and licence terms. One user, list prices in US dollars.",
+      "table": {
+        "class": "data",
+        "corner": "App",
+        "columns": ["Price today", "How updates are sold", "3 years of updates", "Free trial", "Needs macOS", "Latest release"],
+        "highlight": "MacEx",
+        "rows": [
+          ["MacEx", "$9.99", "Included", "$9.99", "No; browser demo", "14", "0.8.12, Nov 14, 2026"],
+          ["ForkLift 4", "[[$19.95]]", "1 or 2 years per licence", "[[$54.90]]", "Yes", "[[14.6]]", "[[4.7.8]], Nov 17, 2026"],
+          ["Path Finder", "[[$29.95]] a year", "Subscription, or 1, 2 or 5 years per licence", "[[$88.90]]", "30 days", "[[13]]", "—"],
+          ["QSpace Pro, all extensions", "[[$54.95]]", "Paid once, “use forever”", "[[$54.95]]", "30 days", "[[10.15]]", "[[7.0.3]], Oct 9, 2026 (App Store)"],
+          ["Commander One PRO", "[[$29.99]]", "Mac App Store purchase", "[[$29.99]]", "PRO: 15 days", "[[10.13]]", "[[3.18]], Sep 25, 2026 (App Store)"],
+          ["Bloom", "[[$16]]", "Not stated", "—", "Not stated", "14", "—"],
+          ["Commander One (free)", "Free", "Free", "Free", "—", "[[10.13]]", "[[3.18]], Sep 25, 2026 (App Store)"],
+          ["Double Commander", "Free, open source", "Free", "Free", "—", "—", "[[1.2.11]], Nov 8, 2026"],
+          ["Nimble Commander", "Free, open source", "Free", "Free", "—", "—", "[[1.9.0]], Nov 1, 2026"],
+          ["Marta", "Free", "Free", "Free", "—", "—", "—"]
+        ],
+        "note": "Three-year figures assume the cheapest licences that keep you on the newest version: ForkLift, a two-year licence then a one-year licence; Path Finder, the same (a yearly subscription costs [[$89.85]]); QSpace, list price with all four extensions (it is often on sale). “—” means the developer doesn’t publish it where we looked. MacEx’s $9.99 is a launch price; the regular price is $19.98. Bloom was checked on November 18, 2026."
+      },
+      "html": [
+        "<p><b>What the data shows.</b> Among paid apps, the gap is in updates, not the sticker price. ForkLift and Path Finder look like one-time purchases but cost about [[$55]] and [[$89]] to keep current for three years. QSpace’s headline price roughly doubles once you add the extensions that match the other apps. MacEx costs $9.99 in year one and the same after three years.</p>",
+        "<p>We publish this table because nobody else does, and we will keep it current. If a price here is wrong, email <a href=\"mailto:support@macex.app\">support@macex.app</a> and we will fix it.</p>"
+      ]
+    },
+    {
+      "id": "comparisons",
+      "heading": "Every comparison",
+      "toc": "All comparisons",
+      "intro": "Each page has a feature table, where the other app is better, a three-year price, a verdict and an FAQ.",
+      "cards": [
+        {"href": "/compare/best-finder-alternatives-mac/", "title": "Best Finder alternative for Mac (2026)", "small": "Eight apps ranked: MacEx, ForkLift, Path Finder, Commander One, QSpace, Bloom, Marta, Nimble Commander"},
+        {"href": "/compare/finder/", "title": "MacEx vs Finder", "small": "Twenty-five everyday tasks, and when Finder alone is enough"},
+        {"href": "/compare/forklift/", "title": "MacEx vs ForkLift 4", "small": "The transfer specialist against search and cleanup"},
+        {"href": "/compare/path-finder/", "title": "MacEx vs Path Finder", "small": "A Path Finder alternative without a subscription"},
+        {"href": "/compare/commander-one/", "title": "MacEx vs Commander One", "small": "Free two-panel manager, PRO pack, or MacEx"},
+        {"href": "/compare/qspace/", "title": "MacEx vs QSpace Pro", "small": "Twelve layouts and extensions against one price"},
+        {"href": "/compare/total-commander-mac/", "title": "Total Commander for Mac", "small": "There isn’t one. What to use instead"},
+        {"href": "/compare/windows-file-explorer-mac/", "title": "File Explorer for Mac", "small": "Windows Explorer habits, keys and apps on macOS"}
+      ]
+    }
+  ],
+  "verdict": {
+    "heading": "Our verdict",
+    "items": [
+      "<b>MacEx</b> for most people: it fixes finding files and running out of space, has two panes and batch rename, and costs $9.99 once with updates included.",
+      "<b>ForkLift</b> if your day is server transfers and folder sync.",
+      "<b>Path Finder</b> if you want the deepest toolbox, Terminal included, and accept paying for updates.",
+      "<b>Double Commander</b> or <b>Commander One</b> if you want a free, Total Commander-style app."
+    ]
+  },
+  "faq": [
+    {"q": "What is the best Finder alternative for Mac?", "a": "For most people, MacEx: it is the only one that finds files from a description, searches words inside screenshots and frees up space with a review step, and it has two panes, batch rename, SFTP and SMB for $9.99 once. For heavy server work, ForkLift is stronger."},
+    {"q": "Is there a free Finder alternative for Mac?", "a": "Yes. Commander One’s basic version, Double Commander, Nimble Commander and Marta are free. They are two-pane file managers; none of them finds files from a description or suggests what is safe to delete."},
+    {"q": "Can I replace Finder completely on a Mac?", "a": "No app fully replaces Finder: macOS still uses it for the Desktop and for Open and Save dialogs. Finder alternatives run alongside it, and MacEx works with the same folders, Finder tags and Trash."},
+    {"q": "Which Finder alternative has no subscription?", "a": "MacEx ($9.99 once, updates included), Commander One PRO and QSpace are paid once. ForkLift and Path Finder licences include a fixed period of updates, and Path Finder also sells a subscription."},
+    {"q": "Which Finder alternative is best for SFTP and cloud storage?", "a": "ForkLift, which connects to SFTP, FTP, WebDAV, Amazon S3, Google Drive, Dropbox, OneDrive and more and can sync folders. Commander One PRO and QSpace’s Server Connections extension also cover clouds. MacEx supports SFTP and SMB only."},
+    {"q": "Is there a Mac file manager like Windows File Explorer?", "a": "Finder is the Mac’s File Explorer, and most Explorer tasks have a Finder shortcut. MacEx adds two panes, F5 and F6, and folder sizes; QSpace offers Windows key bindings."},
+    {"q": "How did you work out the three-year cost?", "a": "From each developer’s own store page on November 20, 2026: the cheapest single-user licences that keep you on the newest version for three years. We don’t include sale prices, taxes or volume discounts."}
+  ],
+  "sources": [
+    {"title": "ForkLift 4 store and licence terms (Binarynights)", "url": "https://binarynights.com/store"},
+    {"title": "Path Finder pricing (Cocoatech)", "url": "https://cocoatech.io/pricing/"},
+    {"title": "QSpace pricing and extensions (awehunt)", "url": "https://qspace.awehunt.com/en-us/pricing.html"},
+    {"title": "Commander One PRO on the Mac App Store", "url": "https://apps.apple.com/us/app/id1035237815"},
+    {"title": "Bloom", "url": "https://bloomapp.club/"},
+    {"title": "Double Commander releases (GitHub)", "url": "https://github.com/doublecmd/doublecmd/releases"},
+    {"title": "Nimble Commander releases (GitHub)", "url": "https://github.com/mikekazakov/nimble-commander/releases"},
+    {"title": "Marta File Manager", "url": "https://marta.sh/"}
+  ],
+  "related": [
+    {"href": "/features/", "title": "Everything MacEx can do", "small": "Every feature, with its limits"},
+    {"href": "/features/file-search/", "title": "Find files by describing them", "small": "How MacEx search reads a sentence"},
+    {"href": "/features/storage-management/", "title": "Free up storage on Mac", "small": "What’s safe to clear, reviewed by you"},
+    {"href": "/features/file-management/", "title": "Split View and batch rename", "small": "Everyday file management in MacEx"},
+    {"href": "/features/remote-access/", "title": "SFTP and SMB in MacEx", "small": "Network drives and servers"},
+    {"href": "/guides/find-duplicate-files-mac/", "title": "Find duplicate files on Mac", "small": "Byte for byte, nothing lost"},
+    {"href": "/guides/clean-up-downloads-folder-mac/", "title": "Clean up your Downloads folder", "small": "One click, with undo"},
+    {"href": "/about/", "title": "About MacEx", "small": "Product facts, requirements and price"}
+  ]
+}
