@@ -1,0 +1,133 @@
+{
+  "slug": "marta",
+  "title": "MacEx vs Marta: A Marta File Manager Alternative",
+  "og_title": "MacEx vs Marta: which Mac file manager?",
+  "description": "MacEx vs Marta compared: dual pane, keyboard control, Lua plugins, archives, search, cleanup, beta status and price. Who should choose Marta and who MacEx.",
+  "h1": "MacEx vs Marta: <em>which Mac file manager?</em>",
+  "crumb": "MacEx vs Marta",
+  "published": "2026-11-20",
+  "updated": "2026-11-20",
+  "checked": "Marta facts checked on marta.sh that day.",
+  "answer": "<b>Marta</b> is a free, native, keyboard-first dual-pane file manager for power users: an action panel, tabs, a built-in terminal, archive browsing, Lua plugins and a text-file configuration. It is still in beta; the latest release is [[0.8.2]] from August 2024. <b>MacEx</b> is built for finding and clearing out files without configuring anything: describe a file to find it, search the words inside screenshots, see where downloads came from, and free up space with a review step, plus two panes, batch rename, SFTP and SMB, for <b>$9.99 once</b>.",
+  "sections": [
+    {
+      "id": "at-a-glance",
+      "heading": "At a glance",
+      "table": {
+        "columns": ["MacEx", "Marta"],
+        "rows": [
+          ["Made by", "MacEx", "Yan Zhulanow"],
+          ["Built for", "Finding, organizing and cleaning up files, plus everyday two-pane work", "Keyboard-driven power users who like to configure"],
+          ["Price", "$9.99 once (launch price)", "Free while in beta; supported through Patreon"],
+          ["Status", "Released, updated regularly", "Beta; latest release [[0.8.2]], August 2024"],
+          ["macOS", "14 Sonoma or later", "[[macOS 11]] or later"],
+          ["Setup", "Works on first launch; settings window", "Settings in a configuration file"]
+        ]
+      }
+    },
+    {
+      "id": "features",
+      "heading": "Feature by feature",
+      "intro": "<b>Partly</b> means the app can do it in a more limited way. Marta entries come from its website and documentation.",
+      "table": {
+        "class": "vs4",
+        "corner": "Task",
+        "columns": ["MacEx", "Marta", "What’s different"],
+        "rows": [
+          ["Two folders side by side", {"tag": "yes", "text": "Split View; <kbd>F5</kbd> copies, <kbd>F6</kbd> moves."}, {"tag": "yes", "text": "Dual pane; <kbd>Tab</kbd> switches panes."}, ""],
+          ["Tabs and windows", {"tag": "no", "text": "One window, one folder per pane."}, {"tag": "yes", "text": "As many windows and tabs as you want."}, ""],
+          ["Run any action from the keyboard", {"tag": "part", "text": "Shortcuts for every main action; <kbd>⌘</kbd><kbd>/</kbd> lists them."}, {"tag": "yes", "text": "Actions panel, <kbd>⌘</kbd><kbd>⇧</kbd><kbd>P</kbd>; every key binding configurable."}, ""],
+          ["Find a file by describing it", {"tag": "yes", "text": "“screenshots from last week” becomes editable filters."}, {"tag": "part", "text": "Quick Search by substring or regex in a list; Look Up uses the macOS index."}, ""],
+          ["Words inside screenshots and scanned PDFs", {"tag": "yes", "text": "Optional on-device Text Search."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Downloads grouped by website", {"tag": "yes", "text": "<kbd>⇧</kbd><kbd>⌘</kbd><kbd>J</kbd>."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["See what fills the disk", {"tag": "part", "text": "Folder sizes in list view."}, {"tag": "yes", "text": "Analyze Disk Usage."}, ""],
+          ["Free up space, reviewed first", {"tag": "yes", "text": "Old installers, forgotten downloads, big old videos, unused apps."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Duplicate finder", {"tag": "yes", "text": "Byte-for-byte check."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Batch rename", {"tag": "yes", "text": "Find and replace or a template, every name previewed."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Archives", {"tag": "part", "text": "Zip and unzip."}, {"tag": "yes", "text": "Read and write zip; open rar, 7z, tar, iso and more, even nested."}, ""],
+          ["Built-in terminal", {"tag": "no", "text": "Not supported."}, {"tag": "yes", "text": "Embedded terminal kept in sync with the pane."}, ""],
+          ["Plugins and themes", {"tag": "no", "text": "Not supported."}, {"tag": "yes", "text": "Lua plugin API; five themes, or make your own."}, ""],
+          ["SFTP and SMB", {"tag": "yes", "text": "SFTP servers and SMB shares in the sidebar."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Finder tags", {"tag": "yes", "text": "Add or remove on many files at once."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Undo and Trash history", {"tag": "yes", "text": "<kbd>⌘</kbd><kbd>Z</kbd>; last 500 files MacEx moved to Trash."}, {"tag": "part", "text": "Task queue to pause and resume operations."}, ""],
+          ["Privacy", {"tag": "yes", "text": "Search and text recognition run on your Mac."}, {"tag": "yes", "text": "Collects no data."}, ""]
+        ]
+      }
+    },
+    {
+      "id": "where-they-win",
+      "heading": "Where Marta is the better choice",
+      "html": [
+        "<p><b>Free.</b> Marta costs nothing while it is in beta. Its developer says it will ask for a licence after beta, and that current versions will stay free to download from the archive.</p>",
+        "<p><b>Keyboard and configuration.</b> An actions panel, every key binding configurable, a Lua plugin API, themes, tabs and an embedded terminal. If you enjoy shaping your tools, Marta gives you far more control than MacEx.</p>",
+        "<p><b>Archives.</b> Marta browses rar, 7z, tar, iso and many more formats like folders, nested ones included. MacEx handles zip only.</p>",
+        "<p><b>Older Macs.</b> Marta runs on macOS 11 or later; MacEx needs macOS 14.</p>"
+      ]
+    },
+    {
+      "id": "where-macex-wins",
+      "heading": "Where MacEx is the better choice",
+      "html": [
+        "<p><b>Nothing to configure.</b> MacEx works on first launch with a sidebar, Split View and a search box. Marta’s settings live in a configuration file.</p>",
+        "<p><b>Finding files you can’t place.</b> MacEx sorts your folders into one library by kind and reads sentences such as <code>pdfs from gmail last month</code>. Text Search finds the words inside screenshots and scanned PDFs. <a href=\"/features/file-search/\">How MacEx search works</a>.</p>",
+        "<p><b>Cleanup with a safety net.</b> Marta shows disk usage; MacEx also lists what is usually safe to clear, finds exact duplicates and lets you put back any of the last 500 files it moved. <a href=\"/features/storage-management/\">What Free Up Space checks</a>.</p>",
+        "<p><b>Everyday extras.</b> Batch rename with a preview, Finder tags on many files, workspaces, SFTP and SMB, and Shortcuts actions. <a href=\"/features/\">Everything MacEx can do</a>.</p>"
+      ]
+    },
+    {
+      "id": "price",
+      "heading": "What each costs",
+      "intro": "Checked on the date above.",
+      "table": {
+        "columns": ["MacEx", "Marta"],
+        "rows": [
+          ["Today", "$9.99 once", "Free (beta)"],
+          ["Later", "Updates included", "A licence after beta, price not announced; Patreon supporters who give [[$15]] or more get a perpetual licence"],
+          ["Three years of updates", "$9.99", "Not known yet"]
+        ]
+      },
+      "html": ["<p class=\"note\">MacEx’s $9.99 is a launch price; the regular price is $19.98.</p>"]
+    },
+    {
+      "id": "switching",
+      "heading": "Switching from Marta, or using both",
+      "html": [
+        "<p>MacEx reads your folders in place; there is nothing to import or configure. Press <kbd>⌘</kbd><kbd>\\</kbd> for Split View, <kbd>F5</kbd> to copy and <kbd>F6</kbd> to move to the other pane, and <kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd> to go to a path.</p>",
+        "<p>If you like Marta for fast navigation and archives, keep it, and add MacEx to find lost files, sort downloads and clear space. They work on the same folders without conflict.</p>"
+      ]
+    }
+  ],
+  "verdict": {
+    "heading": "Verdict: MacEx or Marta?",
+    "items": [
+      "<b>Choose Marta</b> if you want a free, keyboard-first file manager you can configure and extend, and don’t mind beta software.",
+      "<b>Choose MacEx</b> if you want something that works without setup, finds files from a description and frees up space safely, with SFTP, SMB and batch rename, for $9.99 once.",
+      "<b>Use both</b> if you navigate in Marta and want MacEx’s search and cleanup."
+    ]
+  },
+  "faq": [
+    {"q": "Is Marta free?", "a": "Yes, while it is in beta. Its developer has said Marta will ask for a licence once it leaves beta, that current versions stay free to download from the archive, and that Patreon supporters who give [[$15]] or more get a perpetual licence."},
+    {"q": "Is Marta still being developed?", "a": "Its latest release is [[0.8.2]], announced in August 2024, when the developer said development would continue. Check marta.sh for newer releases."},
+    {"q": "Is MacEx a good Marta alternative?", "a": "Yes, if you want a file manager that works without configuration and helps you find and clean up files. MacEx lacks Marta’s tabs, plugins, terminal and wide archive support."},
+    {"q": "Does MacEx have an actions panel like Marta?", "a": "No. MacEx has keyboard shortcuts for its main actions, listed with ⌘/, and Quick Search with ⇧⌘Space from any app."},
+    {"q": "Can MacEx open rar or 7z archives?", "a": "No. MacEx compresses and extracts zip only. Marta opens rar, 7z, tar, iso and many more."},
+    {"q": "Which works on older Macs?", "a": "Marta runs on macOS 11 or later. MacEx needs macOS 14 Sonoma or later."}
+  ],
+  "sources": [
+    {"title": "Marta File Manager features", "url": "https://marta.sh/"},
+    {"title": "Marta download and requirements", "url": "https://marta.sh/download/"},
+    {"title": "Marta 0.8.2: Back on track! (licensing plans)", "url": "https://marta.sh/blog/back-on-track/"},
+    {"title": "Marta documentation", "url": "https://marta.sh/docs/"}
+  ],
+  "related": [
+    {"href": "/compare/", "title": "All comparisons", "small": "Every MacEx comparison, with prices side by side"},
+    {"href": "/compare/best-finder-alternatives-mac/", "title": "Best Finder alternatives", "small": "Eight Mac file managers compared"},
+    {"href": "/compare/total-commander-mac/", "title": "Total Commander for Mac", "small": "Free commander-style apps compared"},
+    {"href": "/compare/commander-one/", "title": "MacEx vs Commander One", "small": "Free dual-pane app against MacEx"},
+    {"href": "/compare/bloom/", "title": "MacEx vs Bloom", "small": "A refined Finder look-alike"},
+    {"href": "/compare/forklift/", "title": "MacEx vs ForkLift", "small": "The transfer specialist against MacEx"},
+    {"href": "/features/file-management/", "title": "Split View and batch rename", "small": "Everyday file management in MacEx"},
+    {"href": "/features/file-search/", "title": "Find files by describing them", "small": "How MacEx search reads a sentence"},
+    {"href": "/features/storage-management/", "title": "Free up storage on Mac", "small": "What’s safe to clear, reviewed by you"}
+  ]
+}

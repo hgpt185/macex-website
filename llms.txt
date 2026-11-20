@@ -40,6 +40,8 @@ Not supported (as of version 0.8.12): tabs, multiple windows, column view, built
 - [MacEx vs Path Finder](https://macex.app/compare/path-finder/): Path Finder alternative without a subscription
 - [MacEx vs Commander One](https://macex.app/compare/commander-one/): free and PRO features against MacEx
 - [MacEx vs QSpace](https://macex.app/compare/qspace/): QSpace layouts and paid extensions against MacEx's single price
+- [MacEx vs Bloom](https://macex.app/compare/bloom/): Bloom's multi-pane layouts, column view and themes against MacEx's search and cleanup
+- [MacEx vs Marta](https://macex.app/compare/marta/): free keyboard-first beta with Lua plugins against MacEx
 - [Total Commander for Mac](https://macex.app/compare/total-commander-mac/): there is no Mac version; Double Commander, Commander One, Nimble Commander and MacEx compared
 - [File Explorer for Mac](https://macex.app/compare/windows-file-explorer-mac/): Windows Explorer tasks mapped to Finder shortcuts and MacEx
 - [Find files on Mac by describing them](https://macex.app/features/file-search/): how plain-language search, text search in images and PDFs, and download sources work, and what search can't do

@@ -36,7 +36,7 @@
         "rows": [
           ["Two folders side by side", {"tag": "yes", "text": "Split View; <kbd>F5</kbd> copies, <kbd>F6</kbd> moves."}, {"tag": "yes", "text": "Two panels."}, ""],
           ["Tabs", {"tag": "no", "text": "One location per pane."}, {"tag": "yes", "text": "Unlimited tabs, free."}, ""],
-          ["Custom hotkeys", {"tag": "part", "text": "Fixed shortcuts; <kbd>⌘</kbd><kbd>/</kbd> lists them."}, {"tag": "yes", "text": "Any action can get a hotkey."}, ""],
+          ["Custom hotkeys", {"tag": "part", "text": "Fixed, except the Quick Search shortcut; <kbd>⌘</kbd><kbd>/</kbd> lists them."}, {"tag": "yes", "text": "Any action can get a hotkey."}, ""],
           ["Find a file by describing it", {"tag": "yes", "text": "“zips bigger than 1gb older than 6 months” becomes editable filters."}, {"tag": "part", "text": "Search with regular expressions, by contents, or with Spotlight."}, "Commander One is precise if you know regex; MacEx reads plain sentences."],
           ["Words inside screenshots and scanned PDFs", {"tag": "yes", "text": "Optional on-device Text Search."}, {"tag": "no", "text": "Not listed."}, ""],
           ["Downloads grouped by website", {"tag": "yes", "text": "<kbd>⇧</kbd><kbd>⌘</kbd><kbd>J</kbd>."}, {"tag": "no", "text": "Not listed."}, ""],
@@ -118,6 +118,7 @@
   ],
   "related": [
     {"href": "/compare/", "title": "All comparisons", "small": "Every MacEx comparison, with prices side by side"},
+    {"href": "/compare/marta/", "title": "MacEx vs Marta", "small": "A free, keyboard-first file manager"},
     {"href": "/compare/total-commander-mac/", "title": "Total Commander for Mac", "small": "What to use instead on a Mac"},
     {"href": "/compare/best-finder-alternatives-mac/", "title": "Best Finder alternatives", "small": "Eight Mac file managers compared"},
     {"href": "/compare/forklift/", "title": "MacEx vs ForkLift", "small": "The transfer specialist against MacEx"},

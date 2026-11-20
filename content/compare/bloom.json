@@ -1,0 +1,130 @@
+{
+  "slug": "bloom",
+  "title": "MacEx vs Bloom: Which Finder Replacement for Mac?",
+  "og_title": "MacEx vs Bloom: which Finder replacement fits you?",
+  "description": "MacEx vs Bloom compared: multi-pane layouts, search, cleanup, cloud drives, SFTP, trial and price. Where Bloom wins, where MacEx wins, and who should pick which.",
+  "h1": "MacEx vs Bloom: <em>which Finder replacement?</em>",
+  "crumb": "MacEx vs Bloom",
+  "published": "2026-11-20",
+  "updated": "2026-11-20",
+  "checked": "Bloom facts checked on bloomapp.club that day.",
+  "answer": "<b>Bloom</b> is a refined Finder look-alike: dual and quad-pane layouts, column view, a system-wide Go to Folder panel, workspaces, colour themes, iCloud Drive, Dropbox and OneDrive, and undo for every operation, for [[$16]] once with a 7-day trial. <b>MacEx</b> costs <b>$9.99 once</b> and is built around finding and clearing out files: describe a file to find it, search the words inside screenshots, see where every download came from, and free up space with a review step, plus two panes, batch rename, SFTP and SMB. Pick Bloom for layouts and looks, MacEx for search and cleanup.",
+  "sections": [
+    {
+      "id": "at-a-glance",
+      "heading": "At a glance",
+      "table": {
+        "columns": ["MacEx", "Bloom"],
+        "rows": [
+          ["Built for", "Finding, organizing and cleaning up files, plus everyday two-pane work", "A more flexible, better-looking Finder"],
+          ["Price", "$9.99 once (launch price)", "[[$16]] once"],
+          ["Updates", "Included", "All future updates included"],
+          ["Free trial", "No; a live demo runs in the browser", "7 days"],
+          ["macOS", "14 Sonoma or later", "[[macOS 14]] or later"],
+          ["Privacy", "Search and text recognition run on your Mac; no account", "Offline app; collects no personal data"]
+        ]
+      }
+    },
+    {
+      "id": "features",
+      "heading": "Feature by feature",
+      "intro": "<b>Partly</b> means the app can do it in a more limited way. Bloom entries come from its own website.",
+      "table": {
+        "class": "vs4",
+        "corner": "Task",
+        "columns": ["MacEx", "Bloom", "What’s different"],
+        "rows": [
+          ["Folders side by side", {"tag": "yes", "text": "Split View with two panes; <kbd>F5</kbd> copies, <kbd>F6</kbd> moves."}, {"tag": "yes", "text": "Multi-pane layouts, dual and quad."}, "Bloom shows more folders at once."],
+          ["Column view", {"tag": "no", "text": "Grid and list."}, {"tag": "yes", "text": "With automatic column resizing."}, ""],
+          ["Go to a folder by path", {"tag": "yes", "text": "<kbd>⇧</kbd><kbd>⌘</kbd><kbd>G</kbd> inside MacEx."}, {"tag": "yes", "text": "A system-wide panel, <kbd>⌘</kbd><kbd>⇧</kbd><kbd>⏎</kbd>."}, "Bloom’s works from any app."],
+          ["Find a file by describing it", {"tag": "yes", "text": "“pdfs from last week over 5 mb” becomes editable filters for kind, date, size and source."}, {"tag": "part", "text": "Keyword search in locations you choose; live search in a folder."}, "Bloom matches words; MacEx also reads dates, sizes and sources."],
+          ["Words inside screenshots and scanned PDFs", {"tag": "yes", "text": "Optional on-device Text Search."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Downloads grouped by website", {"tag": "yes", "text": "<kbd>⇧</kbd><kbd>⌘</kbd><kbd>J</kbd>."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["See what fills the disk", {"tag": "part", "text": "Folder sizes in list view."}, {"tag": "yes", "text": "Folder Scan treemap."}, ""],
+          ["Free up space, reviewed first", {"tag": "yes", "text": "Old installers, forgotten downloads, big old videos, unused apps."}, {"tag": "no", "text": "Not listed."}, "MacEx suggests what is safe to clear."],
+          ["Duplicate finder", {"tag": "yes", "text": "Byte-for-byte check."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Batch rename", {"tag": "yes", "text": "Find and replace or a template, every name previewed."}, {"tag": "yes", "text": "Add, remove, replace, insert; regex supported."}, ""],
+          ["Workspaces", {"tag": "yes", "text": "Sidebar pages that gather files from many folders."}, {"tag": "yes", "text": "Workspaces with their own layout."}, "Same name, different idea."],
+          ["Undo", {"tag": "yes", "text": "<kbd>⌘</kbd><kbd>Z</kbd>; Trash history of the last 500 files."}, {"tag": "yes", "text": "Footprints: every operation recorded and reversible."}, ""],
+          ["Cloud drives", {"tag": "no", "text": "No cloud drive integration."}, {"tag": "yes", "text": "iCloud Drive, Dropbox and OneDrive."}, ""],
+          ["SFTP and SMB", {"tag": "yes", "text": "SFTP servers and SMB shares in the sidebar."}, {"tag": "no", "text": "Not listed."}, ""],
+          ["Archives", {"tag": "part", "text": "Zip and unzip."}, {"tag": "part", "text": "View archive contents without extracting."}, ""],
+          ["Open a Terminal here", {"tag": "no", "text": "Not supported."}, {"tag": "yes", "text": "Your default terminal."}, ""],
+          ["Image tools", {"tag": "part", "text": "Copy text out of up to 20 images or PDFs."}, {"tag": "yes", "text": "Convert, rotate and optimize."}, ""],
+          ["Shortcuts app actions", {"tag": "yes", "text": "Find Files, Search in MacEx, Get Latest Download."}, {"tag": "part", "text": "Configurable keyboard shortcuts."}, ""]
+        ]
+      }
+    },
+    {
+      "id": "where-they-win",
+      "heading": "Where Bloom is the better choice",
+      "html": [
+        "<p><b>Layouts and looks.</b> Bloom has dual and quad-pane layouts, column view with automatic resizing, a compact Portal window you can pin on top, sync browsing and a colour theme you pick. MacEx has one or two panes in grid or list view.</p>",
+        "<p><b>Getting around fast.</b> Bloom’s Go to Folder panel works from any app, and almost every shortcut can be changed. In MacEx only the Quick Search shortcut can be changed.</p>",
+        "<p><b>Extras.</b> Undo for every operation, image conversion, new-file templates, a disk treemap and one-click Terminal. And a 7-day trial; MacEx has no trial.</p>"
+      ]
+    },
+    {
+      "id": "where-macex-wins",
+      "heading": "Where MacEx is the better choice",
+      "html": [
+        "<p><b>Finding a file you can’t place.</b> MacEx gathers your folders into one library sorted by kind and reads plain sentences such as <code>pdfs from gmail last month</code> or <code>zips bigger than 1gb older than 6 months</code>. Text Search finds the words inside screenshots and scanned PDFs. <a href=\"/features/file-search/\">How MacEx search works</a>.</p>",
+        "<p><b>Clearing space safely.</b> Bloom’s treemap shows where the space went; MacEx also lists old installers, forgotten downloads, big old videos, unused apps and exact duplicates, and you review each before it goes to the normal Trash. <a href=\"/features/storage-management/\">What Free Up Space checks</a>.</p>",
+        "<p><b>Servers.</b> SFTP servers and SMB shares open in the same window as your files. <a href=\"/features/remote-access/\">SFTP and SMB in MacEx</a>.</p>",
+        "<p><b>Price.</b> $9.99 once, against [[$16]].</p>"
+      ]
+    },
+    {
+      "id": "price",
+      "heading": "What each costs over three years",
+      "intro": "Both are paid once and include future updates, so the price you pay is the price you pay. List prices for one user, checked on the date above:",
+      "table": {
+        "columns": ["MacEx", "Bloom"],
+        "rows": [
+          ["Year one", "$9.99", "[[$16]]"],
+          ["Three years of updates", "$9.99", "[[$16]]"],
+          ["Try before you buy", "Live demo in the browser", "7-day free trial"]
+        ]
+      },
+      "html": ["<p class=\"note\">MacEx’s $9.99 is a launch price; the regular price is $19.98. Bloom advertised a 25% discount code on its site that day.</p>"]
+    },
+    {
+      "id": "switching",
+      "heading": "Switching from Bloom, or using both",
+      "html": [
+        "<p>MacEx reads your folders and Finder tags where they are; nothing to import. Add the folders you work in to the sidebar, press <kbd>⌘</kbd><kbd>\\</kbd> for Split View, and <kbd>F5</kbd> or <kbd>F6</kbd> to copy or move to the other pane.</p>",
+        "<p>Both apps work with the same folders and tags, so you can browse in Bloom and use MacEx to find files and free up space.</p>"
+      ]
+    }
+  ],
+  "verdict": {
+    "heading": "Verdict: MacEx or Bloom?",
+    "items": [
+      "<b>Choose Bloom</b> if you want a nicer-looking Finder with quad panes, column view, themes, cloud drives and undo for everything, and like trying before you buy.",
+      "<b>Choose MacEx</b> if you lose track of files or run low on space, want SFTP and SMB, and want to pay less: $9.99 once.",
+      "<b>Use both</b> if you love Bloom’s layouts and want MacEx’s search and cleanup."
+    ]
+  },
+  "faq": [
+    {"q": "Is MacEx a good Bloom alternative?", "a": "Yes, if you mainly want to find files and free up space. MacEx has two panes, batch rename, SFTP and SMB, and adds search by description, text search in images and reviewed cleanup. It has no quad panes, column view, themes or Terminal button."},
+    {"q": "How much does Bloom cost?", "a": "Bloom costs [[$16]] once, and its site says that includes all future updates with no subscription. It has a 7-day free trial."},
+    {"q": "Does Bloom have a free trial?", "a": "Yes, 7 days. MacEx has no free trial, but you can try a live demo with sample files in your browser."},
+    {"q": "Can MacEx show four folders at once like Bloom?", "a": "No. MacEx Split View shows two folders side by side."},
+    {"q": "Which is better for freeing up disk space?", "a": "MacEx. Bloom’s Folder Scan shows a treemap of what fills the disk; MacEx also lists what is usually safe to clear, checks duplicates byte for byte, and moves only what you pick to the Trash."},
+    {"q": "Do Bloom and MacEx need the same macOS version?", "a": "Yes. Both need macOS 14 Sonoma or later."}
+  ],
+  "sources": [
+    {"title": "Bloom features, pricing and FAQ", "url": "https://bloomapp.club/"}
+  ],
+  "related": [
+    {"href": "/compare/", "title": "All comparisons", "small": "Every MacEx comparison, with prices side by side"},
+    {"href": "/compare/best-finder-alternatives-mac/", "title": "Best Finder alternatives", "small": "Eight Mac file managers compared"},
+    {"href": "/compare/qspace/", "title": "MacEx vs QSpace", "small": "Another Finder look-alike, with paid extensions"},
+    {"href": "/compare/marta/", "title": "MacEx vs Marta", "small": "A free, keyboard-first file manager"},
+    {"href": "/compare/forklift/", "title": "MacEx vs ForkLift", "small": "The transfer specialist against MacEx"},
+    {"href": "/compare/finder/", "title": "MacEx vs Finder", "small": "Twenty-five tasks, fairly compared"},
+    {"href": "/features/file-search/", "title": "Find files by describing them", "small": "How MacEx search reads a sentence"},
+    {"href": "/features/storage-management/", "title": "Free up storage on Mac", "small": "What’s safe to clear, reviewed by you"},
+    {"href": "/features/automation/", "title": "Workspaces, tags and rules", "small": "Organize files without dragging them around"}
+  ]
+}

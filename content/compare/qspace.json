@@ -119,6 +119,7 @@
   ],
   "related": [
     {"href": "/compare/", "title": "All comparisons", "small": "Every MacEx comparison, with prices side by side"},
+    {"href": "/compare/bloom/", "title": "MacEx vs Bloom", "small": "Another refined Finder look-alike"},
     {"href": "/compare/best-finder-alternatives-mac/", "title": "Best Finder alternatives", "small": "Eight Mac file managers compared"},
     {"href": "/compare/forklift/", "title": "MacEx vs ForkLift", "small": "The transfer specialist against MacEx"},
     {"href": "/compare/path-finder/", "title": "MacEx vs Path Finder", "small": "A Path Finder alternative without a subscription"},

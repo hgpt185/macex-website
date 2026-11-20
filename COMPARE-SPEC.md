@@ -21,6 +21,8 @@ the first, so extend the existing page instead.
 | path finder alternative mac | `compare/path-finder/` |
 | commander one alternative | `compare/commander-one/` |
 | qspace alternative | `compare/qspace/` |
+| bloom finder replacement, bloom vs | `compare/bloom/` |
+| marta file manager alternative | `compare/marta/` |
 | total commander mac, total commander mac alternative | `compare/total-commander-mac/` |
 | file explorer for mac like windows, windows explorer for mac | `compare/windows-file-explorer-mac/` |
 

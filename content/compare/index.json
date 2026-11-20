@@ -46,16 +46,16 @@
           ["Path Finder", "[[$29.95]] a year", "Subscription, or 1, 2 or 5 years per licence", "[[$88.90]]", "30 days", "[[13]]", "—"],
           ["QSpace Pro, all extensions", "[[$54.95]]", "Paid once, “use forever”", "[[$54.95]]", "30 days", "[[10.15]]", "[[7.0.3]], Oct 9, 2026 (App Store)"],
           ["Commander One PRO", "[[$29.99]]", "Mac App Store purchase", "[[$29.99]]", "PRO: 15 days", "[[10.13]]", "[[3.18]], Sep 25, 2026 (App Store)"],
-          ["Bloom", "[[$16]]", "Not stated", "—", "Not stated", "14", "—"],
+          ["Bloom", "[[$16]]", "Paid once, future updates included", "[[$16]]", "7 days", "14", "—"],
           ["Commander One (free)", "Free", "Free", "Free", "—", "[[10.13]]", "[[3.18]], Sep 25, 2026 (App Store)"],
           ["Double Commander", "Free, open source", "Free", "Free", "—", "—", "[[1.2.11]], Nov 8, 2026"],
           ["Nimble Commander", "Free, open source", "Free", "Free", "—", "—", "[[1.9.0]], Nov 1, 2026"],
-          ["Marta", "Free", "Free", "Free", "—", "—", "—"]
+          ["Marta", "Free (beta)", "Free in beta; a paid licence planned after beta", "Not known", "—", "[[11]]", "[[0.8.2]], Aug 2024"]
         ],
-        "note": "Three-year figures assume the cheapest licences that keep you on the newest version: ForkLift, a two-year licence then a one-year licence; Path Finder, the same (a yearly subscription costs [[$89.85]]); QSpace, list price with all four extensions (it is often on sale). “—” means the developer doesn’t publish it where we looked. MacEx’s $9.99 is a launch price; the regular price is $19.98. Bloom was checked on November 18, 2026."
+        "note": "Three-year figures assume the cheapest licences that keep you on the newest version: ForkLift, a two-year licence then a one-year licence; Path Finder, the same (a yearly subscription costs [[$89.85]]); QSpace, list price with all four extensions (it is often on sale). “—” means the developer doesn’t publish it where we looked. MacEx’s $9.99 is a launch price; the regular price is $19.98."
       },
       "html": [
-        "<p><b>What the data shows.</b> Among paid apps, the gap is in updates, not the sticker price. ForkLift and Path Finder look like one-time purchases but cost about [[$55]] and [[$89]] to keep current for three years. QSpace’s headline price roughly doubles once you add the extensions that match the other apps. MacEx costs $9.99 in year one and the same after three years.</p>",
+        "<p><b>What the data shows.</b> Among paid apps, the gap is in updates, not the sticker price. ForkLift and Path Finder look like one-time purchases but cost about [[$55]] and [[$89]] to keep current for three years. Bloom and MacEx include future updates in a single price. QSpace’s headline price roughly doubles once you add the extensions that match the other apps. MacEx costs $9.99 in year one and the same after three years.</p>",
         "<p>We publish this table because nobody else does, and we will keep it current. If a price here is wrong, email <a href=\"mailto:support@macex.app\">support@macex.app</a> and we will fix it.</p>"
       ]
     },
@@ -71,6 +71,8 @@
         {"href": "/compare/path-finder/", "title": "MacEx vs Path Finder", "small": "A Path Finder alternative without a subscription"},
         {"href": "/compare/commander-one/", "title": "MacEx vs Commander One", "small": "Free two-panel manager, PRO pack, or MacEx"},
         {"href": "/compare/qspace/", "title": "MacEx vs QSpace Pro", "small": "Twelve layouts and extensions against one price"},
+        {"href": "/compare/bloom/", "title": "MacEx vs Bloom", "small": "Quad panes and themes, or search and cleanup"},
+        {"href": "/compare/marta/", "title": "MacEx vs Marta", "small": "Free keyboard-first beta against MacEx"},
         {"href": "/compare/total-commander-mac/", "title": "Total Commander for Mac", "small": "There isn’t one. What to use instead"},
         {"href": "/compare/windows-file-explorer-mac/", "title": "File Explorer for Mac", "small": "Windows Explorer habits, keys and apps on macOS"}
       ]
@@ -99,10 +101,10 @@
     {"title": "Path Finder pricing (Cocoatech)", "url": "https://cocoatech.io/pricing/"},
     {"title": "QSpace pricing and extensions (awehunt)", "url": "https://qspace.awehunt.com/en-us/pricing.html"},
     {"title": "Commander One PRO on the Mac App Store", "url": "https://apps.apple.com/us/app/id1035237815"},
-    {"title": "Bloom", "url": "https://bloomapp.club/"},
+    {"title": "Bloom pricing and features", "url": "https://bloomapp.club/"},
     {"title": "Double Commander releases (GitHub)", "url": "https://github.com/doublecmd/doublecmd/releases"},
     {"title": "Nimble Commander releases (GitHub)", "url": "https://github.com/mikekazakov/nimble-commander/releases"},
-    {"title": "Marta File Manager", "url": "https://marta.sh/"}
+    {"title": "Marta download and requirements", "url": "https://marta.sh/download/"}
   ],
   "related": [
     {"href": "/features/", "title": "Everything MacEx can do", "small": "Every feature, with its limits"},
