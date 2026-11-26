@@ -21,6 +21,11 @@ window.MACEX = {
   // Public address of this site, used in the "Ask AI" prompts.
   siteUrl: 'https://macex.app/',
 
+  // Sale. Until endsAt, every page shows the sale bar and the pricing card shows the sale badge
+  // and countdown. After endsAt they hide by themselves and the card says "Launch price" again.
+  // The countdown runs to this fixed time for every visitor; it never resets.
+  sale: { name: 'Black Friday', endsAt: '2026-12-01T07:59:59Z' }, // Monday 30 November 2026, 11:59 pm Pacific
+
   // Licenses shown on the pricing card. Add more rows (with their own checkoutUrl)
   // to show the 1 Mac / 3 Macs / 5 Macs switcher.
   plans: [
@@ -40,6 +45,60 @@ window.MACEX = {
     a.dataset.umamiEvent = name;
     a.dataset.umamiEventPlace = at ? (at.id || at.tagName.toLowerCase()) : 'page';
   };
+
+  // Sale bar, badge and countdown. Elements marked data-sale show only while the sale runs;
+  // elements marked data-sale-hide show only when it is not running.
+  function sale(plan) {
+    const end = C.sale && Date.parse(C.sale.endsAt);
+    const on = () => end && Date.now() < end && plan.was > plan.price;
+    const toggle = live => {
+      all('[data-sale]').forEach(el => { el.hidden = !live; });
+      all('[data-sale-hide]').forEach(el => { el.hidden = live; });
+      if (!live) all('.sale-bar').forEach(el => el.remove());
+    };
+    if (!on()) return toggle(false);
+
+    const off = Math.round((1 - plan.price / plan.was) * 100) + '% off';
+    all('[data-sale-off]').forEach(el => { el.textContent = off; });
+    all('[data-sale-save]').forEach(el => { el.textContent = money(plan.was - plan.price); });
+    all('[data-sale-ends]').forEach(el => {
+      el.textContent = new Date(end).toLocaleString([], { weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' });
+    });
+
+    // Site-wide bar at the top of the page; not on the thank-you page, where the buyer has already paid
+    let dismissed = false;
+    try { dismissed = sessionStorage.getItem('macex-sale-bar') === C.sale.endsAt; } catch (e) { /* storage blocked */ }
+    if (!dismissed && !/^\/thanks/.test(location.pathname)) {
+      const bar = document.createElement('div');
+      bar.className = 'sale-bar';
+      bar.setAttribute('role', 'region');
+      bar.setAttribute('aria-label', C.sale.name + ' sale');
+      const href = document.getElementById('pricing') ? '#pricing' : '/#pricing';
+      bar.innerHTML = `<a class="sb-link" href="${href}"><span class="sb-tag"><i></i>${C.sale.name} sale is live</span>`
+        + `<span class="sb-msg"><b>${off}</b> MacEx for ${money(plan.price)} <s>${money(plan.was)}</s></span>`
+        + `<span class="sb-time">Ends in <b data-sale-clock></b></span><span class="sb-cta">Get the deal</span></a>`
+        + `<button class="sb-close" type="button" aria-label="Hide the sale banner">&times;</button>`;
+      bar.querySelector('.sb-close').addEventListener('click', () => {
+        bar.remove();
+        try { sessionStorage.setItem('macex-sale-bar', C.sale.endsAt); } catch (e) { /* storage blocked */ }
+      });
+      document.body.prepend(bar);
+    }
+    toggle(true);
+
+    const pad = n => String(n).padStart(2, '0');
+    const tick = () => {
+      const left = Math.max(0, end - Date.now());
+      if (!left) { clearInterval(timer); return toggle(false); }
+      const t = Math.floor(left / 1000);
+      const u = { d: Math.floor(t / 86400), h: Math.floor(t / 3600) % 24, m: Math.floor(t / 60) % 60, s: t % 60 };
+      const text = (u.d ? u.d + 'd ' : '') + pad(u.h) + 'h ' + pad(u.m) + 'm ' + pad(u.s) + 's';
+      all('[data-sale-clock]').forEach(el => { el.textContent = text; });
+      all('[data-sale-unit]').forEach(el => { el.textContent = pad(u[el.dataset.saleUnit]); });
+    };
+    const timer = setInterval(tick, 1000);
+    tick();
+  }
 
   function wire() {
     const plans = C.plans.length ? C.plans : [{ macs: 1, price: 0, was: 0 }];
@@ -105,6 +164,7 @@ window.MACEX = {
         } catch (e) { /* share sheet closed */ }
       });
     });
+    sale(plans[0]);
     all('[data-version]').forEach(el => { el.textContent = C.version; });
     all('[data-support]').forEach(a => { if (C.supportEmail) { a.href = 'mailto:' + C.supportEmail; a.hidden = false; } else a.hidden = true; });
 
