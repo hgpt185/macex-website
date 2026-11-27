@@ -51,6 +51,8 @@ All links and prices live in `config.js`. Pages opt in with data attributes, and
 
 Every page has the Umami analytics script in `<head>`. Add it to any new page.
 
+Cloudflare Email Address Obfuscation is on for the zone. It rewrites plain `mailto:` links into `/cdn-cgi/l/email-protection#...`, which Google reported as a 404 and crawlers read as "[email protected]". Wrap every `mailto:` link in a page or in `content/compare/*.json` in `<!--email_off-->...<!--/email_off-->`. Links that `config.js` sets through `data-support` are not affected. After a deploy, `curl` the page and check that `email-protection` does not appear.
+
 Run `python3 -B scripts/seo.py check` before pushing; CI runs it too. `SEO_AUDIT.md` records the SEO audit, decisions and open opportunities.
 
 ## Rules
