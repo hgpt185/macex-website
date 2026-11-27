@@ -56,7 +56,7 @@
       },
       "html": [
         "<p><b>What the data shows.</b> Among paid apps, the gap is in updates, not the sticker price. ForkLift and Path Finder look like one-time purchases but cost about [[$55]] and [[$89]] to keep current for three years. Bloom and MacEx include future updates in a single price. QSpace’s headline price roughly doubles once you add the extensions that match the other apps. MacEx costs $9.99 in year one and the same after three years.</p>",
-        "<p>We publish this table because nobody else does, and we will keep it current. If a price here is wrong, email <a href=\"mailto:support@macex.app\">support@macex.app</a> and we will fix it.</p>"
+        "<p>We publish this table because nobody else does, and we will keep it current. If a price here is wrong, email <!--email_off--><a href=\"mailto:support@macex.app\">support@macex.app</a><!--/email_off--> and we will fix it.</p>"
       ]
     },
     {

@@ -4,5 +4,6 @@
 
 /blog/feed.xml
   Content-Type: application/rss+xml; charset=utf-8
+  X-Robots-Tag: noindex
 /blog/assets/*
   Cache-Control: public, max-age=3600
