@@ -169,7 +169,9 @@ def build(posts, output):
         target = output if number == 1 else output / f'page/{number}'
         target.mkdir(parents=True, exist_ok=True)
         title_suffix = '' if number == 1 else f' — Page {number}'
-        (target / "index.html").write_text(page("The MacEx Journal — Mac Tips & File Organization" + title_suffix, "Practical Mac tips, file organization ideas, and everyday workflows from MacEx. Find your files and build a calmer digital workspace.", path, content, schema))
+        page_description = ("Practical Mac tips, file organization ideas, and everyday workflows from MacEx. Find your files and build a calmer digital workspace."
+                            if number == 1 else f"More practical Mac tips and file organization ideas from the MacEx Journal, page {number}.")
+        (target / "index.html").write_text(page("The MacEx Journal — Mac Tips & File Organization" + title_suffix, page_description, path, content, schema))
     for post in posts:
         url = BASE + "/" + post["slug"] + "/"
         toc = ''.join(f'<li><a href="#section-{i}">{escape(s["heading"])}</a></li>' for i, s in enumerate(post["sections"], 1))
