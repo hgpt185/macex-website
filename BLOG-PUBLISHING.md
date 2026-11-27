@@ -104,7 +104,7 @@ publishing contract. Publishing frequency alone does not guarantee rankings.
 | 2026-11-18 | `/features/file-search/` | Explain why new downloads do not necessarily appear in Finder Recents; show Downloads, Date Added and a saved recent-arrivals Smart Folder | `why-downloads-dont-show-in-finder-recents` | 10 unit tests, generator check, sitemap check, SEO check and diff check passed; Cloudflare production deployment verified |
 | 2026-11-19 | `/features/storage-management/` | Check whether an iCloud Drive file is stored locally; distinguish Download Now, Keep Downloaded, Remove Download and Delete | `icloud-drive-file-downloaded-on-mac` | 10 unit tests, generator check, SEO check and diff check passed; Cloudflare production deployment verified |
 | 2026-11-27 | `/features/storage-management/` | Show folder sizes in Finder List view; explain Calculate all sizes, per-view settings and Get Info alternatives | `show-folder-sizes-in-finder-mac` | Static article output committed; generator and SEO tests not run in this session; production deployment pending verification |
-| 2026-11-28 | `/features/file-search/` | Check a downloaded file’s origin; explain Finder’s Where from metadata, Safari’s Downloads list, missing source details and privacy | `where-file-downloaded-from-mac` | Source committed; automated validation and production deployment pending |
+| 2026-11-28 | `/features/file-search/` | Check a downloaded file’s origin; explain Finder’s Where from metadata, Safari’s Downloads list, missing source details and privacy | `where-file-downloaded-from-mac` | Python tests, generator consistency, sitemap, SEO and diff checks passed; Cloudflare production deployment verified |
 
 ## SEO topic clusters and editorial sequence (from 15 November 2026)
 
