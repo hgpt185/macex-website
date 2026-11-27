@@ -1,0 +1,82 @@
+{
+  "slug": "show-folder-sizes-in-finder-mac",
+  "title": "Show Folder Sizes in Finder on Mac",
+  "description": "Finder can show folder sizes in List view, but the setting is easy to miss. Turn it on, understand the delay, and inspect large folders safely.",
+  "date": "2026-11-27",
+  "category": "Mac storage",
+  "art": "folders",
+  "intro": "A folder can look small in Finder even when it contains gigabytes of files. That makes it hard to spot what is filling your Mac. Finder can calculate folder sizes for you, but the option is tucked away in View Options, and it is not enabled by default.",
+  "takeaways": [
+    "Open a Finder window in List view, then press Command-J to open View Options.",
+    "Turn on Calculate all sizes to let Finder display folder totals in the Size column.",
+    "Large folders can take time to calculate; use Get Info for a single folder when you only need one answer."
+  ],
+  "sections": [
+    {
+      "heading": "Turn on folder sizes in Finder",
+      "paragraphs": [
+        "Open the folder you want to inspect in Finder. Press Command-2 to switch to List view, or choose View > as List from the menu bar.",
+        "Press Command-J, or choose View > Show View Options. Look for Calculate all sizes and select its checkbox. Close the panel. Finder will calculate folder sizes, and the Size column can show each folder's total as results become available.",
+        "If you do not see a Size column, Control-click a column heading in the Finder list and enable Size. Click the Size heading to sort the visible items by size. The largest folders should rise to the top once their totals have been calculated."
+      ]
+    },
+    {
+      "heading": "Why Finder takes a while",
+      "paragraphs": [
+        "Files have a size Finder can read quickly. A folder's size is different: Finder has to walk through the items inside it and add their sizes together. A folder containing thousands of files or several nested folders can take noticeably longer than a small one.",
+        "Give Finder a moment, especially when you open a folder for the first time or inspect a large external drive. If a size is blank or still calculating, it does not mean the folder is empty. Leave the window open and allow the calculation to finish."
+      ]
+    },
+    {
+      "heading": "The setting belongs to a view",
+      "paragraphs": [
+        "Finder's View Options are tied to the folder and view you are customizing. If you open another folder and do not see calculated sizes there, open its View Options and check the setting again.",
+        "The same panel has an Always open in option for keeping a folder in its chosen view. Apple also documents Use as Defaults for applying view settings to other folders that use the same view. This is useful if you want a consistent List view, but check the result in a second folder rather than assuming every existing folder has changed."
+      ]
+    },
+    {
+      "heading": "Check one folder without calculating everything",
+      "paragraphs": [
+        "If you only need the size of one folder, select it and press Command-I, or choose File > Get Info. Finder opens an information window with details for that folder, including its size. This is often quicker than asking Finder to calculate every folder in a large directory.",
+        "To inspect several selected items together, Control-click the selection and choose Get Summary Info. This gives you a combined summary rather than opening a separate information window for every item. Apple documents both Get Info and Get Summary Info in its Mac help guide."
+      ]
+    },
+    {
+      "heading": "What the folder size does and does not tell you",
+      "paragraphs": [
+        "A folder total is useful for comparing folders, but it is not a recommendation to delete the biggest one. A large Photos library, project folder, virtual machine, or application support folder may be important. Open the folder and identify what created it before removing anything.",
+        "Also distinguish a folder's contents from the space your Mac can immediately reclaim. Cloud-synced files, snapshots, caches, and application-managed data can make storage reporting more complicated than a single Finder number. Treat the Size column as a way to find candidates for review, not as a complete storage diagnosis."
+      ]
+    },
+    {
+      "heading": "A safer way to find what is taking up space",
+      "paragraphs": [
+        "Start with your own Documents, Downloads, Movies, and project folders. Sort by Size, open the largest unfamiliar folders, and use Quick Look or Get Info to understand what is inside. Move only files you recognize and no longer need. If you use iCloud Drive or another sync service, remember that deleting a synced file may affect other devices.",
+        "For a broader cleanup, macOS also has a Storage view under System Settings > General > Storage. It gives you a category-level overview, while Finder helps you inspect individual folders. Our guide to finding large files on a Mac covers the next step: locating oversized individual files rather than only comparing folders.",
+        "MacEx offers another way to review a file library and identify storage candidates, but you should still inspect files before deleting them. The safest cleanup is the one where you know exactly what you are removing."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Apple Support: Get file, folder, and disk information on Mac",
+      "url": "https://support.apple.com/guide/mac-help/mchlp1774/mac"
+    },
+    {
+      "title": "Apple Support: Change how folders are displayed in the Finder on Mac",
+      "url": "https://support.apple.com/guide/mac-help/mchldaafb302/mac"
+    }
+  ],
+  "related_pages": [
+    {
+      "title": "MacEx storage management",
+      "url": "https://macex.app/features/storage-management/",
+      "note": "A broader look at reviewing files and freeing space on your Mac."
+    },
+    {
+      "title": "How to find large files on your Mac",
+      "url": "https://macex.app/blog/find-large-files-on-mac/",
+      "note": "Find oversized individual files after identifying a large folder."
+    }
+  ]
+}

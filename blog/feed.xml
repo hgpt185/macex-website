@@ -7,6 +7,14 @@
     <language>en</language>
     <atom:link href="https://macex.app/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Show Folder Sizes in Finder on Mac</title>
+      <link>https://macex.app/blog/show-folder-sizes-in-finder-mac/</link>
+      <guid>https://macex.app/blog/show-folder-sizes-in-finder-mac/</guid>
+      <description>Finder can show folder sizes in List view, but the setting is easy to miss. Turn it on, understand the delay, and inspect large folders safely.</description>
+      <category>Mac storage</category>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Is Your iCloud Drive File Actually on Your Mac?</title>
       <link>https://macex.app/blog/icloud-drive-file-downloaded-on-mac/</link>
       <guid>https://macex.app/blog/icloud-drive-file-downloaded-on-mac/</guid>
