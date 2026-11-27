@@ -1,0 +1,114 @@
+{
+  "slug": "where-file-downloaded-from-mac",
+  "title": "Where Did This File Come From on Mac?",
+  "description": "Find a file’s source on Mac with Finder’s “Where from” field. Check missing details, Safari’s download list, and the difference between origin and safety.",
+  "date": "2026-11-28",
+  "category": "Search tips",
+  "art": "search",
+  "intro": "You find a file called invoice-final.pdf, but the name tells you nothing about who sent it or which site it came from. Before downloading it again or opening it blindly, check the source information macOS may already have saved. Finder can show it in a few clicks.",
+  "takeaways": [
+    "Select a file in Finder, press Command-I, and look for Where from under More Info.",
+    "The field can contain a download URL, a referring page, or other source details, but it is not present on every file.",
+    "If the source is missing, check the browser or service that delivered the file; macOS cannot reliably recreate metadata that was never saved.",
+    "MacEx can group and search downloads by saved website name without keeping the full source URL or browsing history."
+  ],
+  "sections": [
+    {
+      "heading": "Check the file in Finder first",
+      "paragraphs": [
+        "Open Finder and locate the file. Select it, then choose File > Get Info or press Command-I. In the information window, find the More Info section and expand it if it is collapsed. If macOS has source information for that item, you may see a row labelled Where from.",
+        "The value may be a web address. Some files show more than one address, such as the address of the file itself and the page from which you clicked the download. Other files may show sender or message details instead. Treat each entry as a clue about how the file arrived, not as a guaranteed record of every step it took.",
+        "If you do not see a Where from row, do not assume Finder is broken. The file may simply have no source metadata available. The next sections explain what that means and where else to look."
+      ]
+    },
+    {
+      "heading": "What “Where from” actually records",
+      "paragraphs": [
+        "Apple documents a metadata attribute called kMDItemWhereFroms. It describes where an item was obtained from and can contain an array of text values. For a download, that might be a URL. For a file received by email, it may contain information such as the sender's address or the message subject.",
+        "This is useful context, but it is not a complete download history. It does not promise to tell you who last edited a file, whether the file was changed after it arrived, or whether the website is trustworthy. A filename can also be renamed without changing the source details attached to the file.",
+        "The app that saves a file has to supply this information. Different browsers, email clients, cloud services and download tools do not all handle source metadata in the same way. A file copied through another app or service may also lose some extra metadata along the way."
+      ]
+    },
+    {
+      "heading": "If you used Safari, check its Downloads list",
+      "paragraphs": [
+        "For a recent Safari download, open Safari and click the Show Downloads button near the top-right of the window. Find the item and click the magnifying-glass button beside its name. Safari uses that button to reveal the downloaded file in Finder; it helps you locate the item, although it is not the same as showing the original page URL.",
+        "Safari normally removes entries from its Downloads list after one day. If you want to keep the list longer, choose Safari > Settings, open General, and change the Remove download list items setting. The list is convenient for recent downloads, but it should not be treated as a permanent archive of where every file came from.",
+        "If the item is no longer in the list, check Safari history around the time you downloaded it. If the file came from an email attachment, a shared drive or a client portal, the original message or service activity may be a better record."
+      ]
+    },
+    {
+      "heading": "Why the source field may be missing",
+      "paragraphs": [
+        "There are several ordinary reasons. The app that created or saved the file may not have recorded a source. A browser may save the URL for one kind of download but not another. A file may have been exported, extracted from an archive, copied through a service, or received from another person in a way that did not preserve the original metadata.",
+        "Spotlight may also need time to index a recently added file. If you are comfortable with Terminal, you can ask macOS for the indexed value with this read-only command: mdls -name kMDItemWhereFroms followed by the file path in quotation marks. For example: mdls -name kMDItemWhereFroms \"/path/to/invoice-final.pdf\". One easy way to supply the path is to type the command and a space, then drag the file from Finder into the Terminal window.",
+        "If the command prints a list of values, it has found source metadata. If it prints (null), Spotlight currently has no value to return. That does not prove the file never had a source: the metadata may be absent, or the item may not yet be represented in the Spotlight index. Do not run commands that clear extended attributes just to make this field appear."
+      ]
+    },
+    {
+      "heading": "Do not confuse origin with safety",
+      "paragraphs": [
+        "A Where from address is not a security certificate. A file can come from a familiar website and still be unsafe, unexpected or altered. Conversely, a missing source field does not automatically mean a file is malicious. It only means this particular piece of origin information is unavailable.",
+        "Be especially careful with downloaded apps, installers and packages. macOS has Gatekeeper protections that check software signatures and notarization and can warn before software downloaded from the internet is opened. Do not bypass a warning just because the Where from field looks familiar, and do not remove security-related file attributes with a broad cleanup command.",
+        "For documents, use the same common sense: if you were not expecting the file, confirm it with the person or service that sent it before opening links or enabling active content."
+      ]
+    },
+    {
+      "heading": "Find downloads by website with MacEx",
+      "paragraphs": [
+        "Checking Get Info is useful when you have one file in front of you. It is less convenient when you remember the website but not the filename, or when you want to review a whole group of downloads.",
+        "MacEx reads the source information available on files in its library and keeps the website name for searching. You can try a plain-language query such as “pdfs from gmail” or “zips from github”, or press Shift-Command-J to see downloads grouped by website. MacEx does not store the full source links or your browsing history.",
+        "There is an important limit: the file still needs to contain source information. If the browser or another app never saved it, MacEx cannot invent the missing origin. Its file search is useful for narrowing a library by the metadata that is actually present, not for reconstructing a lost download history."
+      ]
+    },
+    {
+      "heading": "A quick way to check the next mystery file",
+      "paragraphs": [
+        "Start with Finder's Get Info window. If Where from is present, read the address or sender details and make sure they match what you expected. If it is absent and the download was recent, check Safari's Downloads list or the history of the app you used. For a file you have had for months, the original email, shared-drive activity or project conversation may be the only remaining trail.",
+        "Before sharing a file with someone else, take a moment to inspect its source details. A long URL can sometimes include a private sharing token or an account-specific link. Share the document through the intended service instead of pasting a sensitive source URL into a public message.",
+        "Once you know where a group of files came from, you can decide where they belong. The goal is not to preserve every URL forever; it is to have enough context to recognize a file, verify that it is expected, and find it again."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Apple Developer: kMDItemWhereFroms",
+      "url": "https://developer.apple.com/documentation/coreservices/kmditemwherefroms"
+    },
+    {
+      "title": "Apple Support: Get file, folder, and disk information on Mac",
+      "url": "https://support.apple.com/en-euro/guide/mac-help/mchlp1774/27/mac/27"
+    },
+    {
+      "title": "Apple Support: Download items from the web using Safari on Mac",
+      "url": "https://support.apple.com/en-au/guide/safari/sfri40598/27.0/mac/27"
+    },
+    {
+      "title": "Apple Support: Safely open apps on your Mac",
+      "url": "https://support.apple.com/en-us/102445"
+    },
+    {
+      "title": "MacEx: Find files on Mac by describing them",
+      "url": "https://macex.app/features/file-search/"
+    }
+  ],
+  "related_pages": [
+    {
+      "title": "Find files on Mac by describing them",
+      "url": "https://macex.app/features/file-search/",
+      "note": "search downloads by saved website name and other available metadata"
+    },
+    {
+      "title": "Clean up your Downloads folder on Mac",
+      "url": "https://macex.app/guides/clean-up-downloads-folder-mac/",
+      "note": "review and organize files after identifying where they came from"
+    }
+  ],
+  "image": {
+    "src": "/assets/file-origin-metadata-mac.svg",
+    "width": 1080,
+    "height": 520,
+    "alt": "Conceptual illustration of a Mac Finder Get Info window showing an example Where from source field, alongside a reminder that some files have no saved source metadata.",
+    "caption": "A simplified illustration, not a screenshot. The example address is fictional."
+  }
+}
