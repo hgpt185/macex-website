@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://macex.app/blog/</loc>
-    <lastmod>2026-11-27</lastmod>
+    <lastmod>2026-11-28</lastmod>
+  </url>
+  <url>
+    <loc>https://macex.app/blog/where-file-downloaded-from-mac/</loc>
+    <lastmod>2026-11-28</lastmod>
   </url>
   <url>
     <loc>https://macex.app/blog/show-folder-sizes-in-finder-mac/</loc>
@@ -51,5 +55,8 @@
   <url>
     <loc>https://macex.app/blog/find-files-on-mac-without-filename/</loc>
     <lastmod>2026-11-14</lastmod>
+  </url>
+  <url>
+    <loc>https://macex.app/blog/page/2/</loc>
   </url>
 </urlset>

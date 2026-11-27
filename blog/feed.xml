@@ -7,6 +7,14 @@
     <language>en</language>
     <atom:link href="https://macex.app/blog/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Where Did This File Come From on Mac?</title>
+      <link>https://macex.app/blog/where-file-downloaded-from-mac/</link>
+      <guid>https://macex.app/blog/where-file-downloaded-from-mac/</guid>
+      <description>Find a file’s source on Mac with Finder’s “Where from” field. Check missing details, Safari’s download list, and the difference between origin and safety.</description>
+      <category>Search tips</category>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 +0000</pubDate>
+    </item>
+    <item>
       <title>Show Folder Sizes in Finder on Mac</title>
       <link>https://macex.app/blog/show-folder-sizes-in-finder-mac/</link>
       <guid>https://macex.app/blog/show-folder-sizes-in-finder-mac/</guid>
