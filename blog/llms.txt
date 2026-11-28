@@ -3,6 +3,7 @@
 > Practical Mac file organization and productivity articles by MacEx.
 
 - [Where Did This File Come From on Mac?](https://macex.app/blog/where-file-downloaded-from-mac/): Find a file’s source on Mac with Finder’s “Where from” field. Check missing details, Safari’s download list, and the difference between origin and safety.
+- [Merge Folders on Mac Without Losing Files](https://macex.app/blog/merge-folders-mac-without-losing-files/): Finder can merge two same-named folders, but only in specific cases. Learn the Option-drag method, when Merge disappears, and safer ways to combine files.
 - [Show Folder Sizes in Finder on Mac](https://macex.app/blog/show-folder-sizes-in-finder-mac/): Finder can show folder sizes in List view, but the setting is easy to miss. Turn it on, understand the delay, and inspect large folders safely.
 - [Is Your iCloud Drive File Actually on Your Mac?](https://macex.app/blog/icloud-drive-file-downloaded-on-mac/): A file can appear in Finder without being stored locally. Check iCloud Drive status and use Download Now, Keep Downloaded and Remove Download safely first.
 - [Why Downloads Don’t Show in Finder Recents on Mac](https://macex.app/blog/why-downloads-dont-show-in-finder-recents/): Downloaded a file but can’t see it in Finder Recents? Learn what Recents shows, how to sort Downloads by Date Added, and save a recent-files view on Mac.
