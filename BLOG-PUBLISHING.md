@@ -105,6 +105,7 @@ publishing contract. Publishing frequency alone does not guarantee rankings.
 | 2026-11-19 | `/features/storage-management/` | Check whether an iCloud Drive file is stored locally; distinguish Download Now, Keep Downloaded, Remove Download and Delete | `icloud-drive-file-downloaded-on-mac` | 10 unit tests, generator check, SEO check and diff check passed; Cloudflare production deployment verified |
 | 2026-11-27 | `/features/storage-management/` | Show folder sizes in Finder List view; explain Calculate all sizes, per-view settings and Get Info alternatives | `show-folder-sizes-in-finder-mac` | Static article output committed; generator and SEO tests not run in this session; production deployment pending verification |
 | 2026-11-28 | `/features/file-search/` | Check a downloaded file’s origin; explain Finder’s Where from metadata, Safari’s Downloads list, missing source details and privacy | `where-file-downloaded-from-mac` | Python tests, generator consistency, sitemap, SEO and diff checks passed; Cloudflare production deployment verified |
+| 2026-11-28 | `/features/file-management/` | Merge same-named folders safely in Finder; explain Option-drag, when Merge is unavailable, and manual alternatives | `merge-folders-mac-without-losing-files` | Source committed; CI validation pending; production deployment pending verification |
 
 ## SEO topic clusters and editorial sequence (from 15 November 2026)
 
