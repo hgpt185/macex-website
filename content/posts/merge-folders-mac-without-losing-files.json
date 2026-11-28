@@ -1,0 +1,108 @@
+{
+  "slug": "merge-folders-mac-without-losing-files",
+  "title": "Merge Folders on Mac Without Losing Files",
+  "description": "Finder can merge two same-named folders, but only in specific cases. Learn the Option-drag method, when Merge disappears, and safer ways to combine files.",
+  "date": "2026-11-28",
+  "category": "Mac file management",
+  "intro": "Two folders called “Projects” can contain different files. If you drag one onto the other in Finder, macOS may offer Merge, Replace or Stop. Choosing the wrong action can leave you with a folder that does not contain everything you expected. The safe approach is to back up both folders, use Merge only when Finder actually offers it, and handle conflicting filenames separately.",
+  "takeaways": [
+    "Finder's Merge option is for two folders with the same name, and it appears only in specific cases.",
+    "Hold Option while dragging one folder to the location of the other, then choose Merge only if Finder offers it.",
+    "Different versions of identically named files can make Merge unavailable; choose Stop if preserving both sets is the priority.",
+    "If Merge is missing, keep the originals and copy their contents into a new folder, resolving name conflicts one at a time.",
+    "Use a Smart Folder when you only need one view across folders, not a physical merge."
+  ],
+  "sections": [
+    {
+      "heading": "Merge is different from Replace",
+      "paragraphs": [
+        "Finder's Merge command is designed for two folders with the same name at different locations. It combines their contents into one folder. It is not the same as dragging a folder into an empty destination, and it is not the same as choosing Replace in a conflict dialog.",
+        "Apple's current Mac guide describes Merge as an Option-drag action. It also documents an important limitation: the button appears only when one folder contains items the other does not. If the folders contain different versions of files with the same name, Finder offers only Stop or Replace. Merge is therefore not a general-purpose tool for resolving every filename conflict.",
+        "If your goal is to preserve both sets of files, do not choose Replace just to make the dialog disappear. Stop, keep the original folders intact, and use the manual method below if Finder does not offer Merge."
+      ]
+    },
+    {
+      "heading": "Back up both folders first",
+      "paragraphs": [
+        "Before combining important project, photo or work folders, make a current backup somewhere separate from the folders you are changing. Time Machine can restore older or deleted files. Apple's guide recommends keeping a backup on a separate disk or another location, rather than relying only on local snapshots stored on the Mac's internal drive.",
+        "If you do not have a recent backup, copy both source folders to an external drive or another safe location and wait for the copies to finish. Open a few files from the backup to make sure it is readable. Do not treat either of the two folders you are about to merge as the only copy of your work."
+      ]
+    },
+    {
+      "heading": "Use Finder's Merge option",
+      "paragraphs": [
+        "First, confirm that the two folders have exactly the same name and are in different locations. Open a Finder window showing the parent folder of the destination. Keep the source folder visible in another Finder window if that makes the drag easier.",
+        "Press and hold the Option key, then drag the source folder to the location that contains the folder with the same name. Read the dialog that appears. If Finder offers a Merge button, choose it only after checking that these are the two folders you intended to combine.",
+        "Wait for Finder to finish before disconnecting an external drive or shutting down. Then open the destination folder and check for files and subfolders that came from both locations. Keep the original folders until you have verified the result and confirmed that your backup is usable."
+      ]
+    },
+    {
+      "heading": "Why the Merge button may be missing",
+      "paragraphs": [
+        "Apple says Merge appears only when one folder contains items that are not in the other. If both folders contain the same set of items, or one has no additional items to contribute, Finder may not have anything to merge.",
+        "The more important limitation is a name conflict. If the folders contain different versions of identically named files, Apple's guide says the available choices are Stop or Replace. Finder is not offering a file-by-file review through the Merge action in that situation.",
+        "If you see only Stop and Replace, choose Stop when your intention is to preserve both folders. Do not assume an old Option-drag tip guarantees that Merge will appear. Mac users regularly run into this exact confusion when the button is absent, so trust the choices Finder actually presents on your Mac."
+      ]
+    },
+    {
+      "heading": "Merge manually when Finder will not offer it",
+      "paragraphs": [
+        "A careful manual merge takes longer, but it gives you control over every conflict. Start by creating a new, empty destination folder somewhere outside both originals. Give it a temporary name such as Projects - Combined. Leave the two source folders unchanged while you work.",
+        "Open the first source folder and the new destination in separate Finder windows. Select the files and subfolders you want to bring across. To keep the originals in place while making copies, hold Option as you drag the selected items into the destination. Apple's folder guide documents Option-drag as the way to keep an item in its original location and put a copy in another folder.",
+        "Repeat with the second source folder. If Finder reports that an item with the same name already exists, stop and compare the two versions before deciding what to keep. If both matter, cancel that copy and rename one version in its original folder with a useful date or project label, then copy it again. Do not choose Replace unless you have deliberately decided that the incoming version should take the place of the existing one.",
+        "For subfolders with the same name, open the two subfolders and repeat the process inside them. Avoid replacing an entire nested folder just because one file inside it conflicts. Work in small batches if the folders are large, and keep both originals until the combined folder has been checked."
+      ]
+    },
+    {
+      "heading": "Check the combined folder before removing anything",
+      "paragraphs": [
+        "Look through the new folder from top to bottom. Check that the expected top-level folders are present, open important documents and projects, and make sure photos or exports you care about are accessible. If you know roughly how many files or subfolders should be there, compare that expectation with what Finder shows.",
+        "Only remove an old source folder after you have checked the combined result and confirmed that a separate backup exists. If anything looks incomplete, stop and go back to the originals. A folder merge is not worth losing the one copy of a file you cannot recreate."
+      ]
+    },
+    {
+      "heading": "Sometimes a Smart Folder is the better answer",
+      "paragraphs": [
+        "If you only want to see related files together, you may not need to move or merge anything. A Finder Smart Folder is a saved search: choose File > New Smart Folder, add criteria such as file type or date, then save it. The list updates as files on your Mac change, while the originals stay in their existing folders.",
+        "Use a physical merge when you really need one folder location. Use a Smart Folder when you want a shared view across several locations without changing where the files live. The MacEx Journal guide to Finder Smart Folders walks through setting up that kind of view."
+      ]
+    },
+    {
+      "heading": "Where MacEx fits",
+      "paragraphs": [
+        "MacEx has a two-pane Split View for copying or moving selected files between folders, and it never replaces or merges an existing item. When a name conflict occurs, it offers Keep Both or Skip. That can help with a deliberate file-by-file transfer, but it is not a one-click folder-merge tool. For Finder's specific Merge command, follow the Finder steps above; for the other file-management features, see the MacEx file-management guide."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Organise files in folders on Mac — Apple Support",
+      "url": "https://support.apple.com/en-in/guide/mac-help/mh26885/27/mac/27"
+    },
+    {
+      "title": "Back up your files with Time Machine on Mac — Apple Support",
+      "url": "https://support.apple.com/en-in/guide/mac-help/mh35860/27/mac/27"
+    },
+    {
+      "title": "Create or change a Smart Folder on Mac — Apple Support",
+      "url": "https://support.apple.com/en-lamr/guide/mac-help/mchlp2804/mac"
+    },
+    {
+      "title": "Moving a folder over a folder with the same name — r/MacOS",
+      "url": "https://www.reddit.com/r/MacOS/comments/1b2y8i6/moving_a_folder_over_a_folder_with_the_same_name/"
+    }
+  ],
+  "related_pages": [
+    {
+      "title": "File management in MacEx: Split View, batch rename, tags and servers",
+      "url": "https://macex.app/features/file-management/",
+      "note": "Use Split View for a manual file-by-file transfer; MacEx does not offer a one-click folder merge."
+    },
+    {
+      "title": "Finder Smart Folders: a project view without moving files",
+      "url": "https://macex.app/blog/finder-smart-folders/",
+      "note": "A saved search is a better fit when you only need one view across several folders."
+    }
+  ],
+  "art": "folders"
+}
